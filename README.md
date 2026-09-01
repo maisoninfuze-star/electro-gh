@@ -248,6 +248,34 @@ the value.
 
 ---
 
+## Deploying to Vercel
+
+`vercel.json` pins the framework and the build command:
+
+```json
+{ "framework": "nextjs", "buildCommand": "next build" }
+```
+
+Build settings in `vercel.json` take precedence over the dashboard's "Build &
+Development Settings", which is the point — it makes the deploy reproducible
+from the repo instead of depending on what is saved in a project's UI.
+
+**There is deliberately no `outputDirectory` key, and no `distDir` in
+`next.config.ts`.** Vercel finds `.next` on its own, and overriding either is
+what produced "routes manifest could not be found" / "output directory .next
+was not found" on the first attempts. If those settings are also overridden in
+the dashboard, clear them — an override there is what `vercel.json` is now
+guarding against.
+
+Environment variables to set on the project:
+
+| Variable | Value |
+| --- | --- |
+| `NEXT_PUBLIC_SITE_URL` | the production origin, e.g. `https://www.electrogh.ca` |
+| `NEXT_PUBLIC_ALLOW_INDEXING` | leave unset until the client signs off; `true` to allow indexing |
+
+---
+
 ## Known limitations
 
 - **The store's address and phone are unconfirmed.** The brief supplied a Laval
