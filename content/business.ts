@@ -22,7 +22,22 @@ export const BUSINESS = {
   legalName: 'Électroménagers GH',
   shortName: 'Electro GH',
 
-  /** Confirmed from the public listing supplied in the brief. */
+  /**
+   * ⚠️  UNRESOLVED CONFLICT — DO NOT SILENTLY PICK ONE.
+   *
+   * The brief supplied a Laval directory listing:
+   *     3570 Chemin du Souvenir, Laval QC H7V 1X2 · 450-681-2848
+   *
+   * The storefront photograph (brand/storefront-sign.jpg) shows:
+   *     civic number 6439 · 514.332.2848   ("ELECTROMENAGER GH · VENTE & ACHAT")
+   *
+   * 514 is on-island Montréal, 450 is Laval — so these are either two
+   * locations or the listing is stale. Which one is right decides the whole
+   * local-SEO strategy (Laval vs Montréal), the map pin, and the number every
+   * call button dials, so it is left exactly as the brief supplied it until
+   * the owner confirms. If there are two stores, this becomes an array and the
+   * showroom section renders both.
+   */
   address: {
     street: '3570 Chemin du Souvenir',
     city: 'Laval',
@@ -33,7 +48,11 @@ export const BUSINESS = {
     countryName: 'Canada',
   },
 
-  /** Confirmed. `raw` is E.164 for tel: links, `display` is what humans read. */
+  /**
+   * `raw` is E.164 for tel: links, `display` is what humans read.
+   * See the conflict note on `address` — the storefront sign shows
+   * 514.332.2848. Unchanged until confirmed.
+   */
   phone: {
     display: '450-681-2848',
     raw: '+14506812848',
@@ -72,6 +91,13 @@ export const BUSINESS = {
     delivery: { offered: true, details: unverified<string>(), pricing: unverified<string>() },
     warranty: { offered: true, durationMonths: unverified<number>(), details: unverified<string>() },
     repair: { offered: true, details: unverified<string>() },
+    /**
+     * The storefront sign reads "VENTE & ACHAT" — they buy used appliances as
+     * well as sell them. That is the business's own public signage, but it is
+     * not yet rendered anywhere: it deserves its own copy and probably its own
+     * page, rather than being quietly folded into a trust bullet.
+     */
+    buyback: { offered: true, details: unverified<string>() },
     financing: { offered: false, details: unverified<string>() },
     installation: { offered: false, details: unverified<string>() },
   },

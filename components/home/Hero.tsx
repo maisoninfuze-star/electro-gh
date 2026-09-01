@@ -69,7 +69,7 @@ export function Hero({ locale, dict }: { locale: Locale; dict: Dictionary }) {
               <MapPin aria-hidden className="size-3.5" strokeWidth={1.75} />
               {dict.hero.trust.map((item, i) => (
                 <span key={item} className="flex items-center gap-3">
-                  {i > 0 && <span aria-hidden className="text-line-strong">·</span>}
+                  {i > 0 && <span aria-hidden className="text-ink-3">·</span>}
                   {item}
                 </span>
               ))}

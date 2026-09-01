@@ -31,16 +31,19 @@ npm run dev          # http://localhost:3000
 | Script | What it does |
 | --- | --- |
 | `npm run dev` | Dev server |
-| `npm run build` | Production build into `.next-build` |
+| `npm run build` | Production build (`.next`) — this is what Vercel runs |
 | `npm start` | Serve the production build |
+| `npm run build:local` | Build into `.next-build` without disturbing `next dev` |
+| `npm run start:local` | Serve that build on :3320 (what the test suites target) |
 | `npm run typecheck` | `tsc --noEmit` |
 | `npm run qa` | Responsive + a11y sweep at 7 breakpoints (see below) |
 | `npm run test:functional` | Filters, prices, i18n, search, schema (see below) |
+| `npm run test:contrast` | WCAG AA contrast on every rendered text node |
 | `npm run images:studio -- ./raw-photos` | fal.ai product-photo pipeline |
 
-> `build` writes to `.next-build`, not `.next`. Running a production build into
-> a live dev server's directory silently corrupts it, which is a miserable bug
-> to chase.
+> Use `build:local` while a dev server is running. A production build into a
+> live `next dev` directory corrupts it silently, which is a miserable bug to
+> chase — but `build` itself must stay on `.next` or Vercel finds no output.
 
 ---
 
@@ -188,7 +191,7 @@ the appliance type reaches the relight prompt.
 ## QA harness
 
 ```bash
-npm run build && npm start &
+npm run build:local && npm run start:local &
 npm run qa
 ```
 
@@ -217,10 +220,46 @@ Covers the things that break silently on catalogue sites:
 
 Currently **18/18**.
 
+## Contrast audit
+
+```bash
+npm run test:contrast
+```
+
+Measures every rendered text node's computed colour against its own effective
+background and checks it against the AA threshold for that node's real size and
+weight. Measuring the rendered page rather than the token table is the point —
+it caught secondary text at 3.07:1 that looked fine by eye. Currently clean on
+all seven page types.
+
+---
+
+## Brand
+
+The accent is taken from the storefront sign (`brand/storefront-sign.jpg`).
+The vinyl samples around `#E3384B`, which fails AA on white at 4.26:1, so
+`--color-accent` is the same hue held a few steps deeper at `#C62438`
+(5.66:1 on white, 5.34:1 on canvas).
+
+Savings deliberately stay **warm bronze**, not red. If price cuts were also red
+they would compete with every CTA and the site would read as a permanent sale
+flyer — the one thing the brief rules out. Red is the call to action; bronze is
+the value.
+
 ---
 
 ## Known limitations
 
+- **The store's address and phone are unconfirmed.** The brief supplied a Laval
+  listing (3570 Chemin du Souvenir · 450-681-2848); the storefront photo shows
+  civic number 6439 and 514.332.2848. 514 is on-island Montréal. Until the
+  owner confirms which is current — or whether there are two locations — the
+  site uses the brief's values unchanged. See the note on `address` in
+  `content/business.ts`.
+- **"Vente & achat" is not on the site.** The sign says they buy appliances as
+  well as sell them; that deserves its own copy and probably its own page
+  rather than being folded into a trust bullet. Recorded as
+  `services.buyback` in `content/business.ts`.
 - **Services / About / Contact are not built.** They are deliberately absent
   from `LIVE_ROUTES`, so nav, footer and sitemap don't link to them. Build the
   pages, then add the route ids.

@@ -4,12 +4,15 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "NEXT_DIST_DIR=.next-build next build",
-    "start": "NEXT_DIST_DIR=.next-build next start",
+    "build": "next build",
+    "start": "next start",
     "typecheck": "tsc --noEmit",
     "images:studio": "node scripts/studio-images.mjs",
     "qa": "node scripts/qa.mjs",
-    "test:functional": "node scripts/functional.mjs"
+    "test:functional": "node scripts/functional.mjs",
+    "build:local": "NEXT_DIST_DIR=.next-build next build",
+    "start:local": "NEXT_DIST_DIR=.next-build next start",
+    "test:contrast": "node scripts/contrast.mjs"
   },
   "dependencies": {
     "framer-motion": "^13.1.1",

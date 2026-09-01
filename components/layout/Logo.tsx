@@ -4,13 +4,15 @@ import type { Locale } from '@/lib/i18n/config';
 import { cx } from '@/lib/format';
 
 /**
- * WORDMARK — PLACEHOLDER IDENTITY
- * ===============================
- * No logo file has been supplied. Rather than a grey box, this is a considered
- * typographic lockup: "ELECTRO" in light weight, "GH" in semibold, separated by
- * a hairline rule. It reads as a deliberate identity at any size and prints.
+ * WORDMARK
+ * ========
+ * Typographic lockup drawn from the storefront sign
+ * (brand/storefront-sign.jpg): the name set in the shop's red, with "GH"
+ * carrying the weight. The sign sets the whole name in red on white; this keeps
+ * that, adds a hairline to separate the two halves, and holds the red a few
+ * steps deeper so it passes contrast at nav size.
  *
- * WHEN THE REAL LOGO ARRIVES: replace the inner markup with an <Image> (or
+ * WHEN A REAL LOGO FILE ARRIVES: replace the inner markup with an <Image> (or
  * inline SVG) and keep the same outer <Link> and sizing props. Nothing else in
  * the codebase references the wordmark, so this is a one-file swap.
  */
@@ -28,10 +30,10 @@ export function Logo({
       href={href(locale, 'home')}
       aria-label="Electro GH"
       className={cx(
-        // py-3 gives the 17px wordmark a 44px tap target without changing
-        // how it looks. -my-3 keeps it from growing the header's height.
+        // py-3.5 gives the 17px wordmark a 44px tap target without changing
+        // how it looks. -my-3.5 keeps it from growing the header's height.
         'group -my-3.5 inline-flex items-baseline gap-[0.45rem] py-3.5 font-display leading-none',
-        onDark ? 'text-canvas' : 'text-ink',
+        onDark ? 'text-canvas' : 'text-accent',
         className,
       )}
     >
@@ -42,7 +44,7 @@ export function Logo({
         aria-hidden
         className={cx(
           'h-[0.9em] w-px self-center transition-colors duration-500',
-          onDark ? 'bg-canvas/35' : 'bg-line-strong group-hover:bg-accent',
+          onDark ? 'bg-canvas/35' : 'bg-accent/35 group-hover:bg-accent',
         )}
       />
       <span className="text-[1.0625rem] font-semibold uppercase tracking-[0.14em] sm:text-[1.125rem]">

@@ -2,10 +2,12 @@ import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
   /**
-   * Keep production builds out of the dev server's working directory.
-   * `next build` writing into a live `next dev` .next silently corrupts the
-   * running dev server, which is a genuinely confusing failure to debug.
-   * `npm run build` sets NEXT_DIST_DIR=.next-build.
+   * Defaults to `.next` so hosted builds (Vercel) find the output where they
+   * expect it — pointing `npm run build` at another directory makes the deploy
+   * fail with "no build output found".
+   *
+   * `npm run build:local` sets NEXT_DIST_DIR=.next-build to build without
+   * clobbering a running `next dev`, which otherwise corrupts it silently.
    */
   distDir: process.env.NEXT_DIST_DIR || '.next',
 
