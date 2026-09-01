@@ -2,14 +2,15 @@ import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
   /**
-   * Defaults to `.next` so hosted builds (Vercel) find the output where they
-   * expect it — pointing `npm run build` at another directory makes the deploy
-   * fail with "no build output found".
+   * NO `distDir` HERE, DELIBERATELY.
    *
-   * `npm run build:local` sets NEXT_DIST_DIR=.next-build to build without
-   * clobbering a running `next dev`, which otherwise corrupts it silently.
+   * Vercel only needs an "Output Directory" setting when a project overrides
+   * distDir, and its detection is happier with the default. An earlier version
+   * of this file set `distDir: process.env.NEXT_DIST_DIR || '.next'` so local
+   * builds could avoid clobbering a running `next dev`; that convenience is not
+   * worth any risk to the client's production deploy. Stop the dev server
+   * before running `npm run build`.
    */
-  distDir: process.env.NEXT_DIST_DIR || '.next',
 
   images: {
     // Product photography is shot on light backgrounds and is mostly flat

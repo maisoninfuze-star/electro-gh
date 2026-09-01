@@ -31,19 +31,19 @@ npm run dev          # http://localhost:3000
 | Script | What it does |
 | --- | --- |
 | `npm run dev` | Dev server |
-| `npm run build` | Production build (`.next`) — this is what Vercel runs |
+| `npm run build` | Production build — this is exactly what Vercel runs |
 | `npm start` | Serve the production build |
-| `npm run build:local` | Build into `.next-build` without disturbing `next dev` |
-| `npm run start:local` | Serve that build on :3320 (what the test suites target) |
 | `npm run typecheck` | `tsc --noEmit` |
 | `npm run qa` | Responsive + a11y sweep at 7 breakpoints (see below) |
 | `npm run test:functional` | Filters, prices, i18n, search, schema (see below) |
 | `npm run test:contrast` | WCAG AA contrast on every rendered text node |
 | `npm run images:studio -- ./raw-photos` | fal.ai product-photo pipeline |
 
-> Use `build:local` while a dev server is running. A production build into a
-> live `next dev` directory corrupts it silently, which is a miserable bug to
-> chase — but `build` itself must stay on `.next` or Vercel finds no output.
+> **Stop `next dev` before running `npm run build`.** They share `.next`, and a
+> production build into a live dev server's directory corrupts it silently —
+> the running page goes blank with no error. There is deliberately no `distDir`
+> override to work around this: Vercel's output detection is happiest with the
+> default, and an override there is what broke the first deploy.
 
 ---
 
@@ -191,7 +191,7 @@ the appliance type reaches the relight prompt.
 ## QA harness
 
 ```bash
-npm run build:local && npm run start:local &
+npm run build && npx next start -p 3320 &
 npm run qa
 ```
 

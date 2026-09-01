@@ -10,8 +10,6 @@
     "images:studio": "node scripts/studio-images.mjs",
     "qa": "node scripts/qa.mjs",
     "test:functional": "node scripts/functional.mjs",
-    "build:local": "NEXT_DIST_DIR=.next-build next build",
-    "start:local": "NEXT_DIST_DIR=.next-build next start",
     "test:contrast": "node scripts/contrast.mjs"
   },
   "dependencies": {
@@ -29,5 +27,8 @@
     "puppeteer-core": "^25.9.0",
     "tailwindcss": "^4",
     "typescript": "^5"
+  },
+  "engines": {
+    "node": ">=20.9.0"
   }
 }
