@@ -136,29 +136,63 @@ check('search: bilingual query "samsung fridge" matches', hitsBilingual > 0, `${
 await page.goto(`${BASE}/`, { waitUntil: 'networkidle2' });
 await settle(600);
 const contacts = await page.evaluate(() => ({
-  tel: [...document.querySelectorAll('a[href^="tel:"]')].map((a) => a.getAttribute('href'))[0],
+  tels: [...document.querySelectorAll('a[href^="tel:"]')].map((a) => a.getAttribute('href')),
   telCount: document.querySelectorAll('a[href^="tel:"]').length,
   maps: document.querySelectorAll('a[href*="google.com/maps"]').length,
   whatsapp: document.querySelectorAll('a[href*="wa.me"]').length,
 }));
-check('contact: tel: links present and correct', contacts.tel === 'tel:+14506812848',
-  `${contacts.telCount} link(s), ${contacts.tel}`);
+// Two stores: BOTH numbers must be reachable as real tel: links, and nothing
+// on the page may dial a number that isn't one of the two.
+check('contact: both store tel: links present',
+  contacts.tels.includes('tel:+15143322848') && contacts.tels.includes('tel:+14506812848'),
+  `${contacts.telCount} link(s): ${[...new Set(contacts.tels)].join(', ')}`);
+check('contact: no tel: link to an unknown number',
+  contacts.tels.every((t) => t === 'tel:+15143322848' || t === 'tel:+14506812848'),
+  [...new Set(contacts.tels)].join(', '));
 check('contact: directions links present', contacts.maps > 0, `${contacts.maps} link(s)`);
 check('contact: WhatsApp hidden while unverified', contacts.whatsapp === 0,
   `${contacts.whatsapp} wa.me link(s)`);
+
+/* ── 6b. Two-store chooser ─────────────────────────────────────────────── */
+await page.setViewport({ width: 390, height: 844, deviceScaleFactor: 2, isMobile: true, hasTouch: true });
+await page.goto(`${BASE}/`, { waitUntil: 'networkidle2' });
+await settle(500);
+await page.click('div.fixed.inset-x-0.bottom-0 button');
+await settle(500);
+const chooser = await page.evaluate(() => {
+  const d = document.querySelector('[role="dialog"][aria-labelledby="store-chooser-title"]');
+  return {
+    open: !!d,
+    rows: d ? [...d.querySelectorAll('a[href^="tel:"]')].map((a) => a.getAttribute('href')) : [],
+  };
+});
+check('chooser: mobile "Appeler" opens the two-store sheet', chooser.open);
+check('chooser: sheet offers both stores as tel: links',
+  chooser.rows.includes('tel:+15143322848') && chooser.rows.includes('tel:+14506812848'),
+  chooser.rows.join(', '));
+await page.keyboard.press('Escape');
+await page.setViewport({ width: 1440, height: 900 });
 
 /* ── 7. Structured data ────────────────────────────────────────────────── */
 await page.goto(`${BASE}/laveuses/laveuse-frontale-27-blanche`, { waitUntil: 'networkidle2' });
 await settle(600);
 const ld = await page.evaluate(() =>
   [...document.querySelectorAll('script[type="application/ld+json"]')].map((s) => JSON.parse(s.textContent)));
-const product = ld.find((x) => x['@type'] === 'Product');
-const store = ld.find((x) => Array.isArray(x['@type']) && x['@type'].includes('Store'));
+// Flatten @graph so the two Store nodes are visible alongside top-level nodes.
+const nodes = ld.flatMap((x) => (Array.isArray(x['@graph']) ? x['@graph'] : [x]));
+const product = nodes.find((x) => x['@type'] === 'Product');
+const stores = nodes.filter((x) => Array.isArray(x['@type']) && x['@type'].includes('Store'));
+const org = nodes.find((x) => x['@type'] === 'Organization');
 check('schema: Product + Offer emitted', !!product?.offers?.price, `price ${product?.offers?.price} ${product?.offers?.priceCurrency}`);
-check('schema: Breadcrumb emitted', ld.some((x) => x['@type'] === 'BreadcrumbList'));
-check('schema: Store emitted with phone', store?.telephone === '+14506812848');
-check('schema: no invented aggregateRating', !product?.aggregateRating && !store?.aggregateRating);
-check('schema: no invented opening hours', !store?.openingHoursSpecification);
+check('schema: Breadcrumb emitted', nodes.some((x) => x['@type'] === 'BreadcrumbList'));
+check('schema: two Store nodes, each with its own phone',
+  stores.length === 2 &&
+    stores.some((s) => s.telephone === '+15143322848' && s.address?.addressLocality === 'Montréal') &&
+    stores.some((s) => s.telephone === '+14506812848' && s.address?.addressLocality === 'Laval'),
+  stores.map((s) => `${s.address?.addressLocality}:${s.telephone}`).join(' '));
+check('schema: Organization with verified email', org?.email === 'electrogh@hotmail.com', org?.email);
+check('schema: no invented aggregateRating', !product?.aggregateRating && !stores.some((s) => s.aggregateRating));
+check('schema: no invented opening hours', !stores.some((s) => s.openingHoursSpecification));
 
 await browser.close();
 

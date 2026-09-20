@@ -1,4 +1,5 @@
 import type { Locale, RouteId } from '@/lib/i18n/config';
+import type { StoreId } from '@/content/business';
 
 /**
  * PRODUCT DATA MODEL
@@ -108,6 +109,14 @@ export interface Product {
   featured?: boolean;
   /** Marks the unit for the Deals / Liquidation surfaces. */
   deal?: boolean;
+
+  /**
+   * Which store physically holds this unit. When set, the product page's call
+   * button dials that store directly; when absent, it opens the two-store
+   * chooser. A used appliance is one physical object in one place, so a real
+   * inventory feed should always fill this in.
+   */
+  storeId?: StoreId;
 
   /** ISO 8601. Drives "new arrivals" ordering. */
   createdAt: string;

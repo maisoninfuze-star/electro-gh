@@ -1,7 +1,7 @@
 import { Star } from 'lucide-react';
 import { SectionHeader } from '@/components/ui/SectionHeader';
 import { Reveal } from '@/components/ui/Reveal';
-import { BUSINESS } from '@/content/business';
+import { STORES } from '@/content/business';
 import type { Dictionary } from '@/lib/i18n/dictionaries';
 
 /**
@@ -40,7 +40,7 @@ export function Reviews({
   dict: Dictionary;
   reviews?: GoogleReview[];
 }) {
-  const connected = BUSINESS.googlePlaceId.verified && reviews.length > 0;
+  const connected = STORES.some((st) => st.googlePlaceId.verified) && reviews.length > 0;
   const isDev = process.env.NODE_ENV === 'development';
 
   // State 3 — nothing to show, and we are live. Render nothing at all.

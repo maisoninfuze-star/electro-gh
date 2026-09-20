@@ -10,22 +10,28 @@ import type { Dictionary } from '@/lib/i18n/dictionaries';
  *
  * Every point is gated on a VERIFIED business fact. "Garantie disponible" only
  * appears because BUSINESS.services.warranty.offered is true — and it says
- * "available", never a duration, because the duration is unverified. Set
- * `financing.offered` to true and a seventh point appears with no code change.
+ * "available", never a duration, because the duration is unverified. The
+ * three service points (achat & revente, réparation, garantie) come straight
+ * off the business card. Set `financing.offered` to true and a ninth point
+ * appears with no code change.
  */
 export function WhyElectroGH({ dict }: { dict: Dictionary }) {
   const s = BUSINESS.services;
   const p = dict.why.points;
 
   // Order matters: price and brand breadth lead, because that is the objection
-  // an appliance shopper arrives with.
+  // an appliance shopper arrives with. Achat & revente is third because it is
+  // printed on the logo — it is the thing this business says about itself.
+  // Eight points: two rows of four from `lg`, four rows of two below.
   const points = [
     { key: 'budget', show: true, ...p.budget },
     { key: 'brands', show: true, ...p.brands },
-    { key: 'delivery', show: s.delivery.offered, ...p.delivery },
+    { key: 'buyback', show: s.buyback.offered, ...p.buyback },
     { key: 'local', show: true, ...p.local },
-    { key: 'guidance', show: true, ...p.guidance },
+    { key: 'delivery', show: s.delivery.offered, ...p.delivery },
+    { key: 'repair', show: s.repair.offered, ...p.repair },
     { key: 'warranty', show: s.warranty.offered, ...p.warranty },
+    { key: 'guidance', show: true, ...p.guidance },
   ].filter((x) => x.show);
 
   return (
@@ -37,9 +43,9 @@ export function WhyElectroGH({ dict }: { dict: Dictionary }) {
           body={dict.why.body}
         />
 
-        <div className="mt-14 grid gap-px border-t border-line bg-line sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-14 grid gap-px border-t border-line bg-line sm:grid-cols-2 lg:grid-cols-4">
           {points.map((point, i) => (
-            <Reveal key={point.key} delay={(i % 3) * 80} className="bg-canvas">
+            <Reveal key={point.key} delay={(i % 4) * 70} className="bg-canvas">
               <div className="flex h-full flex-col gap-3 py-8 pr-6 sm:py-10">
                 <span className="tnum font-display text-xs font-medium tracking-[0.14em] text-ink-3">
                   {String(i + 1).padStart(2, '0')}

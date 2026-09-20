@@ -1,4 +1,4 @@
-import { BUSINESS, addressLine } from '@/content/business';
+import { BUSINESS, STORES, addressLine } from '@/content/business';
 import { CATEGORIES } from '@/lib/catalog/categories';
 import { hasDiscount, type Product } from '@/lib/catalog/types';
 import { SITE_URL, href, type Locale } from '@/lib/i18n/config';
@@ -30,65 +30,78 @@ function Json({ data }: { data: Record<string, unknown> }) {
 }
 
 export function LocalBusinessSchema({ locale }: { locale: Locale }) {
-  const hours = BUSINESS.hours.verified ? BUSINESS.hours.value : null;
+  const DAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
-  const data: Record<string, unknown> = {
-    '@context': 'https://schema.org',
-    // HomeGoodsStore is the closest Schema.org type to an appliance retailer
-    // and inherits from both Store and LocalBusiness.
-    '@type': ['HomeGoodsStore', 'Store'],
-    '@id': `${SITE_URL}/#store`,
+  const sameAs = [BUSINESS.social.facebook, BUSINESS.social.instagram]
+    .filter((x) => x.verified)
+    .map((x) => x.value);
+
+  // One parent Organization, one HomeGoodsStore per physical location, each
+  // with its own @id, telephone and address. Two stores as two nodes is what
+  // lets Google attach the right phone number to the right map pin — a single
+  // node with two phones is ambiguous and usually gets one of them dropped.
+  const org: Record<string, unknown> = {
+    '@type': 'Organization',
+    '@id': `${SITE_URL}/#org`,
     name: BUSINESS.legalName,
     alternateName: BUSINESS.shortName,
     url: SITE_URL + href(locale, 'home'),
-    telephone: BUSINESS.phone.raw,
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: BUSINESS.address.street,
-      addressLocality: BUSINESS.address.city,
-      addressRegion: BUSINESS.address.region,
-      postalCode: BUSINESS.address.postalCode,
-      addressCountry: BUSINESS.address.country,
-    },
-    areaServed: [
-      { '@type': 'City', name: 'Laval' },
-      { '@type': 'City', name: 'Montréal' },
-    ],
-    availableLanguage: [
-      { '@type': 'Language', name: 'French' },
-      { '@type': 'Language', name: 'English' },
-      { '@type': 'Language', name: 'Arabic' },
-    ],
-    hasOfferCatalog: {
-      '@type': 'OfferCatalog',
-      name: 'Électroménagers',
-      itemListElement: Object.values(CATEGORIES).map((c, i) => ({
-        '@type': 'OfferCatalog',
-        position: i + 1,
-        name: c.label[locale],
-        url: SITE_URL + href(locale, c.route),
-      })),
-    },
+    logo: `${SITE_URL}/brand/logo.png`,
+    ...(BUSINESS.email.verified ? { email: BUSINESS.email.value } : {}),
+    ...(sameAs.length ? { sameAs } : {}),
   };
 
-  if (hours?.length) {
-    const DAYS = [
-      'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday',
-    ];
-    data.openingHoursSpecification = hours.map((h) => ({
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: `https://schema.org/${DAYS[h.day]}`,
-      opens: h.opens,
-      closes: h.closes,
-    }));
-  }
+  const stores = STORES.map((st) => {
+    const node: Record<string, unknown> = {
+      // HomeGoodsStore is the closest Schema.org type to an appliance retailer
+      // and inherits from both Store and LocalBusiness.
+      '@type': ['HomeGoodsStore', 'Store'],
+      '@id': `${SITE_URL}/#store-${st.id}`,
+      name: `${BUSINESS.legalName} — ${st.city}`,
+      parentOrganization: { '@id': `${SITE_URL}/#org` },
+      url: SITE_URL + href(locale, 'stores'),
+      telephone: st.phone.raw,
+      image: `${SITE_URL}/brand/logo.png`,
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: st.address.street,
+        addressLocality: st.address.city,
+        addressRegion: st.address.region,
+        postalCode: st.address.postalCode,
+        addressCountry: st.address.country,
+      },
+      areaServed: [
+        { '@type': 'City', name: 'Montréal' },
+        { '@type': 'City', name: 'Laval' },
+      ],
+      availableLanguage: [
+        { '@type': 'Language', name: 'French' },
+        { '@type': 'Language', name: 'English' },
+        { '@type': 'Language', name: 'Arabic' },
+      ],
+      hasOfferCatalog: {
+        '@type': 'OfferCatalog',
+        name: 'Électroménagers',
+        itemListElement: Object.values(CATEGORIES).map((c, i) => ({
+          '@type': 'OfferCatalog',
+          position: i + 1,
+          name: c.label[locale],
+          url: SITE_URL + href(locale, c.route),
+        })),
+      },
+    };
+    if (st.hours.verified && st.hours.value?.length) {
+      node.openingHoursSpecification = st.hours.value.map((h) => ({
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: `https://schema.org/${DAYS[h.day]}`,
+        opens: h.opens,
+        closes: h.closes,
+      }));
+    }
+    return node;
+  });
 
-  const sameAs = [BUSINESS.social.facebook, BUSINESS.social.instagram]
-    .filter((s) => s.verified)
-    .map((s) => s.value);
-  if (sameAs.length) data.sameAs = sameAs;
-
-  return <Json data={data} />;
+  return <Json data={{ '@context': 'https://schema.org', '@graph': [org, ...stores] }} />;
 }
 
 /**

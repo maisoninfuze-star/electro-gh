@@ -33,6 +33,12 @@ const PAGES = [
   { name: 'product', path: '/laveuses/laveuse-frontale-27-blanche' },
   { name: 'product-nophoto', path: '/laveuses/laveuse-compacte-24-blanche' },
   { name: 'home-en', path: '/en' },
+  { name: 'repair', path: '/reparation' },
+  { name: 'parts', path: '/pieces' },
+  { name: 'delivery', path: '/livraison' },
+  { name: 'stores', path: '/nos-magasins' },
+  { name: 'contact', path: '/nous-joindre' },
+  { name: 'contact-en', path: '/en/contact' },
   { name: 'notfound', path: '/cette-page-nexiste-pas' },
 ];
 

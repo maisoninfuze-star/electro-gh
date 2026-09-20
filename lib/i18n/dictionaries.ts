@@ -36,18 +36,32 @@ const fr = {
     demoNotice: 'Données de démonstration',
     demoNoticeLong:
       'Catalogue de démonstration. Ces produits ne représentent pas l’inventaire réel d’Électroménagers GH.',
+    email: 'Courriel',
+    montreal: 'Montréal',
+    laval: 'Laval',
+  },
+
+  storeChooser: {
+    title: 'Quel magasin?',
+    callTitle: 'Appeler quel magasin?',
+    directionsTitle: 'Itinéraire vers quel magasin?',
+    both: 'Deux magasins : Montréal et Laval.',
   },
 
   nav: {
-    shop: 'Magasiner',
+    shop: 'Électroménagers',
     refrigerators: 'Réfrigérateurs',
     laundry: 'Buanderie',
     cooking: 'Cuisson',
     dishwashers: 'Lave-vaisselle',
     deals: 'Aubaines',
-    services: 'Services',
-    about: 'À propos',
+    repair: 'Réparation',
+    parts: 'Pièces',
+    delivery: 'Livraison',
+    stores: 'Nos magasins',
     contact: 'Nous joindre',
+    servicesGroup: 'Services',
+    allCategories: 'Toutes les catégories',
     cta: 'Voir les électros',
     laundryGroup: {
       washers: 'Laveuses',
@@ -63,10 +77,10 @@ const fr = {
   hero: {
     headlineTop: 'Des électroménagers de qualité.',
     headlineBottom: 'À des prix qui font du sens.',
-    body: 'Découvrez une sélection d’électroménagers pour tous les budgets, avec service local, livraison et accompagnement personnalisé à Laval.',
+    body: 'Découvrez une sélection d’électroménagers pour tous les budgets, avec service local, livraison et accompagnement personnalisé, à Montréal et à Laval.',
     ctaPrimary: 'Voir nos électroménagers',
     ctaSecondary: 'Voir les offres',
-    trust: ['Laval', 'Service local', 'Livraison disponible'],
+    trust: ['Montréal & Laval', 'Achat & revente', 'Livraison disponible'],
   },
 
   categories: {
@@ -104,8 +118,16 @@ const fr = {
         body: 'On organise la livraison de votre achat. Parlez-nous de votre adresse et de votre échéancier.',
       },
       local: {
-        title: 'Service local',
-        body: 'Une équipe à Laval, joignable au téléphone, qui répond en français, en anglais et en arabe.',
+        title: 'Deux magasins',
+        body: 'À Montréal et à Laval, joignables au téléphone, en français, en anglais et en arabe.',
+      },
+      buyback: {
+        title: 'Achat & revente',
+        body: 'On achète et on revend des électroménagers. Vous avez un appareil à vendre? Parlez-nous-en.',
+      },
+      repair: {
+        title: 'Service de réparation',
+        body: 'Un appareil qui fait des siennes? Décrivez-nous le problème et le modèle, on vous dit quoi faire.',
       },
       guidance: {
         title: 'Accompagnement personnalisé',
@@ -175,18 +197,19 @@ const fr = {
   },
 
   showroom: {
-    eyebrow: 'Salle de montre',
+    eyebrow: 'Nos magasins',
     title: 'Venez les voir en personne.',
-    body: 'Rien ne remplace le fait de voir l’électro devant soi, d’ouvrir la porte et de poser vos questions à quelqu’un.',
+    body: 'Deux magasins, à Montréal et à Laval. Rien ne remplace le fait de voir l’électro devant soi, d’ouvrir la porte et de poser vos questions à quelqu’un.',
+    allStores: 'Voir nos deux magasins',
     hoursUnknown: 'Appelez-nous pour confirmer les heures d’ouverture.',
     hoursTitle: 'Heures d’ouverture',
     mapLabel: 'Carte de la salle de montre Électroménagers GH',
   },
 
   footer: {
-    tagline: 'Électroménagers pour la maison, à Laval.',
+    tagline: 'Électroménagers pour la maison. Achat & revente, à Montréal et à Laval.',
     shop: 'Magasiner',
-    company: 'L’entreprise',
+    company: 'Services',
     contact: 'Nous joindre',
     langs: 'Service en français, en anglais et en arabe.',
     rights: 'Tous droits réservés.',
@@ -275,6 +298,74 @@ const fr = {
       'Bonjour Electro GH, je suis intéressé(e) par {product}. Est-il encore disponible?',
   },
 
+  pages: {
+    repair: {
+      eyebrow: 'Service de réparation',
+      title: 'On répare aussi.',
+      lead: 'Un électroménager qui ne fonctionne plus comme avant? Électroménagers GH offre un service de réparation. Un appel suffit pour savoir si on peut vous aider.',
+      steps: [
+        { n: '01', title: 'Appelez-nous', body: 'Au magasin le plus proche de chez vous, Montréal ou Laval.' },
+        { n: '02', title: 'Décrivez le problème', body: 'Le type d’appareil, la marque, le modèle si vous l’avez, et ce qui ne va pas.' },
+        { n: '03', title: 'On vous dit quoi faire', body: 'Notre équipe vous indique la prochaine étape.' },
+      ],
+      cta: 'Appeler pour une réparation',
+      tipTitle: 'Avant d’appeler',
+      tip: 'Le numéro de modèle se trouve généralement sur une étiquette à l’intérieur de la porte, sur le cadre ou à l’arrière de l’appareil. L’avoir en main accélère tout.',
+      detailsPending: 'Les détails du service — appareils couverts, délais et tarifs — vous seront confirmés par téléphone.',
+    },
+    parts: {
+      eyebrow: 'Pièces',
+      title: 'La bonne pièce, pour le bon modèle.',
+      lead: 'Nous offrons des pièces d’électroménagers. Ayez le numéro de modèle de votre appareil en main et appelez-nous : on vérifie ce qu’on peut vous trouver.',
+      steps: [
+        { n: '01', title: 'Trouvez le numéro de modèle', body: 'Sur l’étiquette à l’intérieur de la porte, sur le cadre ou à l’arrière de l’appareil.' },
+        { n: '02', title: 'Appelez-nous', body: 'Décrivez la pièce dont vous avez besoin, ou le problème qu’elle doit régler.' },
+        { n: '03', title: 'On vérifie', body: 'Disponibilité et prochaine étape, confirmés par téléphone.' },
+      ],
+      cta: 'Appeler pour une pièce',
+      tipTitle: 'Pourquoi le numéro de modèle',
+      tip: 'Deux appareils qui se ressemblent peuvent utiliser des pièces différentes. Le numéro de modèle évite les erreurs.',
+      detailsPending: 'Disponibilité et prix confirmés par téléphone.',
+    },
+    delivery: {
+      eyebrow: 'Livraison',
+      title: 'On vous le livre.',
+      lead: 'La livraison est disponible pour vos achats. Les modalités dépendent de votre adresse et de l’appareil — contactez-nous avec votre code postal pour tout organiser.',
+      steps: [
+        { n: '01', title: 'Mesurez', body: 'L’ouverture prévue pour l’appareil, mais aussi les portes, escaliers et corridors sur le trajet.' },
+        { n: '02', title: 'Dégagez le passage', body: 'Le chemin jusqu’à l’emplacement final doit être libre le jour de la livraison.' },
+        { n: '03', title: 'On planifie', body: 'Parlez-nous de votre adresse et de vos disponibilités. On organise la suite.' },
+      ],
+      cta: 'Appeler pour la livraison',
+      tipTitle: 'Un doute sur les dimensions?',
+      tip: 'On peut valider les mesures avec vous avant l’achat. Mieux vaut une question de plus qu’un appareil qui ne passe pas la porte.',
+      detailsPending: 'Les frais et les délais de livraison vous sont confirmés au moment de l’achat.',
+    },
+    stores: {
+      eyebrow: 'Nos magasins',
+      title: 'Deux magasins, une même équipe.',
+      lead: 'Venez voir les appareils en personne, à Montréal ou à Laval. Service en français, en anglais et en arabe.',
+      hoursTitle: 'Heures d’ouverture',
+      hoursUnknown: 'Appelez pour confirmer les heures d’ouverture.',
+      call: 'Appeler ce magasin',
+      directions: 'Itinéraire',
+      mapLabel: 'Carte du magasin Électroménagers GH de {city}',
+    },
+    contact: {
+      eyebrow: 'Nous joindre',
+      title: 'Parlez-nous.',
+      lead: 'Par téléphone, par courriel ou en magasin — en français, en anglais ou en arabe. Pour un produit précis, le plus rapide est d’appeler le magasin.',
+      phones: 'Par téléphone',
+      emailTitle: 'Par courriel',
+      emailBody: 'Pour une question sans urgence, ou pour nous envoyer une photo de l’étiquette de votre appareil.',
+      visit: 'En magasin',
+      visitBody: 'Deux adresses, à Montréal et à Laval.',
+      visitCta: 'Voir nos magasins',
+      buybackTitle: 'Vous avez un électro à vendre?',
+      buybackBody: 'On achète aussi des électroménagers. Appelez-nous pour en discuter.',
+    },
+  },
+
   condition: {
     new: 'Neuf',
     refurbished: 'Reconditionné',
@@ -314,18 +405,32 @@ const en: Dict = {
     demoNotice: 'Demo data',
     demoNoticeLong:
       'Demonstration catalogue. These products do not represent the real inventory of Électroménagers GH.',
+    email: 'Email',
+    montreal: 'Montréal',
+    laval: 'Laval',
+  },
+
+  storeChooser: {
+    title: 'Which store?',
+    callTitle: 'Call which store?',
+    directionsTitle: 'Directions to which store?',
+    both: 'Two stores: Montréal and Laval.',
   },
 
   nav: {
-    shop: 'Shop',
+    shop: 'Appliances',
     refrigerators: 'Refrigerators',
     laundry: 'Laundry',
     cooking: 'Cooking',
     dishwashers: 'Dishwashers',
     deals: 'Deals',
-    services: 'Services',
-    about: 'About',
+    repair: 'Repair',
+    parts: 'Parts',
+    delivery: 'Delivery',
+    stores: 'Our stores',
     contact: 'Contact',
+    servicesGroup: 'Services',
+    allCategories: 'All categories',
     cta: 'Browse appliances',
     laundryGroup: { washers: 'Washers', dryers: 'Dryers', sets: 'Washer & dryer sets' },
     cookingGroup: { ranges: 'Ranges & stoves', freezers: 'Freezers' },
@@ -334,10 +439,10 @@ const en: Dict = {
   hero: {
     headlineTop: 'Quality appliances.',
     headlineBottom: 'At prices that make sense.',
-    body: 'A selection of home appliances for every budget, with local service, delivery and one-on-one guidance in Laval.',
+    body: 'A selection of home appliances for every budget, with local service, delivery and one-on-one guidance, in Montréal and Laval.',
     ctaPrimary: 'Browse appliances',
     ctaSecondary: 'See the deals',
-    trust: ['Laval', 'Local service', 'Delivery available'],
+    trust: ['Montréal & Laval', 'We buy & sell', 'Delivery available'],
   },
 
   categories: {
@@ -375,8 +480,16 @@ const en: Dict = {
         body: 'We arrange delivery for your purchase. Tell us your address and your timing.',
       },
       local: {
-        title: 'Local service',
-        body: 'A Laval team you can reach by phone, in French, English or Arabic.',
+        title: 'Two stores',
+        body: 'In Montréal and Laval, a phone call away, in French, English or Arabic.',
+      },
+      buyback: {
+        title: 'We buy & sell',
+        body: 'We buy appliances as well as sell them. Have one to sell? Talk to us.',
+      },
+      repair: {
+        title: 'Repair service',
+        body: 'Appliance acting up? Describe the problem and the model, and we’ll tell you what to do next.',
       },
       guidance: {
         title: 'One-on-one guidance',
@@ -438,18 +551,19 @@ const en: Dict = {
   },
 
   showroom: {
-    eyebrow: 'Showroom',
+    eyebrow: 'Our stores',
     title: 'Come see them in person.',
-    body: 'Nothing beats standing in front of the appliance, opening the door, and asking someone your questions.',
+    body: 'Two stores, in Montréal and Laval. Nothing beats standing in front of the appliance, opening the door, and asking someone your questions.',
+    allStores: 'See both stores',
     hoursUnknown: 'Please call to confirm our opening hours.',
     hoursTitle: 'Opening hours',
     mapLabel: 'Map of the Électroménagers GH showroom',
   },
 
   footer: {
-    tagline: 'Home appliances, in Laval.',
+    tagline: 'Home appliances. We buy & sell, in Montréal and Laval.',
     shop: 'Shop',
-    company: 'Company',
+    company: 'Services',
     contact: 'Contact',
     langs: 'Service in French, English and Arabic.',
     rights: 'All rights reserved.',
@@ -532,6 +646,74 @@ const en: Dict = {
     imagePending: 'Photo coming soon',
     inquirePrefill:
       "Hello Electro GH, I'm interested in {product}. Is it still available?",
+  },
+
+  pages: {
+    repair: {
+      eyebrow: 'Repair service',
+      title: 'We fix them too.',
+      lead: 'An appliance that isn’t working the way it used to? Électroménagers GH offers a repair service. One call is enough to find out whether we can help.',
+      steps: [
+        { n: '01', title: 'Call us', body: 'At whichever store is closer to you, Montréal or Laval.' },
+        { n: '02', title: 'Describe the problem', body: 'The type of appliance, the brand, the model if you have it, and what’s going wrong.' },
+        { n: '03', title: 'We tell you what’s next', body: 'Our team lays out the next step.' },
+      ],
+      cta: 'Call about a repair',
+      tipTitle: 'Before you call',
+      tip: 'The model number is usually on a label inside the door, on the frame, or on the back of the appliance. Having it ready speeds everything up.',
+      detailsPending: 'Service details — appliances covered, timing and rates — are confirmed by phone.',
+    },
+    parts: {
+      eyebrow: 'Parts',
+      title: 'The right part, for the right model.',
+      lead: 'We offer appliance parts. Have your appliance’s model number ready and call us: we’ll check what we can find for you.',
+      steps: [
+        { n: '01', title: 'Find the model number', body: 'On the label inside the door, on the frame, or on the back of the appliance.' },
+        { n: '02', title: 'Call us', body: 'Describe the part you need, or the problem it should fix.' },
+        { n: '03', title: 'We check', body: 'Availability and next step, confirmed by phone.' },
+      ],
+      cta: 'Call about a part',
+      tipTitle: 'Why the model number matters',
+      tip: 'Two appliances that look alike can use different parts. The model number is what prevents mistakes.',
+      detailsPending: 'Availability and pricing confirmed by phone.',
+    },
+    delivery: {
+      eyebrow: 'Delivery',
+      title: 'We bring it to you.',
+      lead: 'Delivery is available for your purchases. The details depend on your address and the appliance — contact us with your postal code and we’ll arrange everything.',
+      steps: [
+        { n: '01', title: 'Measure', body: 'The opening for the appliance, but also the doors, stairs and hallways along the route.' },
+        { n: '02', title: 'Clear the path', body: 'The way to the final spot needs to be free on delivery day.' },
+        { n: '03', title: 'We schedule', body: 'Tell us your address and your availability. We organise the rest.' },
+      ],
+      cta: 'Call about delivery',
+      tipTitle: 'Unsure about the dimensions?',
+      tip: 'We can check the measurements with you before you buy. One extra question beats an appliance that won’t fit through the door.',
+      detailsPending: 'Delivery fees and timing are confirmed at the time of purchase.',
+    },
+    stores: {
+      eyebrow: 'Our stores',
+      title: 'Two stores, one team.',
+      lead: 'Come see the appliances in person, in Montréal or Laval. Service in French, English and Arabic.',
+      hoursTitle: 'Opening hours',
+      hoursUnknown: 'Please call to confirm opening hours.',
+      call: 'Call this store',
+      directions: 'Directions',
+      mapLabel: 'Map of the Électroménagers GH {city} store',
+    },
+    contact: {
+      eyebrow: 'Contact',
+      title: 'Talk to us.',
+      lead: 'By phone, by email or in store — in French, English or Arabic. For a specific product, the fastest route is to call the store.',
+      phones: 'By phone',
+      emailTitle: 'By email',
+      emailBody: 'For a non-urgent question, or to send us a photo of your appliance’s label.',
+      visit: 'In store',
+      visitBody: 'Two addresses, in Montréal and Laval.',
+      visitCta: 'See our stores',
+      buybackTitle: 'Have an appliance to sell?',
+      buybackBody: 'We buy appliances too. Call us to talk it over.',
+    },
   },
 
   condition: {

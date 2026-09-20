@@ -7,7 +7,7 @@ import { getAllProducts } from '@/lib/catalog/provider';
 
 /**
  * Sitemap with hreflang alternates on every entry, so Google serves the French
- * URL to a Laval searcher and the English one to an English query.
+ * URL to a Montréal or Laval searcher and the English one to an English query.
  *
  * Only routes that actually exist are listed — the future pages declared in
  * FUTURE_ROUTES stay out until they have content, because a sitemap entry for a
@@ -26,7 +26,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // isLive keeps unbuilt pages out of the sitemap — a sitemap entry that 404s
   // is a crawl-budget leak and a Search Console error.
   const staticRoutes: RouteId[] = (
-    ['home', 'shop', 'deals', 'services', 'about', 'contact',
+    ['home', 'shop', 'deals', 'repair', 'parts', 'delivery', 'stores', 'contact',
      ...CATEGORY_LIST.map((c) => c.route)] as RouteId[]
   ).filter(isLive);
 

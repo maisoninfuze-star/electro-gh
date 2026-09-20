@@ -74,10 +74,10 @@ export async function generateMetadata({
   return {
     title: `${product.brand} ${product.name[locale]}${product.model ? ` — ${product.model}` : ''}`,
     description: fr
-      ? `${product.brand} ${product.name[locale]} (${conditionWord}) à ${price} chez Electro GH, Laval. ${
+      ? `${product.brand} ${product.name[locale]} (${conditionWord}) à ${price} chez Électroménagers GH, Montréal et Laval. ${
           hasDiscount(product) ? 'En aubaine. ' : ''
         }Appelez-nous pour confirmer la disponibilité.`
-      : `${product.brand} ${product.name[locale]} (${conditionWord}) at ${price} from Electro GH, Laval. ${
+      : `${product.brand} ${product.name[locale]} (${conditionWord}) at ${price} from Électroménagers GH, Montréal and Laval. ${
           hasDiscount(product) ? 'On sale. ' : ''
         }Call us to confirm availability.`,
     alternates: {

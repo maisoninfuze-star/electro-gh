@@ -1,55 +1,56 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { href } from '@/lib/i18n/config';
 import type { Locale } from '@/lib/i18n/config';
 import { cx } from '@/lib/format';
 
 /**
- * WORDMARK
- * ========
- * Typographic lockup drawn from the storefront sign
- * (brand/storefront-sign.jpg): the name set in the shop's red, with "GH"
- * carrying the weight. The sign sets the whole name in red on white; this keeps
- * that, adds a hairline to separate the two halves, and holds the red a few
- * steps deeper so it passes contrast at nav size.
+ * THE OFFICIAL LOGO
+ * =================
+ * public/brand/logo.png is the red "ÉLECTROMÉNAGERS GH · ACHAT & REVENTE" tag
+ * cut from the owner's business card (brand/business-card.png), exterior made
+ * transparent, nothing redrawn. 512×279, which serves the 44px-tall nav mark
+ * at 3× — crisp on every phone.
  *
- * WHEN A REAL LOGO FILE ARRIVES: replace the inner markup with an <Image> (or
- * inline SVG) and keep the same outer <Link> and sizing props. Nothing else in
- * the codebase references the wordmark, so this is a one-file swap.
+ * The owner has said the official logo file is coming as an attachment. When
+ * it arrives, drop it in at the same path (or update `src` below); the aspect
+ * ratio is read from the file, so a differently proportioned original just
+ * works. Nothing else in the codebase references the logo.
+ *
+ * The mark is white on its own red block, so it needs no light/dark variant —
+ * `onDark` is kept for API compatibility with the footer and does nothing.
  */
+const LOGO = { src: '/brand/logo.png', width: 512, height: 279 } as const;
+
 export function Logo({
   locale,
   className,
-  onDark = false,
+  size = 'nav',
 }: {
   locale: Locale;
   className?: string;
+  /** `nav` is 44px tall; `footer` is larger for the dark footer band. */
+  size?: 'nav' | 'footer';
+  /** @deprecated no-op: the mark carries its own background. */
   onDark?: boolean;
 }) {
+  // Nav: 44px on phones (64px bar), 52px from lg (80px bar). Footer: 64px.
+  const h = size === 'footer' ? 64 : 44;
+  const w = Math.round((h * LOGO.width) / LOGO.height);
   return (
     <Link
       href={href(locale, 'home')}
-      aria-label="Electro GH"
-      className={cx(
-        // py-3.5 gives the 17px wordmark a 44px tap target without changing
-        // how it looks. -my-3.5 keeps it from growing the header's height.
-        'group -my-3.5 inline-flex items-baseline gap-[0.45rem] py-3.5 font-display leading-none',
-        onDark ? 'text-canvas' : 'text-accent',
-        className,
-      )}
+      aria-label="Électroménagers GH — Accueil"
+      className={cx('inline-flex shrink-0 items-center', className)}
     >
-      <span className="text-[1.0625rem] font-light uppercase tracking-[0.22em] sm:text-[1.125rem]">
-        Electro
-      </span>
-      <span
-        aria-hidden
-        className={cx(
-          'h-[0.9em] w-px self-center transition-colors duration-500',
-          onDark ? 'bg-canvas/35' : 'bg-accent/35 group-hover:bg-accent',
-        )}
+      <Image
+        src={LOGO.src}
+        alt="Électroménagers GH — Achat & revente"
+        width={w}
+        height={h}
+        priority={size === 'nav'}
+        className={cx('w-auto', size === 'nav' ? 'h-11 lg:h-[3.25rem]' : 'h-16')}
       />
-      <span className="text-[1.0625rem] font-semibold uppercase tracking-[0.14em] sm:text-[1.125rem]">
-        GH
-      </span>
     </Link>
   );
 }

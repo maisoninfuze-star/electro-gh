@@ -1,6 +1,7 @@
-# Electro GH — Électroménagers GH, Laval
+# Électroménagers GH — Montréal & Laval
 
-Premium bilingual storefront for a local appliance retailer.
+Premium bilingual storefront for a two-store appliance retailer (sales, buyback,
+repair, parts, delivery).
 Next.js 16 · React 19 · TypeScript · Tailwind v4 · Framer Motion.
 
 ---
@@ -44,6 +45,21 @@ npm run dev          # http://localhost:3000
 > the running page goes blank with no error. There is deliberately no `distDir`
 > override to work around this: Vercel's output detection is happiest with the
 > default, and an override there is what broke the first deploy.
+
+---
+
+## Two stores
+
+Everything about a location lives on its `Store` entry in `content/business.ts`
+— address, phone, hours, place id. No component holds a default store. Any
+call or directions action is either tied to a specific store (a store card, a
+product with `storeId`) or opens `<StoreChooser>`, a bottom sheet offering
+both. The analytics events carry `store: 'montreal' | 'laval'`, which with two
+locations is the most useful split in the funnel.
+
+Structured data emits one `Organization` plus one `HomeGoodsStore` per
+location, each with its own `@id`, phone and address, so Google attaches the
+right number to the right pin.
 
 ---
 
@@ -127,13 +143,13 @@ page while `IS_DEMO_DATA` is true.
 
 - [ ] Replace `loadAll()` with the real inventory source
 - [ ] `IS_DEMO_DATA = false`
-- [ ] Fill in `BUSINESS.hours` (do **not** copy from a directory unverified)
+- [ ] Fill in `hours` for each store (do **not** copy from a directory unverified)
 - [ ] Fill in `BUSINESS.whatsapp` — this lights up ~8 surfaces at once
-- [ ] Fill in warranty / delivery terms if the owner wants them stated
-- [ ] Add the real logo — see `components/layout/Logo.tsx`
-- [ ] Set the brand accent in `app/globals.css` (`--color-accent`)
-- [ ] Add `BUSINESS.googlePlaceId` to switch on real Google reviews
-- [ ] Build Services / About / Contact, then add them to `LIVE_ROUTES`
+- [ ] Fill in warranty / delivery / repair / parts terms if the owner wants them stated
+- [ ] Confirm the Laval postal code is H7V 1X2 (the card prints H4V — see `content/business.ts`)
+- [ ] Swap `public/brand/logo.png` for the official logo file when the owner sends it
+- [ ] Add `googlePlaceId` per store to switch on real Google reviews
+- [ ] Photograph the Laval store; then both store cards can lead with a photo
 - [ ] Set `NEXT_PUBLIC_SITE_URL`
 - [ ] Set `NEXT_PUBLIC_ALLOW_INDEXING=true` — **only after sign-off**
 
@@ -236,10 +252,20 @@ all seven page types.
 
 ## Brand
 
-The accent is taken from the storefront sign (`brand/storefront-sign.jpg`).
-The vinyl samples around `#E3384B`, which fails AA on white at 4.26:1, so
-`--color-accent` is the same hue held a few steps deeper at `#C62438`
-(5.66:1 on white, 5.34:1 on canvas).
+`public/brand/logo.png` is the official mark, cut from the owner's business card
+(`brand/business-card.png`) with the exterior made transparent and nothing
+redrawn. The owner has said the logo file is coming as an attachment; drop it
+in at the same path.
+
+Two reds, one hue:
+
+| Token | Value | Use |
+| --- | --- | --- |
+| `--color-brand` | `#EF1C27` | The logo red, exactly. Only where nothing has to pass a text-contrast check. |
+| `--color-accent` | `#D3121C` | Same hue, deeper. Button fills with white text, link text on canvas. 5.42:1 on white, 5.11:1 on canvas. |
+
+`#EF1C27` on white is 4.32:1 and fails AA, which is why the UI red is held a
+few steps deeper than the mark.
 
 Savings deliberately stay **warm bronze**, not red. If price cuts were also red
 they would compete with every CTA and the site would read as a permanent sale
@@ -278,19 +304,19 @@ Environment variables to set on the project:
 
 ## Known limitations
 
-- **The store's address and phone are unconfirmed.** The brief supplied a Laval
-  listing (3570 Chemin du Souvenir · 450-681-2848); the storefront photo shows
-  civic number 6439 and 514.332.2848. 514 is on-island Montréal. Until the
-  owner confirms which is current — or whether there are two locations — the
-  site uses the brief's values unchanged. See the note on `address` in
-  `content/business.ts`.
-- **"Vente & achat" is not on the site.** The sign says they buy appliances as
-  well as sell them; that deserves its own copy and probably its own page
-  rather than being folded into a trust bullet. Recorded as
-  `services.buyback` in `content/business.ts`.
-- **Services / About / Contact are not built.** They are deliberately absent
-  from `LIVE_ROUTES`, so nav, footer and sitemap don't link to them. Build the
-  pages, then add the route ids.
+- **The service pages state that a service exists and nothing more.**
+  Réparation, Pièces and Livraison each say the service is offered (business
+  card), give three steps, and send the reader to the phone. Which brands are
+  serviced, what a delivery costs, which parts are stocked — none of that has
+  been supplied, and each page says so in its `detailsPending` line. Real terms
+  go in `content/business.ts` under `services.<kind>.details`.
+- **No contact form.** A form needs somewhere to send submissions; without an
+  email relay or the GoHighLevel webhook, it is a box that swallows leads. The
+  contact page offers both phones, the email and the addresses instead.
+  `lead_submit` is already typed in `lib/analytics/events.ts` for when the form
+  exists.
+- **Opening hours are unknown for both stores.** Each store card says "call to
+  confirm" until `hours` is filled in per store.
 - **The 404 body is client-rendered for paths that match a route shape** (e.g.
   `/laveuses/un-modele-vendu`). The status code is a correct 404 and the page
   renders normally in a browser, but the body is not in the server HTML. Truly

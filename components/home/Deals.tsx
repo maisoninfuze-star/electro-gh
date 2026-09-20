@@ -1,12 +1,11 @@
 import { SectionHeader } from '@/components/ui/SectionHeader';
 import { Reveal } from '@/components/ui/Reveal';
+import { StoreActionButton } from '@/components/layout/StoreChooser';
 import { ProductCard } from '@/components/catalog/ProductCard';
 import { ButtonLink } from '@/components/ui/Button';
 import type { Product } from '@/lib/catalog/types';
 import { href, type Locale } from '@/lib/i18n/config';
 import type { Dictionary } from '@/lib/i18n/dictionaries';
-import { BUSINESS } from '@/content/business';
-import { telHref } from '@/lib/contact';
 
 /**
  * CURRENT DEALS
@@ -51,10 +50,14 @@ export function Deals({
         <Reveal delay={120}>
           <div className="mt-14 flex flex-col items-start gap-4 border-t border-line pt-8 sm:flex-row sm:items-center sm:justify-between">
             <p className="text-sm text-ink-2">{dict.product.reassuranceBody}</p>
-            <ButtonLink href={telHref()} external variant="secondary" className="shrink-0">
+            <StoreActionButton
+              mode="call"
+              source="deals"
+              dict={dict}
+              className="inline-flex min-h-12 shrink-0 items-center justify-center gap-2 rounded-[3px] border border-line-strong px-6 text-[0.875rem] font-medium text-ink transition-colors hover:border-ink hover:bg-surface"
+            >
               {dict.deals.secondaryCta}
-              <span className="tnum ml-1 text-ink-3">{BUSINESS.phone.display}</span>
-            </ButtonLink>
+            </StoreActionButton>
           </div>
         </Reveal>
       </div>

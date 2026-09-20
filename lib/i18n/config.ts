@@ -2,7 +2,7 @@
  * BILINGUAL ARCHITECTURE (FR default, EN, Arabic-ready)
  * ====================================================
  * French is the default locale and is served WITHOUT a path prefix, so the
- * primary Laval audience gets clean canonical URLs:
+ * primary Montréal/Laval audience gets clean canonical URLs:
  *
  *   FR  /                      /refrigerateurs        /aubaines
  *   EN  /en                    /en/refrigerators      /en/deals
@@ -47,9 +47,13 @@ export const ROUTE_SLUGS = {
   freezers: { fr: 'congelateurs', en: 'freezers' },
   deals: { fr: 'aubaines', en: 'deals' },
 
-  // Informational
-  services: { fr: 'livraison-et-services', en: 'delivery-and-services' },
-  about: { fr: 'a-propos', en: 'about' },
+  // Services & company — the sections the owner asked for, by name, in the
+  // acceptance email: Vente d'électroménagers (= shop above), Service de
+  // réparation, Pièces, Livraison, Nos magasins, Nous joindre.
+  repair: { fr: 'reparation', en: 'repair' },
+  parts: { fr: 'pieces', en: 'parts' },
+  delivery: { fr: 'livraison', en: 'delivery' },
+  stores: { fr: 'nos-magasins', en: 'our-stores' },
   contact: { fr: 'nous-joindre', en: 'contact' },
 } as const satisfies Record<string, Record<Locale, string>>;
 
@@ -80,8 +84,11 @@ export const LIVE_ROUTES: ReadonlySet<RouteId> = new Set<RouteId>([
   'dishwashers',
   'freezers',
   'deals',
-  // Not yet built — their slots in the nav are reserved, not rendered:
-  // 'services', 'about', 'contact',
+  'repair',
+  'parts',
+  'delivery',
+  'stores',
+  'contact',
 ]);
 
 export const isLive = (route: RouteId): boolean => LIVE_ROUTES.has(route);
@@ -94,7 +101,6 @@ export const isLive = (route: RouteId): boolean => LIVE_ROUTES.has(route);
 export const FUTURE_ROUTES = {
   brands: { fr: 'marques', en: 'brands' },
   financing: { fr: 'financement', en: 'financing' },
-  repair: { fr: 'reparation', en: 'repair' },
   compare: { fr: 'comparer', en: 'compare' },
 } as const;
 

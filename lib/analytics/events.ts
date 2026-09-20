@@ -1,5 +1,7 @@
 'use client';
 
+import type { StoreId } from '@/content/business';
+
 /**
  * CONVERSION TRACKING
  * ===================
@@ -22,9 +24,13 @@
  */
 
 export type AnalyticsEvent =
-  | { event: 'call_click'; source: string }
+  // `store` is which of the two locations was dialled or routed to. With two
+  // stores this is the single most useful split in the whole funnel: it tells
+  // ad spend where the calls actually land.
+  | { event: 'call_click'; source: string; store: StoreId }
   | { event: 'whatsapp_click'; source: string; product_id?: string }
-  | { event: 'directions_click'; source: string }
+  | { event: 'directions_click'; source: string; store: StoreId }
+  | { event: 'email_click'; source: string }
   | { event: 'product_view'; product_id: string; brand: string; category: string; price: number }
   | { event: 'product_inquiry'; product_id: string; method: 'call' | 'whatsapp' | 'form' }
   | { event: 'category_view'; category: string; result_count: number }

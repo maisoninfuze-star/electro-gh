@@ -9,13 +9,14 @@ import { Logo } from './Logo';
 import { LocaleSwitch } from './LocaleSwitch';
 import { SearchOverlay } from './SearchOverlay';
 import { ButtonLink } from '@/components/ui/Button';
-import { href, isLive, type Locale } from '@/lib/i18n/config';
+import { href, isLive, type Locale, type RouteId } from '@/lib/i18n/config';
 import type { Dictionary } from '@/lib/i18n/dictionaries';
 import type { SearchItem } from '@/lib/catalog/search';
-import { BUSINESS } from '@/content/business';
+import { STORES } from '@/content/business';
 import { telHref } from '@/lib/contact';
 import { track } from '@/lib/analytics/events';
 import { cx } from '@/lib/format';
+import { StoreActionButton } from './StoreChooser';
 
 /**
  * Sticky navigation.
@@ -27,10 +28,15 @@ import { cx } from '@/lib/format';
  *   next one the owner uploads. Legibility beats the trick.
  * · The bar gains a hairline rule and a deeper blur once the page scrolls,
  *   which is enough motion to feel alive without a layout shift.
- * · Two grouped dropdowns (Buanderie, Cuisson) keep seven categories in a bar
- *   that still reads as six items. Dropdowns open on hover AND on focus, and
- *   the trigger is itself a link, so keyboard and touch users are never
- *   trapped behind a hover-only affordance.
+ · The bar follows the sections the owner asked for by name: Électroménagers
+ *   (one dropdown holding all seven categories), Aubaines, Réparation, Pièces,
+ *   Livraison, Nos magasins, Nous joindre. From `xl` the three service pages
+ *   sit flat in the bar; between `lg` and `xl` they fold into one "Services"
+ *   dropdown so nothing wraps. Dropdowns open on hover AND on focus, and the
+ *   trigger is itself a link, so keyboard and touch users are never trapped
+ *   behind a hover-only affordance.
+ * · With two stores the phone action opens the store chooser instead of
+ *   dialling one number by default.
  */
 export function Header({
   locale,
@@ -68,15 +74,33 @@ export function Header({
     };
   }, [menuOpen]);
 
-  const laundry = [
+  const categories = [
+    { label: dict.nav.allCategories, href: href(locale, 'shop') },
+    { label: dict.nav.refrigerators, href: href(locale, 'refrigerators') },
     { label: dict.nav.laundryGroup.washers, href: href(locale, 'washers') },
     { label: dict.nav.laundryGroup.dryers, href: href(locale, 'dryers') },
     { label: dict.nav.laundryGroup.sets, href: href(locale, 'laundrySets') },
-  ];
-  const cooking = [
     { label: dict.nav.cookingGroup.ranges, href: href(locale, 'ranges') },
+    { label: dict.nav.dishwashers, href: href(locale, 'dishwashers') },
     { label: dict.nav.cookingGroup.freezers, href: href(locale, 'freezers') },
   ];
+  const services = (
+    [
+      { id: 'repair', label: dict.nav.repair },
+      { id: 'parts', label: dict.nav.parts },
+      { id: 'delivery', label: dict.nav.delivery },
+    ] as { id: RouteId; label: string }[]
+  )
+    .filter((x) => isLive(x.id))
+    .map((x) => ({ label: x.label, href: href(locale, x.id) }));
+  const company = (
+    [
+      { id: 'stores', label: dict.nav.stores },
+      { id: 'contact', label: dict.nav.contact },
+    ] as { id: RouteId; label: string }[]
+  )
+    .filter((x) => isLive(x.id))
+    .map((x) => ({ label: x.label, href: href(locale, x.id) }));
 
   return (
     <>
@@ -104,36 +128,36 @@ export function Header({
               shortcuts are visible. */}
           <nav
             aria-label={dict.common.menu}
-            className="ml-5 hidden items-center gap-0.5 lg:flex min-[1600px]:ml-9"
+            className="ml-4 hidden items-center gap-0.5 lg:flex min-[1600px]:ml-8"
           >
-            <NavLink href={href(locale, 'shop')}>{dict.nav.shop}</NavLink>
-            <NavLink href={href(locale, 'refrigerators')}>{dict.nav.refrigerators}</NavLink>
-            <NavDropdown label={dict.nav.laundry} href={href(locale, 'washers')} items={laundry} />
-            <NavDropdown label={dict.nav.cooking} href={href(locale, 'ranges')} items={cooking} />
-            <span className="hidden min-[1360px]:block">
-              <NavLink href={href(locale, 'dishwashers')}>{dict.nav.dishwashers}</NavLink>
-            </span>
+            <NavDropdown label={dict.nav.shop} href={href(locale, 'shop')} items={categories} />
             <NavLink href={href(locale, 'deals')} accent>
               {dict.nav.deals}
             </NavLink>
 
-            {(isLive('services') || isLive('about')) && (
-              <span
-                aria-hidden
-                className="mx-3 hidden h-4 w-px bg-line-strong min-[1360px]:block"
-              />
+            {services.length > 0 && (
+              <>
+                {/* lg → xl: folded into one dropdown so the bar never wraps. */}
+                <span className="block xl:hidden">
+                  <NavDropdown label={dict.nav.servicesGroup} href={services[0].href} items={services} />
+                </span>
+                {/* xl and up: flat, exactly as the owner listed them. */}
+                {services.map((item) => (
+                  <span key={item.href} className="hidden xl:block">
+                    <NavLink href={item.href}>{item.label}</NavLink>
+                  </span>
+                ))}
+              </>
             )}
 
-            {isLive('services') && (
-              <span className="hidden min-[1360px]:block">
-                <NavLink href={href(locale, 'services')}>{dict.nav.services}</NavLink>
-              </span>
+            {company.length > 0 && (
+              <span aria-hidden className="mx-2 h-4 w-px bg-line-strong" />
             )}
-            {isLive('about') && (
-              <span className="hidden min-[1360px]:block">
-                <NavLink href={href(locale, 'about')}>{dict.nav.about}</NavLink>
-              </span>
-            )}
+            {company.map((item) => (
+              <NavLink key={item.href} href={item.href}>
+                {item.label}
+              </NavLink>
+            ))}
           </nav>
 
           {/* ── Right cluster ────────────────────────────────────────────── */}
@@ -151,14 +175,17 @@ export function Header({
               <LocaleSwitch locale={locale} label={dict.meta.switchToShort} />
             </span>
 
-            <a
-              href={telHref()}
-              onClick={() => track({ event: 'call_click', source: 'header' })}
-              className="hidden min-h-11 items-center gap-2 whitespace-nowrap px-2 text-sm font-medium text-ink transition-colors duration-300 hover:text-accent min-[1600px]:inline-flex"
-            >
-              <Phone className="size-4 shrink-0" strokeWidth={1.6} />
-              <span className="tnum">{BUSINESS.phone.display}</span>
-            </a>
+            <span className="hidden min-[1600px]:block">
+              <StoreActionButton
+                mode="call"
+                source="header"
+                dict={dict}
+                className="inline-flex min-h-11 items-center gap-2 whitespace-nowrap px-2 text-sm font-medium text-ink transition-colors duration-300 hover:text-accent"
+              >
+                <Phone className="size-4 shrink-0" strokeWidth={1.6} />
+                <span>{dict.common.call}</span>
+              </StoreActionButton>
+            </span>
 
             {/* Wrapper, not `hidden` on the button itself: ButtonLink's base
                 class sets `inline-flex`, and Tailwind resolves display
@@ -184,9 +211,11 @@ export function Header({
       </header>
 
       {/* ── Mobile drawer ──────────────────────────────────────────────────
-          Deliberately a short, flat list. Seven categories plus three pages,
-          all one tap away, no accordions to expand. On a phone the fastest
-          menu is the one with no interaction before the destination.        */}
+          Deliberately flat. Seven categories, then the five service and
+          company pages, all one tap away, no accordions to expand. On a phone
+          the fastest menu is the one with no interaction before the
+          destination. Both store phones sit in the footer as direct tel:
+          links — here there is room to show the city beside each number.  */}
       <AnimatePresence>
         {menuOpen && (
           <motion.div
@@ -254,15 +283,7 @@ export function Header({
                 </ul>
 
                 <ul className="mt-7 flex flex-col gap-1">
-                  {(
-                    [
-                      { id: 'services' as const, label: dict.nav.services },
-                      { id: 'about' as const, label: dict.nav.about },
-                      { id: 'contact' as const, label: dict.nav.contact },
-                    ]
-                      .filter((x) => isLive(x.id))
-                      .map((x) => ({ label: x.label, href: href(locale, x.id) }))
-                  ).map((item) => (
+                  {[...services, ...company].map((item) => (
                     <li key={item.href}>
                       <Link
                         href={item.href}
@@ -281,14 +302,21 @@ export function Header({
                   label={dict.meta.switchTo}
                   className="-ml-2 mb-3"
                 />
-                <a
-                  href={telHref()}
-                  onClick={() => track({ event: 'call_click', source: 'mobile_menu' })}
-                  className="tnum flex items-center gap-2 font-display text-lg font-medium text-ink"
-                >
-                  <Phone className="size-4" strokeWidth={1.75} />
-                  {BUSINESS.phone.display}
-                </a>
+                <ul className="flex flex-col gap-2">
+                  {STORES.map((s) => (
+                    <li key={s.id}>
+                      <a
+                        href={telHref(s)}
+                        onClick={() => track({ event: 'call_click', source: 'mobile_menu', store: s.id })}
+                        className="flex min-h-11 items-center gap-3 font-display text-[1.0625rem] font-medium text-ink"
+                      >
+                        <Phone className="size-4 shrink-0" strokeWidth={1.75} />
+                        <span className="w-20 text-ink-2">{s.city}</span>
+                        <span className="tnum">{s.phone.display}</span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </motion.div>
           </motion.div>

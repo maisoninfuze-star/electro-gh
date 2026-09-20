@@ -7,9 +7,12 @@
  * `null`. Never fill a null with a guess. Any component reading a null must
  * hide the surrounding UI rather than invent a value.
  *
- * `verified: false` blocks are rendered nowhere until the owner confirms them.
- * This is what keeps warranty terms, delivery pricing, financing and opening
- * hours honest.
+ * SOURCES
+ *   brand/business-card.png   the owner's official card (2026-09-19). Two
+ *                             stores, both phones, the email, and the
+ *                             services list all come from here.
+ *   brand/storefront-sign.jpg the Montréal storefront.
+ *   The owner's acceptance email, which also set the site's sections.
  */
 
 export type Verified<T> = { value: T; verified: true } | { value: null; verified: false };
@@ -17,123 +20,149 @@ export type Verified<T> = { value: T; verified: true } | { value: null; verified
 export const v = <T,>(value: T): Verified<T> => ({ value, verified: true });
 export const unverified = <T,>(): Verified<T> => ({ value: null, verified: false });
 
-export const BUSINESS = {
-  /** Legal / display names. Supplied by owner. */
-  legalName: 'Électroménagers GH',
-  shortName: 'Electro GH',
+export type OpeningHour = { day: 0 | 1 | 2 | 3 | 4 | 5 | 6; opens: string; closes: string };
 
-  /**
-   * ⚠️  UNRESOLVED CONFLICT — DO NOT SILENTLY PICK ONE.
-   *
-   * The brief supplied a Laval directory listing:
-   *     3570 Chemin du Souvenir, Laval QC H7V 1X2 · 450-681-2848
-   *
-   * The storefront photograph (brand/storefront-sign.jpg) shows:
-   *     civic number 6439 · 514.332.2848   ("ELECTROMENAGER GH · VENTE & ACHAT")
-   *
-   * 514 is on-island Montréal, 450 is Laval — so these are either two
-   * locations or the listing is stale. Which one is right decides the whole
-   * local-SEO strategy (Laval vs Montréal), the map pin, and the number every
-   * call button dials, so it is left exactly as the brief supplied it until
-   * the owner confirms. If there are two stores, this becomes an array and the
-   * showroom section renders both.
-   */
+export type StoreId = 'montreal' | 'laval';
+
+export type Store = {
+  id: StoreId;
+  /** City word used in nav chips, chooser sheets and schema names. */
+  city: string;
   address: {
-    street: '3570 Chemin du Souvenir',
-    city: 'Laval',
-    region: 'QC',
-    regionName: 'Québec',
-    postalCode: 'H7V 1X2',
-    country: 'CA',
-    countryName: 'Canada',
-  },
-
+    street: string;
+    city: string;
+    region: string;
+    regionName: string;
+    postalCode: string;
+    country: string;
+    countryName: string;
+  };
+  /** `raw` is E.164 for tel: links, `display` is what humans read. */
+  phone: { display: string; raw: string };
   /**
-   * `raw` is E.164 for tel: links, `display` is what humans read.
-   * See the conflict note on `address` — the storefront sign shows
-   * 514.332.2848. Unchanged until confirmed.
-   */
-  phone: {
-    display: '450-681-2848',
-    raw: '+14506812848',
-  },
-
-  /**
-   * WhatsApp. UNVERIFIED — the brief asks for deep WhatsApp integration but no
-   * WhatsApp number was supplied. Until `verified` is true the floating button
-   * and all WhatsApp CTAs are hidden site-wide (see lib/contact.ts).
-   * To switch WhatsApp on: replace with v('14506812848') — digits only, no +.
-   */
-  whatsapp: unverified<string>(),
-
-  /** UNVERIFIED — no email address was supplied. */
-  email: unverified<string>(),
-
-  /**
-   * Opening hours. UNVERIFIED and intentionally empty.
-   * Third-party directories carry stale appliance-store hours; publishing them
-   * unchecked creates wasted trips and one-star reviews. The showroom section
-   * renders a "call to confirm" line instead until these are filled in.
-   *
-   * Shape when filled, e.g.:
+   * Opening hours — UNVERIFIED for both stores. Third-party directories carry
+   * stale appliance-store hours; publishing them unchecked creates wasted
+   * trips. Each store renders "call to confirm" until this is filled:
    *   hours: v([{ day: 1, opens: '09:00', closes: '18:00' }, ...])
    */
-  hours: unverified<OpeningHour[]>(),
+  hours: Verified<OpeningHour[]>;
+  /** Google Business Profile place id — map pin and, later, live reviews. */
+  googlePlaceId: Verified<string>;
+};
+
+export const BUSINESS = {
+  /** From the logo: "ÉLECTROMÉNAGERS GH". */
+  legalName: 'Électroménagers GH',
+  shortName: 'Electro GH',
+  /** Printed on the logo itself — the most verified claim the business makes. */
+  tagline: { fr: 'Achat & revente', en: 'We buy & sell' },
+
+  /**
+   * TWO STORES, in the order the business card lists them.
+   * Nothing designates a "main" store: every phone and directions action
+   * either targets a specific store or offers both.
+   */
+  stores: [
+    {
+      id: 'montreal',
+      city: 'Montréal',
+      address: {
+        street: '6439, boul. Gouin Ouest',
+        city: 'Montréal',
+        region: 'QC',
+        regionName: 'Québec',
+        postalCode: 'H4K 1A9',
+        country: 'CA',
+        countryName: 'Canada',
+      },
+      phone: { display: '514 332-2848', raw: '+15143322848' },
+      hours: unverified<OpeningHour[]>(),
+      googlePlaceId: unverified<string>(),
+    },
+    {
+      id: 'laval',
+      city: 'Laval',
+      address: {
+        street: '3570, chemin du Souvenir',
+        city: 'Laval',
+        region: 'QC',
+        regionName: 'Québec',
+        /**
+         * ⚠️ The business card prints "H4V 1X2" here. H4V is a Montréal
+         * (Côte-Saint-Luc) prefix; chemin du Souvenir is in Chomedey, Laval,
+         * whose prefix is H7V — and the original brief said H7V 1X2. Almost
+         * certainly a typo on the card. Using H7V; confirm with the owner.
+         */
+        postalCode: 'H7V 1X2',
+        country: 'CA',
+        countryName: 'Canada',
+      },
+      phone: { display: '450 681-2848', raw: '+14506812848' },
+      hours: unverified<OpeningHour[]>(),
+      googlePlaceId: unverified<string>(),
+    },
+  ] as const satisfies readonly Store[],
+
+  /** From the business card. */
+  email: v('electrogh@hotmail.com'),
+
+  /**
+   * WhatsApp — still UNVERIFIED. Two landlines are known, but no WhatsApp
+   * number was supplied. Every WhatsApp CTA stays hidden until this is set
+   * (digits only, no +): whatsapp: v('15143322848')
+   */
+  whatsapp: unverified<string>(),
 
   /** Languages spoken in store. Confirmed in the brief. */
   languages: ['fr', 'en', 'ar'] as const,
 
   /**
-   * Service claims. Only `true` claims are rendered. `details` stays null until
-   * the owner supplies exact terms — the UI shows the claim without the terms.
+   * Services. `offered` mirrors the business card and the owner's email.
+   * `details` stays null until exact terms are supplied — the UI states the
+   * service exists and routes to a call, never a price or a turnaround.
    */
   services: {
+    /** Card: "Service de livraison". */
     delivery: { offered: true, details: unverified<string>(), pricing: unverified<string>() },
-    warranty: { offered: true, durationMonths: unverified<number>(), details: unverified<string>() },
+    /** Card: "Service de réparation". Owner's email: its own section. */
     repair: { offered: true, details: unverified<string>() },
-    /**
-     * The storefront sign reads "VENTE & ACHAT" — they buy used appliances as
-     * well as sell them. That is the business's own public signage, but it is
-     * not yet rendered anywhere: it deserves its own copy and probably its own
-     * page, rather than being quietly folded into a trust bullet.
-     */
+    /** Owner's email: "Pièces". Nothing else is known — not even which parts. */
+    parts: { offered: true, details: unverified<string>() },
+    /** Card: "Garantie disponible". */
+    warranty: { offered: true, durationMonths: unverified<number>(), details: unverified<string>() },
+    /** Logo: "Achat & revente". They buy used appliances as well as sell. */
     buyback: { offered: true, details: unverified<string>() },
     financing: { offered: false, details: unverified<string>() },
     installation: { offered: false, details: unverified<string>() },
   },
 
-  /** Social. Fill in when the real handles are supplied. */
+  /** Card: "Appareils de toutes marques". The LIST of brands is still not supplied. */
+  brands: unverified<string[]>(),
+
   social: {
     facebook: unverified<string>(),
     instagram: unverified<string>(),
   },
 
-  /**
-   * Google Business Profile place id — powers the map embed and, later, live
-   * reviews. Until supplied the map falls back to an address-based embed and
-   * the reviews section does not render in production.
-   */
-  googlePlaceId: unverified<string>(),
-
   /** Company history / founding year — NOT supplied. Never invent one. */
   foundedYear: unverified<number>(),
-
-  /** Brands carried. "Multiple brands" is confirmed; the LIST is not. */
-  brands: unverified<string[]>(),
 } as const;
 
-export type OpeningHour = { day: 0 | 1 | 2 | 3 | 4 | 5 | 6; opens: string; closes: string };
+export const STORES: readonly Store[] = BUSINESS.stores;
 
-/** Single formatted address line, used in schema.org output and the footer. */
-export const addressLine = () =>
-  `${BUSINESS.address.street}, ${BUSINESS.address.city}, ${BUSINESS.address.region} ${BUSINESS.address.postalCode}`;
+export const storeById = (id: StoreId): Store =>
+  STORES.find((s) => s.id === id) ?? STORES[0];
 
-/** Google Maps directions deep-link, built from the verified address. */
-export const directionsUrl = () =>
+/** "6439, boul. Gouin Ouest, Montréal, QC H4K 1A9" */
+export const addressLine = (store: Store) =>
+  `${store.address.street}, ${store.address.city}, ${store.address.region} ${store.address.postalCode}`;
+
+/** Google Maps directions deep-link for one store. */
+export const directionsUrl = (store: Store) =>
   `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(
-    `${BUSINESS.legalName}, ${addressLine()}`,
+    `${BUSINESS.legalName}, ${addressLine(store)}`,
   )}`;
 
-/** Map embed. Uses the place id when supplied, otherwise a plain address query. */
-export const mapEmbedUrl = () =>
-  `https://maps.google.com/maps?q=${encodeURIComponent(addressLine())}&t=&z=15&ie=UTF8&iwloc=B&output=embed`;
+/** Map embed for one store. Uses the place id when supplied. */
+export const mapEmbedUrl = (store: Store) =>
+  `https://maps.google.com/maps?q=${encodeURIComponent(addressLine(store))}&t=&z=15&ie=UTF8&iwloc=B&output=embed`;

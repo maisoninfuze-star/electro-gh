@@ -1,9 +1,9 @@
 import Link from 'next/link';
+import { StoreActionButton } from '@/components/layout/StoreChooser';
 import { ButtonLink } from '@/components/ui/Button';
 import { CATEGORY_LIST } from '@/lib/catalog/categories';
 import { href, DEFAULT_LOCALE, type Locale } from '@/lib/i18n/config';
 import { getDictionary } from '@/lib/i18n/dictionaries';
-import { telHref } from '@/lib/contact';
 
 /**
  * Shared 404 body, used by both not-found boundaries.
@@ -35,9 +35,9 @@ export function NotFoundContent({ locale = DEFAULT_LOCALE }: { locale?: Locale }
         <ButtonLink href={href(locale, 'shop')} size="lg">
           {dict.nav.cta}
         </ButtonLink>
-        <ButtonLink href={telHref()} external variant="secondary" size="lg">
+        <StoreActionButton mode="call" source="not_found" dict={dict} className="inline-flex min-h-14 items-center justify-center gap-2 rounded-[3px] border border-line-strong px-8 text-[0.9375rem] font-medium text-ink transition-colors hover:border-ink hover:bg-surface">
           {dict.common.callUs}
-        </ButtonLink>
+        </StoreActionButton>
       </div>
 
       <ul className="mt-12 flex flex-wrap gap-2 border-t border-line pt-8">

@@ -1,6 +1,7 @@
 'use client';
 
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { StoreActionButton } from '@/components/layout/StoreChooser';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { AnimatePresence, motion } from 'framer-motion';
 import { SlidersHorizontal, X } from 'lucide-react';
@@ -29,7 +30,6 @@ import { CATEGORIES, CATEGORY_LIST } from '@/lib/catalog/categories';
 import type { Product, CategoryId } from '@/lib/catalog/types';
 import type { Locale } from '@/lib/i18n/config';
 import type { Dictionary } from '@/lib/i18n/dictionaries';
-import { telHref } from '@/lib/contact';
 import { track } from '@/lib/analytics/events';
 import { cx } from '@/lib/format';
 
@@ -277,9 +277,9 @@ export function CatalogBrowser({
                 >
                   {dict.catalog.empty.cta}
                 </Button>
-                <ButtonLink href={telHref()} external variant="secondary">
+                <StoreActionButton mode="call" source="catalog_empty" dict={dict} className="inline-flex min-h-12 items-center justify-center gap-2 rounded-[3px] border border-line-strong px-6 text-[0.875rem] font-medium text-ink transition-colors hover:border-ink hover:bg-surface">
                   {dict.common.callUs}
-                </ButtonLink>
+                </StoreActionButton>
               </div>
             </div>
           ) : (

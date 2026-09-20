@@ -26,11 +26,11 @@ export async function generateMetadata({
 
   return {
     title: fr
-      ? 'Électroménagers à Laval — réfrigérateurs, laveuses, sécheuses, cuisinières'
-      : 'Appliance store in Laval — refrigerators, washers, dryers, ranges',
+      ? 'Électroménagers à Montréal et Laval — réfrigérateurs, laveuses, sécheuses, cuisinières'
+      : 'Appliance store in Montréal and Laval — refrigerators, washers, dryers, ranges',
     description: fr
-      ? 'Electro GH, magasin d’électroménagers à Laval. Réfrigérateurs, laveuses, sécheuses, ensembles, cuisinières, lave-vaisselle et congélateurs neufs et reconditionnés. Service local en français, anglais et arabe, livraison disponible.'
-      : 'Electro GH, appliance store in Laval. New and refurbished refrigerators, washers, dryers, laundry sets, ranges, dishwashers and freezers. Local service in French, English and Arabic, delivery available.',
+      ? 'Électroménagers GH, deux magasins d’électroménagers à Montréal et à Laval. Réfrigérateurs, laveuses, sécheuses, ensembles, cuisinières, lave-vaisselle et congélateurs neufs et reconditionnés. Achat & revente, réparation, pièces. Service en français, anglais et arabe, livraison disponible.'
+      : 'Électroménagers GH, two appliance stores in Montréal and Laval. New and refurbished refrigerators, washers, dryers, laundry sets, ranges, dishwashers and freezers. We buy & sell, repair, parts. Service in French, English and Arabic, delivery available.',
     alternates: {
       canonical: SITE_URL + href(locale as Locale, 'home'),
       languages: alternates('home'),

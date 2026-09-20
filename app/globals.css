@@ -15,12 +15,17 @@
                       fluorescent-lit warehouse
    ink                near-black charcoal, never pure #000 (too harsh on warm
                       white, and it kills the paper feeling)
-   accent             ELECTRO GH RED, taken from the storefront sign
-                      (brand/storefront-sign.jpg). The vinyl samples at about
-                      #E3384B, which fails AA on white at 4.26:1 — so the token
-                      is the same hue held a few steps deeper. It still reads as
-                      their red on the street, and it can carry white button
-                      text and sit on canvas as link colour without failing.
+   brand              THE LOGO RED, exactly: #EF1C27, sampled from the
+                      official business card (brand/business-card.png). Used
+                      only where nothing has to pass a text-contrast check —
+                      the logo block itself, decorative rules, the demo ribbon.
+   accent             the same hue held a few steps deeper for anything that
+                      carries text: button fills with white labels, link text
+                      on canvas. #EF1C27 on white is 4.32:1 and fails AA;
+                      #D3121C is 5.42:1 on white and 5.11:1 on canvas. Side by
+                      side, a fill slightly deeper than the mark reads as
+                      intentional; a fill that fails contrast just reads as
+                      hard to use.
    signal             warm bronze, used ONLY for savings and clearance.
                       Deliberately NOT the brand red: if price cuts were red
                       too, every discount would compete with every CTA and the
@@ -31,12 +36,12 @@
 
 @theme {
   /* --- Brand ------------------------------------------------------------ */
-  /* Sampled #E3384B from the sign; deepened to #C62438 for AA.
-     Contrast: 5.66:1 on white, 5.34:1 on canvas. */
-  --color-accent: #c62438;
-  --color-accent-hover: #a81c2f;
+  --color-brand: #ef1c27;
+
+  --color-accent: #d3121c;
+  --color-accent-hover: #b50f18;
   --color-accent-ink: #ffffff;
-  --color-accent-soft: #fdf0f1;
+  --color-accent-soft: #fdeeef;
 
   --color-signal: #8c5a2e;
   --color-signal-soft: #f6efe6;

@@ -8,7 +8,8 @@ import { ConditionBadge, AvailabilityTag } from '@/components/ui/Badges';
 import type { Product } from '@/lib/catalog/types';
 import { CATEGORIES } from '@/lib/catalog/categories';
 import { telHref, whatsappHref, whatsappEnabled } from '@/lib/contact';
-import { BUSINESS } from '@/content/business';
+import { storeById } from '@/content/business';
+import { StoreActionButton } from '@/components/layout/StoreChooser';
 import { SITE_CONFIG } from '@/content/site-config';
 import { track } from '@/lib/analytics/events';
 import { t } from '@/lib/i18n/interpolate';
@@ -29,6 +30,14 @@ import type { Dictionary } from '@/lib/i18n/dictionaries';
  * WhatsApp integration and it only works if the prefill is specific.
  *
  * The button renders only when a WhatsApp number is verified.
+ *
+ * TWO STORES
+ * ----------
+ * A used appliance is one physical object in one place. When the feed says
+ * which store holds it (`product.storeId`), the call button dials that store
+ * and shows its city and number. When it doesn't, the button opens the
+ * two-store chooser rather than dialling a default — the wrong store cannot
+ * confirm availability of a unit it does not have.
  */
 export function ProductBuyBox({
   product,
@@ -87,20 +96,47 @@ export function ProductBuyBox({
       </div>
 
       <div className="mt-7 flex flex-col gap-3">
-        <ButtonLink
-          href={telHref()}
-          external
-          size="lg"
-          onClick={() =>
-            track({ event: 'product_inquiry', product_id: product.id, method: 'call' })
+        {(() => {
+          const label =
+            SITE_CONFIG.primaryProductAction === 'reserve'
+              ? dict.product.ctaReserve
+              : dict.product.ctaCall;
+          const store = product.storeId ? storeById(product.storeId) : null;
+          const onInquiry = () =>
+            track({ event: 'product_inquiry', product_id: product.id, method: 'call' });
+
+          if (store) {
+            return (
+              <ButtonLink
+                href={telHref(store)}
+                external
+                size="lg"
+                onClick={() => {
+                  onInquiry();
+                  track({ event: 'call_click', source: 'product', store: store.id });
+                }}
+              >
+                <Phone className="size-4" strokeWidth={1.75} />
+                {label}
+                <span className="tnum ml-1 opacity-80">
+                  {store.city} · {store.phone.display}
+                </span>
+              </ButtonLink>
+            );
           }
-        >
-          <Phone className="size-4" strokeWidth={1.75} />
-          {SITE_CONFIG.primaryProductAction === 'reserve'
-            ? dict.product.ctaReserve
-            : dict.product.ctaCall}
-          <span className="tnum ml-1 opacity-80">{BUSINESS.phone.display}</span>
-        </ButtonLink>
+          return (
+            <StoreActionButton
+              mode="call"
+              source="product"
+              dict={dict}
+              onClickCapture={onInquiry}
+              className="inline-flex min-h-14 items-center justify-center gap-2 rounded-[3px] bg-accent px-8 text-[0.9375rem] font-medium text-accent-ink transition-colors hover:bg-accent-hover active:scale-[0.985]"
+            >
+              <Phone className="size-4" strokeWidth={1.75} />
+              {label}
+            </StoreActionButton>
+          );
+        })()}
 
         {whatsappEnabled() && wa && (
           <ButtonLink

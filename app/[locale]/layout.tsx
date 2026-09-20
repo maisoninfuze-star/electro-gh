@@ -63,13 +63,13 @@ export async function generateMetadata({
     metadataBase: new URL(SITE_URL),
     title: {
       default: fr
-        ? 'Electro GH | Électroménagers à Laval — réfrigérateurs, laveuses, sécheuses'
-        : 'Electro GH | Appliance store in Laval — refrigerators, washers, dryers',
+        ? 'Électroménagers GH | Électroménagers à Montréal et Laval — achat & revente'
+        : 'Électroménagers GH | Appliance store in Montréal and Laval — we buy & sell',
       template: '%s | Electro GH',
     },
     description: fr
-      ? 'Électroménagers neufs et reconditionnés à Laval. Réfrigérateurs, laveuses, sécheuses, cuisinières, lave-vaisselle et congélateurs. Service local, livraison disponible.'
-      : 'New and refurbished home appliances in Laval. Refrigerators, washers, dryers, ranges, dishwashers and freezers. Local service, delivery available.',
+      ? 'Électroménagers neufs et reconditionnés à Montréal et à Laval. Réfrigérateurs, laveuses, sécheuses, cuisinières, lave-vaisselle et congélateurs. Achat & revente, réparation, livraison disponible.'
+      : 'New and refurbished home appliances in Montréal and Laval. Refrigerators, washers, dryers, ranges, dishwashers and freezers. We buy & sell, repair, delivery available.',
     applicationName: BUSINESS.shortName,
     /* The demo build must never be indexed. Flip NEXT_PUBLIC_ALLOW_INDEXING
        to "true" only once the client has signed off on the live content. */
