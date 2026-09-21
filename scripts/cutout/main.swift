@@ -38,7 +38,7 @@ if !keepAll && instances.count > 1 {
   instances = IndexSet(integer: best)
 }
 
-let masked = try obs.generateMaskedImage(ofInstances: instances, from: handler, croppedToInstancesExtent: true)
+let masked = try obs.generateMaskedImage(ofInstances: instances, from: handler, croppedToInstancesExtent: false)
 let outCI = CIImage(cvPixelBuffer: masked)
 let ctx = CIContext()
 guard let cg = ctx.createCGImage(outCI, from: outCI.extent) else { fputs("render failed\n", stderr); exit(4) }

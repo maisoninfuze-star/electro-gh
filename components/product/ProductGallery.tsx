@@ -20,10 +20,12 @@ export function ProductGallery({
   images,
   label,
   pendingLabel,
+  referenceLabel,
 }: {
   images: ProductImage[];
   label: string;
   pendingLabel: string;
+  referenceLabel?: string;
 }) {
   const [active, setActive] = useState(0);
 
@@ -59,6 +61,7 @@ export function ProductGallery({
                 sizes="100vw"
                 className="product-shadow object-contain p-8 pb-12"
               />
+              {image.kind === 'reference' && referenceLabel && <ReferenceNote text={referenceLabel} />}
             </div>
           ))}
         </div>
@@ -89,6 +92,7 @@ export function ProductGallery({
             sizes="(max-width: 1279px) 50vw, 44vw"
             className="product-shadow object-contain p-12 pb-16"
           />
+          {current.kind === 'reference' && referenceLabel && <ReferenceNote text={referenceLabel} />}
         </div>
 
         {images.length > 1 && (
@@ -113,5 +117,18 @@ export function ProductGallery({
         )}
       </div>
     </div>
+  );
+}
+
+/**
+ * The honesty label for a manufacturer image. Sits inside the frame, always
+ * visible, never a tooltip: the whole point is that a customer cannot look at
+ * a stock photo and take it for the unit they will receive.
+ */
+function ReferenceNote({ text }: { text: string }) {
+  return (
+    <p className="pointer-events-none absolute inset-x-0 bottom-0 bg-ink/80 px-4 py-2.5 text-center text-[0.75rem] leading-snug text-canvas backdrop-blur-sm">
+      {text}
+    </p>
   );
 }

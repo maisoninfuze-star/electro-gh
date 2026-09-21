@@ -96,7 +96,7 @@ export function parseProductForm(fd: FormData): ParsedForm {
         alt: (typeof i.alt === 'string' && i.alt) || nameFr,
         width: Number(i.width) || 1600,
         height: Number(i.height) || 2000,
-        kind: i.kind === 'studio' || i.kind === 'placeholder' ? i.kind : 'original',
+        kind: i.kind === 'studio' || i.kind === 'placeholder' || i.kind === 'reference' ? i.kind : 'original',
       }));
   } catch {
     errors.images = 'Liste de photos invalide.';

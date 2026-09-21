@@ -68,6 +68,11 @@ export function ProductCard({
         <div className="pointer-events-none absolute left-3 top-3 flex flex-wrap gap-1.5">
           <ConditionBadge condition={product.condition} dict={dict} />
         </div>
+        {image?.kind === 'reference' && (
+          <span className="pointer-events-none absolute bottom-3 left-3 rounded-[2px] bg-ink/75 px-1.5 py-0.5 text-[0.625rem] font-medium uppercase tracking-[0.1em] text-canvas">
+            {dict.product.referenceBadge}
+          </span>
+        )}
 
         {/* Desktop affordance only — never relied upon for meaning. */}
         <span

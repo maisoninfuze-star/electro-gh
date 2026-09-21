@@ -58,8 +58,13 @@ export interface ProductImage {
    *   'original'  straight from the store, background not cleaned
    *   'studio'    background removed / normalised, e-commerce ready
    *   'placeholder' generic category imagery — NOT this exact unit
+   *   'reference'   the manufacturer's photo of the same model. Shown with a
+   *                 visible "photo de référence" label and NEVER without the
+   *                 real unit's own photo alongside it — a pristine stock
+   *                 image standing alone for a used machine would be a
+   *                 misleading representation.
    */
-  kind: 'original' | 'studio' | 'placeholder';
+  kind: 'original' | 'studio' | 'placeholder' | 'reference';
 }
 
 /** Free-form spec rows. Localised so EN and FR both read naturally. */

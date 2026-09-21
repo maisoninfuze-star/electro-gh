@@ -9,10 +9,11 @@
  *   npm run build && ADMIN_PASSWORD=electrogh-dev npx next start -p 3320 &
  *   npm run test:admin
  *
- * Restores data/inventory.json from data/inventory.backup.json at the end.
+ * Snapshots data/inventory.json before starting and restores it at the end,
+ * so the suite leaves the seed exactly as it found it.
  */
 import puppeteer from 'puppeteer-core';
-import { copyFile, readFile } from 'node:fs/promises';
+import { copyFile, readFile, rm } from 'node:fs/promises';
 import path from 'node:path';
 
 const BASE = process.env.BASE ?? 'http://localhost:3320';
@@ -23,6 +24,9 @@ const check = (name, pass, detail = '') => {
   console.log(`${pass ? 'PASS' : 'FAIL'}  ${name}${detail ? '  — ' + detail : ''}`);
 };
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+const SNAPSHOT = 'data/.inventory.e2e-snapshot.json';
+await copyFile('data/inventory.json', SNAPSHOT);
 
 const browser = await puppeteer.launch({
   executablePath: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
@@ -154,7 +158,8 @@ try {
   check('logout: /admin redirects to login again', page.url().endsWith('/admin/login'));
 } finally {
   await browser.close();
-  await copyFile('data/inventory.backup.json', 'data/inventory.json');
+  await copyFile(SNAPSHOT, 'data/inventory.json');
+  await rm(SNAPSHOT, { force: true });
 }
 
 const failed = results.filter((r) => !r.pass).length;

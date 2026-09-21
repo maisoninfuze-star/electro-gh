@@ -29,13 +29,22 @@ const serial = <T,>(fn: () => Promise<T>): Promise<T> => {
 };
 
 async function readAll(): Promise<Product[]> {
+  let raw: string;
   try {
-    const raw = await fs.readFile(DATA, 'utf8');
-    const parsed = JSON.parse(raw) as { products: Product[] };
-    return parsed.products ?? [];
+    raw = await fs.readFile(DATA, 'utf8');
   } catch (e) {
     if ((e as NodeJS.ErrnoException).code === 'ENOENT') return [];
     throw e;
+  }
+  try {
+    const parsed = JSON.parse(raw) as { products: Product[] };
+    return Array.isArray(parsed.products) ? parsed.products : [];
+  } catch (e) {
+    // A hand-edited file with a stray character must not take the whole
+    // storefront down with a 500 on every page. Serve an empty catalogue
+    // (the pages have honest empty states) and shout in the log.
+    console.error('[store] data/inventory.json is not valid JSON — serving an empty catalogue.', e);
+    return [];
   }
 }
 

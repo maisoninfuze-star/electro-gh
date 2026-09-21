@@ -42,7 +42,8 @@
       "deal": false,
       "status": "published",
       "createdAt": "2026-09-20T13:53:00.000Z",
-      "updatedAt": "2026-09-20T13:53:00.000Z"
+      "updatedAt": "2026-09-20T13:53:00.000Z",
+      "notes": "Modèle probable d’après l’apparence — À CONFIRMER sur l’étiquette (intérieur de la porte ou dos) avant d’ajouter une photo de référence : Samsung WF42H5000AW (laveuse) / DV42H5000EW (sécheuse) — famille VRT, bouton chromé."
     },
     {
       "id": "seed-02",
@@ -86,7 +87,8 @@
       "deal": true,
       "status": "published",
       "createdAt": "2026-09-20T13:46:00.000Z",
-      "updatedAt": "2026-09-20T13:46:00.000Z"
+      "updatedAt": "2026-09-20T13:46:00.000Z",
+      "notes": "Modèle probable d’après l’apparence — À CONFIRMER sur l’étiquette (intérieur de la porte ou dos) avant d’ajouter une photo de référence : Samsung WF45T6000AW ou WF45M5100AW (laveuse VRTplus) / DV42H5000EW (sécheuse, bouton chromé)."
     },
     {
       "id": "seed-03",
@@ -130,7 +132,8 @@
       "deal": false,
       "status": "published",
       "createdAt": "2026-09-20T13:39:00.000Z",
-      "updatedAt": "2026-09-20T13:39:00.000Z"
+      "updatedAt": "2026-09-20T13:39:00.000Z",
+      "notes": "Modèle probable d’après l’apparence — À CONFIRMER sur l’étiquette (intérieur de la porte ou dos) avant d’ajouter une photo de référence : Samsung WF45R6100AW (laveuse SuperSpeed Steam, moteur Digital Inverter) / DVE45R6100W (sécheuse)."
     },
     {
       "id": "seed-04",
@@ -175,7 +178,8 @@
       "storeId": "laval",
       "status": "published",
       "createdAt": "2026-09-20T13:32:00.000Z",
-      "updatedAt": "2026-09-20T13:32:00.000Z"
+      "updatedAt": "2026-09-20T13:32:00.000Z",
+      "notes": "Modèle probable d’après l’apparence — À CONFIRMER sur l’étiquette (intérieur de la porte ou dos) avant d’ajouter une photo de référence : Samsung WF45K6500AV (laveuse AddWash) / DV45K6500EV (sécheuse MultiSteam), piédestaux WE402NV."
     },
     {
       "id": "seed-05",
@@ -212,7 +216,8 @@
       "deal": false,
       "status": "published",
       "createdAt": "2026-09-20T13:25:00.000Z",
-      "updatedAt": "2026-09-20T13:25:00.000Z"
+      "updatedAt": "2026-09-20T13:25:00.000Z",
+      "notes": "Modèle probable d’après l’apparence — À CONFIRMER sur l’étiquette (intérieur de la porte ou dos) avant d’ajouter une photo de référence : Maytag Bravos XL avec vapeur — MVWB765FW (laveuse) / MEDB765FW (sécheuse)."
     },
     {
       "id": "seed-06",
@@ -249,7 +254,8 @@
       "deal": false,
       "status": "published",
       "createdAt": "2026-09-20T13:18:00.000Z",
-      "updatedAt": "2026-09-20T13:18:00.000Z"
+      "updatedAt": "2026-09-20T13:18:00.000Z",
+      "notes": "Modèle probable d’après l’apparence — À CONFIRMER sur l’étiquette (intérieur de la porte ou dos) avant d’ajouter une photo de référence : Amana NTW4516FW (laveuse) / NED4655EW (sécheuse)."
     },
     {
       "id": "seed-07",
@@ -285,7 +291,7 @@
       "featured": false,
       "deal": false,
       "status": "published",
-      "notes": "Autocollants : « 650 $ set » (ensemble) et « SALE 300 $ » sur la sécheuse GE seule.",
+      "notes": "Autocollants : « 650 $ set » (ensemble) et « SALE 300 $ » sur la sécheuse GE seule.\nModèle probable d’après l’apparence — À CONFIRMER sur l’étiquette (intérieur de la porte ou dos) avant d’ajouter une photo de référence : LG WM2050CW ou WM2016CW (laveuse Direct Drive) / GE DCVH515EF ou GFDS150 (sécheuse SensorDry).",
       "createdAt": "2026-09-20T13:11:00.000Z",
       "updatedAt": "2026-09-20T13:11:00.000Z"
     },
@@ -324,7 +330,8 @@
       "deal": false,
       "status": "published",
       "createdAt": "2026-09-20T13:04:00.000Z",
-      "updatedAt": "2026-09-20T13:04:00.000Z"
+      "updatedAt": "2026-09-20T13:04:00.000Z",
+      "notes": "Modèle probable d’après l’apparence — À CONFIRMER sur l’étiquette (intérieur de la porte ou dos) avant d’ajouter une photo de référence : Samsung WA45H7000AW ou WA45M7050AW (chargement par le haut, couvercle vitré, VRT)."
     },
     {
       "id": "seed-09",
@@ -361,7 +368,8 @@
       "deal": true,
       "status": "published",
       "createdAt": "2026-09-20T12:57:00.000Z",
-      "updatedAt": "2026-09-20T12:57:00.000Z"
+      "updatedAt": "2026-09-20T12:57:00.000Z",
+      "notes": "Modèle probable d’après l’apparence — À CONFIRMER sur l’étiquette (intérieur de la porte ou dos) avant d’ajouter une photo de référence : Samsung WF45M5500AP ou WF42H5200AP (laveuse Steam VRT, fini platine, Digital Inverter)."
     },
     {
       "id": "seed-10",
@@ -398,7 +406,8 @@
       "deal": false,
       "status": "published",
       "createdAt": "2026-09-20T12:50:00.000Z",
-      "updatedAt": "2026-09-20T12:50:00.000Z"
+      "updatedAt": "2026-09-20T12:50:00.000Z",
+      "notes": "Modèle probable d’après l’apparence — À CONFIRMER sur l’étiquette (intérieur de la porte ou dos) avant d’ajouter une photo de référence : Frigidaire Gallery FGID2466QF ou FGID2468UF (lave-vaisselle inox, commandes sur le dessus)."
     },
     {
       "id": "seed-11",

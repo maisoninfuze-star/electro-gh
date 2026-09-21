@@ -24,8 +24,13 @@ async function readDoc(): Promise<Product[] | null> {
     const meta = await head(DOC);
     const res = await fetch(meta.url, { cache: 'no-store' });
     if (!res.ok) return null;
-    const parsed = (await res.json()) as { products: Product[] };
-    return parsed.products ?? [];
+    try {
+      const parsed = (await res.json()) as { products: Product[] };
+      return Array.isArray(parsed.products) ? parsed.products : [];
+    } catch (e) {
+      console.error('[store] inventory.json in Blob is not valid JSON — serving an empty catalogue.', e);
+      return [];
+    }
   } catch (e) {
     if ((e as { name?: string }).name === 'BlobNotFoundError') return null;
     throw e;
