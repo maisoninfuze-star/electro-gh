@@ -1,4 +1,4 @@
-import { put, del, head, list as listBlobs } from '@vercel/blob';
+import { put, del, head, list as listBlobs, BlobNotFoundError } from '@vercel/blob';
 import type { Product } from '@/lib/catalog/types';
 import type { InventoryStore } from './adapter';
 import { readSeed } from './local';
@@ -19,21 +19,37 @@ const IMG_PREFIX = 'inventory/images/';
  * committed seed (data/inventory.json) so a fresh deploy shows the real
  * units, and the first admin write persists that seed plus the change.
  */
+/**
+ * READS NEVER THROW.
+ *
+ * The first production build after Blob was attached failed on
+ * /sitemap.xml: the document did not exist yet, the SDK threw, and the
+ * `e.name === 'BlobNotFoundError'` check that was meant to catch it never
+ * matched — the SDK's error classes do not set `name`, so it stays "Error".
+ * Beyond that one case, a storage hiccup of any kind must not take the
+ * storefront down. So: not-found → seed (expected on first run); anything
+ * else → log loudly and serve the seed too.
+ */
 async function readDoc(): Promise<Product[] | null> {
+  let url: string;
   try {
-    const meta = await head(DOC);
-    const res = await fetch(meta.url, { cache: 'no-store' });
-    if (!res.ok) return null;
-    try {
-      const parsed = (await res.json()) as { products: Product[] };
-      return Array.isArray(parsed.products) ? parsed.products : [];
-    } catch (e) {
-      console.error('[store] inventory.json in Blob is not valid JSON — serving an empty catalogue.', e);
-      return [];
-    }
+    url = (await head(DOC)).url;
   } catch (e) {
-    if ((e as { name?: string }).name === 'BlobNotFoundError') return null;
-    throw e;
+    if (e instanceof BlobNotFoundError) return null; // first run: nothing saved yet
+    console.error('[store] Blob head() failed — serving the committed seed.', e);
+    return null;
+  }
+  try {
+    const res = await fetch(url, { cache: 'no-store' });
+    if (!res.ok) {
+      console.error(`[store] Blob fetch ${res.status} — serving the committed seed.`);
+      return null;
+    }
+    const parsed = (await res.json()) as { products: Product[] };
+    return Array.isArray(parsed.products) ? parsed.products : [];
+  } catch (e) {
+    console.error('[store] inventory.json in Blob unreadable — serving the committed seed.', e);
+    return null;
   }
 }
 

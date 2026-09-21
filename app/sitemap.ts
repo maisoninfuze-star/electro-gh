@@ -6,6 +6,13 @@ import { CATEGORIES, CATEGORY_LIST } from '@/lib/catalog/categories';
 import { getAllProducts } from '@/lib/catalog/provider';
 
 /**
+ * Generated per request, not at build: the sitemap must list what is in
+ * stock NOW, and it must never be the reason a deploy fails because the
+ * inventory store was unreachable for a moment during the build.
+ */
+export const dynamic = 'force-dynamic';
+
+/**
  * Sitemap with hreflang alternates on every entry, so Google serves the French
  * URL to a Montréal or Laval searcher and the English one to an English query.
  *
