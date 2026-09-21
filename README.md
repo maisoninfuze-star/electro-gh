@@ -48,6 +48,56 @@ npm run dev          # http://localhost:3000
 
 ---
 
+## Inventory & admin
+
+The catalogue is **real stock** — `data/inventory.json` holds the units photographed in
+the two stores in September 2026, priced from the tags on the machines. Only units
+with `status: "published"` appear publicly; `draft` units (price unreadable, or a
+question for the owner) and `sold` units never do.
+
+`/admin` is the owner's inventory tool, French, built for a phone in the shop:
+
+| Action | Where |
+| --- | --- |
+| Add a unit with photos from the camera | **Ajouter** → photos → marque, nom, prix → **Publier** |
+| Mark a unit sold (one tap, reversible) | list row → **Vendu** |
+| Fix a price | row → edit → save; live on the next request |
+| See what needs attention | **Brouillons** tab — rows say *Manque : prix / photo* |
+
+**Storage** (`lib/store/`): `data/inventory.json` + `data/uploads/` locally; **Vercel Blob**
+in production, selected automatically when `BLOB_READ_WRITE_TOKEN` exists. To go live:
+Vercel → Storage → Create → Blob → Connect to project. That's the whole setup; the
+committed JSON is the seed the first save starts from.
+
+**Auth**: `ADMIN_PASSWORD` env var, HMAC-signed 30-day cookie. No default password —
+the admin is disabled until the variable is set.
+
+Uploaded photos are rotated, fitted to 1600×2000 and re-encoded as WebP (~100 KB).
+They are stored as-is (`kind: original`); the background-removal treatment is
+`scripts/studio.py`, which runs on a Mac (Apple Vision) — see **Photos** below.
+
+```bash
+npm run test:admin     # 23 checks: login → create+upload → live → edit → sold → 404 → delete
+```
+
+---
+
+## Photos
+
+`scripts/studio.py` turns a store photo into a catalogue image: hand-set crop →
+Apple Vision subject cutout → warm plate with a contact shadow → 1600×2000 WebP.
+Nothing about the appliance is regenerated. Crops are per-photo because the store
+is packed and the cutout merges touching machines. Photos where the cutout is
+unreliable (white machine on a white wall, a panel close-up) fall back to a
+plain, consistently framed crop and are flagged `kind: original`.
+
+The honest limit: these are phone photos of used machines in a full showroom. The
+single biggest upgrade is a re-shoot — pull the unit a metre off the wall, peel the
+sticker, shoot at chest height in daylight. The admin accepts the new photo in
+one tap.
+
+---
+
 ## Two stores
 
 Everything about a location lives on its `Store` entry in `content/business.ts`
@@ -141,8 +191,9 @@ page while `IS_DEMO_DATA` is true.
 
 ## Going live — checklist
 
-- [ ] Replace `loadAll()` with the real inventory source
-- [ ] `IS_DEMO_DATA = false`
+- [ ] Vercel → Storage → Blob → Connect (one click; injects `BLOB_READ_WRITE_TOKEN`)
+- [ ] Set `ADMIN_PASSWORD` in Vercel env vars
+- [ ] Owner reviews the 6 **Brouillons** — each says what's missing
 - [ ] Fill in `hours` for each store (do **not** copy from a directory unverified)
 - [ ] Fill in `BUSINESS.whatsapp` — this lights up ~8 surfaces at once
 - [ ] Fill in warranty / delivery / repair / parts terms if the owner wants them stated

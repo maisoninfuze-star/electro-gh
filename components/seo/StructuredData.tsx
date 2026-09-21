@@ -113,6 +113,7 @@ export function LocalBusinessSchema({ locale }: { locale: Locale }) {
  */
 const CONDITION_URL: Record<Product['condition'], string> = {
   new: 'https://schema.org/NewCondition',
+  used: 'https://schema.org/UsedCondition',
   refurbished: 'https://schema.org/RefurbishedCondition',
   'open-box': 'https://schema.org/NewCondition',
   clearance: 'https://schema.org/UsedCondition',

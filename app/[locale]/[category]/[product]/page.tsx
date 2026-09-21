@@ -29,18 +29,13 @@ import { hasDiscount } from '@/lib/catalog/types';
  * without a synthetic /produit/ segment.
  */
 
-export async function generateStaticParams() {
-  const products = await getAllProducts();
-  // `category` must be the LOCALISED SLUG that appears in the URL
-  // (ensembles-laveuse-secheuse), not the internal route id (laundrySets).
-  return LOCALES.flatMap((locale) =>
-    products.map((p) => ({
-      locale,
-      category: ROUTE_SLUGS[CATEGORIES[p.category].route][locale],
-      product: p.slug,
-    })),
-  );
-}
+/**
+ * Inventory is live data edited from the admin, so every page that shows it
+ * renders per request. With a few dozen units the cost is nothing, and it
+ * removes an entire class of "I saved it but the site still shows the old
+ * price" bugs that cache invalidation would otherwise have to get right.
+ */
+export const dynamic = 'force-dynamic';
 
 async function load(locale: Locale, categorySlug: string, productSlug: string) {
   const routeId = routeIdFromSlug(locale, categorySlug);
@@ -66,8 +61,8 @@ export async function generateMetadata({
 
   const fr = locale === 'fr';
   const conditionWord = fr
-    ? { new: 'neuf', refurbished: 'reconditionné', 'open-box': 'boîte ouverte', clearance: 'liquidation' }[product.condition]
-    : { new: 'new', refurbished: 'refurbished', 'open-box': 'open box', clearance: 'clearance' }[product.condition];
+    ? { new: 'neuf', used: 'usagé', refurbished: 'reconditionné', 'open-box': 'boîte ouverte', clearance: 'liquidation' }[product.condition]
+    : { new: 'new', used: 'used', refurbished: 'refurbished', 'open-box': 'open box', clearance: 'clearance' }[product.condition];
 
   const price = formatPrice(product.price, locale);
 

@@ -30,6 +30,12 @@ export default function proxy(request: NextRequest) {
     return NextResponse.next();
   }
 
+  // The admin lives outside the locale tree. It is French-only and gated by
+  // its own layout; it must never be rewritten to /fr/admin.
+  if (first === 'admin') {
+    return NextResponse.next();
+  }
+
   // Everything else is French: rewrite internally, leave the address bar alone.
   const url = request.nextUrl.clone();
   url.pathname = `/${DEFAULT_LOCALE}${pathname}`;

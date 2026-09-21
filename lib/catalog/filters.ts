@@ -70,7 +70,7 @@ export const FINISH_LABELS: Record<string, Record<Locale, string>> = {
   other: { fr: 'Autre', en: 'Other' },
 };
 
-export const CONDITION_ORDER: Condition[] = ['new', 'open-box', 'refurbished', 'clearance'];
+export const CONDITION_ORDER: Condition[] = ['new', 'open-box', 'refurbished', 'used', 'clearance'];
 export const AVAILABILITY_ORDER: InventoryStatus[] = ['in-stock', 'low-stock', 'on-request'];
 
 const inBucket = (

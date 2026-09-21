@@ -125,7 +125,7 @@ export function CatalogBrowser({
 
   const conditionOptions = CONDITION_ORDER
     .map((c) => opt(c, dict.condition[
-      c === 'open-box' ? 'openBox' : (c as 'new' | 'refurbished' | 'clearance')
+      c === 'open-box' ? 'openBox' : (c as 'new' | 'used' | 'refurbished' | 'clearance')
     ], conditionCounts))
     .filter((o) => o.count > 0 || filters.conditions.includes(o.value as never));
 

@@ -43,11 +43,13 @@ const INFO_ROUTES: RouteId[] = ['repair', 'parts', 'delivery', 'stores', 'contac
 
 const ALL_ROUTES = [...LISTING_ROUTES, ...INFO_ROUTES];
 
-export async function generateStaticParams() {
-  return LOCALES.flatMap((locale) =>
-    ALL_ROUTES.map((route) => ({ locale, category: ROUTE_SLUGS[route][locale] })),
-  );
-}
+/**
+ * Inventory is live data edited from the admin, so every page that shows it
+ * renders per request. With a few dozen units the cost is nothing, and it
+ * removes an entire class of "I saved it but the site still shows the old
+ * price" bugs that cache invalidation would otherwise have to get right.
+ */
+export const dynamic = 'force-dynamic';
 
 /** Metadata for the informational pages — title and description per page. */
 function infoMeta(locale: Locale, routeId: RouteId): Metadata {

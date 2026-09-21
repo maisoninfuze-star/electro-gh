@@ -26,7 +26,20 @@ export type CategoryId =
   | 'dishwashers'
   | 'freezers';
 
-export type Condition = 'new' | 'refurbished' | 'open-box' | 'clearance';
+/**
+ * `used` is the honest default for this store — the sign says "achat &
+ * revente". `refurbished` implies work was done on the unit; only the owner
+ * can say that, per unit, in the admin.
+ */
+export type Condition = 'new' | 'used' | 'refurbished' | 'open-box' | 'clearance';
+
+/**
+ * Publication state. ONLY `published` units appear on the public site.
+ *   draft      imported or half-entered — needs a price/photo/confirmation
+ *   published  live
+ *   sold       gone; kept for the record, hidden everywhere public
+ */
+export type ProductStatus = 'draft' | 'published' | 'sold';
 
 export type InventoryStatus = 'in-stock' | 'low-stock' | 'on-request';
 
@@ -118,8 +131,14 @@ export interface Product {
    */
   storeId?: StoreId;
 
+  status: ProductStatus;
+  /** Admin-only. Never rendered publicly. "Sticker says $500 and $800 — confirm." */
+  notes?: string;
+
   /** ISO 8601. Drives "new arrivals" ordering. */
   createdAt: string;
+  updatedAt: string;
+  soldAt?: string;
 }
 
 /** True only when there is a real, larger prior price. */

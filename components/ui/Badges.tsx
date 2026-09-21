@@ -9,6 +9,7 @@ import { cx } from '@/lib/format';
  */
 const CONDITION_STYLE: Record<Condition, string> = {
   new: 'bg-accent-soft text-accent',
+  used: 'bg-surface-2 text-ink-2',
   refurbished: 'bg-surface-2 text-ink-2',
   'open-box': 'bg-surface-2 text-ink-2',
   clearance: 'bg-signal-soft text-signal',
@@ -16,6 +17,7 @@ const CONDITION_STYLE: Record<Condition, string> = {
 
 const CONDITION_KEY: Record<Condition, keyof Dictionary['condition']> = {
   new: 'new',
+  used: 'used',
   refurbished: 'refurbished',
   'open-box': 'openBox',
   clearance: 'clearance',

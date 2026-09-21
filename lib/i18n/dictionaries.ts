@@ -368,6 +368,7 @@ const fr = {
 
   condition: {
     new: 'Neuf',
+    used: 'Usagé',
     refurbished: 'Reconditionné',
     openBox: 'Boîte ouverte',
     clearance: 'Liquidation',
@@ -718,6 +719,7 @@ const en: Dict = {
 
   condition: {
     new: 'New',
+    used: 'Used',
     refurbished: 'Refurbished',
     openBox: 'Open box',
     clearance: 'Clearance',

@@ -13,6 +13,8 @@ const nextConfig: NextConfig = {
    */
 
   images: {
+    // Photos uploaded from the admin live in Vercel Blob in production.
+    remotePatterns: [{ protocol: 'https', hostname: '*.public.blob.vercel-storage.com' }],
     // Product photography is shot on light backgrounds and is mostly flat
     // colour, so AVIF wins meaningfully over WebP here.
     formats: ['image/avif', 'image/webp'],

@@ -1,7 +1,7 @@
 import type { CategoryId, Product } from './types';
 import { CATEGORIES } from './categories';
 import { href, type Locale } from '@/lib/i18n/config';
-import { normalise } from './provider';
+import { normalise } from './text';
 
 /**
  * A deliberately small payload for client-side instant search.

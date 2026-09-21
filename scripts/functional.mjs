@@ -121,16 +121,16 @@ await page.evaluate(() => {
   b?.click();
 });
 await settle(600);
-await page.type('input[type="search"]', 'refrigerateur');
+await page.type('input[type="search"]', 'secheuse');
 await settle(700);
 const hitsNoAccent = await page.evaluate(() => document.querySelectorAll('[role="dialog"] li a').length);
-check('search: "refrigerateur" (no accents) finds réfrigérateurs', hitsNoAccent > 0, `${hitsNoAccent} results`);
+check('search: "secheuse" (no accents) finds sécheuses', hitsNoAccent > 0, `${hitsNoAccent} results`);
 
 await page.evaluate(() => { const i = document.querySelector('input[type="search"]'); i.value=''; });
-await page.type('input[type="search"]', 'samsung fridge');
+await page.type('input[type="search"]', 'samsung washer');
 await settle(700);
 const hitsBilingual = await page.evaluate(() => document.querySelectorAll('[role="dialog"] li a').length);
-check('search: bilingual query "samsung fridge" matches', hitsBilingual > 0, `${hitsBilingual} results`);
+check('search: bilingual query "samsung washer" matches', hitsBilingual > 0, `${hitsBilingual} results`);
 
 /* ── 6. Contact affordances are real ───────────────────────────────────── */
 await page.goto(`${BASE}/`, { waitUntil: 'networkidle2' });
@@ -174,7 +174,7 @@ await page.keyboard.press('Escape');
 await page.setViewport({ width: 1440, height: 900 });
 
 /* ── 7. Structured data ────────────────────────────────────────────────── */
-await page.goto(`${BASE}/laveuses/laveuse-frontale-27-blanche`, { waitUntil: 'networkidle2' });
+await page.goto(`${BASE}/laveuses/laveuse-samsung-a-chargement-par-le-haut-blanc`, { waitUntil: 'networkidle2' });
 await settle(600);
 const ld = await page.evaluate(() =>
   [...document.querySelectorAll('script[type="application/ld+json"]')].map((s) => JSON.parse(s.textContent)));

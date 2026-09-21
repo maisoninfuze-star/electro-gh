@@ -16,6 +16,14 @@ import { getDictionary } from '@/lib/i18n/dictionaries';
 import { alternates, href, isLocale, SITE_URL, type Locale } from '@/lib/i18n/config';
 import { getDeals, getNewArrivals } from '@/lib/catalog/provider';
 
+/**
+ * Inventory is live data edited from the admin, so every page that shows it
+ * renders per request. With a few dozen units the cost is nothing, and it
+ * removes an entire class of "I saved it but the site still shows the old
+ * price" bugs that cache invalidation would otherwise have to get right.
+ */
+export const dynamic = 'force-dynamic';
+
 export async function generateMetadata({
   params,
 }: {

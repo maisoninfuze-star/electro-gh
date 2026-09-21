@@ -1,33 +1,32 @@
 import type { Product, CategoryId } from './types';
-import { DEMO_PRODUCTS, IS_DEMO_DATA } from './demo-products';
 import { CATEGORIES } from './categories';
+import { getStore } from '@/lib/store';
 import type { Locale, RouteId } from '@/lib/i18n/config';
+import { normalise } from './text';
+
+export { normalise };
 
 /**
  * CATALOG PROVIDER
  * ================
- * The only module the UI is allowed to read products from.
+ * The only module the public UI is allowed to read products from.
  *
- * Swapping the data source is a change to `loadAll()` alone:
+ * It reads the inventory store (lib/store) and exposes ONLY `published`
+ * units. Drafts and sold units exist in the store for the admin, and never
+ * reach a public page through any of these functions.
  *
- *   Supabase       const { data } = await supabase.from('products').select('*')
- *   Google Sheets  parse the published CSV, map columns → Product
- *   Shopify        Storefront GraphQL, map nodes → Product
- *   Airtable       records.map(mapAirtableRow)
- *   GoHighLevel    REST products endpoint
- *
- * Everything below (filtering, faceting, search, sorting, related items)
- * operates on the Product shape and needs no changes when the source moves.
- *
- * These functions are async on purpose. They run on the server, so a real
- * network-backed provider drops in without turning every page client-side.
+ * The demo dataset that used to live here is gone: the seed in
+ * data/inventory.json is real Électroménagers GH stock, photographed in the
+ * two stores, priced from the tags on the machines.
  */
 
-export { IS_DEMO_DATA };
+/** The catalogue is real inventory now. Kept as a constant so nothing that
+ *  imported it breaks; the demo ribbon it drove no longer renders. */
+export const IS_DEMO_DATA = false;
 
 async function loadAll(): Promise<Product[]> {
-  // ── SWAP POINT ──────────────────────────────────────────────────────────
-  return DEMO_PRODUCTS;
+  const store = await getStore();
+  return (await store.list()).filter((p) => p.status === 'published');
 }
 
 export async function getAllProducts(): Promise<Product[]> {
@@ -136,15 +135,3 @@ export function buildSearchIndex(products: Product[], locale: Locale): SearchRow
   }));
 }
 
-/**
- * Accent- and case-insensitive. "refrigerateur" must match "Réfrigérateur",
- * because nobody types accents into a search box on a phone.
- */
-export function normalise(s: string): string {
-  return s
-    .toLowerCase()
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .replace(/\s+/g, ' ')
-    .trim();
-}

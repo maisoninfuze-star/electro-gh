@@ -1,0 +1,611 @@
+{
+  "products": [
+    {
+      "id": "seed-01",
+      "slug": "ensemble-laveuse-frontale-vrt-secheuse-samsung-blanc",
+      "sku": "GH-1001",
+      "brand": "Samsung",
+      "name": {
+        "fr": "Ensemble laveuse frontale VRT + sécheuse Samsung, blanc",
+        "en": "Samsung VRT front-load washer + dryer set, white"
+      },
+      "description": {
+        "fr": "Ensemble laveuse frontale Samsung (VRT) et sécheuse Samsung à capteur d’humidité, fini blanc. Vendu en ensemble. Photographié en magasin.",
+        "en": "Samsung VRT front-load washer and Samsung moisture-sensor dryer, white finish. Sold as a set. Photographed in store."
+      },
+      "category": "laundry-sets",
+      "price": 750,
+      "condition": "used",
+      "inventoryStatus": "in-stock",
+      "colour": {
+        "fr": "Blanc",
+        "en": "White"
+      },
+      "finish": "white",
+      "images": [
+        {
+          "src": "/inventory/gh-5.webp",
+          "alt": "Ensemble laveuse frontale VRT + sécheuse Samsung, blanc",
+          "width": 1600,
+          "height": 2000,
+          "kind": "studio"
+        },
+        {
+          "src": "/inventory/gh-6.webp",
+          "alt": "Ensemble laveuse frontale VRT + sécheuse Samsung, blanc",
+          "width": 1600,
+          "height": 2000,
+          "kind": "original"
+        }
+      ],
+      "featured": true,
+      "deal": false,
+      "status": "published",
+      "createdAt": "2026-09-20T13:53:00.000Z",
+      "updatedAt": "2026-09-20T13:53:00.000Z"
+    },
+    {
+      "id": "seed-02",
+      "slug": "ensemble-laveuse-frontale-vrtplus-secheuse-samsung-blanc",
+      "sku": "GH-1002",
+      "brand": "Samsung",
+      "name": {
+        "fr": "Ensemble laveuse frontale VRTplus + sécheuse Samsung, blanc",
+        "en": "Samsung VRTplus front-load washer + dryer set, white"
+      },
+      "description": {
+        "fr": "Ensemble laveuse frontale Samsung (VRTplus) et sécheuse Samsung à capteur d’humidité, fini blanc. Vendu en ensemble. Photographié en magasin.",
+        "en": "Samsung VRTplus front-load washer and Samsung moisture-sensor dryer, white finish. Sold as a set. Photographed in store."
+      },
+      "category": "laundry-sets",
+      "price": 750,
+      "condition": "used",
+      "inventoryStatus": "in-stock",
+      "colour": {
+        "fr": "Blanc",
+        "en": "White"
+      },
+      "finish": "white",
+      "images": [
+        {
+          "src": "/inventory/gh-11.webp",
+          "alt": "Ensemble laveuse frontale VRTplus + sécheuse Samsung, blanc",
+          "width": 1600,
+          "height": 2000,
+          "kind": "original"
+        },
+        {
+          "src": "/inventory/gh-12.webp",
+          "alt": "Ensemble laveuse frontale VRTplus + sécheuse Samsung, blanc",
+          "width": 1600,
+          "height": 2000,
+          "kind": "original"
+        }
+      ],
+      "featured": true,
+      "deal": true,
+      "status": "published",
+      "createdAt": "2026-09-20T13:46:00.000Z",
+      "updatedAt": "2026-09-20T13:46:00.000Z"
+    },
+    {
+      "id": "seed-03",
+      "slug": "ensemble-laveuse-superspeed-steam-secheuse-samsung-blanc",
+      "sku": "GH-1003",
+      "brand": "Samsung",
+      "name": {
+        "fr": "Ensemble laveuse SuperSpeed Steam + sécheuse Samsung, blanc",
+        "en": "Samsung SuperSpeed Steam washer + dryer set, white"
+      },
+      "description": {
+        "fr": "Ensemble laveuse frontale Samsung SuperSpeed Steam VRT et sécheuse Samsung à capteur d’humidité, fini blanc. Vendu en ensemble. Photographié en magasin.",
+        "en": "Samsung SuperSpeed Steam VRT front-load washer and Samsung moisture-sensor dryer, white finish. Sold as a set. Photographed in store."
+      },
+      "category": "laundry-sets",
+      "price": 799,
+      "condition": "used",
+      "inventoryStatus": "in-stock",
+      "colour": {
+        "fr": "Blanc",
+        "en": "White"
+      },
+      "finish": "white",
+      "images": [
+        {
+          "src": "/inventory/gh-10.webp",
+          "alt": "Ensemble laveuse SuperSpeed Steam + sécheuse Samsung, blanc",
+          "width": 1600,
+          "height": 2000,
+          "kind": "studio"
+        },
+        {
+          "src": "/inventory/gh-9.webp",
+          "alt": "Ensemble laveuse SuperSpeed Steam + sécheuse Samsung, blanc",
+          "width": 1600,
+          "height": 2000,
+          "kind": "studio"
+        }
+      ],
+      "featured": true,
+      "deal": false,
+      "status": "published",
+      "createdAt": "2026-09-20T13:39:00.000Z",
+      "updatedAt": "2026-09-20T13:39:00.000Z"
+    },
+    {
+      "id": "seed-04",
+      "slug": "ensemble-laveuse-addwash-secheuse-multisteam-samsung-noir-sur-piedestaux",
+      "sku": "GH-1004",
+      "brand": "Samsung",
+      "name": {
+        "fr": "Ensemble laveuse AddWash + sécheuse MultiSteam Samsung, noir, sur piédestaux",
+        "en": "Samsung AddWash washer + MultiSteam dryer set, black, on pedestals"
+      },
+      "description": {
+        "fr": "Ensemble laveuse frontale Samsung SuperSpeed Steam VRTplus avec porte AddWash et sécheuse Samsung MultiSteam VentSensor, fini noir, chacun sur piédestal à tiroir. Vendu en ensemble. Photographié en magasin.",
+        "en": "Samsung SuperSpeed Steam VRTplus front-load washer with AddWash door and Samsung MultiSteam VentSensor dryer, black finish, each on a drawer pedestal. Sold as a set. Photographed in store."
+      },
+      "category": "laundry-sets",
+      "price": 899,
+      "condition": "used",
+      "inventoryStatus": "in-stock",
+      "colour": {
+        "fr": "Noir",
+        "en": "Black"
+      },
+      "finish": "black",
+      "images": [
+        {
+          "src": "/inventory/gh-17.webp",
+          "alt": "Ensemble laveuse AddWash + sécheuse MultiSteam Samsung, noir, sur piédestaux",
+          "width": 1600,
+          "height": 2000,
+          "kind": "studio"
+        },
+        {
+          "src": "/inventory/gh-16.webp",
+          "alt": "Ensemble laveuse AddWash + sécheuse MultiSteam Samsung, noir, sur piédestaux",
+          "width": 1600,
+          "height": 2000,
+          "kind": "studio"
+        }
+      ],
+      "featured": true,
+      "deal": false,
+      "storeId": "laval",
+      "status": "published",
+      "createdAt": "2026-09-20T13:32:00.000Z",
+      "updatedAt": "2026-09-20T13:32:00.000Z"
+    },
+    {
+      "id": "seed-05",
+      "slug": "ensemble-laveuse-secheuse-maytag-bravos-xl-chargement-par-le-haut-blanc",
+      "sku": "GH-1005",
+      "brand": "Maytag",
+      "name": {
+        "fr": "Ensemble laveuse + sécheuse Maytag Bravos XL, chargement par le haut, blanc",
+        "en": "Maytag Bravos XL top-load washer + dryer set, white"
+      },
+      "description": {
+        "fr": "Ensemble laveuse à chargement par le haut et sécheuse Maytag Bravos XL, fini blanc. Vendu en ensemble. Photographié en magasin.",
+        "en": "Maytag Bravos XL top-load washer and dryer set, white finish. Sold as a set. Photographed in store."
+      },
+      "category": "laundry-sets",
+      "price": 899,
+      "condition": "used",
+      "inventoryStatus": "in-stock",
+      "colour": {
+        "fr": "Blanc",
+        "en": "White"
+      },
+      "finish": "white",
+      "images": [
+        {
+          "src": "/inventory/gh-18.webp",
+          "alt": "Ensemble laveuse + sécheuse Maytag Bravos XL, chargement par le haut, blanc",
+          "width": 1600,
+          "height": 2000,
+          "kind": "studio"
+        }
+      ],
+      "featured": true,
+      "deal": false,
+      "status": "published",
+      "createdAt": "2026-09-20T13:25:00.000Z",
+      "updatedAt": "2026-09-20T13:25:00.000Z"
+    },
+    {
+      "id": "seed-06",
+      "slug": "ensemble-laveuse-secheuse-amana-chargement-par-le-haut-blanc",
+      "sku": "GH-1006",
+      "brand": "Amana",
+      "name": {
+        "fr": "Ensemble laveuse + sécheuse Amana, chargement par le haut, blanc",
+        "en": "Amana top-load washer + dryer set, white"
+      },
+      "description": {
+        "fr": "Ensemble laveuse à chargement par le haut et sécheuse Amana, fini blanc. Vendu en ensemble. Photographié en magasin.",
+        "en": "Amana top-load washer and dryer set, white finish. Sold as a set. Photographed in store."
+      },
+      "category": "laundry-sets",
+      "price": 550,
+      "condition": "used",
+      "inventoryStatus": "in-stock",
+      "colour": {
+        "fr": "Blanc",
+        "en": "White"
+      },
+      "finish": "white",
+      "images": [
+        {
+          "src": "/inventory/gh-20.webp",
+          "alt": "Ensemble laveuse + sécheuse Amana, chargement par le haut, blanc",
+          "width": 1600,
+          "height": 2000,
+          "kind": "studio"
+        }
+      ],
+      "featured": true,
+      "deal": false,
+      "status": "published",
+      "createdAt": "2026-09-20T13:18:00.000Z",
+      "updatedAt": "2026-09-20T13:18:00.000Z"
+    },
+    {
+      "id": "seed-07",
+      "slug": "ensemble-laveuse-frontale-lg-secheuse-ge-blanc",
+      "sku": "GH-1007",
+      "brand": "LG",
+      "name": {
+        "fr": "Ensemble laveuse frontale LG + sécheuse GE, blanc",
+        "en": "LG front-load washer + GE dryer set, white"
+      },
+      "description": {
+        "fr": "Laveuse frontale LG Direct Drive et sécheuse GE SensorDry, fini blanc, vendues en ensemble. La sécheuse GE est aussi offerte seule — demandez-nous. Photographié en magasin.",
+        "en": "LG Direct Drive front-load washer and GE SensorDry dryer, white finish, sold as a set. The GE dryer is also available on its own — ask us. Photographed in store."
+      },
+      "category": "laundry-sets",
+      "price": 650,
+      "condition": "used",
+      "inventoryStatus": "in-stock",
+      "colour": {
+        "fr": "Blanc",
+        "en": "White"
+      },
+      "finish": "white",
+      "images": [
+        {
+          "src": "/inventory/gh-2.webp",
+          "alt": "Ensemble laveuse frontale LG + sécheuse GE, blanc",
+          "width": 1600,
+          "height": 2000,
+          "kind": "studio"
+        }
+      ],
+      "featured": false,
+      "deal": false,
+      "status": "published",
+      "notes": "Autocollants : « 650 $ set » (ensemble) et « SALE 300 $ » sur la sécheuse GE seule.",
+      "createdAt": "2026-09-20T13:11:00.000Z",
+      "updatedAt": "2026-09-20T13:11:00.000Z"
+    },
+    {
+      "id": "seed-08",
+      "slug": "laveuse-samsung-a-chargement-par-le-haut-blanc",
+      "sku": "GH-1008",
+      "brand": "Samsung",
+      "name": {
+        "fr": "Laveuse Samsung à chargement par le haut, blanc",
+        "en": "Samsung top-load washer, white"
+      },
+      "description": {
+        "fr": "Laveuse Samsung à chargement par le haut (VRT), fini blanc. Photographiée en magasin.",
+        "en": "Samsung VRT top-load washer, white finish. Photographed in store."
+      },
+      "category": "washers",
+      "price": 420,
+      "condition": "used",
+      "inventoryStatus": "in-stock",
+      "colour": {
+        "fr": "Blanc",
+        "en": "White"
+      },
+      "finish": "white",
+      "images": [
+        {
+          "src": "/inventory/gh-4.webp",
+          "alt": "Laveuse Samsung à chargement par le haut, blanc",
+          "width": 1600,
+          "height": 2000,
+          "kind": "studio"
+        }
+      ],
+      "featured": false,
+      "deal": false,
+      "status": "published",
+      "createdAt": "2026-09-20T13:04:00.000Z",
+      "updatedAt": "2026-09-20T13:04:00.000Z"
+    },
+    {
+      "id": "seed-09",
+      "slug": "laveuse-frontale-samsung-steam-vrt-platine",
+      "sku": "GH-1009",
+      "brand": "Samsung",
+      "name": {
+        "fr": "Laveuse frontale Samsung Steam VRT, platine",
+        "en": "Samsung Steam VRT front-load washer, platinum"
+      },
+      "description": {
+        "fr": "Laveuse frontale Samsung Steam VRT à moteur Digital Inverter, fini platine. Photographiée en magasin.",
+        "en": "Samsung Steam VRT front-load washer with Digital Inverter motor, platinum finish. Photographed in store."
+      },
+      "category": "washers",
+      "price": 499,
+      "condition": "used",
+      "inventoryStatus": "in-stock",
+      "colour": {
+        "fr": "Platine",
+        "en": "Platinum"
+      },
+      "finish": "slate",
+      "images": [
+        {
+          "src": "/inventory/gh-15.webp",
+          "alt": "Laveuse frontale Samsung Steam VRT, platine",
+          "width": 1600,
+          "height": 2000,
+          "kind": "studio"
+        }
+      ],
+      "featured": false,
+      "deal": true,
+      "status": "published",
+      "createdAt": "2026-09-20T12:57:00.000Z",
+      "updatedAt": "2026-09-20T12:57:00.000Z"
+    },
+    {
+      "id": "seed-10",
+      "slug": "lave-vaisselle-frigidaire-gallery-acier-inoxydable",
+      "sku": "GH-1010",
+      "brand": "Frigidaire",
+      "name": {
+        "fr": "Lave-vaisselle Frigidaire Gallery, acier inoxydable",
+        "en": "Frigidaire Gallery dishwasher, stainless steel"
+      },
+      "description": {
+        "fr": "Lave-vaisselle encastré Frigidaire Gallery, façade en acier inoxydable, commandes sur le dessus. Photographié en magasin.",
+        "en": "Frigidaire Gallery built-in dishwasher, stainless steel front, top controls. Photographed in store."
+      },
+      "category": "dishwashers",
+      "price": 259,
+      "condition": "used",
+      "inventoryStatus": "in-stock",
+      "colour": {
+        "fr": "Acier inoxydable",
+        "en": "Stainless steel"
+      },
+      "finish": "stainless",
+      "images": [
+        {
+          "src": "/inventory/gh-14.webp",
+          "alt": "Lave-vaisselle Frigidaire Gallery, acier inoxydable",
+          "width": 1600,
+          "height": 2000,
+          "kind": "studio"
+        }
+      ],
+      "featured": false,
+      "deal": false,
+      "status": "published",
+      "createdAt": "2026-09-20T12:50:00.000Z",
+      "updatedAt": "2026-09-20T12:50:00.000Z"
+    },
+    {
+      "id": "seed-11",
+      "slug": "secheuse-frigidaire-chargement-frontal-blanc-27-po",
+      "sku": "GH-1011",
+      "brand": "Frigidaire",
+      "name": {
+        "fr": "Sécheuse Frigidaire, chargement frontal, blanc — 27 po",
+        "en": "Frigidaire front-load dryer, white — 27 in."
+      },
+      "category": "dryers",
+      "price": 299,
+      "condition": "used",
+      "inventoryStatus": "in-stock",
+      "colour": {
+        "fr": "Blanc",
+        "en": "White"
+      },
+      "finish": "white",
+      "dimensions": {
+        "width": 27
+      },
+      "images": [
+        {
+          "src": "/inventory/gh-13.webp",
+          "alt": "Sécheuse Frigidaire, chargement frontal, blanc — 27 po",
+          "width": 1600,
+          "height": 2000,
+          "kind": "studio"
+        }
+      ],
+      "featured": false,
+      "deal": false,
+      "status": "draft",
+      "notes": "Prix 299 $ sur l’autocollant. Un ruban VERT « 27 pouces » est collé sur le dessus — confirmer que l’appareil n’est PAS vendu avant de publier.",
+      "createdAt": "2026-09-20T12:43:00.000Z",
+      "updatedAt": "2026-09-20T12:43:00.000Z"
+    },
+    {
+      "id": "seed-12",
+      "slug": "ensemble-laveuse-secheuse-electrolux-titane",
+      "sku": "GH-1012",
+      "brand": "Electrolux",
+      "name": {
+        "fr": "Ensemble laveuse + sécheuse Electrolux, titane",
+        "en": "Electrolux washer + dryer set, titanium"
+      },
+      "category": "laundry-sets",
+      "price": 0,
+      "condition": "used",
+      "inventoryStatus": "in-stock",
+      "colour": {
+        "fr": "Titane",
+        "en": "Titanium"
+      },
+      "finish": "slate",
+      "images": [
+        {
+          "src": "/inventory/gh-3.webp",
+          "alt": "Ensemble laveuse + sécheuse Electrolux, titane",
+          "width": 1600,
+          "height": 2000,
+          "kind": "studio"
+        }
+      ],
+      "featured": false,
+      "deal": false,
+      "status": "draft",
+      "notes": "Aucun prix visible sur la photo. Laveuse LuxCare Wash / SmartBoost, sécheuse Perfect Steam.",
+      "createdAt": "2026-09-20T12:36:00.000Z",
+      "updatedAt": "2026-09-20T12:36:00.000Z"
+    },
+    {
+      "id": "seed-13",
+      "slug": "secheuse-ge-frontale-blanc-garniture-chrome",
+      "sku": "GH-1013",
+      "brand": "GE",
+      "name": {
+        "fr": "Sécheuse GE frontale, blanc, garniture chrome",
+        "en": "GE front-load dryer, white, chrome trim"
+      },
+      "category": "dryers",
+      "price": 0,
+      "condition": "used",
+      "inventoryStatus": "in-stock",
+      "colour": {
+        "fr": "Blanc",
+        "en": "White"
+      },
+      "finish": "white",
+      "images": [
+        {
+          "src": "/inventory/gh-7.webp",
+          "alt": "Sécheuse GE frontale, blanc, garniture chrome",
+          "width": 1600,
+          "height": 2000,
+          "kind": "studio"
+        }
+      ],
+      "featured": false,
+      "deal": false,
+      "status": "draft",
+      "notes": "Autocollant « SALE » avec prix rayé (100 $ ?) et mention « seul » — confirmer le prix.",
+      "createdAt": "2026-09-20T12:29:00.000Z",
+      "updatedAt": "2026-09-20T12:29:00.000Z"
+    },
+    {
+      "id": "seed-14",
+      "slug": "laveuse-frontale-samsung-vrt-steam-platine",
+      "sku": "GH-1014",
+      "brand": "Samsung",
+      "name": {
+        "fr": "Laveuse frontale Samsung VRT Steam, platine",
+        "en": "Samsung VRT Steam front-load washer, platinum"
+      },
+      "category": "washers",
+      "price": 0,
+      "condition": "used",
+      "inventoryStatus": "in-stock",
+      "colour": {
+        "fr": "Platine",
+        "en": "Platinum"
+      },
+      "finish": "slate",
+      "images": [
+        {
+          "src": "/inventory/gh-8.webp",
+          "alt": "Laveuse frontale Samsung VRT Steam, platine",
+          "width": 1600,
+          "height": 2000,
+          "kind": "original"
+        }
+      ],
+      "featured": false,
+      "deal": false,
+      "status": "draft",
+      "notes": "Aucun prix visible sur la photo. Sous la sécheuse GE chromée.",
+      "createdAt": "2026-09-20T12:22:00.000Z",
+      "updatedAt": "2026-09-20T12:22:00.000Z"
+    },
+    {
+      "id": "seed-15",
+      "slug": "secheuse-kenmore-chargement-frontal-blanc",
+      "sku": "GH-1015",
+      "brand": "Kenmore",
+      "name": {
+        "fr": "Sécheuse Kenmore, chargement frontal, blanc",
+        "en": "Kenmore front-load dryer, white"
+      },
+      "category": "dryers",
+      "price": 0,
+      "condition": "used",
+      "inventoryStatus": "in-stock",
+      "colour": {
+        "fr": "Blanc",
+        "en": "White"
+      },
+      "finish": "white",
+      "images": [
+        {
+          "src": "/inventory/gh-19.webp",
+          "alt": "Sécheuse Kenmore, chargement frontal, blanc",
+          "width": 1600,
+          "height": 2000,
+          "kind": "studio"
+        }
+      ],
+      "featured": false,
+      "deal": false,
+      "status": "draft",
+      "notes": "Aucun prix visible sur la photo. Série 100, commande manuelle.",
+      "createdAt": "2026-09-20T12:15:00.000Z",
+      "updatedAt": "2026-09-20T12:15:00.000Z"
+    },
+    {
+      "id": "seed-16",
+      "slug": "secheuse-samsung-a-chargement-par-le-haut-gris-vapeur",
+      "sku": "GH-1016",
+      "brand": "Samsung",
+      "name": {
+        "fr": "Sécheuse Samsung à chargement par le haut, gris, vapeur",
+        "en": "Samsung top-load steam dryer, grey"
+      },
+      "category": "dryers",
+      "price": 0,
+      "condition": "used",
+      "inventoryStatus": "in-stock",
+      "colour": {
+        "fr": "Gris",
+        "en": "Grey"
+      },
+      "finish": "slate",
+      "images": [
+        {
+          "src": "/inventory/gh-21.webp",
+          "alt": "Sécheuse Samsung à chargement par le haut, gris, vapeur",
+          "width": 1600,
+          "height": 2000,
+          "kind": "original"
+        }
+      ],
+      "featured": false,
+      "deal": false,
+      "status": "draft",
+      "notes": "Deux autocollants photographiés : « SALE 500 $ set » et « SALE 800 $ ». Confirmer le prix et s’il s’agit d’un ensemble avec la laveuse grise.",
+      "createdAt": "2026-09-20T12:08:00.000Z",
+      "updatedAt": "2026-09-20T12:08:00.000Z"
+    }
+  ]
+}
