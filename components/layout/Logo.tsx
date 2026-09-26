@@ -34,22 +34,35 @@ export function Logo({
   /** @deprecated no-op: the mark carries its own background. */
   onDark?: boolean;
 }) {
-  // Nav: 44px on phones (64px bar), 52px from lg (80px bar). Footer: 64px.
-  const h = size === 'footer' ? 64 : 44;
-  const w = Math.round((h * LOGO.width) / LOGO.height);
+  // Nav: 44px on phones (64px bar), 52px from lg (80px bar). Footer: 64px —
+  // all applied as CSS on the link below, never as width/height props.
   return (
     <Link
       href={href(locale, 'home')}
       aria-label="Électroménagers GH — Accueil"
-      className={cx('inline-flex shrink-0 items-center', className)}
+      className={cx(
+        'inline-flex shrink-0 items-center',
+        // The responsive height lives on the LINK, not the image. next/image
+        // warns when CSS changes exactly one of its two dimensions, and it
+        // cannot see Tailwind classes — so the image itself gets both
+        // dimensions set inline (height fills the link, width follows the
+        // aspect ratio) and the link decides how tall that is.
+        size === 'nav' ? 'h-11 lg:h-[3.25rem]' : 'h-16',
+        className,
+      )}
     >
+      {/* Intrinsic dimensions, not display ones. next/image warns when exactly
+          one rendered dimension differs from its attribute: a rounded display
+          width (81 at a 44px height) renders as 80, so width mismatched while
+          height did not. Handing over the real file size lets CSS scale both. */}
       <Image
         src={LOGO.src}
         alt="Électroménagers GH — Achat & revente"
-        width={w}
-        height={h}
+        width={LOGO.width}
+        height={LOGO.height}
         priority={size === 'nav'}
-        className={cx('w-auto', size === 'nav' ? 'h-11 lg:h-[3.25rem]' : 'h-16')}
+        className="w-auto"
+        style={{ height: '100%', width: 'auto' }}
       />
     </Link>
   );
