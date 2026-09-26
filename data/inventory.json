@@ -1,91 +1,9 @@
 {
   "products": [
     {
-      "id": "cat-set-ap-104",
-      "slug": "ensemble-laveuse-et-secheuse-samsung",
-      "sku": "GH-S01",
-      "brand": "Samsung",
-      "name": {
-        "fr": "Ensemble laveuse et sécheuse Samsung",
-        "en": "Samsung washer and dryer set"
-      },
-      "description": {
-        "fr": "Ensemble laveuse et sécheuse vendu en paire. White front-load washer with a black control panel and round glass door. White front-load dryer with a black control panel and round glass door.",
-        "en": "Washer and dryer sold as a pair. White front-load washer with a black control panel and round glass door. White front-load dryer with a black control panel and round glass door."
-      },
-      "category": "laundry-sets",
-      "price": 599,
-      "condition": "used",
-      "inventoryStatus": "in-stock",
-      "finish": "white",
-      "images": [
-        {
-          "src": "/inventory/ap-105.webp",
-          "alt": "Ensemble laveuse et sécheuse Samsung",
-          "width": 1600,
-          "height": 1600,
-          "kind": "studio"
-        },
-        {
-          "src": "/inventory/ap-104.webp",
-          "alt": "Ensemble laveuse et sécheuse Samsung",
-          "width": 1600,
-          "height": 1600,
-          "kind": "studio"
-        }
-      ],
-      "featured": true,
-      "deal": false,
-      "status": "published",
-      "notes": "Ensemble constitué à partir de deux fiches du catalogue photo (AP-105 laveuse + AP-104 sécheuse), réunies parce qu'elles portent la même étiquette d'ensemble à 599 $. Confirmer que les deux appareils se vendent bien ensemble à ce prix. Numéros de modèle non lisibles sur les photos. Photos sources : IMG_5739.JPG, IMG_5739.JPG.",
-      "createdAt": "2026-09-20T12:00:00.000Z",
-      "updatedAt": "2026-09-20T12:00:00.000Z"
-    },
-    {
-      "id": "cat-set-ap-059",
-      "slug": "ensemble-laveuse-et-secheuse-whirlpool",
-      "sku": "GH-S02",
-      "brand": "Whirlpool",
-      "name": {
-        "fr": "Ensemble laveuse et sécheuse Whirlpool",
-        "en": "Whirlpool washer and dryer set"
-      },
-      "description": {
-        "fr": "Ensemble laveuse et sécheuse vendu en paire. White top-load washer with a solid lid and dark rear control panel. White dryer with a curved front handle and dark rear control console.",
-        "en": "Washer and dryer sold as a pair. White top-load washer with a solid lid and dark rear control panel. White dryer with a curved front handle and dark rear control console."
-      },
-      "category": "laundry-sets",
-      "price": 600,
-      "condition": "used",
-      "inventoryStatus": "in-stock",
-      "finish": "white",
-      "images": [
-        {
-          "src": "/inventory/ap-060.webp",
-          "alt": "Ensemble laveuse et sécheuse Whirlpool",
-          "width": 1600,
-          "height": 1600,
-          "kind": "studio"
-        },
-        {
-          "src": "/inventory/ap-059.webp",
-          "alt": "Ensemble laveuse et sécheuse Whirlpool",
-          "width": 1600,
-          "height": 1600,
-          "kind": "studio"
-        }
-      ],
-      "featured": true,
-      "deal": false,
-      "status": "published",
-      "notes": "Ensemble constitué à partir de deux fiches du catalogue photo (AP-060 laveuse + AP-059 sécheuse), réunies parce qu'elles portent la même étiquette d'ensemble à 600 $. Confirmer que les deux appareils se vendent bien ensemble à ce prix. Numéros de modèle non lisibles sur les photos. Photos sources : IMG_5687.JPG, IMG_5685.JPG.",
-      "createdAt": "2026-09-20T11:59:00.000Z",
-      "updatedAt": "2026-09-20T11:59:00.000Z"
-    },
-    {
       "id": "cat-set-ap-001",
       "slug": "ensemble-laveuse-lg-et-secheuse-ge",
-      "sku": "GH-S03",
+      "sku": "GH-S01",
       "brand": "",
       "name": {
         "fr": "Ensemble laveuse LG et sécheuse GE",
@@ -119,14 +37,55 @@
       "featured": true,
       "deal": false,
       "status": "published",
-      "notes": "Ensemble constitué à partir de deux fiches du catalogue photo (AP-002 laveuse + AP-001 sécheuse), réunies parce qu'elles portent la même étiquette d'ensemble à 650 $. Confirmer que les deux appareils se vendent bien ensemble à ce prix. Numéros de modèle non lisibles sur les photos. Marques différentes : laveuse LG, sécheuse GE. Photos sources : IMG_5412.JPG, IMG_5412.JPG.",
-      "createdAt": "2026-09-20T11:58:00.000Z",
-      "updatedAt": "2026-09-20T11:58:00.000Z"
+      "notes": "Ensemble constitué à partir de deux fiches du catalogue photo (AP-002 laveuse + AP-001 sécheuse). Raison du jumelage : même étiquette d'ensemble (650 $). Confirmer que les deux appareils se vendent bien ensemble à ce prix.  Numéros de modèle non lisibles sur les photos. Marques différentes : laveuse LG, sécheuse GE. Photos sources : IMG_5412.JPG, IMG_5412.JPG.",
+      "createdAt": "2026-09-20T12:00:00.000Z",
+      "updatedAt": "2026-09-20T12:00:00.000Z"
+    },
+    {
+      "id": "cat-set-ap-003",
+      "slug": "ensemble-laveuse-et-secheuse-electrolux",
+      "sku": "GH-S02",
+      "brand": "Electrolux",
+      "name": {
+        "fr": "Ensemble laveuse et sécheuse Electrolux",
+        "en": "Electrolux washer and dryer set"
+      },
+      "description": {
+        "fr": "Ensemble laveuse et sécheuse vendu en paire. Graphite front-load washer with a chrome-trimmed door and front controls. Graphite front-load dryer with a large chrome-trimmed door.",
+        "en": "Washer and dryer sold as a pair. Graphite front-load washer with a chrome-trimmed door and front controls. Graphite front-load dryer with a large chrome-trimmed door."
+      },
+      "category": "laundry-sets",
+      "price": 0,
+      "condition": "used",
+      "inventoryStatus": "in-stock",
+      "finish": "slate",
+      "images": [
+        {
+          "src": "/inventory/ap-004.webp",
+          "alt": "Ensemble laveuse et sécheuse Electrolux",
+          "width": 1600,
+          "height": 1600,
+          "kind": "studio"
+        },
+        {
+          "src": "/inventory/ap-003.webp",
+          "alt": "Ensemble laveuse et sécheuse Electrolux",
+          "width": 1600,
+          "height": 1600,
+          "kind": "studio"
+        }
+      ],
+      "featured": true,
+      "deal": false,
+      "status": "draft",
+      "notes": "Ensemble constitué à partir de deux fiches du catalogue photo (AP-004 laveuse + AP-003 sécheuse). Raison du jumelage : photographiés ensemble, aucun prix visible. AUCUN PRIX visible sur les photos — à saisir avant publication.  Numéros de modèle non lisibles sur les photos. Photos sources : IMG_5413.JPG, IMG_5413.JPG.",
+      "createdAt": "2026-09-20T11:59:00.000Z",
+      "updatedAt": "2026-09-20T11:59:00.000Z"
     },
     {
       "id": "cat-set-ap-006",
-      "slug": "ensemble-laveuse-et-secheuse-samsung-2",
-      "sku": "GH-S04",
+      "slug": "ensemble-laveuse-et-secheuse-samsung",
+      "sku": "GH-S03",
       "brand": "Samsung",
       "name": {
         "fr": "Ensemble laveuse et sécheuse Samsung",
@@ -160,14 +119,14 @@
       "featured": true,
       "deal": false,
       "status": "published",
-      "notes": "Ensemble constitué à partir de deux fiches du catalogue photo (AP-007 laveuse + AP-006 sécheuse), réunies parce qu'elles portent la même étiquette d'ensemble à 750 $. Confirmer que les deux appareils se vendent bien ensemble à ce prix. Numéros de modèle non lisibles sur les photos. Photos sources : IMG_5416.JPG, IMG_5415.JPG.",
-      "createdAt": "2026-09-20T11:57:00.000Z",
-      "updatedAt": "2026-09-20T11:57:00.000Z"
+      "notes": "Ensemble constitué à partir de deux fiches du catalogue photo (AP-007 laveuse + AP-006 sécheuse). Raison du jumelage : même étiquette d'ensemble (750 $). Confirmer que les deux appareils se vendent bien ensemble à ce prix.  Numéros de modèle non lisibles sur les photos. Photos sources : IMG_5416.JPG, IMG_5415.JPG.",
+      "createdAt": "2026-09-20T11:58:00.000Z",
+      "updatedAt": "2026-09-20T11:58:00.000Z"
     },
     {
       "id": "cat-set-ap-010",
-      "slug": "ensemble-laveuse-et-secheuse-samsung-3",
-      "sku": "GH-S05",
+      "slug": "ensemble-laveuse-et-secheuse-samsung-2",
+      "sku": "GH-S04",
       "brand": "Samsung",
       "name": {
         "fr": "Ensemble laveuse et sécheuse Samsung",
@@ -198,10 +157,51 @@
           "kind": "studio"
         }
       ],
+      "featured": true,
+      "deal": false,
+      "status": "published",
+      "notes": "Ensemble constitué à partir de deux fiches du catalogue photo (AP-011 laveuse + AP-010 sécheuse). Raison du jumelage : même étiquette d'ensemble (799 $). Confirmer que les deux appareils se vendent bien ensemble à ce prix.  Numéros de modèle non lisibles sur les photos. Photos sources : IMG_5420.JPG, IMG_5419.JPG.",
+      "createdAt": "2026-09-20T11:57:00.000Z",
+      "updatedAt": "2026-09-20T11:57:00.000Z"
+    },
+    {
+      "id": "cat-set-ap-012",
+      "slug": "ensemble-laveuse-et-secheuse-samsung-3",
+      "sku": "GH-S05",
+      "brand": "Samsung",
+      "name": {
+        "fr": "Ensemble laveuse et sécheuse Samsung",
+        "en": "Samsung washer and dryer set"
+      },
+      "description": {
+        "fr": "Ensemble laveuse et sécheuse vendu en paire. White front-load washer with a silver dial and circular door. White front-load dryer with a silver dial and round glass door.",
+        "en": "Washer and dryer sold as a pair. White front-load washer with a silver dial and circular door. White front-load dryer with a silver dial and round glass door."
+      },
+      "category": "laundry-sets",
+      "price": 750,
+      "condition": "used",
+      "inventoryStatus": "in-stock",
+      "finish": "white",
+      "images": [
+        {
+          "src": "/inventory/ap-013.webp",
+          "alt": "Ensemble laveuse et sécheuse Samsung",
+          "width": 1600,
+          "height": 1600,
+          "kind": "studio"
+        },
+        {
+          "src": "/inventory/ap-012.webp",
+          "alt": "Ensemble laveuse et sécheuse Samsung",
+          "width": 1600,
+          "height": 1600,
+          "kind": "studio"
+        }
+      ],
       "featured": false,
       "deal": false,
       "status": "published",
-      "notes": "Ensemble constitué à partir de deux fiches du catalogue photo (AP-011 laveuse + AP-010 sécheuse), réunies parce qu'elles portent la même étiquette d'ensemble à 799 $. Confirmer que les deux appareils se vendent bien ensemble à ce prix. Numéros de modèle non lisibles sur les photos. Photos sources : IMG_5420.JPG, IMG_5419.JPG.",
+      "notes": "Ensemble constitué à partir de deux fiches du catalogue photo (AP-013 laveuse + AP-012 sécheuse). Raison du jumelage : même étiquette d'ensemble (750 $). Confirmer que les deux appareils se vendent bien ensemble à ce prix.  Numéros de modèle non lisibles sur les photos. Photos sources : IMG_5422.JPG, IMG_5421.JPG.",
       "createdAt": "2026-09-20T11:56:00.000Z",
       "updatedAt": "2026-09-20T11:56:00.000Z"
     },
@@ -242,32 +242,39 @@
       "featured": false,
       "deal": false,
       "status": "published",
-      "notes": "Ensemble constitué à partir de deux fiches du catalogue photo (AP-018 laveuse + AP-017 sécheuse), réunies parce qu'elles portent la même étiquette d'ensemble à 899 $. Confirmer que les deux appareils se vendent bien ensemble à ce prix. Numéros de modèle non lisibles sur les photos. Photos sources : IMG_5427.JPG, IMG_5426.JPG.",
+      "notes": "Ensemble constitué à partir de deux fiches du catalogue photo (AP-018 laveuse + AP-017 sécheuse). Raison du jumelage : même étiquette d'ensemble (899 $). Confirmer que les deux appareils se vendent bien ensemble à ce prix.  Numéros de modèle non lisibles sur les photos. Photos sources : IMG_5427.JPG, IMG_5426.JPG.",
       "createdAt": "2026-09-20T11:55:00.000Z",
       "updatedAt": "2026-09-20T11:55:00.000Z"
     },
     {
-      "id": "cat-ap-003",
-      "slug": "secheuse-frontale-graphite",
-      "sku": "GH-003",
-      "brand": "Electrolux",
+      "id": "cat-set-ap-020",
+      "slug": "ensemble-laveuse-et-secheuse-maytag",
+      "sku": "GH-S07",
+      "brand": "Maytag",
       "name": {
-        "fr": "Sécheuse frontale graphite",
-        "en": "Graphite front-load dryer"
+        "fr": "Ensemble laveuse et sécheuse Maytag",
+        "en": "Maytag washer and dryer set"
       },
       "description": {
-        "fr": "Graphite front-load dryer with a large chrome-trimmed door.",
-        "en": "Graphite front-load dryer with a large chrome-trimmed door."
+        "fr": "Ensemble laveuse et sécheuse vendu en paire. White top-load washer with a solid lid and silver rear console. White dryer with a solid front door and silver rear console.",
+        "en": "Washer and dryer sold as a pair. White top-load washer with a solid lid and silver rear console. White dryer with a solid front door and silver rear console."
       },
-      "category": "dryers",
-      "price": 0,
+      "category": "laundry-sets",
+      "price": 899,
       "condition": "used",
       "inventoryStatus": "in-stock",
-      "finish": "slate",
+      "finish": "white",
       "images": [
         {
-          "src": "/inventory/ap-003.webp",
-          "alt": "Sécheuse frontale graphite",
+          "src": "/inventory/ap-019.webp",
+          "alt": "Ensemble laveuse et sécheuse Maytag",
+          "width": 1600,
+          "height": 1600,
+          "kind": "studio"
+        },
+        {
+          "src": "/inventory/ap-020.webp",
+          "alt": "Ensemble laveuse et sécheuse Maytag",
           "width": 1600,
           "height": 1600,
           "kind": "studio"
@@ -275,33 +282,40 @@
       ],
       "featured": false,
       "deal": false,
-      "status": "draft",
-      "notes": "Aucun prix lisible sur les photos. Numéro de modèle non lisible sur les photos. Only the upper appliance is this record. Other appliances in the photo are separate products. Potential look-alike elsewhere in batch. Physical identity requires model/serial label; do not auto-merge or publish duplicate stock. Not established from supplied photos Le magasin vend surtout les laveuses et sécheuses en ensemble — confirmer si cet appareil se vend seul ou avec son partenaire. Photos sources : IMG_5413.JPG, IMG_5658.JPG (réf. catalogue AP-003)",
+      "status": "published",
+      "notes": "Ensemble constitué à partir de deux fiches du catalogue photo (AP-019 laveuse + AP-020 sécheuse). Raison du jumelage : même étiquette d'ensemble (899 $). Confirmer que les deux appareils se vendent bien ensemble à ce prix.  Numéros de modèle non lisibles sur les photos. Photos sources : IMG_5428.JPG, IMG_5428.JPG.",
       "createdAt": "2026-09-20T11:54:00.000Z",
       "updatedAt": "2026-09-20T11:54:00.000Z"
     },
     {
-      "id": "cat-ap-004",
-      "slug": "laveuse-frontale-graphite",
-      "sku": "GH-004",
-      "brand": "Electrolux",
+      "id": "cat-set-ap-021",
+      "slug": "ensemble-laveuse-samsung-et-secheuse-amana",
+      "sku": "GH-S08",
+      "brand": "",
       "name": {
-        "fr": "Laveuse frontale graphite",
-        "en": "Graphite front-load washer"
+        "fr": "Ensemble laveuse Samsung et sécheuse Amana",
+        "en": "Samsung washer and Amana dryer set"
       },
       "description": {
-        "fr": "Graphite front-load washer with a chrome-trimmed door and front controls.",
-        "en": "Graphite front-load washer with a chrome-trimmed door and front controls."
+        "fr": "Ensemble laveuse et sécheuse vendu en paire. Gray top-load washer with a dark rear control console and wide lid. White dryer with a solid front door and simple rotary controls.",
+        "en": "Washer and dryer sold as a pair. Gray top-load washer with a dark rear control console and wide lid. White dryer with a solid front door and simple rotary controls."
       },
-      "category": "washers",
-      "price": 0,
+      "category": "laundry-sets",
+      "price": 800,
       "condition": "used",
       "inventoryStatus": "in-stock",
       "finish": "slate",
       "images": [
         {
-          "src": "/inventory/ap-004.webp",
-          "alt": "Laveuse frontale graphite",
+          "src": "/inventory/ap-022.webp",
+          "alt": "Ensemble laveuse Samsung et sécheuse Amana",
+          "width": 1600,
+          "height": 1600,
+          "kind": "studio"
+        },
+        {
+          "src": "/inventory/ap-021.webp",
+          "alt": "Ensemble laveuse Samsung et sécheuse Amana",
           "width": 1600,
           "height": 1600,
           "kind": "studio"
@@ -310,9 +324,419 @@
       "featured": false,
       "deal": false,
       "status": "draft",
-      "notes": "Aucun prix lisible sur les photos. Numéro de modèle non lisible sur les photos. Only the lower appliance is this record. Other appliances in the photo are separate products. Potential look-alike elsewhere in batch. Physical identity requires model/serial label; do not auto-merge or publish duplicate stock. Not established from supplied photos Le magasin vend surtout les laveuses et sécheuses en ensemble — confirmer si cet appareil se vend seul ou avec son partenaire. Photos sources : IMG_5413.JPG, IMG_5658.JPG (réf. catalogue AP-004)",
+      "notes": "Ensemble constitué à partir de deux fiches du catalogue photo (AP-022 laveuse + AP-021 sécheuse). Raison du jumelage : étiquette d'ensemble (800 $) sur un seul des deux appareils. Confirmer que les deux appareils se vendent bien ensemble à ce prix. JUMELAGE À VÉRIFIER : marques différentes et appareils photographiés séparément. Confirmer que ces deux appareils forment bien l’ensemble avant de publier. Numéros de modèle non lisibles sur les photos. Marques différentes : laveuse Samsung, sécheuse Amana. Photos sources : IMG_5431.JPG, IMG_5429.JPG.",
+      "createdAt": "2026-09-20T11:53:00.000Z",
+      "updatedAt": "2026-09-20T11:53:00.000Z"
+    },
+    {
+      "id": "cat-set-ap-025",
+      "slug": "ensemble-laveuse-amana-et-secheuse-maytag",
+      "sku": "GH-S09",
+      "brand": "",
+      "name": {
+        "fr": "Ensemble laveuse Amana et sécheuse Maytag",
+        "en": "Amana washer and Maytag dryer set"
+      },
+      "description": {
+        "fr": "Ensemble laveuse et sécheuse vendu en paire. White top-load washer with a solid lid and three rotary controls. White dryer with a solid rectangular door and silver rear console.",
+        "en": "Washer and dryer sold as a pair. White top-load washer with a solid lid and three rotary controls. White dryer with a solid rectangular door and silver rear console."
+      },
+      "category": "laundry-sets",
+      "price": 550,
+      "condition": "used",
+      "inventoryStatus": "in-stock",
+      "finish": "white",
+      "images": [
+        {
+          "src": "/inventory/ap-024.webp",
+          "alt": "Ensemble laveuse Amana et sécheuse Maytag",
+          "width": 1600,
+          "height": 1600,
+          "kind": "studio"
+        },
+        {
+          "src": "/inventory/ap-025.webp",
+          "alt": "Ensemble laveuse Amana et sécheuse Maytag",
+          "width": 1600,
+          "height": 1600,
+          "kind": "studio"
+        }
+      ],
+      "featured": false,
+      "deal": false,
+      "status": "draft",
+      "notes": "Ensemble constitué à partir de deux fiches du catalogue photo (AP-024 laveuse + AP-025 sécheuse). Raison du jumelage : étiquette d'ensemble (550 $) sur un seul des deux appareils. Confirmer que les deux appareils se vendent bien ensemble à ce prix. JUMELAGE À VÉRIFIER : marques différentes et appareils photographiés séparément. Confirmer que ces deux appareils forment bien l’ensemble avant de publier. Numéros de modèle non lisibles sur les photos. Marques différentes : laveuse Amana, sécheuse Maytag. Photos sources : IMG_5433.JPG, IMG_5434.JPG.",
+      "createdAt": "2026-09-20T11:52:00.000Z",
+      "updatedAt": "2026-09-20T11:52:00.000Z"
+    },
+    {
+      "id": "cat-set-ap-044",
+      "slug": "ensemble-laveuse-et-secheuse-samsung-5",
+      "sku": "GH-S10",
+      "brand": "Samsung",
+      "name": {
+        "fr": "Ensemble laveuse et sécheuse Samsung",
+        "en": "Samsung washer and dryer set"
+      },
+      "description": {
+        "fr": "Ensemble laveuse et sécheuse vendu en paire. White front-load washer with a black control panel and silver door trim. White front-load dryer with a black control panel and silver door trim.",
+        "en": "Washer and dryer sold as a pair. White front-load washer with a black control panel and silver door trim. White front-load dryer with a black control panel and silver door trim."
+      },
+      "category": "laundry-sets",
+      "price": 0,
+      "condition": "used",
+      "inventoryStatus": "in-stock",
+      "finish": "white",
+      "images": [
+        {
+          "src": "/inventory/ap-045.webp",
+          "alt": "Ensemble laveuse et sécheuse Samsung",
+          "width": 1600,
+          "height": 1600,
+          "kind": "studio"
+        },
+        {
+          "src": "/inventory/ap-044.webp",
+          "alt": "Ensemble laveuse et sécheuse Samsung",
+          "width": 1600,
+          "height": 1600,
+          "kind": "studio"
+        }
+      ],
+      "featured": false,
+      "deal": false,
+      "status": "draft",
+      "notes": "Ensemble constitué à partir de deux fiches du catalogue photo (AP-045 laveuse + AP-044 sécheuse). Raison du jumelage : photographiés ensemble, aucun prix visible. AUCUN PRIX visible sur les photos — à saisir avant publication.  Numéros de modèle non lisibles sur les photos. Photos sources : IMG_5657.JPG, IMG_5657.JPG.",
       "createdAt": "2026-09-20T11:51:00.000Z",
       "updatedAt": "2026-09-20T11:51:00.000Z"
+    },
+    {
+      "id": "cat-set-ap-046",
+      "slug": "ensemble-laveuse-et-secheuse",
+      "sku": "GH-S11",
+      "brand": "",
+      "name": {
+        "fr": "Ensemble laveuse et sécheuse",
+        "en": "Washer and dryer set"
+      },
+      "description": {
+        "fr": "Ensemble laveuse et sécheuse vendu en paire. Dark front-load washer with a large round door and front controls. White front-load dryer with a large chrome-trimmed door and compact control panel.",
+        "en": "Washer and dryer sold as a pair. Dark front-load washer with a large round door and front controls. White front-load dryer with a large chrome-trimmed door and compact control panel."
+      },
+      "category": "laundry-sets",
+      "price": 0,
+      "condition": "used",
+      "inventoryStatus": "in-stock",
+      "finish": "black",
+      "images": [
+        {
+          "src": "/inventory/ap-047.webp",
+          "alt": "Ensemble laveuse et sécheuse",
+          "width": 1600,
+          "height": 1600,
+          "kind": "studio"
+        },
+        {
+          "src": "/inventory/ap-046.webp",
+          "alt": "Ensemble laveuse et sécheuse",
+          "width": 1600,
+          "height": 1600,
+          "kind": "studio"
+        }
+      ],
+      "featured": false,
+      "deal": false,
+      "status": "draft",
+      "notes": "Ensemble constitué à partir de deux fiches du catalogue photo (AP-047 laveuse + AP-046 sécheuse). Raison du jumelage : photographiés ensemble, aucun prix visible. AUCUN PRIX visible sur les photos — à saisir avant publication.  Numéros de modèle non lisibles sur les photos. Marques différentes : laveuse , sécheuse . Photos sources : IMG_5665.JPG, IMG_5665.JPG.",
+      "createdAt": "2026-09-20T11:50:00.000Z",
+      "updatedAt": "2026-09-20T11:50:00.000Z"
+    },
+    {
+      "id": "cat-set-ap-059",
+      "slug": "ensemble-laveuse-et-secheuse-whirlpool",
+      "sku": "GH-S12",
+      "brand": "Whirlpool",
+      "name": {
+        "fr": "Ensemble laveuse et sécheuse Whirlpool",
+        "en": "Whirlpool washer and dryer set"
+      },
+      "description": {
+        "fr": "Ensemble laveuse et sécheuse vendu en paire. White top-load washer with a solid lid and dark rear control panel. White dryer with a curved front handle and dark rear control console.",
+        "en": "Washer and dryer sold as a pair. White top-load washer with a solid lid and dark rear control panel. White dryer with a curved front handle and dark rear control console."
+      },
+      "category": "laundry-sets",
+      "price": 600,
+      "condition": "used",
+      "inventoryStatus": "in-stock",
+      "finish": "white",
+      "images": [
+        {
+          "src": "/inventory/ap-060.webp",
+          "alt": "Ensemble laveuse et sécheuse Whirlpool",
+          "width": 1600,
+          "height": 1600,
+          "kind": "studio"
+        },
+        {
+          "src": "/inventory/ap-059.webp",
+          "alt": "Ensemble laveuse et sécheuse Whirlpool",
+          "width": 1600,
+          "height": 1600,
+          "kind": "studio"
+        }
+      ],
+      "featured": false,
+      "deal": false,
+      "status": "published",
+      "notes": "Ensemble constitué à partir de deux fiches du catalogue photo (AP-060 laveuse + AP-059 sécheuse). Raison du jumelage : même étiquette d'ensemble (600 $). Confirmer que les deux appareils se vendent bien ensemble à ce prix.  Numéros de modèle non lisibles sur les photos. Photos sources : IMG_5687.JPG, IMG_5685.JPG.",
+      "createdAt": "2026-09-20T11:49:00.000Z",
+      "updatedAt": "2026-09-20T11:49:00.000Z"
+    },
+    {
+      "id": "cat-set-ap-062",
+      "slug": "ensemble-laveuse-et-secheuse-amana",
+      "sku": "GH-S13",
+      "brand": "Amana",
+      "name": {
+        "fr": "Ensemble laveuse et sécheuse Amana",
+        "en": "Amana washer and dryer set"
+      },
+      "description": {
+        "fr": "Ensemble laveuse et sécheuse vendu en paire. White top-load washer with a solid lid and three rotary controls. White dryer with a solid front door and two rotary controls.",
+        "en": "Washer and dryer sold as a pair. White top-load washer with a solid lid and three rotary controls. White dryer with a solid front door and two rotary controls."
+      },
+      "category": "laundry-sets",
+      "price": 600,
+      "condition": "used",
+      "inventoryStatus": "in-stock",
+      "finish": "white",
+      "images": [
+        {
+          "src": "/inventory/ap-061.webp",
+          "alt": "Ensemble laveuse et sécheuse Amana",
+          "width": 1600,
+          "height": 1600,
+          "kind": "studio"
+        },
+        {
+          "src": "/inventory/ap-062.webp",
+          "alt": "Ensemble laveuse et sécheuse Amana",
+          "width": 1600,
+          "height": 1600,
+          "kind": "studio"
+        }
+      ],
+      "featured": false,
+      "deal": false,
+      "status": "published",
+      "notes": "Ensemble constitué à partir de deux fiches du catalogue photo (AP-061 laveuse + AP-062 sécheuse). Raison du jumelage : étiquette d'ensemble (600 $) sur un seul des deux appareils. Confirmer que les deux appareils se vendent bien ensemble à ce prix.  Numéros de modèle non lisibles sur les photos. Photos sources : IMG_5688.JPG, IMG_5689.JPG.",
+      "createdAt": "2026-09-20T11:48:00.000Z",
+      "updatedAt": "2026-09-20T11:48:00.000Z"
+    },
+    {
+      "id": "cat-set-ap-067",
+      "slug": "ensemble-laveuse-et-secheuse-2",
+      "sku": "GH-S14",
+      "brand": "",
+      "name": {
+        "fr": "Ensemble laveuse et sécheuse",
+        "en": "Washer and dryer set"
+      },
+      "description": {
+        "fr": "Ensemble laveuse et sécheuse vendu en paire. Dark front-load washer with a circular door and front control panel. White front-load dryer with a black control panel and silver door trim.",
+        "en": "Washer and dryer sold as a pair. Dark front-load washer with a circular door and front control panel. White front-load dryer with a black control panel and silver door trim."
+      },
+      "category": "laundry-sets",
+      "price": 0,
+      "condition": "used",
+      "inventoryStatus": "in-stock",
+      "finish": "black",
+      "images": [
+        {
+          "src": "/inventory/ap-069.webp",
+          "alt": "Ensemble laveuse et sécheuse",
+          "width": 1600,
+          "height": 1600,
+          "kind": "studio"
+        },
+        {
+          "src": "/inventory/ap-067.webp",
+          "alt": "Ensemble laveuse et sécheuse",
+          "width": 1600,
+          "height": 1600,
+          "kind": "studio"
+        }
+      ],
+      "featured": false,
+      "deal": false,
+      "status": "draft",
+      "notes": "Ensemble constitué à partir de deux fiches du catalogue photo (AP-069 laveuse + AP-067 sécheuse). Raison du jumelage : photographiés ensemble, aucun prix visible. AUCUN PRIX visible sur les photos — à saisir avant publication.  Numéros de modèle non lisibles sur les photos. Marques différentes : laveuse , sécheuse Samsung. Photos sources : IMG_5695.JPG, IMG_5695.JPG.",
+      "createdAt": "2026-09-20T11:47:00.000Z",
+      "updatedAt": "2026-09-20T11:47:00.000Z"
+    },
+    {
+      "id": "cat-set-ap-098",
+      "slug": "ensemble-laveuse-et-secheuse-samsung-6",
+      "sku": "GH-S15",
+      "brand": "Samsung",
+      "name": {
+        "fr": "Ensemble laveuse et sécheuse Samsung",
+        "en": "Samsung washer and dryer set"
+      },
+      "description": {
+        "fr": "Ensemble laveuse et sécheuse vendu en paire. White front-load washer with a black control panel and circular glass door. White front-load dryer with a black control panel and circular glass door.",
+        "en": "Washer and dryer sold as a pair. White front-load washer with a black control panel and circular glass door. White front-load dryer with a black control panel and circular glass door."
+      },
+      "category": "laundry-sets",
+      "price": 599,
+      "condition": "used",
+      "inventoryStatus": "in-stock",
+      "finish": "white",
+      "images": [
+        {
+          "src": "/inventory/ap-099.webp",
+          "alt": "Ensemble laveuse et sécheuse Samsung",
+          "width": 1600,
+          "height": 1600,
+          "kind": "studio"
+        },
+        {
+          "src": "/inventory/ap-098.webp",
+          "alt": "Ensemble laveuse et sécheuse Samsung",
+          "width": 1600,
+          "height": 1600,
+          "kind": "studio"
+        }
+      ],
+      "featured": false,
+      "deal": false,
+      "status": "published",
+      "notes": "Ensemble constitué à partir de deux fiches du catalogue photo (AP-099 laveuse + AP-098 sécheuse). Raison du jumelage : même étiquette d'ensemble (599 $). Confirmer que les deux appareils se vendent bien ensemble à ce prix.  Numéros de modèle non lisibles sur les photos. Photos sources : IMG_5736.JPG, IMG_5736.JPG.",
+      "createdAt": "2026-09-20T11:46:00.000Z",
+      "updatedAt": "2026-09-20T11:46:00.000Z"
+    },
+    {
+      "id": "cat-set-ap-100",
+      "slug": "ensemble-laveuse-et-secheuse-samsung-7",
+      "sku": "GH-S16",
+      "brand": "Samsung",
+      "name": {
+        "fr": "Ensemble laveuse et sécheuse Samsung",
+        "en": "Samsung washer and dryer set"
+      },
+      "description": {
+        "fr": "Ensemble laveuse et sécheuse vendu en paire. Red front-load washer with a chrome-trimmed circular door and front detergent drawer. Red front-load dryer with a chrome-trimmed circular door and rotary controls.",
+        "en": "Washer and dryer sold as a pair. Red front-load washer with a chrome-trimmed circular door and front detergent drawer. Red front-load dryer with a chrome-trimmed circular door and rotary controls."
+      },
+      "category": "laundry-sets",
+      "price": 600,
+      "condition": "used",
+      "inventoryStatus": "in-stock",
+      "finish": "other",
+      "images": [
+        {
+          "src": "/inventory/ap-101.webp",
+          "alt": "Ensemble laveuse et sécheuse Samsung",
+          "width": 1600,
+          "height": 1600,
+          "kind": "studio"
+        },
+        {
+          "src": "/inventory/ap-100.webp",
+          "alt": "Ensemble laveuse et sécheuse Samsung",
+          "width": 1600,
+          "height": 1600,
+          "kind": "studio"
+        }
+      ],
+      "featured": false,
+      "deal": false,
+      "status": "published",
+      "notes": "Ensemble constitué à partir de deux fiches du catalogue photo (AP-101 laveuse + AP-100 sécheuse). Raison du jumelage : même étiquette d'ensemble (600 $). Confirmer que les deux appareils se vendent bien ensemble à ce prix.  Numéros de modèle non lisibles sur les photos. Photos sources : IMG_5737.JPG, IMG_5737.JPG.",
+      "createdAt": "2026-09-20T11:45:00.000Z",
+      "updatedAt": "2026-09-20T11:45:00.000Z"
+    },
+    {
+      "id": "cat-set-ap-104",
+      "slug": "ensemble-laveuse-et-secheuse-samsung-8",
+      "sku": "GH-S17",
+      "brand": "Samsung",
+      "name": {
+        "fr": "Ensemble laveuse et sécheuse Samsung",
+        "en": "Samsung washer and dryer set"
+      },
+      "description": {
+        "fr": "Ensemble laveuse et sécheuse vendu en paire. White front-load washer with a black control panel and round glass door. White front-load dryer with a black control panel and round glass door.",
+        "en": "Washer and dryer sold as a pair. White front-load washer with a black control panel and round glass door. White front-load dryer with a black control panel and round glass door."
+      },
+      "category": "laundry-sets",
+      "price": 599,
+      "condition": "used",
+      "inventoryStatus": "in-stock",
+      "finish": "white",
+      "images": [
+        {
+          "src": "/inventory/ap-105.webp",
+          "alt": "Ensemble laveuse et sécheuse Samsung",
+          "width": 1600,
+          "height": 1600,
+          "kind": "studio"
+        },
+        {
+          "src": "/inventory/ap-104.webp",
+          "alt": "Ensemble laveuse et sécheuse Samsung",
+          "width": 1600,
+          "height": 1600,
+          "kind": "studio"
+        }
+      ],
+      "featured": false,
+      "deal": false,
+      "status": "published",
+      "notes": "Ensemble constitué à partir de deux fiches du catalogue photo (AP-105 laveuse + AP-104 sécheuse). Raison du jumelage : même étiquette d'ensemble (599 $). Confirmer que les deux appareils se vendent bien ensemble à ce prix.  Numéros de modèle non lisibles sur les photos. Photos sources : IMG_5739.JPG, IMG_5739.JPG.",
+      "createdAt": "2026-09-20T11:44:00.000Z",
+      "updatedAt": "2026-09-20T11:44:00.000Z"
+    },
+    {
+      "id": "cat-set-ap-116",
+      "slug": "ensemble-laveuse-et-secheuse-3",
+      "sku": "GH-S18",
+      "brand": "",
+      "name": {
+        "fr": "Ensemble laveuse et sécheuse",
+        "en": "Washer and dryer set"
+      },
+      "description": {
+        "fr": "Ensemble laveuse et sécheuse vendu en paire. Silver front-load washer with a round glass door and front controls. Dark front-load dryer with a broad chrome-trimmed door.",
+        "en": "Washer and dryer sold as a pair. Silver front-load washer with a round glass door and front controls. Dark front-load dryer with a broad chrome-trimmed door."
+      },
+      "category": "laundry-sets",
+      "price": 600,
+      "condition": "used",
+      "inventoryStatus": "in-stock",
+      "finish": "slate",
+      "images": [
+        {
+          "src": "/inventory/ap-117.webp",
+          "alt": "Ensemble laveuse et sécheuse",
+          "width": 1600,
+          "height": 1600,
+          "kind": "studio"
+        },
+        {
+          "src": "/inventory/ap-116.webp",
+          "alt": "Ensemble laveuse et sécheuse",
+          "width": 1600,
+          "height": 1600,
+          "kind": "studio"
+        }
+      ],
+      "featured": false,
+      "deal": false,
+      "status": "published",
+      "notes": "Ensemble constitué à partir de deux fiches du catalogue photo (AP-117 laveuse + AP-116 sécheuse). Raison du jumelage : même étiquette d'ensemble (600 $). Confirmer que les deux appareils se vendent bien ensemble à ce prix.  Numéros de modèle non lisibles sur les photos. Marques différentes : laveuse , sécheuse . Photos sources : IMG_5752 2.JPG, IMG_5752 2.JPG.",
+      "createdAt": "2026-09-20T11:43:00.000Z",
+      "updatedAt": "2026-09-20T11:43:00.000Z"
     },
     {
       "id": "cat-ap-005",
@@ -384,7 +808,7 @@
     },
     {
       "id": "cat-ap-009",
-      "slug": "laveuse-frontale-graphite-2",
+      "slug": "laveuse-frontale-graphite",
       "sku": "GH-009",
       "brand": "Samsung",
       "name": {
@@ -415,74 +839,6 @@
       "notes": "Aucun prix lisible sur les photos. Numéro de modèle non lisible sur les photos. Only the lower appliance is this record. Other appliances in the photo are separate products. Not established from supplied photos Le magasin vend surtout les laveuses et sécheuses en ensemble — confirmer si cet appareil se vend seul ou avec son partenaire. Photos sources : IMG_5418.JPG, IMG_5654.JPG, IMG_5660.JPG (réf. catalogue AP-009)",
       "createdAt": "2026-09-20T11:36:00.000Z",
       "updatedAt": "2026-09-20T11:36:00.000Z"
-    },
-    {
-      "id": "cat-ap-012",
-      "slug": "secheuse-frontale-blanche-2",
-      "sku": "GH-012",
-      "brand": "Samsung",
-      "name": {
-        "fr": "Sécheuse frontale blanche",
-        "en": "White front-load dryer"
-      },
-      "description": {
-        "fr": "White front-load dryer with a silver dial and round glass door.",
-        "en": "White front-load dryer with a silver dial and round glass door."
-      },
-      "category": "dryers",
-      "price": 0,
-      "condition": "used",
-      "inventoryStatus": "in-stock",
-      "finish": "white",
-      "images": [
-        {
-          "src": "/inventory/ap-012.webp",
-          "alt": "Sécheuse frontale blanche",
-          "width": 1600,
-          "height": 1600,
-          "kind": "studio"
-        }
-      ],
-      "featured": false,
-      "deal": false,
-      "status": "draft",
-      "notes": "Aucun prix lisible sur les photos. Étiquette de prix dont la portée (unité ou ensemble) n’est pas confirmée. Numéro de modèle non lisible sur les photos. Repères de catalogage : variante B. Détail non traduit : « position ». Only the upper appliance is this record. Other appliances in the photo are separate products. Needs review Le magasin vend surtout les laveuses et sécheuses en ensemble — confirmer si cet appareil se vend seul ou avec son partenaire. Photos sources : IMG_5421.JPG, IMG_5661.JPG (réf. catalogue AP-012)",
-      "createdAt": "2026-09-20T11:27:00.000Z",
-      "updatedAt": "2026-09-20T11:27:00.000Z"
-    },
-    {
-      "id": "cat-ap-013",
-      "slug": "laveuse-frontale-blanche",
-      "sku": "GH-013",
-      "brand": "Samsung",
-      "name": {
-        "fr": "Laveuse frontale blanche",
-        "en": "White front-load washer"
-      },
-      "description": {
-        "fr": "White front-load washer with a silver dial and circular door.",
-        "en": "White front-load washer with a silver dial and circular door."
-      },
-      "category": "washers",
-      "price": 0,
-      "condition": "used",
-      "inventoryStatus": "in-stock",
-      "finish": "white",
-      "images": [
-        {
-          "src": "/inventory/ap-013.webp",
-          "alt": "Laveuse frontale blanche",
-          "width": 1600,
-          "height": 1600,
-          "kind": "studio"
-        }
-      ],
-      "featured": false,
-      "deal": false,
-      "status": "draft",
-      "notes": "Aucun prix lisible sur les photos. Étiquette de prix dont la portée (unité ou ensemble) n’est pas confirmée. Numéro de modèle non lisible sur les photos. Repères de catalogage : variante B. Détail non traduit : « position ». Only the lower appliance is this record. Other appliances in the photo are separate products. Needs review Le magasin vend surtout les laveuses et sécheuses en ensemble — confirmer si cet appareil se vend seul ou avec son partenaire. Photos sources : IMG_5422.JPG, IMG_5661.JPG (réf. catalogue AP-013)",
-      "createdAt": "2026-09-20T11:24:00.000Z",
-      "updatedAt": "2026-09-20T11:24:00.000Z"
     },
     {
       "id": "cat-ap-014",
@@ -587,142 +943,6 @@
       "updatedAt": "2026-09-20T11:15:00.000Z"
     },
     {
-      "id": "cat-ap-019",
-      "slug": "laveuse-a-chargement-par-le-haut-blanche",
-      "sku": "GH-019",
-      "brand": "Maytag",
-      "name": {
-        "fr": "Laveuse à chargement par le haut blanche",
-        "en": "White top-load washer"
-      },
-      "description": {
-        "fr": "White top-load washer with a solid lid and silver rear console.",
-        "en": "White top-load washer with a solid lid and silver rear console."
-      },
-      "category": "washers",
-      "price": 0,
-      "condition": "used",
-      "inventoryStatus": "in-stock",
-      "finish": "white",
-      "images": [
-        {
-          "src": "/inventory/ap-019.webp",
-          "alt": "Laveuse à chargement par le haut blanche",
-          "width": 1600,
-          "height": 1600,
-          "kind": "studio"
-        }
-      ],
-      "featured": false,
-      "deal": false,
-      "status": "draft",
-      "notes": "Aucun prix lisible sur les photos. Étiquette de prix dont la portée (unité ou ensemble) n’est pas confirmée. Numéro de modèle non lisible sur les photos. Détail non traduit : « matched pair ». Only the left appliance is this record. Other appliances in the photo are separate products. Needs review Le magasin vend surtout les laveuses et sécheuses en ensemble — confirmer si cet appareil se vend seul ou avec son partenaire. Photos sources : IMG_5428.JPG, IMG_5667.JPG (réf. catalogue AP-019)",
-      "createdAt": "2026-09-20T11:06:00.000Z",
-      "updatedAt": "2026-09-20T11:06:00.000Z"
-    },
-    {
-      "id": "cat-ap-020",
-      "slug": "secheuse-blanche",
-      "sku": "GH-020",
-      "brand": "Maytag",
-      "name": {
-        "fr": "Sécheuse blanche",
-        "en": "White dryer"
-      },
-      "description": {
-        "fr": "White dryer with a solid front door and silver rear console.",
-        "en": "White dryer with a solid front door and silver rear console."
-      },
-      "category": "dryers",
-      "price": 0,
-      "condition": "used",
-      "inventoryStatus": "in-stock",
-      "finish": "white",
-      "images": [
-        {
-          "src": "/inventory/ap-020.webp",
-          "alt": "Sécheuse blanche",
-          "width": 1600,
-          "height": 1600,
-          "kind": "studio"
-        }
-      ],
-      "featured": false,
-      "deal": false,
-      "status": "draft",
-      "notes": "Aucun prix lisible sur les photos. Étiquette de prix dont la portée (unité ou ensemble) n’est pas confirmée. Numéro de modèle non lisible sur les photos. Détail non traduit : « matched pair ». Only the right appliance is this record. Other appliances in the photo are separate products. Needs review Le magasin vend surtout les laveuses et sécheuses en ensemble — confirmer si cet appareil se vend seul ou avec son partenaire. Photos sources : IMG_5428.JPG, IMG_5667.JPG (réf. catalogue AP-020)",
-      "createdAt": "2026-09-20T11:03:00.000Z",
-      "updatedAt": "2026-09-20T11:03:00.000Z"
-    },
-    {
-      "id": "cat-ap-021",
-      "slug": "secheuse-blanche-2",
-      "sku": "GH-021",
-      "brand": "Amana",
-      "name": {
-        "fr": "Sécheuse blanche",
-        "en": "White dryer"
-      },
-      "description": {
-        "fr": "White dryer with a solid front door and simple rotary controls.",
-        "en": "White dryer with a solid front door and simple rotary controls."
-      },
-      "category": "dryers",
-      "price": 0,
-      "condition": "used",
-      "inventoryStatus": "in-stock",
-      "finish": "white",
-      "images": [
-        {
-          "src": "/inventory/ap-021.webp",
-          "alt": "Sécheuse blanche",
-          "width": 1600,
-          "height": 1600,
-          "kind": "studio"
-        }
-      ],
-      "featured": false,
-      "deal": false,
-      "status": "draft",
-      "notes": "Aucun prix lisible sur les photos. Numéro de modèle non lisible sur les photos. Détail non traduit : « with two-dial console ». Potential look-alike elsewhere in batch. Physical identity requires model/serial label; do not auto-merge or publish duplicate stock. Not established from supplied photos Le magasin vend surtout les laveuses et sécheuses en ensemble — confirmer si cet appareil se vend seul ou avec son partenaire. Photos sources : IMG_5429.JPG, IMG_5430.JPG, IMG_5668.JPG, IMG_5669.JPG (réf. catalogue AP-021)",
-      "createdAt": "2026-09-20T11:00:00.000Z",
-      "updatedAt": "2026-09-20T11:00:00.000Z"
-    },
-    {
-      "id": "cat-ap-022",
-      "slug": "laveuse-a-chargement-par-le-haut-grise",
-      "sku": "GH-022",
-      "brand": "Samsung",
-      "name": {
-        "fr": "Laveuse à chargement par le haut grise",
-        "en": "Grey top-load washer"
-      },
-      "description": {
-        "fr": "Gray top-load washer with a dark rear control console and wide lid.",
-        "en": "Gray top-load washer with a dark rear control console and wide lid."
-      },
-      "category": "washers",
-      "price": 800,
-      "condition": "used",
-      "inventoryStatus": "in-stock",
-      "finish": "slate",
-      "images": [
-        {
-          "src": "/inventory/ap-022.webp",
-          "alt": "Laveuse à chargement par le haut grise",
-          "width": 1600,
-          "height": 1600,
-          "kind": "studio"
-        }
-      ],
-      "featured": false,
-      "deal": false,
-      "status": "draft",
-      "notes": "Prix affiché = prix d'ENSEMBLE (800 $). Confirmer le prix à l'unité. Numéro de modèle non lisible sur les photos. Needs review Le magasin vend surtout les laveuses et sécheuses en ensemble — confirmer si cet appareil se vend seul ou avec son partenaire. Photos sources : IMG_5431.JPG (réf. catalogue AP-022)",
-      "createdAt": "2026-09-20T10:57:00.000Z",
-      "updatedAt": "2026-09-20T10:57:00.000Z"
-    },
-    {
       "id": "cat-ap-023",
       "slug": "laveuse-a-chargement-par-le-haut-argent-couvercle-vitre",
       "sku": "GH-023",
@@ -755,74 +975,6 @@
       "notes": "Aucun prix lisible sur les photos. Numéro de modèle non lisible sur les photos. Not established from supplied photos Le magasin vend surtout les laveuses et sécheuses en ensemble — confirmer si cet appareil se vend seul ou avec son partenaire. Photos sources : IMG_5432.JPG (réf. catalogue AP-023)",
       "createdAt": "2026-09-20T10:54:00.000Z",
       "updatedAt": "2026-09-20T10:54:00.000Z"
-    },
-    {
-      "id": "cat-ap-024",
-      "slug": "laveuse-a-chargement-par-le-haut-blanche-2",
-      "sku": "GH-024",
-      "brand": "Amana",
-      "name": {
-        "fr": "Laveuse à chargement par le haut blanche",
-        "en": "White top-load washer"
-      },
-      "description": {
-        "fr": "White top-load washer with a solid lid and three rotary controls.",
-        "en": "White top-load washer with a solid lid and three rotary controls."
-      },
-      "category": "washers",
-      "price": 550,
-      "condition": "used",
-      "inventoryStatus": "in-stock",
-      "finish": "white",
-      "images": [
-        {
-          "src": "/inventory/ap-024.webp",
-          "alt": "Laveuse à chargement par le haut blanche",
-          "width": 1600,
-          "height": 1600,
-          "kind": "studio"
-        }
-      ],
-      "featured": false,
-      "deal": false,
-      "status": "draft",
-      "notes": "Prix affiché = prix d'ENSEMBLE (550 $). Confirmer le prix à l'unité. Numéro de modèle non lisible sur les photos. Potential look-alike elsewhere in batch. Physical identity requires model/serial label; do not auto-merge or publish duplicate stock. Needs review Le magasin vend surtout les laveuses et sécheuses en ensemble — confirmer si cet appareil se vend seul ou avec son partenaire. Photos sources : IMG_5433.JPG (réf. catalogue AP-024)",
-      "createdAt": "2026-09-20T10:51:00.000Z",
-      "updatedAt": "2026-09-20T10:51:00.000Z"
-    },
-    {
-      "id": "cat-ap-025",
-      "slug": "secheuse-blanche-console-argentee",
-      "sku": "GH-025",
-      "brand": "Maytag",
-      "name": {
-        "fr": "Sécheuse blanche, console argentée",
-        "en": "White dryer, silver console"
-      },
-      "description": {
-        "fr": "White dryer with a solid rectangular door and silver rear console.",
-        "en": "White dryer with a solid rectangular door and silver rear console."
-      },
-      "category": "dryers",
-      "price": 0,
-      "condition": "used",
-      "inventoryStatus": "in-stock",
-      "finish": "white",
-      "images": [
-        {
-          "src": "/inventory/ap-025.webp",
-          "alt": "Sécheuse blanche, console argentée",
-          "width": 1600,
-          "height": 1600,
-          "kind": "studio"
-        }
-      ],
-      "featured": false,
-      "deal": false,
-      "status": "draft",
-      "notes": "Aucun prix lisible sur les photos. Numéro de modèle non lisible sur les photos. Possible dryer paired with IMG_5432; price not confirmed. Not established from supplied photos Le magasin vend surtout les laveuses et sécheuses en ensemble — confirmer si cet appareil se vend seul ou avec son partenaire. Photos sources : IMG_5434.JPG, IMG_5671.JPG (réf. catalogue AP-025)",
-      "createdAt": "2026-09-20T10:48:00.000Z",
-      "updatedAt": "2026-09-20T10:48:00.000Z"
     },
     {
       "id": "cat-ap-026",
@@ -860,7 +1012,7 @@
     },
     {
       "id": "cat-ap-027",
-      "slug": "secheuse-blanche-3",
+      "slug": "secheuse-blanche",
       "sku": "GH-027",
       "brand": "Maytag",
       "name": {
@@ -1437,144 +1589,8 @@
       "updatedAt": "2026-09-20T09:54:00.000Z"
     },
     {
-      "id": "cat-ap-044",
-      "slug": "secheuse-frontale-blanche-console-noire",
-      "sku": "GH-044",
-      "brand": "Samsung",
-      "name": {
-        "fr": "Sécheuse frontale blanche, console noire",
-        "en": "White front-load dryer, black console"
-      },
-      "description": {
-        "fr": "White front-load dryer with a black control panel and silver door trim.",
-        "en": "White front-load dryer with a black control panel and silver door trim."
-      },
-      "category": "dryers",
-      "price": 0,
-      "condition": "used",
-      "inventoryStatus": "in-stock",
-      "finish": "white",
-      "images": [
-        {
-          "src": "/inventory/ap-044.webp",
-          "alt": "Sécheuse frontale blanche, console noire",
-          "width": 1600,
-          "height": 1600,
-          "kind": "studio"
-        }
-      ],
-      "featured": false,
-      "deal": false,
-      "status": "draft",
-      "notes": "Aucun prix lisible sur les photos. Numéro de modèle non lisible sur les photos. Repères de catalogage : variante A. Only the upper appliance is this record. Other appliances in the photo are separate products. Potential look-alike elsewhere in batch. Physical identity requires model/serial label; do not auto-merge or publish duplicate stock. Not established from supplied photos Le magasin vend surtout les laveuses et sécheuses en ensemble — confirmer si cet appareil se vend seul ou avec son partenaire. Photos sources : IMG_5657.JPG (réf. catalogue AP-044)",
-      "createdAt": "2026-09-20T09:51:00.000Z",
-      "updatedAt": "2026-09-20T09:51:00.000Z"
-    },
-    {
-      "id": "cat-ap-045",
-      "slug": "laveuse-frontale-blanche-console-noire",
-      "sku": "GH-045",
-      "brand": "Samsung",
-      "name": {
-        "fr": "Laveuse frontale blanche, console noire",
-        "en": "White front-load washer, black console"
-      },
-      "description": {
-        "fr": "White front-load washer with a black control panel and silver door trim.",
-        "en": "White front-load washer with a black control panel and silver door trim."
-      },
-      "category": "washers",
-      "price": 0,
-      "condition": "used",
-      "inventoryStatus": "in-stock",
-      "finish": "white",
-      "images": [
-        {
-          "src": "/inventory/ap-045.webp",
-          "alt": "Laveuse frontale blanche, console noire",
-          "width": 1600,
-          "height": 1600,
-          "kind": "studio"
-        }
-      ],
-      "featured": false,
-      "deal": false,
-      "status": "draft",
-      "notes": "Aucun prix lisible sur les photos. Numéro de modèle non lisible sur les photos. Repères de catalogage : variante A. Only the lower appliance is this record. Other appliances in the photo are separate products. Potential look-alike elsewhere in batch. Physical identity requires model/serial label; do not auto-merge or publish duplicate stock. Not established from supplied photos Le magasin vend surtout les laveuses et sécheuses en ensemble — confirmer si cet appareil se vend seul ou avec son partenaire. Photos sources : IMG_5657.JPG (réf. catalogue AP-045)",
-      "createdAt": "2026-09-20T09:48:00.000Z",
-      "updatedAt": "2026-09-20T09:48:00.000Z"
-    },
-    {
-      "id": "cat-ap-046",
-      "slug": "secheuse-frontale-blanche-3",
-      "sku": "GH-046",
-      "brand": "",
-      "name": {
-        "fr": "Sécheuse frontale blanche",
-        "en": "White front-load dryer"
-      },
-      "description": {
-        "fr": "White front-load dryer with a large chrome-trimmed door and compact control panel.",
-        "en": "White front-load dryer with a large chrome-trimmed door and compact control panel."
-      },
-      "category": "dryers",
-      "price": 0,
-      "condition": "used",
-      "inventoryStatus": "in-stock",
-      "finish": "white",
-      "images": [
-        {
-          "src": "/inventory/ap-046.webp",
-          "alt": "Sécheuse frontale blanche",
-          "width": 1600,
-          "height": 1600,
-          "kind": "studio"
-        }
-      ],
-      "featured": false,
-      "deal": false,
-      "status": "draft",
-      "notes": "Aucun prix lisible sur les photos. Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Détail non traduit : « with chrome door ». Brand not confidently readable; no brand guessed from styling. Only the upper appliance is this record. Other appliances in the photo are separate products. Not established from supplied photos Le magasin vend surtout les laveuses et sécheuses en ensemble — confirmer si cet appareil se vend seul ou avec son partenaire. Photos sources : IMG_5665.JPG (réf. catalogue AP-046)",
-      "createdAt": "2026-09-20T09:45:00.000Z",
-      "updatedAt": "2026-09-20T09:45:00.000Z"
-    },
-    {
-      "id": "cat-ap-047",
-      "slug": "laveuse-frontale-foncee",
-      "sku": "GH-047",
-      "brand": "",
-      "name": {
-        "fr": "Laveuse frontale foncée",
-        "en": "Dark front-load washer"
-      },
-      "description": {
-        "fr": "Dark front-load washer with a large round door and front controls.",
-        "en": "Dark front-load washer with a large round door and front controls."
-      },
-      "category": "washers",
-      "price": 0,
-      "condition": "used",
-      "inventoryStatus": "in-stock",
-      "finish": "black",
-      "images": [
-        {
-          "src": "/inventory/ap-047.webp",
-          "alt": "Laveuse frontale foncée",
-          "width": 1600,
-          "height": 1600,
-          "kind": "studio"
-        }
-      ],
-      "featured": false,
-      "deal": false,
-      "status": "draft",
-      "notes": "Aucun prix lisible sur les photos. Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Repères de catalogage : beneath white dryer. Brand not confidently readable; no brand guessed from styling. Only the lower appliance is this record. Other appliances in the photo are separate products. Not established from supplied photos Le magasin vend surtout les laveuses et sécheuses en ensemble — confirmer si cet appareil se vend seul ou avec son partenaire. Photos sources : IMG_5665.JPG (réf. catalogue AP-047)",
-      "createdAt": "2026-09-20T09:42:00.000Z",
-      "updatedAt": "2026-09-20T09:42:00.000Z"
-    },
-    {
       "id": "cat-ap-048",
-      "slug": "secheuse-blanche-4",
+      "slug": "secheuse-blanche-2",
       "sku": "GH-048",
       "brand": "",
       "name": {
@@ -1608,7 +1624,7 @@
     },
     {
       "id": "cat-ap-049",
-      "slug": "secheuse-blanche-5",
+      "slug": "secheuse-blanche-3",
       "sku": "GH-049",
       "brand": "",
       "name": {
@@ -1947,74 +1963,6 @@
       "updatedAt": "2026-09-20T09:09:00.000Z"
     },
     {
-      "id": "cat-ap-061",
-      "slug": "laveuse-a-chargement-par-le-haut-blanche-trois-cadrans",
-      "sku": "GH-061",
-      "brand": "Amana",
-      "name": {
-        "fr": "Laveuse à chargement par le haut blanche, trois cadrans",
-        "en": "White top-load washer, three dials"
-      },
-      "description": {
-        "fr": "White top-load washer with a solid lid and three rotary controls.",
-        "en": "White top-load washer with a solid lid and three rotary controls."
-      },
-      "category": "washers",
-      "price": 600,
-      "condition": "used",
-      "inventoryStatus": "in-stock",
-      "finish": "white",
-      "images": [
-        {
-          "src": "/inventory/ap-061.webp",
-          "alt": "Laveuse à chargement par le haut blanche, trois cadrans",
-          "width": 1600,
-          "height": 1600,
-          "kind": "studio"
-        }
-      ],
-      "featured": false,
-      "deal": false,
-      "status": "draft",
-      "notes": "Prix affiché = prix d'ENSEMBLE (600 $). Confirmer le prix à l'unité. Numéro de modèle non lisible sur les photos. Potential look-alike elsewhere in batch. Physical identity requires model/serial label; do not auto-merge or publish duplicate stock. Needs review Le magasin vend surtout les laveuses et sécheuses en ensemble — confirmer si cet appareil se vend seul ou avec son partenaire. Photos sources : IMG_5688.JPG (réf. catalogue AP-061)",
-      "createdAt": "2026-09-20T09:00:00.000Z",
-      "updatedAt": "2026-09-20T09:00:00.000Z"
-    },
-    {
-      "id": "cat-ap-062",
-      "slug": "secheuse-blanche-deux-cadrans",
-      "sku": "GH-062",
-      "brand": "Amana",
-      "name": {
-        "fr": "Sécheuse blanche, deux cadrans",
-        "en": "White dryer, two dials"
-      },
-      "description": {
-        "fr": "White dryer with a solid front door and two rotary controls.",
-        "en": "White dryer with a solid front door and two rotary controls."
-      },
-      "category": "dryers",
-      "price": 0,
-      "condition": "used",
-      "inventoryStatus": "in-stock",
-      "finish": "white",
-      "images": [
-        {
-          "src": "/inventory/ap-062.webp",
-          "alt": "Sécheuse blanche, deux cadrans",
-          "width": 1600,
-          "height": 1600,
-          "kind": "studio"
-        }
-      ],
-      "featured": false,
-      "deal": false,
-      "status": "draft",
-      "notes": "Aucun prix lisible sur les photos. Numéro de modèle non lisible sur les photos. Potential look-alike elsewhere in batch. Physical identity requires model/serial label; do not auto-merge or publish duplicate stock. Not established from supplied photos Le magasin vend surtout les laveuses et sécheuses en ensemble — confirmer si cet appareil se vend seul ou avec son partenaire. Photos sources : IMG_5689.JPG (réf. catalogue AP-062)",
-      "createdAt": "2026-09-20T08:57:00.000Z",
-      "updatedAt": "2026-09-20T08:57:00.000Z"
-    },
-    {
       "id": "cat-ap-063",
       "slug": "refrigerateur-a-congelateur-superieur-blanc",
       "sku": "GH-063",
@@ -2118,7 +2066,7 @@
     },
     {
       "id": "cat-ap-066",
-      "slug": "secheuse-frontale-blanche-console-noire-2",
+      "slug": "secheuse-frontale-blanche-console-noire",
       "sku": "GH-066",
       "brand": "Samsung",
       "name": {
@@ -2151,42 +2099,8 @@
       "updatedAt": "2026-09-20T08:45:00.000Z"
     },
     {
-      "id": "cat-ap-067",
-      "slug": "secheuse-frontale-blanche-console-noire-3",
-      "sku": "GH-067",
-      "brand": "Samsung",
-      "name": {
-        "fr": "Sécheuse frontale blanche, console noire",
-        "en": "White front-load dryer, black console"
-      },
-      "description": {
-        "fr": "White front-load dryer with a black control panel and silver door trim.",
-        "en": "White front-load dryer with a black control panel and silver door trim."
-      },
-      "category": "dryers",
-      "price": 0,
-      "condition": "used",
-      "inventoryStatus": "in-stock",
-      "finish": "white",
-      "images": [
-        {
-          "src": "/inventory/ap-067.webp",
-          "alt": "Sécheuse frontale blanche, console noire",
-          "width": 1600,
-          "height": 1600,
-          "kind": "studio"
-        }
-      ],
-      "featured": false,
-      "deal": false,
-      "status": "draft",
-      "notes": "Aucun prix lisible sur les photos. Numéro de modèle non lisible sur les photos. Repères de catalogage : adjacent unit ; variante B. Only the upper appliance is this record. Other appliances in the photo are separate products. Potential look-alike elsewhere in batch. Physical identity requires model/serial label; do not auto-merge or publish duplicate stock. Not established from supplied photos Le magasin vend surtout les laveuses et sécheuses en ensemble — confirmer si cet appareil se vend seul ou avec son partenaire. Photos sources : IMG_5695.JPG (réf. catalogue AP-067)",
-      "createdAt": "2026-09-20T08:42:00.000Z",
-      "updatedAt": "2026-09-20T08:42:00.000Z"
-    },
-    {
       "id": "cat-ap-068",
-      "slug": "laveuse-frontale-foncee-2",
+      "slug": "laveuse-frontale-foncee",
       "sku": "GH-068",
       "brand": "LG",
       "name": {
@@ -2217,40 +2131,6 @@
       "notes": "Numéro de modèle non lisible sur les photos. Repères de catalogage : beneath Samsung dryer. Only the lower appliance is this record. Other appliances in the photo are separate products. Potential look-alike elsewhere in batch. Physical identity requires model/serial label; do not auto-merge or publish duplicate stock. Sticker amount transcribed; confirm current price before publishing Le magasin vend surtout les laveuses et sécheuses en ensemble — confirmer si cet appareil se vend seul ou avec son partenaire. Photos sources : IMG_5694.JPG (réf. catalogue AP-068)",
       "createdAt": "2026-09-20T08:39:00.000Z",
       "updatedAt": "2026-09-20T08:39:00.000Z"
-    },
-    {
-      "id": "cat-ap-069",
-      "slug": "laveuse-frontale-foncee-3",
-      "sku": "GH-069",
-      "brand": "",
-      "name": {
-        "fr": "Laveuse frontale foncée",
-        "en": "Dark front-load washer"
-      },
-      "description": {
-        "fr": "Dark front-load washer with a circular door and front control panel.",
-        "en": "Dark front-load washer with a circular door and front control panel."
-      },
-      "category": "washers",
-      "price": 0,
-      "condition": "used",
-      "inventoryStatus": "in-stock",
-      "finish": "black",
-      "images": [
-        {
-          "src": "/inventory/ap-069.webp",
-          "alt": "Laveuse frontale foncée",
-          "width": 1600,
-          "height": 1600,
-          "kind": "studio"
-        }
-      ],
-      "featured": false,
-      "deal": false,
-      "status": "draft",
-      "notes": "Aucun prix lisible sur les photos. Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Repères de catalogage : adjacent unit ; beneath Samsung dryer. Brand not confidently readable; no brand guessed from styling. Only the lower appliance is this record. Other appliances in the photo are separate products. Potential look-alike elsewhere in batch. Physical identity requires model/serial label; do not auto-merge or publish duplicate stock. Not established from supplied photos Le magasin vend surtout les laveuses et sécheuses en ensemble — confirmer si cet appareil se vend seul ou avec son partenaire. Photos sources : IMG_5695.JPG (réf. catalogue AP-069)",
-      "createdAt": "2026-09-20T08:36:00.000Z",
-      "updatedAt": "2026-09-20T08:36:00.000Z"
     },
     {
       "id": "cat-ap-070",
@@ -3098,7 +2978,7 @@
       "featured": false,
       "deal": false,
       "status": "published",
-      "notes": "Plusieurs étiquettes photographiées : 649 $ (individual), 599 $ (individual). Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Brand not confidently readable; no brand guessed from styling. Needs review Le magasin vend surtout les laveuses et sécheuses en ensemble — confirmer si cet appareil se vend seul ou avec son partenaire. Photos sources : IMG_5732.JPG (réf. catalogue AP-094)",
+      "notes": "Plusieurs étiquettes photographiées : 649 $ (individual), 599 $ (individual). Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Brand not confidently readable; no brand guessed from styling. Needs review Photos sources : IMG_5732.JPG (réf. catalogue AP-094)",
       "createdAt": "2026-09-20T07:21:00.000Z",
       "updatedAt": "2026-09-20T07:21:00.000Z"
     },
@@ -3205,142 +3085,6 @@
       "updatedAt": "2026-09-20T07:12:00.000Z"
     },
     {
-      "id": "cat-ap-098",
-      "slug": "secheuse-frontale-blanche-console-noire-4",
-      "sku": "GH-098",
-      "brand": "Samsung",
-      "name": {
-        "fr": "Sécheuse frontale blanche, console noire",
-        "en": "White front-load dryer, black console"
-      },
-      "description": {
-        "fr": "White front-load dryer with a black control panel and circular glass door.",
-        "en": "White front-load dryer with a black control panel and circular glass door."
-      },
-      "category": "dryers",
-      "price": 0,
-      "condition": "used",
-      "inventoryStatus": "in-stock",
-      "finish": "white",
-      "images": [
-        {
-          "src": "/inventory/ap-098.webp",
-          "alt": "Sécheuse frontale blanche, console noire",
-          "width": 1600,
-          "height": 1600,
-          "kind": "studio"
-        }
-      ],
-      "featured": false,
-      "deal": false,
-      "status": "draft",
-      "notes": "Aucun prix lisible sur les photos. Étiquette de prix dont la portée (unité ou ensemble) n’est pas confirmée. Numéro de modèle non lisible sur les photos. Repères de catalogage : variante C. Only the upper appliance is this record. Other appliances in the photo are separate products. Potential look-alike elsewhere in batch. Physical identity requires model/serial label; do not auto-merge or publish duplicate stock. Needs review Le magasin vend surtout les laveuses et sécheuses en ensemble — confirmer si cet appareil se vend seul ou avec son partenaire. Photos sources : IMG_5736.JPG (réf. catalogue AP-098)",
-      "createdAt": "2026-09-20T07:09:00.000Z",
-      "updatedAt": "2026-09-20T07:09:00.000Z"
-    },
-    {
-      "id": "cat-ap-099",
-      "slug": "laveuse-frontale-blanche-console-noire-2",
-      "sku": "GH-099",
-      "brand": "Samsung",
-      "name": {
-        "fr": "Laveuse frontale blanche, console noire",
-        "en": "White front-load washer, black console"
-      },
-      "description": {
-        "fr": "White front-load washer with a black control panel and circular glass door.",
-        "en": "White front-load washer with a black control panel and circular glass door."
-      },
-      "category": "washers",
-      "price": 0,
-      "condition": "used",
-      "inventoryStatus": "in-stock",
-      "finish": "white",
-      "images": [
-        {
-          "src": "/inventory/ap-099.webp",
-          "alt": "Laveuse frontale blanche, console noire",
-          "width": 1600,
-          "height": 1600,
-          "kind": "studio"
-        }
-      ],
-      "featured": false,
-      "deal": false,
-      "status": "draft",
-      "notes": "Aucun prix lisible sur les photos. Étiquette de prix dont la portée (unité ou ensemble) n’est pas confirmée. Numéro de modèle non lisible sur les photos. Repères de catalogage : variante C. Only the lower appliance is this record. Other appliances in the photo are separate products. Potential look-alike elsewhere in batch. Physical identity requires model/serial label; do not auto-merge or publish duplicate stock. Needs review Le magasin vend surtout les laveuses et sécheuses en ensemble — confirmer si cet appareil se vend seul ou avec son partenaire. Photos sources : IMG_5736.JPG (réf. catalogue AP-099)",
-      "createdAt": "2026-09-20T07:06:00.000Z",
-      "updatedAt": "2026-09-20T07:06:00.000Z"
-    },
-    {
-      "id": "cat-ap-100",
-      "slug": "secheuse-frontale-rouge",
-      "sku": "GH-100",
-      "brand": "Samsung",
-      "name": {
-        "fr": "Sécheuse frontale rouge",
-        "en": "Red front-load dryer"
-      },
-      "description": {
-        "fr": "Red front-load dryer with a chrome-trimmed circular door and rotary controls.",
-        "en": "Red front-load dryer with a chrome-trimmed circular door and rotary controls."
-      },
-      "category": "dryers",
-      "price": 0,
-      "condition": "used",
-      "inventoryStatus": "in-stock",
-      "finish": "other",
-      "images": [
-        {
-          "src": "/inventory/ap-100.webp",
-          "alt": "Sécheuse frontale rouge",
-          "width": 1600,
-          "height": 1600,
-          "kind": "studio"
-        }
-      ],
-      "featured": false,
-      "deal": false,
-      "status": "draft",
-      "notes": "Aucun prix lisible sur les photos. Étiquette de prix dont la portée (unité ou ensemble) n’est pas confirmée. Numéro de modèle non lisible sur les photos. Only the upper appliance is this record. Other appliances in the photo are separate products. Needs review Le magasin vend surtout les laveuses et sécheuses en ensemble — confirmer si cet appareil se vend seul ou avec son partenaire. Photos sources : IMG_5737.JPG (réf. catalogue AP-100)",
-      "createdAt": "2026-09-20T07:03:00.000Z",
-      "updatedAt": "2026-09-20T07:03:00.000Z"
-    },
-    {
-      "id": "cat-ap-101",
-      "slug": "laveuse-frontale-rouge",
-      "sku": "GH-101",
-      "brand": "Samsung",
-      "name": {
-        "fr": "Laveuse frontale rouge",
-        "en": "Red front-load washer"
-      },
-      "description": {
-        "fr": "Red front-load washer with a chrome-trimmed circular door and front detergent drawer.",
-        "en": "Red front-load washer with a chrome-trimmed circular door and front detergent drawer."
-      },
-      "category": "washers",
-      "price": 0,
-      "condition": "used",
-      "inventoryStatus": "in-stock",
-      "finish": "other",
-      "images": [
-        {
-          "src": "/inventory/ap-101.webp",
-          "alt": "Laveuse frontale rouge",
-          "width": 1600,
-          "height": 1600,
-          "kind": "studio"
-        }
-      ],
-      "featured": false,
-      "deal": false,
-      "status": "draft",
-      "notes": "Aucun prix lisible sur les photos. Étiquette de prix dont la portée (unité ou ensemble) n’est pas confirmée. Numéro de modèle non lisible sur les photos. Only the lower appliance is this record. Other appliances in the photo are separate products. Needs review Le magasin vend surtout les laveuses et sécheuses en ensemble — confirmer si cet appareil se vend seul ou avec son partenaire. Photos sources : IMG_5737.JPG (réf. catalogue AP-101)",
-      "createdAt": "2026-09-20T07:00:00.000Z",
-      "updatedAt": "2026-09-20T07:00:00.000Z"
-    },
-    {
       "id": "cat-ap-102",
       "slug": "secheuse-frontale-blanche-console-blanche",
       "sku": "GH-102",
@@ -3444,7 +3188,7 @@
     },
     {
       "id": "cat-ap-107",
-      "slug": "laveuse-frontale-graphite-3",
+      "slug": "laveuse-frontale-graphite-2",
       "sku": "GH-107",
       "brand": "Maytag",
       "name": {
@@ -3749,76 +3493,8 @@
       "updatedAt": "2026-09-20T06:18:00.000Z"
     },
     {
-      "id": "cat-ap-116",
-      "slug": "secheuse-frontale-foncee",
-      "sku": "GH-116",
-      "brand": "",
-      "name": {
-        "fr": "Sécheuse frontale foncée",
-        "en": "Dark front-load dryer"
-      },
-      "description": {
-        "fr": "Dark front-load dryer with a broad chrome-trimmed door.",
-        "en": "Dark front-load dryer with a broad chrome-trimmed door."
-      },
-      "category": "dryers",
-      "price": 0,
-      "condition": "used",
-      "inventoryStatus": "in-stock",
-      "finish": "black",
-      "images": [
-        {
-          "src": "/inventory/ap-116.webp",
-          "alt": "Sécheuse frontale foncée",
-          "width": 1600,
-          "height": 1600,
-          "kind": "studio"
-        }
-      ],
-      "featured": false,
-      "deal": false,
-      "status": "draft",
-      "notes": "Aucun prix lisible sur les photos. Étiquette de prix dont la portée (unité ou ensemble) n’est pas confirmée. Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Repères de catalogage : stacked window display. Brand not confidently readable; no brand guessed from styling. Only the upper appliance is this record. Other appliances in the photo are separate products. Potential look-alike elsewhere in batch. Physical identity requires model/serial label; do not auto-merge or publish duplicate stock. Needs review Le magasin vend surtout les laveuses et sécheuses en ensemble — confirmer si cet appareil se vend seul ou avec son partenaire. Photos sources : IMG_5752 2.JPG (réf. catalogue AP-116)",
-      "createdAt": "2026-09-20T06:15:00.000Z",
-      "updatedAt": "2026-09-20T06:15:00.000Z"
-    },
-    {
-      "id": "cat-ap-117",
-      "slug": "laveuse-frontale-argent-2",
-      "sku": "GH-117",
-      "brand": "",
-      "name": {
-        "fr": "Laveuse frontale argent",
-        "en": "Silver front-load washer"
-      },
-      "description": {
-        "fr": "Silver front-load washer with a round glass door and front controls.",
-        "en": "Silver front-load washer with a round glass door and front controls."
-      },
-      "category": "washers",
-      "price": 0,
-      "condition": "used",
-      "inventoryStatus": "in-stock",
-      "finish": "slate",
-      "images": [
-        {
-          "src": "/inventory/ap-117.webp",
-          "alt": "Laveuse frontale argent",
-          "width": 1600,
-          "height": 1600,
-          "kind": "studio"
-        }
-      ],
-      "featured": false,
-      "deal": false,
-      "status": "draft",
-      "notes": "Aucun prix lisible sur les photos. Étiquette de prix dont la portée (unité ou ensemble) n’est pas confirmée. Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Repères de catalogage : stacked window display. Brand not confidently readable; no brand guessed from styling. Only the lower appliance is this record. Other appliances in the photo are separate products. Potential look-alike elsewhere in batch. Physical identity requires model/serial label; do not auto-merge or publish duplicate stock. Needs review Le magasin vend surtout les laveuses et sécheuses en ensemble — confirmer si cet appareil se vend seul ou avec son partenaire. Photos sources : IMG_5752 2.JPG (réf. catalogue AP-117)",
-      "createdAt": "2026-09-20T06:12:00.000Z",
-      "updatedAt": "2026-09-20T06:12:00.000Z"
-    },
-    {
       "id": "cat-ap-118",
-      "slug": "laveuse-frontale-argent-3",
+      "slug": "laveuse-frontale-argent-2",
       "sku": "GH-118",
       "brand": "LG",
       "name": {

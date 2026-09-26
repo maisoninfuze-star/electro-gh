@@ -161,8 +161,16 @@ def photo_num(name):
 
 
 def kind_of(r):
+    """
+    What THIS record is, not what stands next to it. The catalogue names
+    neighbours for context — "Dark front-load washer beneath Samsung dryer"
+    is a washer — so the neighbour clause is cut before matching, and
+    'dishwasher' is tested before 'washer' because it contains it.
+    """
     t = (r['name'] + ' ' + r.get('description', '')).lower()
+    t = re.split(r'\bbeneath\b|\bbelow\b|\bunder\b|\babove\b', t)[0]
     if 'dishwasher' in t: return 'dishwasher'
+    if 'laundry center' in t: return 'center'
     if 'dryer' in t: return 'dryer'
     if 'washer' in t: return 'washer'
     return 'other'
@@ -170,37 +178,82 @@ def kind_of(r):
 
 def find_pairs(records):
     """
-    The shop sells most laundry as washer+dryer sets, and the catalogue split
-    each pair into two records because it inventories one appliance per record.
-    A set sticker stuck on one machine is therefore the pair's price, not that
-    machine's — which is why those records could not be published on their own.
+    The shop sells most laundry as washer+dryer pairs, and the catalogue splits
+    every pair into two records because it inventories one appliance per
+    record. Worse, the set sticker is stuck on ONE machine, so its partner
+    often carries no price at all — requiring both records to show the same set
+    price found only 6 of them and missed the rest.
 
-    Pair two records only on evidence, never on a hunch:
-      * both carry the SAME set price, and
-      * one is a washer and the other a dryer, and
-      * same brand or the same source photo, and
-      * their photos were taken within 3 frames of each other.
+    Pair a washer with a dryer co-photographed or within 3 frames, when any of:
+      a) both carry the same set (or unconfirmed-scope) price
+      b) one carries a set price and the partner carries none
+      c) the catalogue calls them a matched pair
+      d) neither carries any price and they share one photograph
 
-    Anything weaker stays two separate drafts for the owner to judge.
+    Never pair a candidate that has its own INDIVIDUAL price — that machine is
+    sold on its own, whatever stands beside it. The pair takes the set amount
+    when one exists, and is a draft when it does not.
     """
-    setamt = {}
-    for r in records:
-        s_ = [p['amount'] for p in r.get('prices', []) if p.get('scope') == 'set']
-        if s_: setamt.setdefault(s_[0], []).append(r)
+    def setish(r):
+        return [p['amount'] for p in r.get('prices', []) if p.get('scope') != 'individual']
 
+    def individual(r):
+        return [p['amount'] for p in r.get('prices', []) if p.get('scope') == 'individual']
+
+    def eligible(r):
+        # Sold on its own only if it has an individual price AND no set price.
+        # AP-001 carries both ($300 alone, $650 as a pair) and must stay pairable.
+        return not (individual(r) and not setish(r))
+
+    laundry = [r for r in records if kind_of(r) in ('washer', 'dryer') and eligible(r)]
+    dryers = [r for r in laundry if kind_of(r) == 'dryer']
+    washers = [r for r in laundry if kind_of(r) == 'washer']
+
+    # Score EVERY candidate pair, then assign best-first. Walking the list in
+    # photo order and taking the first acceptable washer let an earlier dryer
+    # steal a washer that belonged to a later, far better match.
+    cands = []
+    for d in dryers:
+        for w in washers:
+            gap = abs(photo_num(d['primary_photo']) - photo_num(w['primary_photo']))
+            if gap > 3:
+                continue
+            same_photo = d['primary_photo'] == w['primary_photo']
+            sd, sw = setish(d), setish(w)
+            matched = 'matched pair' in (d['name'] + w['name']).lower()
+            if sd and sw and sd[0] == sw[0]:
+                reason, sc = "même étiquette d'ensemble (%s $)" % sd[0], 100
+            elif (sd and not sw) or (sw and not sd):
+                reason, sc = "étiquette d'ensemble (%s $) sur un seul des deux appareils" % (sd or sw)[0], 80
+            elif matched:
+                reason, sc = 'catalogue : « matched pair »', 70
+            elif not sd and not sw and same_photo:
+                reason, sc = 'photographiés ensemble, aucun prix visible', 50
+            else:
+                continue
+            if same_photo:
+                sc += 20
+            if d.get('brand') == w.get('brand') and (d.get('brand') or 'Unknown') != 'Unknown':
+                sc += 10
+            sc -= 8 * gap
+            cands.append((sc, reason, d, w))
+
+    cands.sort(key=lambda c: (-c[0], c[2]['id']))
     pairs, used = [], set()
-    for amt, group in sorted(setamt.items()):
-        washers = [r for r in group if kind_of(r) == 'washer']
-        dryers = [r for r in group if kind_of(r) == 'dryer']
-        for d in dryers:
-            if d['id'] in used: continue
-            cands = [w for w in washers if w['id'] not in used
-                     and (w.get('brand') == d.get('brand') or w['primary_photo'] == d['primary_photo'])
-                     and abs(photo_num(w['primary_photo']) - photo_num(d['primary_photo'])) <= 3]
-            if not cands: continue
-            w = min(cands, key=lambda w: abs(photo_num(w['primary_photo']) - photo_num(d['primary_photo'])))
-            used.add(d['id']); used.add(w['id'])
-            pairs.append((amt, w, d))
+    for sc, reason, d, w in cands:
+        if d['id'] in used or w['id'] in used:
+            continue
+        used.add(d['id']); used.add(w['id'])
+        amt = (setish(d) or setish(w) or [0])[0]
+        # Confident = photographed together, or the same brand. A cross-brand
+        # pair inferred from two different frames is a proposal, not a fact
+        # (the catalogue itself says "matching dryer not positively
+        # identified"), so it is imported as a draft for the owner to confirm.
+        confident = (d['primary_photo'] == w['primary_photo']
+                     or (d.get('brand') == w.get('brand')
+                         and (d.get('brand') or 'Unknown') != 'Unknown'))
+        pairs.append((amt, w, d, reason, confident))
+    pairs.sort(key=lambda p: p[2]['id'])
     return pairs, used
 
 
@@ -222,9 +275,10 @@ def main():
     base = datetime(2026, 9, 20, 12, 0, 0)
 
     pairs, paired_ids = find_pairs(records)
-    print(f'{len(pairs)} washer+dryer sets identified from matching set prices')
-    for amt, w, d in pairs:
-        print(f"   ${amt}: {d['id']} ({d.get('brand')} dryer) + {w['id']} ({w.get('brand')} washer)")
+    print(f'{len(pairs)} washer+dryer sets identified')
+    for amt, w, d, why, conf in pairs:
+        price = f'${amt}' if amt else 'no price'
+        print(f"   {price:9} {'OK ' if conf else 'chk'} {d['id']} ({d.get('brand')} dryer) + {w['id']} ({w.get('brand')} washer)   <- {why}")
 
     def copy_img(rec, alt):
         src = IMG_SRC / f"{rec['id']}.webp"
@@ -235,23 +289,32 @@ def main():
                 'width': 1600, 'height': 1600, 'kind': 'studio'}
 
     # ── Sets first ────────────────────────────────────────────────────────
-    for n, (amt, w, d) in enumerate(pairs):
-        wb, db = w.get('brand'), d.get('brand')
-        same = wb == db and (wb or 'Unknown') != 'Unknown'
+    for n, (amt, w, d, why, confident) in enumerate(pairs):
+        # 'Unknown' is a catalogue placeholder, never a brand a customer reads.
+        wb = w.get('brand') if (w.get('brand') or 'Unknown') != 'Unknown' else ''
+        db = d.get('brand') if (d.get('brand') or 'Unknown') != 'Unknown' else ''
+        same = bool(wb) and wb == db
         brand = wb if same else ''
-        wp, dp = parse(w['name']), parse(d['name'])
-        colour_fr = wp[0].split(',')[0].split(' ', 2)[-1] if wp else ''
+        wp = parse(w['name'])
         if same:
             fr = f'Ensemble laveuse et sécheuse {wb}'
             en = f'{wb} washer and dryer set'
+        elif wb and db:
+            fr = f'Ensemble laveuse {wb} et sécheuse {db}'
+            en = f'{wb} washer and {db} dryer set'
         else:
-            fr = f"Ensemble laveuse {wb} et sécheuse {db}" if (wb and db) else 'Ensemble laveuse et sécheuse'
-            en = f'{wb} washer and {db} dryer set' if (wb and db) else 'Washer and dryer set'
+            # One or both plates unreadable — name the pair, claim no brand.
+            fr = 'Ensemble laveuse et sécheuse'
+            en = 'Washer and dryer set'
         imgs = [im for im in (copy_img(w, fr), copy_img(d, fr)) if im]
         note = [
-            f"Ensemble constitué à partir de deux fiches du catalogue photo ({w['id']} laveuse + {d['id']} sécheuse), "
-            f"réunies parce qu'elles portent la même étiquette d'ensemble à {amt} $.",
-            'Confirmer que les deux appareils se vendent bien ensemble à ce prix.',
+            f"Ensemble constitué à partir de deux fiches du catalogue photo "
+            f"({w['id']} laveuse + {d['id']} sécheuse). Raison du jumelage : {why}.",
+            ('Confirmer que les deux appareils se vendent bien ensemble à ce prix.'
+             if amt else 'AUCUN PRIX visible sur les photos — à saisir avant publication.'),
+            ('' if confident else
+             'JUMELAGE À VÉRIFIER : marques différentes et appareils photographiés séparément. '
+             'Confirmer que ces deux appareils forment bien l’ensemble avant de publier.'),
             'Numéros de modèle non lisibles sur les photos.',
         ]
         if not same:
@@ -282,7 +345,7 @@ def main():
             'images': imgs,
             'featured': n < 4,
             'deal': False,
-            'status': 'published' if imgs else 'draft',
+            'status': 'published' if (imgs and amt and confident) else 'draft',
             'notes': ' '.join(note),
             'createdAt': (base - timedelta(minutes=n)).isoformat(timespec='milliseconds') + 'Z',
             'updatedAt': (base - timedelta(minutes=n)).isoformat(timespec='milliseconds') + 'Z',
