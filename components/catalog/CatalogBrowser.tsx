@@ -119,7 +119,10 @@ export function CatalogBrowser({
     .map((c) => opt(c.id, c.label[locale], categoryCounts))
     .filter((o) => o.count > 0 || filters.categories.includes(o.value as CategoryId));
 
-  const brandOptions = [...new Set(products.map((p) => p.brand))]
+  // A used-appliance shop stocks units whose brand plate is unreadable; those
+  // carry an empty brand. Filter them out of the facet — an unnamed option
+  // that matches nothing is a dead control.
+  const brandOptions = [...new Set(products.map((p) => p.brand).filter(Boolean))]
     .sort((a, b) => a.localeCompare(b, locale))
     .map((b) => opt(b, b, brandCounts));
 

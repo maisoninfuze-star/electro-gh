@@ -84,9 +84,13 @@ export function ProductCard({
       </div>
 
       <div className="flex flex-1 flex-col gap-2 pt-4">
-        <p className="text-[0.6875rem] font-medium uppercase tracking-[0.12em] text-ink-3">
-          {product.brand}
-        </p>
+        {/* A used-appliance shop legitimately stocks units whose brand plate
+            is unreadable. Render nothing rather than an empty eyebrow. */}
+        {product.brand && (
+          <p className="text-[0.6875rem] font-medium uppercase tracking-[0.12em] text-ink-3">
+            {product.brand}
+          </p>
+        )}
 
         <h3 className="text-[0.9375rem] font-medium leading-snug text-ink">
           <Link href={url} className="after:absolute after:inset-0 after:content-['']">

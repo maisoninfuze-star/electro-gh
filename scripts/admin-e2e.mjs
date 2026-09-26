@@ -28,6 +28,16 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const SNAPSHOT = 'data/.inventory.e2e-snapshot.json';
 await copyFile('data/inventory.json', SNAPSHOT);
 
+// Expected counts come from the seed itself. Hard-coding them meant every
+// legitimate catalogue change broke the suite for no reason.
+const SEED = JSON.parse(await readFile('data/inventory.json', 'utf8')).products;
+const EXPECT = {
+  published: SEED.filter((p) => p.status === 'published').length,
+  draft: SEED.filter((p) => p.status === 'draft').length,
+  sold: SEED.filter((p) => p.status === 'sold').length,
+  noPrice: SEED.filter((p) => p.status === 'draft' && !(p.price > 0)).length,
+};
+
 const browser = await puppeteer.launch({
   executablePath: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
   headless: true,
@@ -55,15 +65,16 @@ try {
 
   /* ── 2. Seed shows: 10 published, 6 drafts ───────────────────────── */
   const counts = await page.$eval('main p', (el) => el.textContent);
-  check('list: header counts read 10 en ligne · 6 brouillons', /10 en ligne · 6 brouillons/.test(counts), counts);
+check(`list: header counts read ${EXPECT.published} en ligne · ${EXPECT.draft} brouillons`,
+  counts.includes(`${EXPECT.published} en ligne`) && counts.includes(`${EXPECT.draft} brouillon`), counts);
 
   await page.goto(`${BASE}/admin?status=draft`, { waitUntil: 'networkidle2' });
   const draftRows = await page.$$eval('main ul > li', (els) => els.length);
-  check('list: drafts tab shows 6 rows', draftRows === 6, `${draftRows} rows`);
+  check(`list: drafts tab shows ${EXPECT.draft} rows`, draftRows === EXPECT.draft, `${draftRows} rows`);
   const missing = await page.$$eval('main ul > li', (els) => els.filter((e) => /Manque : prix/.test(e.textContent)).length);
-  check('list: 5 drafts flag "Manque : prix"', missing === 5, `${missing}`);
+  check(`list: ${EXPECT.noPrice} drafts flag "Manque : prix"`, missing === EXPECT.noPrice, `${missing}`);
   const disabled = await page.$$eval('main ul > li button', (els) => els.filter((b) => b.disabled && /Publier/.test(b.textContent)).length);
-  check('list: Publier is disabled on drafts without price', disabled === 5, `${disabled} disabled`);
+  check('list: Publier is disabled on drafts without price', disabled === EXPECT.noPrice, `${disabled} disabled`);
 
   /* ── 3. Create a product with a photo, from the form ─────────────── */
   await page.goto(`${BASE}/admin/produits/nouveau`, { waitUntil: 'networkidle2' });

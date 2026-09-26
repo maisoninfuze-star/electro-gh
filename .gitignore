@@ -54,3 +54,4 @@ data/inventory.backup.json
 data/photos/cut
 scripts/cutout/cutout
 data/.inventory.e2e-snapshot.json
+.claude/launch.json

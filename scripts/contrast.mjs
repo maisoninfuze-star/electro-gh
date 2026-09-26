@@ -17,7 +17,7 @@ import puppeteer from 'puppeteer-core';
 const BASE=process.argv[2] || 'http://localhost:3320';
 const b = await puppeteer.launch({executablePath:'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',headless:true,args:['--hide-scrollbars','--disable-gpu']});
 const p = await b.newPage(); await p.setViewport({width:1440,height:900});
-const PAGES=['/','/magasiner','/aubaines','/laveuses','/laveuses/laveuse-samsung-a-chargement-par-le-haut-blanc','/en','/reparation','/pieces','/livraison','/nos-magasins','/nous-joindre','/a/b/c'];
+const PAGES=['/','/magasiner','/aubaines','/laveuses','/laveuses/laveuse-a-chargement-par-le-haut-blanche-couvercle-vitre','/en','/reparation','/pieces','/livraison','/nos-magasins','/nous-joindre','/a/b/c'];
 let total=0;
 for (const path of PAGES) {
 await p.goto(BASE+path,{waitUntil:'domcontentloaded'});

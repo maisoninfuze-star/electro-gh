@@ -174,7 +174,7 @@ await page.keyboard.press('Escape');
 await page.setViewport({ width: 1440, height: 900 });
 
 /* ── 7. Structured data ────────────────────────────────────────────────── */
-await page.goto(`${BASE}/laveuses/laveuse-samsung-a-chargement-par-le-haut-blanc`, { waitUntil: 'networkidle2' });
+await page.goto(`${BASE}/laveuses/laveuse-a-chargement-par-le-haut-blanche-couvercle-vitre`, { waitUntil: 'networkidle2' });
 await settle(600);
 const ld = await page.evaluate(() =>
   [...document.querySelectorAll('script[type="application/ld+json"]')].map((s) => JSON.parse(s.textContent)));

@@ -71,7 +71,7 @@ export function ProductBuyBox({
   return (
     <div className="flex flex-col">
       <p className="text-[0.6875rem] font-medium uppercase tracking-[0.14em] text-ink-3">
-        {product.brand} · {category.label[locale]}
+        {[product.brand, category.label[locale]].filter(Boolean).join(' · ')}
       </p>
 
       <h1 className="mt-3 font-display text-display-3 font-medium text-ink">
