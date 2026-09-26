@@ -4,6 +4,7 @@ import { ExternalLink } from 'lucide-react';
 import { getStore } from '@/lib/store';
 import { ProductForm } from '@/components/admin/ProductForm';
 import { StatusChip } from '@/components/admin/StatusChip';
+import { SourcePhotos } from '@/components/admin/SourcePhotos';
 import { CATEGORIES } from '@/lib/catalog/categories';
 import { href } from '@/lib/i18n/config';
 import { formatDate } from '@/lib/format';
@@ -32,6 +33,12 @@ export default async function EditProductPage({ params }: { params: Promise<{ id
           </Link>
         )}
       </div>
+      {product.sourcePhotos?.length ? (
+        <div className="mb-8">
+          <SourcePhotos photos={product.sourcePhotos} />
+        </div>
+      ) : null}
+
       <ProductForm product={product} brands={brands} />
     </>
   );

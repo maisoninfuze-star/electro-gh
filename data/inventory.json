@@ -38,6 +38,11 @@
       "deal": false,
       "status": "published",
       "notes": "Ensemble constitué à partir de deux fiches du catalogue photo (AP-002 laveuse + AP-001 sécheuse). Raison du jumelage : même étiquette d'ensemble (650 $). Confirmer que les deux appareils se vendent bien ensemble à ce prix.  Numéros de modèle non lisibles sur les photos. Marques différentes : laveuse LG, sécheuse GE. Photos sources : IMG_5412.JPG, IMG_5412.JPG.",
+      "sourcePhotos": [
+        "IMG_5412.webp",
+        "IMG_5656.webp",
+        "IMG_5655.webp"
+      ],
       "createdAt": "2026-09-20T12:00:00.000Z",
       "updatedAt": "2026-09-20T12:00:00.000Z"
     },
@@ -79,6 +84,10 @@
       "deal": false,
       "status": "draft",
       "notes": "Ensemble constitué à partir de deux fiches du catalogue photo (AP-004 laveuse + AP-003 sécheuse). Raison du jumelage : photographiés ensemble, aucun prix visible. AUCUN PRIX visible sur les photos — à saisir avant publication.  Numéros de modèle non lisibles sur les photos. Photos sources : IMG_5413.JPG, IMG_5413.JPG.",
+      "sourcePhotos": [
+        "IMG_5413.webp",
+        "IMG_5658.webp"
+      ],
       "createdAt": "2026-09-20T11:59:00.000Z",
       "updatedAt": "2026-09-20T11:59:00.000Z"
     },
@@ -120,6 +129,11 @@
       "deal": false,
       "status": "published",
       "notes": "Ensemble constitué à partir de deux fiches du catalogue photo (AP-007 laveuse + AP-006 sécheuse). Raison du jumelage : même étiquette d'ensemble (750 $). Confirmer que les deux appareils se vendent bien ensemble à ce prix.  Numéros de modèle non lisibles sur les photos. Photos sources : IMG_5416.JPG, IMG_5415.JPG.",
+      "sourcePhotos": [
+        "IMG_5416.webp",
+        "IMG_5659.webp",
+        "IMG_5415.webp"
+      ],
       "createdAt": "2026-09-20T11:58:00.000Z",
       "updatedAt": "2026-09-20T11:58:00.000Z"
     },
@@ -161,6 +175,11 @@
       "deal": false,
       "status": "published",
       "notes": "Ensemble constitué à partir de deux fiches du catalogue photo (AP-011 laveuse + AP-010 sécheuse). Raison du jumelage : même étiquette d'ensemble (799 $). Confirmer que les deux appareils se vendent bien ensemble à ce prix.  Numéros de modèle non lisibles sur les photos. Photos sources : IMG_5420.JPG, IMG_5419.JPG.",
+      "sourcePhotos": [
+        "IMG_5420.webp",
+        "IMG_5662.webp",
+        "IMG_5419.webp"
+      ],
       "createdAt": "2026-09-20T11:57:00.000Z",
       "updatedAt": "2026-09-20T11:57:00.000Z"
     },
@@ -202,6 +221,11 @@
       "deal": false,
       "status": "published",
       "notes": "Ensemble constitué à partir de deux fiches du catalogue photo (AP-013 laveuse + AP-012 sécheuse). Raison du jumelage : même étiquette d'ensemble (750 $). Confirmer que les deux appareils se vendent bien ensemble à ce prix.  Numéros de modèle non lisibles sur les photos. Photos sources : IMG_5422.JPG, IMG_5421.JPG.",
+      "sourcePhotos": [
+        "IMG_5422.webp",
+        "IMG_5661.webp",
+        "IMG_5421.webp"
+      ],
       "createdAt": "2026-09-20T11:56:00.000Z",
       "updatedAt": "2026-09-20T11:56:00.000Z"
     },
@@ -243,6 +267,10 @@
       "deal": false,
       "status": "published",
       "notes": "Ensemble constitué à partir de deux fiches du catalogue photo (AP-018 laveuse + AP-017 sécheuse). Raison du jumelage : même étiquette d'ensemble (899 $). Confirmer que les deux appareils se vendent bien ensemble à ce prix.  Numéros de modèle non lisibles sur les photos. Photos sources : IMG_5427.JPG, IMG_5426.JPG.",
+      "sourcePhotos": [
+        "IMG_5427.webp",
+        "IMG_5426.webp"
+      ],
       "createdAt": "2026-09-20T11:55:00.000Z",
       "updatedAt": "2026-09-20T11:55:00.000Z"
     },
@@ -284,6 +312,10 @@
       "deal": false,
       "status": "published",
       "notes": "Ensemble constitué à partir de deux fiches du catalogue photo (AP-019 laveuse + AP-020 sécheuse). Raison du jumelage : même étiquette d'ensemble (899 $). Confirmer que les deux appareils se vendent bien ensemble à ce prix.  Numéros de modèle non lisibles sur les photos. Photos sources : IMG_5428.JPG, IMG_5428.JPG.",
+      "sourcePhotos": [
+        "IMG_5428.webp",
+        "IMG_5667.webp"
+      ],
       "createdAt": "2026-09-20T11:54:00.000Z",
       "updatedAt": "2026-09-20T11:54:00.000Z"
     },
@@ -325,6 +357,13 @@
       "deal": false,
       "status": "draft",
       "notes": "Ensemble constitué à partir de deux fiches du catalogue photo (AP-022 laveuse + AP-021 sécheuse). Raison du jumelage : étiquette d'ensemble (800 $) sur un seul des deux appareils. Confirmer que les deux appareils se vendent bien ensemble à ce prix. JUMELAGE À VÉRIFIER : marques différentes et appareils photographiés séparément. Confirmer que ces deux appareils forment bien l’ensemble avant de publier. Numéros de modèle non lisibles sur les photos. Marques différentes : laveuse Samsung, sécheuse Amana. Photos sources : IMG_5431.JPG, IMG_5429.JPG.",
+      "sourcePhotos": [
+        "IMG_5431.webp",
+        "IMG_5429.webp",
+        "IMG_5430.webp",
+        "IMG_5668.webp",
+        "IMG_5669.webp"
+      ],
       "createdAt": "2026-09-20T11:53:00.000Z",
       "updatedAt": "2026-09-20T11:53:00.000Z"
     },
@@ -366,6 +405,11 @@
       "deal": false,
       "status": "draft",
       "notes": "Ensemble constitué à partir de deux fiches du catalogue photo (AP-024 laveuse + AP-025 sécheuse). Raison du jumelage : étiquette d'ensemble (550 $) sur un seul des deux appareils. Confirmer que les deux appareils se vendent bien ensemble à ce prix. JUMELAGE À VÉRIFIER : marques différentes et appareils photographiés séparément. Confirmer que ces deux appareils forment bien l’ensemble avant de publier. Numéros de modèle non lisibles sur les photos. Marques différentes : laveuse Amana, sécheuse Maytag. Photos sources : IMG_5433.JPG, IMG_5434.JPG.",
+      "sourcePhotos": [
+        "IMG_5433.webp",
+        "IMG_5434.webp",
+        "IMG_5671.webp"
+      ],
       "createdAt": "2026-09-20T11:52:00.000Z",
       "updatedAt": "2026-09-20T11:52:00.000Z"
     },
@@ -407,6 +451,9 @@
       "deal": false,
       "status": "draft",
       "notes": "Ensemble constitué à partir de deux fiches du catalogue photo (AP-045 laveuse + AP-044 sécheuse). Raison du jumelage : photographiés ensemble, aucun prix visible. AUCUN PRIX visible sur les photos — à saisir avant publication.  Numéros de modèle non lisibles sur les photos. Photos sources : IMG_5657.JPG, IMG_5657.JPG.",
+      "sourcePhotos": [
+        "IMG_5657.webp"
+      ],
       "createdAt": "2026-09-20T11:51:00.000Z",
       "updatedAt": "2026-09-20T11:51:00.000Z"
     },
@@ -448,6 +495,9 @@
       "deal": false,
       "status": "draft",
       "notes": "Ensemble constitué à partir de deux fiches du catalogue photo (AP-047 laveuse + AP-046 sécheuse). Raison du jumelage : photographiés ensemble, aucun prix visible. AUCUN PRIX visible sur les photos — à saisir avant publication.  Numéros de modèle non lisibles sur les photos. Marques différentes : laveuse , sécheuse . Photos sources : IMG_5665.JPG, IMG_5665.JPG.",
+      "sourcePhotos": [
+        "IMG_5665.webp"
+      ],
       "createdAt": "2026-09-20T11:50:00.000Z",
       "updatedAt": "2026-09-20T11:50:00.000Z"
     },
@@ -489,6 +539,11 @@
       "deal": false,
       "status": "published",
       "notes": "Ensemble constitué à partir de deux fiches du catalogue photo (AP-060 laveuse + AP-059 sécheuse). Raison du jumelage : même étiquette d'ensemble (600 $). Confirmer que les deux appareils se vendent bien ensemble à ce prix.  Numéros de modèle non lisibles sur les photos. Photos sources : IMG_5687.JPG, IMG_5685.JPG.",
+      "sourcePhotos": [
+        "IMG_5687.webp",
+        "IMG_5685.webp",
+        "IMG_5686.webp"
+      ],
       "createdAt": "2026-09-20T11:49:00.000Z",
       "updatedAt": "2026-09-20T11:49:00.000Z"
     },
@@ -530,6 +585,10 @@
       "deal": false,
       "status": "published",
       "notes": "Ensemble constitué à partir de deux fiches du catalogue photo (AP-061 laveuse + AP-062 sécheuse). Raison du jumelage : étiquette d'ensemble (600 $) sur un seul des deux appareils. Confirmer que les deux appareils se vendent bien ensemble à ce prix.  Numéros de modèle non lisibles sur les photos. Photos sources : IMG_5688.JPG, IMG_5689.JPG.",
+      "sourcePhotos": [
+        "IMG_5688.webp",
+        "IMG_5689.webp"
+      ],
       "createdAt": "2026-09-20T11:48:00.000Z",
       "updatedAt": "2026-09-20T11:48:00.000Z"
     },
@@ -571,6 +630,9 @@
       "deal": false,
       "status": "draft",
       "notes": "Ensemble constitué à partir de deux fiches du catalogue photo (AP-069 laveuse + AP-067 sécheuse). Raison du jumelage : photographiés ensemble, aucun prix visible. AUCUN PRIX visible sur les photos — à saisir avant publication.  Numéros de modèle non lisibles sur les photos. Marques différentes : laveuse , sécheuse Samsung. Photos sources : IMG_5695.JPG, IMG_5695.JPG.",
+      "sourcePhotos": [
+        "IMG_5695.webp"
+      ],
       "createdAt": "2026-09-20T11:47:00.000Z",
       "updatedAt": "2026-09-20T11:47:00.000Z"
     },
@@ -612,6 +674,9 @@
       "deal": false,
       "status": "published",
       "notes": "Ensemble constitué à partir de deux fiches du catalogue photo (AP-099 laveuse + AP-098 sécheuse). Raison du jumelage : même étiquette d'ensemble (599 $). Confirmer que les deux appareils se vendent bien ensemble à ce prix.  Numéros de modèle non lisibles sur les photos. Photos sources : IMG_5736.JPG, IMG_5736.JPG.",
+      "sourcePhotos": [
+        "IMG_5736.webp"
+      ],
       "createdAt": "2026-09-20T11:46:00.000Z",
       "updatedAt": "2026-09-20T11:46:00.000Z"
     },
@@ -653,6 +718,9 @@
       "deal": false,
       "status": "published",
       "notes": "Ensemble constitué à partir de deux fiches du catalogue photo (AP-101 laveuse + AP-100 sécheuse). Raison du jumelage : même étiquette d'ensemble (600 $). Confirmer que les deux appareils se vendent bien ensemble à ce prix.  Numéros de modèle non lisibles sur les photos. Photos sources : IMG_5737.JPG, IMG_5737.JPG.",
+      "sourcePhotos": [
+        "IMG_5737.webp"
+      ],
       "createdAt": "2026-09-20T11:45:00.000Z",
       "updatedAt": "2026-09-20T11:45:00.000Z"
     },
@@ -694,6 +762,9 @@
       "deal": false,
       "status": "published",
       "notes": "Ensemble constitué à partir de deux fiches du catalogue photo (AP-105 laveuse + AP-104 sécheuse). Raison du jumelage : même étiquette d'ensemble (599 $). Confirmer que les deux appareils se vendent bien ensemble à ce prix.  Numéros de modèle non lisibles sur les photos. Photos sources : IMG_5739.JPG, IMG_5739.JPG.",
+      "sourcePhotos": [
+        "IMG_5739.webp"
+      ],
       "createdAt": "2026-09-20T11:44:00.000Z",
       "updatedAt": "2026-09-20T11:44:00.000Z"
     },
@@ -735,6 +806,9 @@
       "deal": false,
       "status": "published",
       "notes": "Ensemble constitué à partir de deux fiches du catalogue photo (AP-117 laveuse + AP-116 sécheuse). Raison du jumelage : même étiquette d'ensemble (600 $). Confirmer que les deux appareils se vendent bien ensemble à ce prix.  Numéros de modèle non lisibles sur les photos. Marques différentes : laveuse , sécheuse . Photos sources : IMG_5752 2.JPG, IMG_5752 2.JPG.",
+      "sourcePhotos": [
+        "IMG_5752_2.webp"
+      ],
       "createdAt": "2026-09-20T11:43:00.000Z",
       "updatedAt": "2026-09-20T11:43:00.000Z"
     },
@@ -769,6 +843,9 @@
       "deal": false,
       "status": "published",
       "notes": "Numéro de modèle non lisible sur les photos. Sticker amount transcribed; confirm current price before publishing Le magasin vend surtout les laveuses et sécheuses en ensemble — confirmer si cet appareil se vend seul ou avec son partenaire. Photos sources : IMG_5414.JPG (réf. catalogue AP-005)",
+      "sourcePhotos": [
+        "IMG_5414.webp"
+      ],
       "createdAt": "2026-09-20T11:48:00.000Z",
       "updatedAt": "2026-09-20T11:48:00.000Z"
     },
@@ -803,6 +880,10 @@
       "deal": false,
       "status": "draft",
       "notes": "Aucun prix lisible sur les photos. Numéro de modèle non lisible sur les photos. Détail non traduit : « with curved console ». Only the upper appliance is this record. Other appliances in the photo are separate products. Not established from supplied photos Le magasin vend surtout les laveuses et sécheuses en ensemble — confirmer si cet appareil se vend seul ou avec son partenaire. Photos sources : IMG_5417.JPG, IMG_5660.JPG (réf. catalogue AP-008)",
+      "sourcePhotos": [
+        "IMG_5417.webp",
+        "IMG_5660.webp"
+      ],
       "createdAt": "2026-09-20T11:39:00.000Z",
       "updatedAt": "2026-09-20T11:39:00.000Z"
     },
@@ -837,6 +918,11 @@
       "deal": false,
       "status": "draft",
       "notes": "Aucun prix lisible sur les photos. Numéro de modèle non lisible sur les photos. Only the lower appliance is this record. Other appliances in the photo are separate products. Not established from supplied photos Le magasin vend surtout les laveuses et sécheuses en ensemble — confirmer si cet appareil se vend seul ou avec son partenaire. Photos sources : IMG_5418.JPG, IMG_5654.JPG, IMG_5660.JPG (réf. catalogue AP-009)",
+      "sourcePhotos": [
+        "IMG_5418.webp",
+        "IMG_5654.webp",
+        "IMG_5660.webp"
+      ],
       "createdAt": "2026-09-20T11:36:00.000Z",
       "updatedAt": "2026-09-20T11:36:00.000Z"
     },
@@ -871,6 +957,10 @@
       "deal": false,
       "status": "published",
       "notes": "Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Détail non traduit : « compact ». Brand not confidently readable; no brand guessed from styling. Sticker amount transcribed; confirm current price before publishing Le magasin vend surtout les laveuses et sécheuses en ensemble — confirmer si cet appareil se vend seul ou avec son partenaire. Photos sources : IMG_5423.JPG, IMG_5653.JPG (réf. catalogue AP-014)",
+      "sourcePhotos": [
+        "IMG_5423.webp",
+        "IMG_5653.webp"
+      ],
       "createdAt": "2026-09-20T11:21:00.000Z",
       "updatedAt": "2026-09-20T11:21:00.000Z"
     },
@@ -905,6 +995,10 @@
       "deal": false,
       "status": "published",
       "notes": "Numéro de modèle non lisible sur les photos. Sticker amount transcribed; confirm current price before publishing Photos sources : IMG_5424.JPG, IMG_5664.JPG (réf. catalogue AP-015)",
+      "sourcePhotos": [
+        "IMG_5424.webp",
+        "IMG_5664.webp"
+      ],
       "createdAt": "2026-09-20T11:18:00.000Z",
       "updatedAt": "2026-09-20T11:18:00.000Z"
     },
@@ -939,6 +1033,10 @@
       "deal": false,
       "status": "published",
       "notes": "Numéro de modèle non lisible sur les photos. Détail non traduit : « -look ». Sticker amount transcribed; confirm current price before publishing Le magasin vend surtout les laveuses et sécheuses en ensemble — confirmer si cet appareil se vend seul ou avec son partenaire. Photos sources : IMG_5425.JPG, IMG_5663.JPG (réf. catalogue AP-016)",
+      "sourcePhotos": [
+        "IMG_5425.webp",
+        "IMG_5663.webp"
+      ],
       "createdAt": "2026-09-20T11:15:00.000Z",
       "updatedAt": "2026-09-20T11:15:00.000Z"
     },
@@ -973,6 +1071,9 @@
       "deal": false,
       "status": "draft",
       "notes": "Aucun prix lisible sur les photos. Numéro de modèle non lisible sur les photos. Not established from supplied photos Le magasin vend surtout les laveuses et sécheuses en ensemble — confirmer si cet appareil se vend seul ou avec son partenaire. Photos sources : IMG_5432.JPG (réf. catalogue AP-023)",
+      "sourcePhotos": [
+        "IMG_5432.webp"
+      ],
       "createdAt": "2026-09-20T10:54:00.000Z",
       "updatedAt": "2026-09-20T10:54:00.000Z"
     },
@@ -1007,6 +1108,10 @@
       "deal": false,
       "status": "published",
       "notes": "Numéro de modèle non lisible sur les photos. Repères de catalogage : variante A. Détail non traduit : « smooth-top ». Sticker amount transcribed; confirm current price before publishing Photos sources : IMG_5435.JPG, IMG_5670.JPG (réf. catalogue AP-026)",
+      "sourcePhotos": [
+        "IMG_5435.webp",
+        "IMG_5670.webp"
+      ],
       "createdAt": "2026-09-20T10:45:00.000Z",
       "updatedAt": "2026-09-20T10:45:00.000Z"
     },
@@ -1041,6 +1146,10 @@
       "deal": false,
       "status": "published",
       "notes": "Numéro de modèle non lisible sur les photos. Détail non traduit : « with curved front ». Sticker amount transcribed; confirm current price before publishing Le magasin vend surtout les laveuses et sécheuses en ensemble — confirmer si cet appareil se vend seul ou avec son partenaire. Photos sources : IMG_5436.JPG, IMG_5672.JPG (réf. catalogue AP-027)",
+      "sourcePhotos": [
+        "IMG_5436.webp",
+        "IMG_5672.webp"
+      ],
       "createdAt": "2026-09-20T10:42:00.000Z",
       "updatedAt": "2026-09-20T10:42:00.000Z"
     },
@@ -1075,6 +1184,10 @@
       "deal": false,
       "status": "published",
       "notes": "Numéro de modèle non lisible sur les photos. Potential look-alike elsewhere in batch. Physical identity requires model/serial label; do not auto-merge or publish duplicate stock. Sticker amount transcribed; confirm current price before publishing Photos sources : IMG_5437.JPG, IMG_5673.JPG (réf. catalogue AP-028)",
+      "sourcePhotos": [
+        "IMG_5437.webp",
+        "IMG_5673.webp"
+      ],
       "createdAt": "2026-09-20T10:39:00.000Z",
       "updatedAt": "2026-09-20T10:39:00.000Z"
     },
@@ -1109,6 +1222,10 @@
       "deal": false,
       "status": "published",
       "notes": "Numéro de modèle non lisible sur les photos. Potential look-alike elsewhere in batch. Physical identity requires model/serial label; do not auto-merge or publish duplicate stock. Sticker amount transcribed; confirm current price before publishing Photos sources : IMG_5438.JPG, IMG_5674.JPG (réf. catalogue AP-029)",
+      "sourcePhotos": [
+        "IMG_5438.webp",
+        "IMG_5674.webp"
+      ],
       "createdAt": "2026-09-20T10:36:00.000Z",
       "updatedAt": "2026-09-20T10:36:00.000Z"
     },
@@ -1143,6 +1260,9 @@
       "deal": false,
       "status": "published",
       "notes": "Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Détail non traduit : « coil-top ». Brand not confidently readable; no brand guessed from styling. Sticker amount transcribed; confirm current price before publishing Photos sources : IMG_5439.JPG (réf. catalogue AP-030)",
+      "sourcePhotos": [
+        "IMG_5439.webp"
+      ],
       "createdAt": "2026-09-20T10:33:00.000Z",
       "updatedAt": "2026-09-20T10:33:00.000Z"
     },
@@ -1177,6 +1297,10 @@
       "deal": false,
       "status": "published",
       "notes": "Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Détail non traduit : « double-oven ». Brand not confidently readable; no brand guessed from styling. Sticker amount transcribed; confirm current price before publishing Photos sources : IMG_5440.JPG, IMG_5630.JPG (réf. catalogue AP-031)",
+      "sourcePhotos": [
+        "IMG_5440.webp",
+        "IMG_5630.webp"
+      ],
       "createdAt": "2026-09-20T10:30:00.000Z",
       "updatedAt": "2026-09-20T10:30:00.000Z"
     },
@@ -1211,6 +1335,11 @@
       "deal": false,
       "status": "published",
       "notes": "Numéro de modèle non lisible sur les photos. Sticker amount transcribed; confirm current price before publishing Photos sources : IMG_5441.JPG, IMG_5631.JPG, IMG_5632.JPG (réf. catalogue AP-032)",
+      "sourcePhotos": [
+        "IMG_5441.webp",
+        "IMG_5631.webp",
+        "IMG_5632.webp"
+      ],
       "createdAt": "2026-09-20T10:27:00.000Z",
       "updatedAt": "2026-09-20T10:27:00.000Z"
     },
@@ -1245,6 +1374,11 @@
       "deal": false,
       "status": "published",
       "notes": "Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Détail non traduit : « with touch controls ». Brand not confidently readable; no brand guessed from styling. Sticker amount transcribed; confirm current price before publishing Photos sources : IMG_5442.JPG, IMG_5633.JPG, IMG_5636.JPG (réf. catalogue AP-033)",
+      "sourcePhotos": [
+        "IMG_5442.webp",
+        "IMG_5633.webp",
+        "IMG_5636.webp"
+      ],
       "createdAt": "2026-09-20T10:24:00.000Z",
       "updatedAt": "2026-09-20T10:24:00.000Z"
     },
@@ -1279,6 +1413,11 @@
       "deal": false,
       "status": "published",
       "notes": "Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Détail non traduit : « with black control panel ». Brand not confidently readable; no brand guessed from styling. Sticker amount transcribed; confirm current price before publishing Photos sources : IMG_5443.JPG, IMG_5639.JPG, IMG_5640.JPG (réf. catalogue AP-034)",
+      "sourcePhotos": [
+        "IMG_5443.webp",
+        "IMG_5639.webp",
+        "IMG_5640.webp"
+      ],
       "createdAt": "2026-09-20T10:21:00.000Z",
       "updatedAt": "2026-09-20T10:21:00.000Z"
     },
@@ -1313,6 +1452,11 @@
       "deal": false,
       "status": "published",
       "notes": "Plusieurs étiquettes photographiées : 550 $ (individual), 500 $ (individual). Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Détail non traduit : « with oval display ». Brand not confidently readable; no brand guessed from styling. Needs review Photos sources : IMG_5444.JPG, IMG_5635.JPG, IMG_5638.JPG (réf. catalogue AP-035)",
+      "sourcePhotos": [
+        "IMG_5444.webp",
+        "IMG_5635.webp",
+        "IMG_5638.webp"
+      ],
       "createdAt": "2026-09-20T10:18:00.000Z",
       "updatedAt": "2026-09-20T10:18:00.000Z"
     },
@@ -1347,6 +1491,13 @@
       "deal": false,
       "status": "published",
       "notes": "Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Brand not confidently readable; no brand guessed from styling. Sticker amount transcribed; confirm current price before publishing Photos sources : IMG_5445.JPG, IMG_5647.JPG, IMG_5648.JPG, IMG_5649.JPG, IMG_5652.JPG (réf. catalogue AP-036)",
+      "sourcePhotos": [
+        "IMG_5445.webp",
+        "IMG_5647.webp",
+        "IMG_5648.webp",
+        "IMG_5649.webp",
+        "IMG_5652.webp"
+      ],
       "createdAt": "2026-09-20T10:15:00.000Z",
       "updatedAt": "2026-09-20T10:15:00.000Z"
     },
@@ -1381,6 +1532,11 @@
       "deal": false,
       "status": "draft",
       "notes": "Aucun prix lisible sur les photos. Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Détail non traduit : « with four front knobs ». Brand not confidently readable; no brand guessed from styling. Not established from supplied photos Photos sources : IMG_5446.JPG, IMG_5650.JPG, IMG_5651.JPG (réf. catalogue AP-037)",
+      "sourcePhotos": [
+        "IMG_5446.webp",
+        "IMG_5650.webp",
+        "IMG_5651.webp"
+      ],
       "createdAt": "2026-09-20T10:12:00.000Z",
       "updatedAt": "2026-09-20T10:12:00.000Z"
     },
@@ -1415,6 +1571,10 @@
       "deal": false,
       "status": "published",
       "notes": "Numéro de modèle non lisible sur les photos. Détail non traduit : « with six knobs ». Sticker amount transcribed; confirm current price before publishing Photos sources : IMG_5634.JPG, IMG_5637.JPG (réf. catalogue AP-038)",
+      "sourcePhotos": [
+        "IMG_5634.webp",
+        "IMG_5637.webp"
+      ],
       "createdAt": "2026-09-20T10:09:00.000Z",
       "updatedAt": "2026-09-20T10:09:00.000Z"
     },
@@ -1449,6 +1609,10 @@
       "deal": false,
       "status": "draft",
       "notes": "Aucun prix lisible sur les photos. Numéro de modèle non lisible sur les photos. Repères de catalogage : variante A. Not established from supplied photos Photos sources : IMG_5641.JPG, IMG_5642.JPG (réf. catalogue AP-039)",
+      "sourcePhotos": [
+        "IMG_5641.webp",
+        "IMG_5642.webp"
+      ],
       "createdAt": "2026-09-20T10:06:00.000Z",
       "updatedAt": "2026-09-20T10:06:00.000Z"
     },
@@ -1483,6 +1647,9 @@
       "deal": false,
       "status": "published",
       "notes": "Numéro de modèle non lisible sur les photos. Repères de catalogage : variante B. Needs review Photos sources : IMG_5643.JPG (réf. catalogue AP-040)",
+      "sourcePhotos": [
+        "IMG_5643.webp"
+      ],
       "createdAt": "2026-09-20T10:03:00.000Z",
       "updatedAt": "2026-09-20T10:03:00.000Z"
     },
@@ -1517,6 +1684,9 @@
       "deal": false,
       "status": "draft",
       "notes": "Aucun prix lisible sur les photos. Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Repères de catalogage : variante B. Détail non traduit : « smooth-top ». Brand not confidently readable; no brand guessed from styling. Not established from supplied photos Photos sources : IMG_5644.JPG (réf. catalogue AP-041)",
+      "sourcePhotos": [
+        "IMG_5644.webp"
+      ],
       "createdAt": "2026-09-20T10:00:00.000Z",
       "updatedAt": "2026-09-20T10:00:00.000Z"
     },
@@ -1551,6 +1721,9 @@
       "deal": false,
       "status": "draft",
       "notes": "Aucun prix lisible sur les photos. Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Repères de catalogage : variante A. Détail non traduit : « coil-top ». Brand not confidently readable; no brand guessed from styling. Not established from supplied photos Photos sources : IMG_5645.JPG (réf. catalogue AP-042)",
+      "sourcePhotos": [
+        "IMG_5645.webp"
+      ],
       "createdAt": "2026-09-20T09:57:00.000Z",
       "updatedAt": "2026-09-20T09:57:00.000Z"
     },
@@ -1585,6 +1758,9 @@
       "deal": false,
       "status": "draft",
       "notes": "Aucun prix lisible sur les photos. Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Repères de catalogage : variante A. Brand not confidently readable; no brand guessed from styling. Not established from supplied photos Photos sources : IMG_5646.JPG (réf. catalogue AP-043)",
+      "sourcePhotos": [
+        "IMG_5646.webp"
+      ],
       "createdAt": "2026-09-20T09:54:00.000Z",
       "updatedAt": "2026-09-20T09:54:00.000Z"
     },
@@ -1619,6 +1795,9 @@
       "deal": false,
       "status": "draft",
       "notes": "Aucun prix lisible sur les photos. Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Détail non traduit : « by window, left ». Brand not confidently readable; no brand guessed from styling. Only the left appliance is this record. Other appliances in the photo are separate products. Not established from supplied photos Le magasin vend surtout les laveuses et sécheuses en ensemble — confirmer si cet appareil se vend seul ou avec son partenaire. Photos sources : IMG_5666.JPG (réf. catalogue AP-048)",
+      "sourcePhotos": [
+        "IMG_5666.webp"
+      ],
       "createdAt": "2026-09-20T09:39:00.000Z",
       "updatedAt": "2026-09-20T09:39:00.000Z"
     },
@@ -1653,6 +1832,9 @@
       "deal": false,
       "status": "draft",
       "notes": "Aucun prix lisible sur les photos. Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Détail non traduit : « by window, right ». Brand not confidently readable; no brand guessed from styling. Only the right appliance is this record. Other appliances in the photo are separate products. Not established from supplied photos Le magasin vend surtout les laveuses et sécheuses en ensemble — confirmer si cet appareil se vend seul ou avec son partenaire. Photos sources : IMG_5666.JPG (réf. catalogue AP-049)",
+      "sourcePhotos": [
+        "IMG_5666.webp"
+      ],
       "createdAt": "2026-09-20T09:36:00.000Z",
       "updatedAt": "2026-09-20T09:36:00.000Z"
     },
@@ -1687,6 +1869,9 @@
       "deal": false,
       "status": "draft",
       "notes": "Aucun prix lisible sur les photos. Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Repères de catalogage : variante C. Brand not confidently readable; no brand guessed from styling. Not established from supplied photos Photos sources : IMG_5675.JPG (réf. catalogue AP-050)",
+      "sourcePhotos": [
+        "IMG_5675.webp"
+      ],
       "createdAt": "2026-09-20T09:33:00.000Z",
       "updatedAt": "2026-09-20T09:33:00.000Z"
     },
@@ -1721,6 +1906,9 @@
       "deal": false,
       "status": "draft",
       "notes": "Aucun prix lisible sur les photos. Numéro de modèle non lisible sur les photos. Not established from supplied photos Photos sources : IMG_5676.JPG (réf. catalogue AP-051)",
+      "sourcePhotos": [
+        "IMG_5676.webp"
+      ],
       "createdAt": "2026-09-20T09:30:00.000Z",
       "updatedAt": "2026-09-20T09:30:00.000Z"
     },
@@ -1755,6 +1943,9 @@
       "deal": false,
       "status": "draft",
       "notes": "Aucun prix lisible sur les photos. Numéro de modèle non lisible sur les photos. Not established from supplied photos Photos sources : IMG_5677.JPG (réf. catalogue AP-052)",
+      "sourcePhotos": [
+        "IMG_5677.webp"
+      ],
       "createdAt": "2026-09-20T09:27:00.000Z",
       "updatedAt": "2026-09-20T09:27:00.000Z"
     },
@@ -1789,6 +1980,9 @@
       "deal": false,
       "status": "draft",
       "notes": "Aucun prix lisible sur les photos. Numéro de modèle non lisible sur les photos. Not established from supplied photos Photos sources : IMG_5678.JPG (réf. catalogue AP-053)",
+      "sourcePhotos": [
+        "IMG_5678.webp"
+      ],
       "createdAt": "2026-09-20T09:24:00.000Z",
       "updatedAt": "2026-09-20T09:24:00.000Z"
     },
@@ -1823,6 +2017,9 @@
       "deal": false,
       "status": "published",
       "notes": "Numéro de modèle non lisible sur les photos. Repères de catalogage : variante B. Sticker amount transcribed; confirm current price before publishing Photos sources : IMG_5679.JPG (réf. catalogue AP-054)",
+      "sourcePhotos": [
+        "IMG_5679.webp"
+      ],
       "createdAt": "2026-09-20T09:21:00.000Z",
       "updatedAt": "2026-09-20T09:21:00.000Z"
     },
@@ -1857,6 +2054,9 @@
       "deal": false,
       "status": "published",
       "notes": "Numéro de modèle non lisible sur les photos. Repères de catalogage : variante C. Sticker amount transcribed; confirm current price before publishing Photos sources : IMG_5680.JPG (réf. catalogue AP-055)",
+      "sourcePhotos": [
+        "IMG_5680.webp"
+      ],
       "createdAt": "2026-09-20T09:18:00.000Z",
       "updatedAt": "2026-09-20T09:18:00.000Z"
     },
@@ -1891,6 +2091,9 @@
       "deal": false,
       "status": "published",
       "notes": "Numéro de modèle non lisible sur les photos. Sticker amount transcribed; confirm current price before publishing Photos sources : IMG_5681.JPG (réf. catalogue AP-056)",
+      "sourcePhotos": [
+        "IMG_5681.webp"
+      ],
       "createdAt": "2026-09-20T09:15:00.000Z",
       "updatedAt": "2026-09-20T09:15:00.000Z"
     },
@@ -1925,6 +2128,10 @@
       "deal": false,
       "status": "draft",
       "notes": "Aucun prix lisible sur les photos. Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Brand not confidently readable; no brand guessed from styling. Not established from supplied photos Photos sources : IMG_5682.JPG, IMG_5683.JPG (réf. catalogue AP-057)",
+      "sourcePhotos": [
+        "IMG_5682.webp",
+        "IMG_5683.webp"
+      ],
       "createdAt": "2026-09-20T09:12:00.000Z",
       "updatedAt": "2026-09-20T09:12:00.000Z"
     },
@@ -1959,6 +2166,9 @@
       "deal": false,
       "status": "draft",
       "notes": "Aucun prix lisible sur les photos. Numéro de modèle non lisible sur les photos. Not established from supplied photos Le magasin vend surtout les laveuses et sécheuses en ensemble — confirmer si cet appareil se vend seul ou avec son partenaire. Photos sources : IMG_5684.JPG (réf. catalogue AP-058)",
+      "sourcePhotos": [
+        "IMG_5684.webp"
+      ],
       "createdAt": "2026-09-20T09:09:00.000Z",
       "updatedAt": "2026-09-20T09:09:00.000Z"
     },
@@ -1993,6 +2203,9 @@
       "deal": false,
       "status": "published",
       "notes": "Numéro de modèle non lisible sur les photos. Repères de catalogage : variante A. Sticker amount transcribed; confirm current price before publishing Photos sources : IMG_5690.JPG (réf. catalogue AP-063)",
+      "sourcePhotos": [
+        "IMG_5690.webp"
+      ],
       "createdAt": "2026-09-20T08:54:00.000Z",
       "updatedAt": "2026-09-20T08:54:00.000Z"
     },
@@ -2027,6 +2240,9 @@
       "deal": false,
       "status": "published",
       "notes": "Numéro de modèle non lisible sur les photos. Repères de catalogage : variante B. Sticker amount transcribed; confirm current price before publishing Photos sources : IMG_5691.JPG (réf. catalogue AP-064)",
+      "sourcePhotos": [
+        "IMG_5691.webp"
+      ],
       "createdAt": "2026-09-20T08:51:00.000Z",
       "updatedAt": "2026-09-20T08:51:00.000Z"
     },
@@ -2061,6 +2277,10 @@
       "deal": false,
       "status": "published",
       "notes": "Numéro de modèle non lisible sur les photos. Repères de catalogage : variante C. Sticker amount transcribed; confirm current price before publishing Photos sources : IMG_5692.JPG, IMG_5693.JPG (réf. catalogue AP-065)",
+      "sourcePhotos": [
+        "IMG_5692.webp",
+        "IMG_5693.webp"
+      ],
       "createdAt": "2026-09-20T08:48:00.000Z",
       "updatedAt": "2026-09-20T08:48:00.000Z"
     },
@@ -2095,6 +2315,9 @@
       "deal": false,
       "status": "draft",
       "notes": "Aucun prix lisible sur les photos. Numéro de modèle non lisible sur les photos. Repères de catalogage : variante B. Only the upper appliance is this record. Other appliances in the photo are separate products. Potential look-alike elsewhere in batch. Physical identity requires model/serial label; do not auto-merge or publish duplicate stock. Not established from supplied photos Le magasin vend surtout les laveuses et sécheuses en ensemble — confirmer si cet appareil se vend seul ou avec son partenaire. Photos sources : IMG_5694.JPG (réf. catalogue AP-066)",
+      "sourcePhotos": [
+        "IMG_5694.webp"
+      ],
       "createdAt": "2026-09-20T08:45:00.000Z",
       "updatedAt": "2026-09-20T08:45:00.000Z"
     },
@@ -2129,6 +2352,9 @@
       "deal": false,
       "status": "published",
       "notes": "Numéro de modèle non lisible sur les photos. Repères de catalogage : beneath Samsung dryer. Only the lower appliance is this record. Other appliances in the photo are separate products. Potential look-alike elsewhere in batch. Physical identity requires model/serial label; do not auto-merge or publish duplicate stock. Sticker amount transcribed; confirm current price before publishing Le magasin vend surtout les laveuses et sécheuses en ensemble — confirmer si cet appareil se vend seul ou avec son partenaire. Photos sources : IMG_5694.JPG (réf. catalogue AP-068)",
+      "sourcePhotos": [
+        "IMG_5694.webp"
+      ],
       "createdAt": "2026-09-20T08:39:00.000Z",
       "updatedAt": "2026-09-20T08:39:00.000Z"
     },
@@ -2163,6 +2389,9 @@
       "deal": false,
       "status": "published",
       "notes": "Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Brand not confidently readable; no brand guessed from styling. Sticker amount transcribed; confirm current price before publishing Photos sources : IMG_5696.JPG (réf. catalogue AP-070)",
+      "sourcePhotos": [
+        "IMG_5696.webp"
+      ],
       "createdAt": "2026-09-20T08:33:00.000Z",
       "updatedAt": "2026-09-20T08:33:00.000Z"
     },
@@ -2197,6 +2426,9 @@
       "deal": false,
       "status": "published",
       "notes": "Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Brand not confidently readable; no brand guessed from styling. Sticker amount transcribed; confirm current price before publishing Le magasin vend surtout les laveuses et sécheuses en ensemble — confirmer si cet appareil se vend seul ou avec son partenaire. Photos sources : IMG_5698.JPG (réf. catalogue AP-071)",
+      "sourcePhotos": [
+        "IMG_5698.webp"
+      ],
       "createdAt": "2026-09-20T08:30:00.000Z",
       "updatedAt": "2026-09-20T08:30:00.000Z"
     },
@@ -2231,6 +2463,9 @@
       "deal": false,
       "status": "published",
       "notes": "Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Brand not confidently readable; no brand guessed from styling. Sticker amount transcribed; confirm current price before publishing Le magasin vend surtout les laveuses et sécheuses en ensemble — confirmer si cet appareil se vend seul ou avec son partenaire. Photos sources : IMG_5699.JPG (réf. catalogue AP-072)",
+      "sourcePhotos": [
+        "IMG_5699.webp"
+      ],
       "createdAt": "2026-09-20T08:27:00.000Z",
       "updatedAt": "2026-09-20T08:27:00.000Z"
     },
@@ -2265,6 +2500,9 @@
       "deal": false,
       "status": "published",
       "notes": "Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Repères de catalogage : variante A. Brand not confidently readable; no brand guessed from styling. Sticker amount transcribed; confirm current price before publishing Le magasin vend surtout les laveuses et sécheuses en ensemble — confirmer si cet appareil se vend seul ou avec son partenaire. Photos sources : IMG_5700.JPG (réf. catalogue AP-073)",
+      "sourcePhotos": [
+        "IMG_5700.webp"
+      ],
       "createdAt": "2026-09-20T08:24:00.000Z",
       "updatedAt": "2026-09-20T08:24:00.000Z"
     },
@@ -2299,6 +2537,9 @@
       "deal": false,
       "status": "published",
       "notes": "Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Repères de catalogage : variante B. Brand not confidently readable; no brand guessed from styling. Sticker amount transcribed; confirm current price before publishing Le magasin vend surtout les laveuses et sécheuses en ensemble — confirmer si cet appareil se vend seul ou avec son partenaire. Photos sources : IMG_5701.JPG (réf. catalogue AP-074)",
+      "sourcePhotos": [
+        "IMG_5701.webp"
+      ],
       "createdAt": "2026-09-20T08:21:00.000Z",
       "updatedAt": "2026-09-20T08:21:00.000Z"
     },
@@ -2333,6 +2574,9 @@
       "deal": false,
       "status": "published",
       "notes": "Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Brand not confidently readable; no brand guessed from styling. Sticker amount transcribed; confirm current price before publishing Le magasin vend surtout les laveuses et sécheuses en ensemble — confirmer si cet appareil se vend seul ou avec son partenaire. Photos sources : IMG_5702.JPG (réf. catalogue AP-075)",
+      "sourcePhotos": [
+        "IMG_5702.webp"
+      ],
       "createdAt": "2026-09-20T08:18:00.000Z",
       "updatedAt": "2026-09-20T08:18:00.000Z"
     },
@@ -2367,6 +2611,9 @@
       "deal": false,
       "status": "published",
       "notes": "Numéro de modèle non lisible sur les photos. Potential look-alike elsewhere in batch. Physical identity requires model/serial label; do not auto-merge or publish duplicate stock. Sticker amount transcribed; confirm current price before publishing Le magasin vend surtout les laveuses et sécheuses en ensemble — confirmer si cet appareil se vend seul ou avec son partenaire. Photos sources : IMG_5703.JPG (réf. catalogue AP-076)",
+      "sourcePhotos": [
+        "IMG_5703.webp"
+      ],
       "createdAt": "2026-09-20T08:15:00.000Z",
       "updatedAt": "2026-09-20T08:15:00.000Z"
     },
@@ -2401,6 +2648,9 @@
       "deal": false,
       "status": "published",
       "notes": "Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Repères de catalogage : later view. Brand not confidently readable; no brand guessed from styling. Potential look-alike elsewhere in batch. Physical identity requires model/serial label; do not auto-merge or publish duplicate stock. Sticker amount transcribed; confirm current price before publishing Le magasin vend surtout les laveuses et sécheuses en ensemble — confirmer si cet appareil se vend seul ou avec son partenaire. Photos sources : IMG_5709.JPG (réf. catalogue AP-077)",
+      "sourcePhotos": [
+        "IMG_5709.webp"
+      ],
       "createdAt": "2026-09-20T08:12:00.000Z",
       "updatedAt": "2026-09-20T08:12:00.000Z"
     },
@@ -2435,6 +2685,9 @@
       "deal": false,
       "status": "draft",
       "notes": "Aucun prix lisible sur les photos. Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Repères de catalogage : variante D. Brand not confidently readable; no brand guessed from styling. Not established from supplied photos Photos sources : IMG_5704.JPG (réf. catalogue AP-078)",
+      "sourcePhotos": [
+        "IMG_5704.webp"
+      ],
       "createdAt": "2026-09-20T08:09:00.000Z",
       "updatedAt": "2026-09-20T08:09:00.000Z"
     },
@@ -2469,6 +2722,9 @@
       "deal": false,
       "status": "draft",
       "notes": "Aucun prix lisible sur les photos. Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Repères de catalogage : variante D. Brand not confidently readable; no brand guessed from styling. Not established from supplied photos Photos sources : IMG_5705.JPG (réf. catalogue AP-079)",
+      "sourcePhotos": [
+        "IMG_5705.webp"
+      ],
       "createdAt": "2026-09-20T08:06:00.000Z",
       "updatedAt": "2026-09-20T08:06:00.000Z"
     },
@@ -2503,6 +2759,10 @@
       "deal": false,
       "status": "published",
       "notes": "Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Repères de catalogage : variante E. Brand not confidently readable; no brand guessed from styling. Needs review Photos sources : IMG_5706.JPG, IMG_5708.JPG (réf. catalogue AP-080)",
+      "sourcePhotos": [
+        "IMG_5706.webp",
+        "IMG_5708.webp"
+      ],
       "createdAt": "2026-09-20T08:03:00.000Z",
       "updatedAt": "2026-09-20T08:03:00.000Z"
     },
@@ -2537,6 +2797,9 @@
       "deal": false,
       "status": "published",
       "notes": "Numéro de modèle non lisible sur les photos. Sticker amount transcribed; confirm current price before publishing Le magasin vend surtout les laveuses et sécheuses en ensemble — confirmer si cet appareil se vend seul ou avec son partenaire. Photos sources : IMG_5710.JPG (réf. catalogue AP-081)",
+      "sourcePhotos": [
+        "IMG_5710.webp"
+      ],
       "createdAt": "2026-09-20T08:00:00.000Z",
       "updatedAt": "2026-09-20T08:00:00.000Z"
     },
@@ -2571,6 +2834,10 @@
       "deal": false,
       "status": "published",
       "notes": "Numéro de modèle non lisible sur les photos. Sticker amount transcribed; confirm current price before publishing Photos sources : IMG_5711.JPG, IMG_5712.JPG (réf. catalogue AP-082)",
+      "sourcePhotos": [
+        "IMG_5711.webp",
+        "IMG_5712.webp"
+      ],
       "createdAt": "2026-09-20T07:57:00.000Z",
       "updatedAt": "2026-09-20T07:57:00.000Z"
     },
@@ -2605,6 +2872,10 @@
       "deal": false,
       "status": "published",
       "notes": "Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Brand not confidently readable; no brand guessed from styling. Sticker amount transcribed; confirm current price before publishing Photos sources : IMG_5713.JPG, IMG_5714.JPG (réf. catalogue AP-083)",
+      "sourcePhotos": [
+        "IMG_5713.webp",
+        "IMG_5714.webp"
+      ],
       "createdAt": "2026-09-20T07:54:00.000Z",
       "updatedAt": "2026-09-20T07:54:00.000Z"
     },
@@ -2639,6 +2910,11 @@
       "deal": false,
       "status": "published",
       "notes": "Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Brand not confidently readable; no brand guessed from styling. Sticker amount transcribed; confirm current price before publishing Photos sources : IMG_5715.JPG, IMG_5716.JPG, IMG_5717.JPG (réf. catalogue AP-084)",
+      "sourcePhotos": [
+        "IMG_5715.webp",
+        "IMG_5716.webp",
+        "IMG_5717.webp"
+      ],
       "createdAt": "2026-09-20T07:51:00.000Z",
       "updatedAt": "2026-09-20T07:51:00.000Z"
     },
@@ -2673,6 +2949,10 @@
       "deal": false,
       "status": "published",
       "notes": "Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Brand not confidently readable; no brand guessed from styling. Sticker amount transcribed; confirm current price before publishing Photos sources : IMG_5718.JPG, IMG_5719.JPG (réf. catalogue AP-085)",
+      "sourcePhotos": [
+        "IMG_5718.webp",
+        "IMG_5719.webp"
+      ],
       "createdAt": "2026-09-20T07:48:00.000Z",
       "updatedAt": "2026-09-20T07:48:00.000Z"
     },
@@ -2707,6 +2987,10 @@
       "deal": false,
       "status": "published",
       "notes": "Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Brand not confidently readable; no brand guessed from styling. Sticker amount transcribed; confirm current price before publishing Photos sources : IMG_5720.JPG, IMG_5721.JPG (réf. catalogue AP-086)",
+      "sourcePhotos": [
+        "IMG_5720.webp",
+        "IMG_5721.webp"
+      ],
       "createdAt": "2026-09-20T07:45:00.000Z",
       "updatedAt": "2026-09-20T07:45:00.000Z"
     },
@@ -2741,6 +3025,10 @@
       "deal": false,
       "status": "draft",
       "notes": "Aucun prix lisible sur les photos. Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Brand not confidently readable; no brand guessed from styling. Not established from supplied photos Photos sources : IMG_5722.JPG, IMG_5723.JPG (réf. catalogue AP-087)",
+      "sourcePhotos": [
+        "IMG_5722.webp",
+        "IMG_5723.webp"
+      ],
       "createdAt": "2026-09-20T07:42:00.000Z",
       "updatedAt": "2026-09-20T07:42:00.000Z"
     },
@@ -2775,6 +3063,10 @@
       "deal": false,
       "status": "draft",
       "notes": "Aucun prix lisible sur les photos. Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Repères de catalogage : variante C. Brand not confidently readable; no brand guessed from styling. Not established from supplied photos Photos sources : IMG_5724.JPG, IMG_5725.JPG (réf. catalogue AP-088)",
+      "sourcePhotos": [
+        "IMG_5724.webp",
+        "IMG_5725.webp"
+      ],
       "createdAt": "2026-09-20T07:39:00.000Z",
       "updatedAt": "2026-09-20T07:39:00.000Z"
     },
@@ -2809,6 +3101,10 @@
       "deal": false,
       "status": "draft",
       "notes": "Aucun prix lisible sur les photos. Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Repères de catalogage : variante D. Brand not confidently readable; no brand guessed from styling. Not established from supplied photos Photos sources : IMG_5726.JPG, IMG_5727.JPG (réf. catalogue AP-089)",
+      "sourcePhotos": [
+        "IMG_5726.webp",
+        "IMG_5727.webp"
+      ],
       "createdAt": "2026-09-20T07:36:00.000Z",
       "updatedAt": "2026-09-20T07:36:00.000Z"
     },
@@ -2843,6 +3139,9 @@
       "deal": false,
       "status": "published",
       "notes": "Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Brand not confidently readable; no brand guessed from styling. Sticker amount transcribed; confirm current price before publishing Photos sources : IMG_5728.JPG (réf. catalogue AP-090)",
+      "sourcePhotos": [
+        "IMG_5728.webp"
+      ],
       "createdAt": "2026-09-20T07:33:00.000Z",
       "updatedAt": "2026-09-20T07:33:00.000Z"
     },
@@ -2877,6 +3176,9 @@
       "deal": false,
       "status": "published",
       "notes": "Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Brand not confidently readable; no brand guessed from styling. Sticker amount transcribed; confirm current price before publishing Photos sources : IMG_5729.JPG (réf. catalogue AP-091)",
+      "sourcePhotos": [
+        "IMG_5729.webp"
+      ],
       "createdAt": "2026-09-20T07:30:00.000Z",
       "updatedAt": "2026-09-20T07:30:00.000Z"
     },
@@ -2911,6 +3213,9 @@
       "deal": false,
       "status": "published",
       "notes": "Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Repères de catalogage : variante D. Brand not confidently readable; no brand guessed from styling. Needs review Photos sources : IMG_5730.JPG (réf. catalogue AP-092)",
+      "sourcePhotos": [
+        "IMG_5730.webp"
+      ],
       "createdAt": "2026-09-20T07:27:00.000Z",
       "updatedAt": "2026-09-20T07:27:00.000Z"
     },
@@ -2945,6 +3250,9 @@
       "deal": false,
       "status": "published",
       "notes": "Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Repères de catalogage : variante E. Brand not confidently readable; no brand guessed from styling. Sticker amount transcribed; confirm current price before publishing Photos sources : IMG_5731.JPG (réf. catalogue AP-093)",
+      "sourcePhotos": [
+        "IMG_5731.webp"
+      ],
       "createdAt": "2026-09-20T07:24:00.000Z",
       "updatedAt": "2026-09-20T07:24:00.000Z"
     },
@@ -2979,6 +3287,9 @@
       "deal": false,
       "status": "published",
       "notes": "Plusieurs étiquettes photographiées : 649 $ (individual), 599 $ (individual). Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Brand not confidently readable; no brand guessed from styling. Needs review Photos sources : IMG_5732.JPG (réf. catalogue AP-094)",
+      "sourcePhotos": [
+        "IMG_5732.webp"
+      ],
       "createdAt": "2026-09-20T07:21:00.000Z",
       "updatedAt": "2026-09-20T07:21:00.000Z"
     },
@@ -3013,6 +3324,9 @@
       "deal": false,
       "status": "published",
       "notes": "Plusieurs étiquettes photographiées : 250 $ (individual), 150 $ (individual). Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Brand not confidently readable; no brand guessed from styling. Needs review Photos sources : IMG_5733.JPG (réf. catalogue AP-095)",
+      "sourcePhotos": [
+        "IMG_5733.webp"
+      ],
       "createdAt": "2026-09-20T07:18:00.000Z",
       "updatedAt": "2026-09-20T07:18:00.000Z"
     },
@@ -3047,6 +3361,9 @@
       "deal": false,
       "status": "published",
       "notes": "Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Brand not confidently readable; no brand guessed from styling. Sticker amount transcribed; confirm current price before publishing Photos sources : IMG_5734.JPG (réf. catalogue AP-096)",
+      "sourcePhotos": [
+        "IMG_5734.webp"
+      ],
       "createdAt": "2026-09-20T07:15:00.000Z",
       "updatedAt": "2026-09-20T07:15:00.000Z"
     },
@@ -3081,6 +3398,9 @@
       "deal": false,
       "status": "published",
       "notes": "Numéro de modèle non lisible sur les photos. Needs review Le magasin vend surtout les laveuses et sécheuses en ensemble — confirmer si cet appareil se vend seul ou avec son partenaire. Photos sources : IMG_5735.JPG (réf. catalogue AP-097)",
+      "sourcePhotos": [
+        "IMG_5735.webp"
+      ],
       "createdAt": "2026-09-20T07:12:00.000Z",
       "updatedAt": "2026-09-20T07:12:00.000Z"
     },
@@ -3115,6 +3435,9 @@
       "deal": false,
       "status": "draft",
       "notes": "Aucun prix lisible sur les photos. Numéro de modèle non lisible sur les photos. Only the upper appliance is this record. Other appliances in the photo are separate products. Not established from supplied photos Le magasin vend surtout les laveuses et sécheuses en ensemble — confirmer si cet appareil se vend seul ou avec son partenaire. Photos sources : IMG_5738.JPG (réf. catalogue AP-102)",
+      "sourcePhotos": [
+        "IMG_5738.webp"
+      ],
       "createdAt": "2026-09-20T06:57:00.000Z",
       "updatedAt": "2026-09-20T06:57:00.000Z"
     },
@@ -3149,6 +3472,9 @@
       "deal": false,
       "status": "published",
       "notes": "Numéro de modèle non lisible sur les photos. Repères de catalogage : beneath Electrolux dryer. Only the lower appliance is this record. Other appliances in the photo are separate products. Sticker amount transcribed; confirm current price before publishing Le magasin vend surtout les laveuses et sécheuses en ensemble — confirmer si cet appareil se vend seul ou avec son partenaire. Photos sources : IMG_5738.JPG (réf. catalogue AP-103)",
+      "sourcePhotos": [
+        "IMG_5738.webp"
+      ],
       "createdAt": "2026-09-20T06:54:00.000Z",
       "updatedAt": "2026-09-20T06:54:00.000Z"
     },
@@ -3183,6 +3509,9 @@
       "deal": false,
       "status": "published",
       "notes": "Plusieurs étiquettes photographiées : 249 $ (individual), 199 $ (individual). Numéro de modèle non lisible sur les photos. Only the upper appliance is this record. Other appliances in the photo are separate products. Needs review Le magasin vend surtout les laveuses et sécheuses en ensemble — confirmer si cet appareil se vend seul ou avec son partenaire. Photos sources : IMG_5740.JPG (réf. catalogue AP-106)",
+      "sourcePhotos": [
+        "IMG_5740.webp"
+      ],
       "createdAt": "2026-09-20T06:45:00.000Z",
       "updatedAt": "2026-09-20T06:45:00.000Z"
     },
@@ -3217,6 +3546,9 @@
       "deal": false,
       "status": "draft",
       "notes": "Aucun prix lisible sur les photos. Numéro de modèle non lisible sur les photos. Repères de catalogage : beneath Maytag dryer. Only the lower appliance is this record. Other appliances in the photo are separate products. Not established from supplied photos Le magasin vend surtout les laveuses et sécheuses en ensemble — confirmer si cet appareil se vend seul ou avec son partenaire. Photos sources : IMG_5740.JPG (réf. catalogue AP-107)",
+      "sourcePhotos": [
+        "IMG_5740.webp"
+      ],
       "createdAt": "2026-09-20T06:42:00.000Z",
       "updatedAt": "2026-09-20T06:42:00.000Z"
     },
@@ -3251,6 +3583,9 @@
       "deal": false,
       "status": "published",
       "notes": "Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Brand not confidently readable; no brand guessed from styling. Potential look-alike elsewhere in batch. Physical identity requires model/serial label; do not auto-merge or publish duplicate stock. Sticker amount transcribed; confirm current price before publishing Photos sources : IMG_5741.JPG (réf. catalogue AP-108)",
+      "sourcePhotos": [
+        "IMG_5741.webp"
+      ],
       "createdAt": "2026-09-20T06:39:00.000Z",
       "updatedAt": "2026-09-20T06:39:00.000Z"
     },
@@ -3285,6 +3620,9 @@
       "deal": false,
       "status": "published",
       "notes": "Numéro de modèle non lisible sur les photos. Repères de catalogage : later batch. Potential look-alike elsewhere in batch. Physical identity requires model/serial label; do not auto-merge or publish duplicate stock. Sticker amount transcribed; confirm current price before publishing Photos sources : IMG_5742.JPG (réf. catalogue AP-109)",
+      "sourcePhotos": [
+        "IMG_5742.webp"
+      ],
       "createdAt": "2026-09-20T06:36:00.000Z",
       "updatedAt": "2026-09-20T06:36:00.000Z"
     },
@@ -3319,6 +3657,9 @@
       "deal": false,
       "status": "published",
       "notes": "Numéro de modèle non lisible sur les photos. Repères de catalogage : later batch. Potential look-alike elsewhere in batch. Physical identity requires model/serial label; do not auto-merge or publish duplicate stock. Sticker amount transcribed; confirm current price before publishing Photos sources : IMG_5743.JPG (réf. catalogue AP-110)",
+      "sourcePhotos": [
+        "IMG_5743.webp"
+      ],
       "createdAt": "2026-09-20T06:33:00.000Z",
       "updatedAt": "2026-09-20T06:33:00.000Z"
     },
@@ -3353,6 +3694,10 @@
       "deal": false,
       "status": "published",
       "notes": "Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Repères de catalogage : variante B. Brand not confidently readable; no brand guessed from styling. Sticker amount transcribed; confirm current price before publishing Photos sources : IMG_5744.JPG, IMG_5745.JPG (réf. catalogue AP-111)",
+      "sourcePhotos": [
+        "IMG_5744.webp",
+        "IMG_5745.webp"
+      ],
       "createdAt": "2026-09-20T06:30:00.000Z",
       "updatedAt": "2026-09-20T06:30:00.000Z"
     },
@@ -3387,6 +3732,9 @@
       "deal": false,
       "status": "published",
       "notes": "Numéro de modèle non lisible sur les photos. Sticker amount transcribed; confirm current price before publishing Photos sources : IMG_5746.JPG (réf. catalogue AP-112)",
+      "sourcePhotos": [
+        "IMG_5746.webp"
+      ],
       "createdAt": "2026-09-20T06:27:00.000Z",
       "updatedAt": "2026-09-20T06:27:00.000Z"
     },
@@ -3421,6 +3769,9 @@
       "deal": false,
       "status": "published",
       "notes": "Numéro de modèle non lisible sur les photos. Repères de catalogage : with blue price tag. Sticker amount transcribed; confirm current price before publishing Photos sources : IMG_5747.JPG (réf. catalogue AP-113)",
+      "sourcePhotos": [
+        "IMG_5747.webp"
+      ],
       "createdAt": "2026-09-20T06:24:00.000Z",
       "updatedAt": "2026-09-20T06:24:00.000Z"
     },
@@ -3455,6 +3806,11 @@
       "deal": false,
       "status": "published",
       "notes": "Numéro de modèle non lisible sur les photos. Repères de catalogage : behind window A. Sticker amount transcribed; confirm current price before publishing Photos sources : IMG_5748.JPG, IMG_5750.JPG, IMG_5751.JPG (réf. catalogue AP-114)",
+      "sourcePhotos": [
+        "IMG_5748.webp",
+        "IMG_5750.webp",
+        "IMG_5751.webp"
+      ],
       "createdAt": "2026-09-20T06:21:00.000Z",
       "updatedAt": "2026-09-20T06:21:00.000Z"
     },
@@ -3489,6 +3845,9 @@
       "deal": false,
       "status": "draft",
       "notes": "Aucun prix lisible sur les photos. Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Repères de catalogage : behind window B. Brand not confidently readable; no brand guessed from styling. Not established from supplied photos Photos sources : IMG_5749.JPG (réf. catalogue AP-115)",
+      "sourcePhotos": [
+        "IMG_5749.webp"
+      ],
       "createdAt": "2026-09-20T06:18:00.000Z",
       "updatedAt": "2026-09-20T06:18:00.000Z"
     },
@@ -3523,6 +3882,9 @@
       "deal": false,
       "status": "published",
       "notes": "Numéro de modèle non lisible sur les photos. Sticker amount transcribed; confirm current price before publishing Le magasin vend surtout les laveuses et sécheuses en ensemble — confirmer si cet appareil se vend seul ou avec son partenaire. Photos sources : IMG_5753 2.JPG (réf. catalogue AP-118)",
+      "sourcePhotos": [
+        "IMG_5753_2.webp"
+      ],
       "createdAt": "2026-09-20T06:09:00.000Z",
       "updatedAt": "2026-09-20T06:09:00.000Z"
     },
@@ -3557,6 +3919,9 @@
       "deal": false,
       "status": "published",
       "notes": "Numéro de modèle non lisible sur les photos. Sticker amount transcribed; confirm current price before publishing Le magasin vend surtout les laveuses et sécheuses en ensemble — confirmer si cet appareil se vend seul ou avec son partenaire. Photos sources : IMG_5754 2.JPG (réf. catalogue AP-119)",
+      "sourcePhotos": [
+        "IMG_5754_2.webp"
+      ],
       "createdAt": "2026-09-20T06:06:00.000Z",
       "updatedAt": "2026-09-20T06:06:00.000Z"
     }

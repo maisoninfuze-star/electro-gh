@@ -24,9 +24,28 @@ export { normalise };
  *  imported it breaks; the demo ribbon it drove no longer renders. */
 export const IS_DEMO_DATA = false;
 
+/**
+ * Fields that exist for the owner and must never reach a visitor.
+ *
+ * `notes` carries internal uncertainty — "JUMELAGE À VÉRIFIER", "plusieurs
+ * étiquettes photographiées", "marque non lisible" — and `sourcePhotos` names
+ * the shop-floor originals. Neither is rendered, but a Product handed to a
+ * client component is serialised into the page's RSC payload, so both were
+ * readable in view-source on every catalogue page until this strip existed.
+ *
+ * The admin does NOT go through this provider; it reads getStore() directly
+ * and still sees everything.
+ */
+function publicView(p: Product): Product {
+  const { notes: _notes, sourcePhotos: _sourcePhotos, ...rest } = p;
+  return rest as Product;
+}
+
 async function loadAll(): Promise<Product[]> {
   const store = await getStore();
-  return (await store.list()).filter((p) => p.status === 'published');
+  return (await store.list())
+    .filter((p) => p.status === 'published')
+    .map(publicView);
 }
 
 export async function getAllProducts(): Promise<Product[]> {

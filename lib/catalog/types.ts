@@ -140,6 +140,19 @@ export interface Product {
   /** Admin-only. Never rendered publicly. "Sticker says $500 and $800 — confirm." */
   notes?: string;
 
+  /**
+   * ADMIN-ONLY. Filenames of the original phone photographs this record was
+   * read from, e.g. ['IMG_5412.webp']. They let the owner check that the
+   * studio render, the price and the washer/dryer pairing actually match what
+   * was photographed.
+   *
+   * These are NEVER rendered on the storefront: they show the shop floor,
+   * neighbouring machines and handwritten stickers. They are served only by
+   * /admin/source/[name], which refuses without a valid admin session — not
+   * merely left unlinked in /public, which would be public in practice.
+   */
+  sourcePhotos?: string[];
+
   /** ISO 8601. Drives "new arrivals" ordering. */
   createdAt: string;
   updatedAt: string;

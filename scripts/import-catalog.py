@@ -257,6 +257,17 @@ def find_pairs(records):
     return pairs, used
 
 
+def source_photos(*records):
+    """Admin-only filenames of the phone originals these records were read from."""
+    out = []
+    for r in records:
+        for ph in (r.get('source_photos') or [r['primary_photo']]):
+            n = Path(ph).stem.replace(' ', '_') + '.webp'
+            if n not in out and (SITE / 'data/source-photos' / n).exists():
+                out.append(n)
+    return out
+
+
 def slugify(s):
     s = unicodedata.normalize('NFD', s).encode('ascii', 'ignore').decode().lower()
     return re.sub(r'-+', '-', re.sub(r'[^a-z0-9]+', '-', s)).strip('-')[:80]
@@ -347,6 +358,7 @@ def main():
             'deal': False,
             'status': 'published' if (imgs and amt and confident) else 'draft',
             'notes': ' '.join(note),
+            'sourcePhotos': source_photos(w, d),
             'createdAt': (base - timedelta(minutes=n)).isoformat(timespec='milliseconds') + 'Z',
             'updatedAt': (base - timedelta(minutes=n)).isoformat(timespec='milliseconds') + 'Z',
         })
@@ -434,6 +446,7 @@ def main():
             'deal': False,
             'status': status,
             'notes': ' '.join(note),
+            'sourcePhotos': source_photos(r),
             'createdAt': (base - timedelta(minutes=i * 3)).isoformat(timespec='milliseconds') + 'Z',
             'updatedAt': (base - timedelta(minutes=i * 3)).isoformat(timespec='milliseconds') + 'Z',
         })

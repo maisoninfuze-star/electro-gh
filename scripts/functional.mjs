@@ -173,6 +173,18 @@ check('chooser: sheet offers both stores as tel: links',
 await page.keyboard.press('Escape');
 await page.setViewport({ width: 1440, height: 900 });
 
+/* ── 6c. Admin-only fields must not reach the public payload ───────────── */
+// `notes` and `sourcePhotos` are serialised into the RSC payload whenever a
+// Product reaches a client component, so they leak in view-source long before
+// anyone renders them.
+for (const path of ['/magasiner', '/ensembles-laveuse-secheuse', '/']) {
+  const res = await fetch(`${BASE}${path}`);
+  const html = await res.text();
+  check(`privacy: no admin notes in the HTML of ${path}`,
+    !/JUMELAGE|étiquettes photographiées|Photos sources|sourcePhotos|\\"notes\\"/.test(html));
+  check(`privacy: no source-photo filenames in ${path}`, !/IMG_\d{4}/.test(html));
+}
+
 /* ── 7. Structured data ────────────────────────────────────────────────── */
 await page.goto(`${BASE}/laveuses/laveuse-a-chargement-par-le-haut-blanche-couvercle-vitre`, { waitUntil: 'networkidle2' });
 await settle(600);

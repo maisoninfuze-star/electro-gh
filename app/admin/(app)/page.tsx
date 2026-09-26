@@ -4,6 +4,7 @@ import { getStore } from '@/lib/store';
 import { LABELS } from '@/lib/admin/product-form';
 import { StatusChip } from '@/components/admin/StatusChip';
 import { QuickActions } from '@/components/admin/QuickActions';
+import { SourcePhotos } from '@/components/admin/SourcePhotos';
 import { InventoryToolbar } from '@/components/admin/InventoryToolbar';
 import { formatPrice } from '@/lib/format';
 import { cx } from '@/lib/format';
@@ -91,6 +92,8 @@ function Row({ p }: { p: Product }) {
 
   return (
     <li className="flex items-start gap-3 py-3 sm:items-center sm:gap-4">
+      {p.sourcePhotos?.length ? <SourcePhotos photos={p.sourcePhotos} compact /> : null}
+
       <Link href={`/admin/produits/${p.id}`} className="block size-16 shrink-0 overflow-hidden bg-surface-2 sm:size-20">
         {img ? (
           // eslint-disable-next-line @next/next/no-img-element
