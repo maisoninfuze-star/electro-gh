@@ -81,6 +81,8 @@ const fr = {
     ctaPrimary: 'Voir nos électroménagers',
     ctaSecondary: 'Voir les offres',
     trust: ['Montréal & Laval', 'Achat & revente', 'Livraison disponible'],
+    showcaseLabel: 'Quelques appareils en magasin',
+    showcaseGoTo: 'Voir l’appareil',
   },
 
   categories: {
@@ -446,6 +448,8 @@ const en: Dict = {
     ctaPrimary: 'Browse appliances',
     ctaSecondary: 'See the deals',
     trust: ['Montréal & Laval', 'We buy & sell', 'Delivery available'],
+    showcaseLabel: 'A few appliances in store',
+    showcaseGoTo: 'View appliance',
   },
 
   categories: {

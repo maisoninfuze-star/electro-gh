@@ -73,6 +73,42 @@ export async function getDeals(): Promise<Product[]> {
     .sort((a, b) => savingsOf(b) - savingsOf(a));
 }
 
+/**
+ * The rotation behind the hero.
+ *
+ * Merchandising rule: variety before depth. A hero that cycles six
+ * refrigerators tells a visitor this is a fridge shop; one that cycles a
+ * laundry set, a range, a fridge and a dishwasher tells them the truth. So
+ * take the best candidate from each category first, then fill any remaining
+ * slots with the next best overall.
+ *
+ * "Best" = marked as a deal, then featured, then most recently added. Only
+ * published units with a real photograph are eligible — the hero is the one
+ * place a missing image would be most costly.
+ */
+export async function getHeroProducts(limit = 6): Promise<Product[]> {
+  const all = (await loadAll()).filter((p) => p.images.length > 0 && p.price > 0);
+
+  const rank = (p: Product) =>
+    (p.deal ? 0 : p.featured ? 1 : 2) * 1e13 + (1e13 - Date.parse(p.createdAt));
+  const sorted = [...all].sort((a, b) => rank(a) - rank(b));
+
+  const picked: Product[] = [];
+  const seen = new Set<string>();
+  for (const p of sorted) {
+    if (seen.has(p.category)) continue;
+    seen.add(p.category);
+    picked.push(p);
+    if (picked.length === limit) return picked;
+  }
+  for (const p of sorted) {
+    if (picked.includes(p)) continue;
+    picked.push(p);
+    if (picked.length === limit) break;
+  }
+  return picked;
+}
+
 export async function getFeatured(limit = 4): Promise<Product[]> {
   const all = await loadAll();
   const featured = all.filter((p) => p.featured);

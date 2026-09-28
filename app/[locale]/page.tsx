@@ -14,7 +14,7 @@ import { Showroom } from '@/components/home/Showroom';
 
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import { alternates, href, isLocale, SITE_URL, type Locale } from '@/lib/i18n/config';
-import { getDeals, getNewArrivals } from '@/lib/catalog/provider';
+import { getDeals, getNewArrivals, getHeroProducts } from '@/lib/catalog/provider';
 
 /**
  * Inventory is live data edited from the admin, so every page that shows it
@@ -58,11 +58,15 @@ export default async function HomePage({
 
   // Fetched in parallel — both hit the same provider, so a real network-backed
   // source resolves in one round trip rather than two sequential ones.
-  const [deals, arrivals] = await Promise.all([getDeals(), getNewArrivals(8)]);
+  const [deals, arrivals, showcase] = await Promise.all([
+    getDeals(),
+    getNewArrivals(8),
+    getHeroProducts(6),
+  ]);
 
   return (
     <>
-      <Hero locale={locale} dict={dict} />
+      <Hero locale={locale} dict={dict} showcase={showcase} />
       <CategoryDiscovery locale={locale} dict={dict} />
       <Deals products={deals.slice(0, 4)} locale={locale} dict={dict} />
       <WhyElectroGH dict={dict} />

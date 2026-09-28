@@ -1,5 +1,7 @@
 import { MapPin } from 'lucide-react';
 import { HeroMedia } from './HeroMedia';
+import { HeroShowcase } from './HeroShowcase';
+import type { Product } from '@/lib/catalog/types';
 import { RevealLines, Reveal } from '@/components/ui/Reveal';
 import { ButtonLink } from '@/components/ui/Button';
 import { href, type Locale } from '@/lib/i18n/config';
@@ -19,17 +21,43 @@ import type { Dictionary } from '@/lib/i18n/dictionaries';
  * a full-height mobile hero pushes the actual product one whole swipe away,
  * which is exactly the wrong trade for a store people arrive at from Instagram
  * ready to buy.
+ *
+ * The right-hand panel now rotates through REAL stock with real prices rather
+ * than showing a stock kitchen. That is the strongest claim this page can
+ * make, and it is self-updating: as the owner publishes and sells, the hero
+ * changes with the shop. If nothing is publishable — an empty catalogue, or
+ * every unit missing a photo — it falls back to the kitchen photograph
+ * instead of rendering an empty frame.
  */
-export function Hero({ locale, dict }: { locale: Locale; dict: Dictionary }) {
+export function Hero({
+  locale,
+  dict,
+  showcase = [],
+}: {
+  locale: Locale;
+  dict: Dictionary;
+  showcase?: Product[];
+}) {
   return (
     <section className="relative border-b border-line bg-canvas">
       <div className="grid lg:grid-cols-12">
         {/* Media — first on mobile, right-hand bleed on desktop */}
-        <div className="relative order-1 aspect-[4/3] w-full sm:aspect-[16/10] lg:order-2 lg:col-span-6 lg:aspect-auto lg:min-h-[min(82vh,46rem)]">
-          <HeroMedia
-            src="/media/hero-kitchen.webp"
-            alt="Cuisine contemporaine avec électroménagers en acier inoxydable"
-          />
+        <div
+          className={
+            'relative order-1 w-full lg:order-2 lg:col-span-6 lg:aspect-auto lg:min-h-[min(82vh,46rem)] ' +
+            // A standing appliance needs vertical room; a landscape kitchen photo
+            // does not. The box changes shape with what is in it.
+            (showcase.length > 0 ? 'aspect-[3/4] sm:aspect-[4/3]' : 'aspect-[4/3] sm:aspect-[16/10]')
+          }
+        >
+          {showcase.length > 0 ? (
+            <HeroShowcase products={showcase} locale={locale} dict={dict} />
+          ) : (
+            <HeroMedia
+              src="/media/hero-kitchen.webp"
+              alt="Cuisine contemporaine avec électroménagers en acier inoxydable"
+            />
+          )}
         </div>
 
         {/* Type panel */}
