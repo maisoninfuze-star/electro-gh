@@ -31,7 +31,7 @@ const PAGES = [
   { name: 'category', path: '/laveuses' },
   { name: 'deals', path: '/aubaines' },
   { name: 'product', path: '/laveuses/laveuse-a-chargement-par-le-haut-blanche-couvercle-vitre' },
-  { name: 'product-set', path: '/refrigerateurs/refrigerateur-a-congelateur-superieur-en-acier-inoxydable' },
+  { name: 'product-set', path: '/refrigerateurs/refrigerateur-a-congelateur-superieur-en-acier-inoxydable-2' },
   { name: 'product-en', path: '/en/dishwashers/lave-vaisselle-en-acier-inoxydable-console-noire' },
   { name: 'home-en', path: '/en' },
   { name: 'repair', path: '/reparation' },

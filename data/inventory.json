@@ -20,6 +20,13 @@
       "finish": "white",
       "images": [
         {
+          "src": "/inventory/gh-s01-pair.webp",
+          "alt": "Ensemble laveuse LG et sécheuse GE",
+          "width": 1600,
+          "height": 1600,
+          "kind": "pair"
+        },
+        {
           "src": "/inventory/ap-002.webp",
           "alt": "Ensemble laveuse LG et sécheuse GE",
           "width": 1600,
@@ -66,6 +73,13 @@
       "finish": "slate",
       "images": [
         {
+          "src": "/inventory/gh-s02-pair.webp",
+          "alt": "Ensemble laveuse et sécheuse Electrolux",
+          "width": 1600,
+          "height": 1600,
+          "kind": "pair"
+        },
+        {
           "src": "/inventory/ap-004.webp",
           "alt": "Ensemble laveuse et sécheuse Electrolux",
           "width": 1600,
@@ -110,6 +124,13 @@
       "inventoryStatus": "in-stock",
       "finish": "white",
       "images": [
+        {
+          "src": "/inventory/gh-s03-pair.webp",
+          "alt": "Ensemble laveuse et sécheuse Samsung",
+          "width": 1600,
+          "height": 1600,
+          "kind": "pair"
+        },
         {
           "src": "/inventory/ap-007.webp",
           "alt": "Ensemble laveuse et sécheuse Samsung",
@@ -157,6 +178,13 @@
       "finish": "white",
       "images": [
         {
+          "src": "/inventory/gh-s04-pair.webp",
+          "alt": "Ensemble laveuse et sécheuse Samsung",
+          "width": 1600,
+          "height": 1600,
+          "kind": "pair"
+        },
+        {
           "src": "/inventory/ap-011.webp",
           "alt": "Ensemble laveuse et sécheuse Samsung",
           "width": 1600,
@@ -202,6 +230,13 @@
       "inventoryStatus": "in-stock",
       "finish": "white",
       "images": [
+        {
+          "src": "/inventory/gh-s05-pair.webp",
+          "alt": "Ensemble laveuse et sécheuse Samsung",
+          "width": 1600,
+          "height": 1600,
+          "kind": "pair"
+        },
         {
           "src": "/inventory/ap-013.webp",
           "alt": "Ensemble laveuse et sécheuse Samsung",
@@ -249,6 +284,13 @@
       "finish": "black",
       "images": [
         {
+          "src": "/inventory/gh-s06-pair.webp",
+          "alt": "Ensemble laveuse et sécheuse Samsung",
+          "width": 1600,
+          "height": 1600,
+          "kind": "pair"
+        },
+        {
           "src": "/inventory/ap-018.webp",
           "alt": "Ensemble laveuse et sécheuse Samsung",
           "width": 1600,
@@ -294,6 +336,13 @@
       "finish": "white",
       "images": [
         {
+          "src": "/inventory/gh-s07-pair.webp",
+          "alt": "Ensemble laveuse et sécheuse Maytag",
+          "width": 1600,
+          "height": 1600,
+          "kind": "pair"
+        },
+        {
           "src": "/inventory/ap-019.webp",
           "alt": "Ensemble laveuse et sécheuse Maytag",
           "width": 1600,
@@ -338,6 +387,13 @@
       "inventoryStatus": "in-stock",
       "finish": "slate",
       "images": [
+        {
+          "src": "/inventory/gh-s08-pair.webp",
+          "alt": "Ensemble laveuse Samsung et sécheuse Amana",
+          "width": 1600,
+          "height": 1600,
+          "kind": "pair"
+        },
         {
           "src": "/inventory/ap-022.webp",
           "alt": "Ensemble laveuse Samsung et sécheuse Amana",
@@ -387,6 +443,13 @@
       "finish": "white",
       "images": [
         {
+          "src": "/inventory/gh-s09-pair.webp",
+          "alt": "Ensemble laveuse Amana et sécheuse Maytag",
+          "width": 1600,
+          "height": 1600,
+          "kind": "pair"
+        },
+        {
           "src": "/inventory/ap-024.webp",
           "alt": "Ensemble laveuse Amana et sécheuse Maytag",
           "width": 1600,
@@ -433,6 +496,13 @@
       "finish": "white",
       "images": [
         {
+          "src": "/inventory/gh-s10-pair.webp",
+          "alt": "Ensemble laveuse et sécheuse Samsung",
+          "width": 1600,
+          "height": 1600,
+          "kind": "pair"
+        },
+        {
           "src": "/inventory/ap-045.webp",
           "alt": "Ensemble laveuse et sécheuse Samsung",
           "width": 1600,
@@ -477,6 +547,13 @@
       "finish": "black",
       "images": [
         {
+          "src": "/inventory/gh-s11-pair.webp",
+          "alt": "Ensemble laveuse et sécheuse",
+          "width": 1600,
+          "height": 1600,
+          "kind": "pair"
+        },
+        {
           "src": "/inventory/ap-047.webp",
           "alt": "Ensemble laveuse et sécheuse",
           "width": 1600,
@@ -520,6 +597,13 @@
       "inventoryStatus": "in-stock",
       "finish": "white",
       "images": [
+        {
+          "src": "/inventory/gh-s12-pair.webp",
+          "alt": "Ensemble laveuse et sécheuse Whirlpool",
+          "width": 1600,
+          "height": 1600,
+          "kind": "pair"
+        },
         {
           "src": "/inventory/ap-060.webp",
           "alt": "Ensemble laveuse et sécheuse Whirlpool",
@@ -567,6 +651,13 @@
       "finish": "white",
       "images": [
         {
+          "src": "/inventory/gh-s13-pair.webp",
+          "alt": "Ensemble laveuse et sécheuse Amana",
+          "width": 1600,
+          "height": 1600,
+          "kind": "pair"
+        },
+        {
           "src": "/inventory/ap-061.webp",
           "alt": "Ensemble laveuse et sécheuse Amana",
           "width": 1600,
@@ -612,6 +703,13 @@
       "finish": "black",
       "images": [
         {
+          "src": "/inventory/gh-s14-pair.webp",
+          "alt": "Ensemble laveuse et sécheuse",
+          "width": 1600,
+          "height": 1600,
+          "kind": "pair"
+        },
+        {
           "src": "/inventory/ap-069.webp",
           "alt": "Ensemble laveuse et sécheuse",
           "width": 1600,
@@ -655,6 +753,13 @@
       "inventoryStatus": "in-stock",
       "finish": "white",
       "images": [
+        {
+          "src": "/inventory/gh-s15-pair.webp",
+          "alt": "Ensemble laveuse et sécheuse Samsung",
+          "width": 1600,
+          "height": 1600,
+          "kind": "pair"
+        },
         {
           "src": "/inventory/ap-099.webp",
           "alt": "Ensemble laveuse et sécheuse Samsung",
@@ -700,6 +805,13 @@
       "finish": "other",
       "images": [
         {
+          "src": "/inventory/gh-s16-pair.webp",
+          "alt": "Ensemble laveuse et sécheuse Samsung",
+          "width": 1600,
+          "height": 1600,
+          "kind": "pair"
+        },
+        {
           "src": "/inventory/ap-101.webp",
           "alt": "Ensemble laveuse et sécheuse Samsung",
           "width": 1600,
@@ -744,6 +856,13 @@
       "finish": "white",
       "images": [
         {
+          "src": "/inventory/gh-s17-pair.webp",
+          "alt": "Ensemble laveuse et sécheuse Samsung",
+          "width": 1600,
+          "height": 1600,
+          "kind": "pair"
+        },
+        {
           "src": "/inventory/ap-105.webp",
           "alt": "Ensemble laveuse et sécheuse Samsung",
           "width": 1600,
@@ -787,6 +906,13 @@
       "inventoryStatus": "in-stock",
       "finish": "slate",
       "images": [
+        {
+          "src": "/inventory/gh-s18-pair.webp",
+          "alt": "Ensemble laveuse et sécheuse",
+          "width": 1600,
+          "height": 1600,
+          "kind": "pair"
+        },
         {
           "src": "/inventory/ap-117.webp",
           "alt": "Ensemble laveuse et sécheuse",
@@ -1144,8 +1270,8 @@
       ],
       "featured": false,
       "deal": false,
-      "status": "published",
-      "notes": "Numéro de modèle non lisible sur les photos. Détail non traduit : « with curved front ». Sticker amount transcribed; confirm current price before publishing Le magasin vend surtout les laveuses et sécheuses en ensemble — confirmer si cet appareil se vend seul ou avec son partenaire. Photos sources : IMG_5436.JPG, IMG_5672.JPG (réf. catalogue AP-027)",
+      "status": "draft",
+      "notes": "L'image montre une laveuse frontale ; la photo d'origine montre une sécheuse. Photo à refaire. Numéro de modèle non lisible sur les photos. Détail non traduit : « with curved front ». Sticker amount transcribed; confirm current price before publishing Le magasin vend surtout les laveuses et sécheuses en ensemble — confirmer si cet appareil se vend seul ou avec son partenaire. Photos sources : IMG_5436.JPG, IMG_5672.JPG (réf. catalogue AP-027)",
       "sourcePhotos": [
         "IMG_5436.webp",
         "IMG_5672.webp"
@@ -1182,8 +1308,8 @@
       ],
       "featured": false,
       "deal": false,
-      "status": "published",
-      "notes": "Numéro de modèle non lisible sur les photos. Potential look-alike elsewhere in batch. Physical identity requires model/serial label; do not auto-merge or publish duplicate stock. Sticker amount transcribed; confirm current price before publishing Photos sources : IMG_5437.JPG, IMG_5673.JPG (réf. catalogue AP-028)",
+      "status": "draft",
+      "notes": "L'image montre un petit réfrigérateur d'appartement ; la photo d'origine montre un grand LG inox à congélateur supérieur. Photo à refaire. Numéro de modèle non lisible sur les photos. Potential look-alike elsewhere in batch. Physical identity requires model/serial label; do not auto-merge or publish duplicate stock. Sticker amount transcribed; confirm current price before publishing Photos sources : IMG_5437.JPG, IMG_5673.JPG (réf. catalogue AP-028)",
       "sourcePhotos": [
         "IMG_5437.webp",
         "IMG_5673.webp"
@@ -1272,8 +1398,8 @@
       "sku": "GH-031",
       "brand": "",
       "name": {
-        "fr": "Cuisinière électrique en acier inoxydable",
-        "en": "Stainless steel electric range"
+        "fr": "Cuisinière électrique à double four, acier inoxydable",
+        "en": "Double-oven electric range, stainless steel"
       },
       "description": {
         "fr": "Stainless-finish electric range with a smooth cooktop and two oven doors.",
@@ -1287,7 +1413,7 @@
       "images": [
         {
           "src": "/inventory/ap-031.webp",
-          "alt": "Cuisinière électrique en acier inoxydable",
+          "alt": "Cuisinière électrique à double four, acier inoxydable",
           "width": 1600,
           "height": 1600,
           "kind": "studio"
@@ -1296,7 +1422,7 @@
       "featured": false,
       "deal": false,
       "status": "published",
-      "notes": "Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Détail non traduit : « double-oven ». Brand not confidently readable; no brand guessed from styling. Sticker amount transcribed; confirm current price before publishing Photos sources : IMG_5440.JPG, IMG_5630.JPG (réf. catalogue AP-031)",
+      "notes": "Photo corrigée le 28 sept : rendu fourni par le propriétaire, conforme à IMG_5440 / IMG_5630 (double four, bandeau à cadrans aux deux extrémités, macaron jaune 500 $). Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Détail non traduit : « double-oven ». Brand not confidently readable; no brand guessed from styling. Sticker amount transcribed; confirm current price before publishing Photos sources : IMG_5440.JPG, IMG_5630.JPG (réf. catalogue AP-031)",
       "sourcePhotos": [
         "IMG_5440.webp",
         "IMG_5630.webp"
@@ -2029,8 +2155,8 @@
       "sku": "GH-055",
       "brand": "Kenmore",
       "name": {
-        "fr": "Réfrigérateur à congélateur inférieur en acier inoxydable",
-        "en": "Stainless steel bottom-freezer refrigerator"
+        "fr": "Réfrigérateur à congélateur inférieur Kenmore, acier inoxydable",
+        "en": "Kenmore bottom-freezer refrigerator, stainless steel"
       },
       "description": {
         "fr": "Stainless-finish refrigerator with a vertical upper-door handle and bottom freezer drawer.",
@@ -2044,7 +2170,7 @@
       "images": [
         {
           "src": "/inventory/ap-055.webp",
-          "alt": "Réfrigérateur à congélateur inférieur en acier inoxydable",
+          "alt": "Réfrigérateur à congélateur inférieur Kenmore, acier inoxydable",
           "width": 1600,
           "height": 1600,
           "kind": "studio"
@@ -2052,8 +2178,8 @@
       ],
       "featured": false,
       "deal": false,
-      "status": "published",
-      "notes": "Numéro de modèle non lisible sur les photos. Repères de catalogage : variante C. Sticker amount transcribed; confirm current price before publishing Photos sources : IMG_5680.JPG (réf. catalogue AP-055)",
+      "status": "draft",
+      "notes": "CONFIRMÉ PAR LE PROPRIÉTAIRE (28 sept) : GH-055 est bien le KENMORE à congélateur inférieur (macaron JAUNE 499 $) d'IMG_5680. L'image retouchée reçue le 28 sept est refusée une deuxième fois : elle porte l'écusson Frigidaire Gallery et la pastille rouge SALE 499 $ du réfrigérateur UNE PORTE voisin. En attente d'une photo du Kenmore, écusson Kenmore visible. L'image montre un réfrigérateur à portes françaises avec distributeur ; l'appareil réel est le Kenmore à congélateur inférieur (macaron jaune 499 $) d'IMG_5680. Photo à refaire. Numéro de modèle non lisible sur les photos. Repères de catalogage : variante C. Sticker amount transcribed; confirm current price before publishing Photos sources : IMG_5680.JPG (réf. catalogue AP-055)",
       "sourcePhotos": [
         "IMG_5680.webp"
       ],
@@ -2066,8 +2192,8 @@
       "sku": "GH-056",
       "brand": "Frigidaire",
       "name": {
-        "fr": "Réfrigérateur à congélateur supérieur en acier inoxydable, façade plate",
-        "en": "Stainless steel top-freezer refrigerator, flat front"
+        "fr": "Réfrigérateur une porte Frigidaire Gallery, acier inoxydable",
+        "en": "Frigidaire Gallery single-door refrigerator, stainless steel"
       },
       "description": {
         "fr": "Stainless-finish top-freezer refrigerator with a flat front and horizontal door division.",
@@ -2081,7 +2207,7 @@
       "images": [
         {
           "src": "/inventory/ap-056.webp",
-          "alt": "Réfrigérateur à congélateur supérieur en acier inoxydable, façade plate",
+          "alt": "Réfrigérateur une porte Frigidaire Gallery, acier inoxydable",
           "width": 1600,
           "height": 1600,
           "kind": "studio"
@@ -2089,8 +2215,8 @@
       ],
       "featured": false,
       "deal": false,
-      "status": "published",
-      "notes": "Numéro de modèle non lisible sur les photos. Sticker amount transcribed; confirm current price before publishing Photos sources : IMG_5681.JPG (réf. catalogue AP-056)",
+      "status": "draft",
+      "notes": "Titre et image corrigés d'après IMG_5681 : l'appareil est un Frigidaire Gallery à UNE SEULE PORTE (pastille rouge SALE 499 $), pas un congélateur supérieur. Photo à refaire. Numéro de modèle non lisible sur les photos. Sticker amount transcribed; confirm current price before publishing Photos sources : IMG_5681.JPG (réf. catalogue AP-056)",
       "sourcePhotos": [
         "IMG_5681.webp"
       ],
@@ -2201,8 +2327,8 @@
       ],
       "featured": false,
       "deal": false,
-      "status": "published",
-      "notes": "Numéro de modèle non lisible sur les photos. Repères de catalogage : variante A. Sticker amount transcribed; confirm current price before publishing Photos sources : IMG_5690.JPG (réf. catalogue AP-063)",
+      "status": "draft",
+      "notes": "L'image est un réfrigérateur blanc à 4 portes ; la photo d'origine montre un Frigidaire blanc à 2 portes, macaron jaune 350 $. Photo à refaire. Numéro de modèle non lisible sur les photos. Repères de catalogage : variante A. Sticker amount transcribed; confirm current price before publishing Photos sources : IMG_5690.JPG (réf. catalogue AP-063)",
       "sourcePhotos": [
         "IMG_5690.webp"
       ],
@@ -3223,17 +3349,17 @@
       "id": "cat-ap-093",
       "slug": "refrigerateur-a-congelateur-superieur-blanc-5",
       "sku": "GH-093",
-      "brand": "",
+      "brand": "Frigidaire",
       "name": {
         "fr": "Réfrigérateur à congélateur supérieur blanc",
         "en": "White top-freezer refrigerator"
       },
       "description": {
-        "fr": "White top-freezer refrigerator with separate freezer and refrigerator doors.",
-        "en": "White top-freezer refrigerator with separate freezer and refrigerator doors."
+        "fr": "Réfrigérateur blanc à congélateur supérieur, poignées verticales à droite et écusson Frigidaire. Étiquette du magasin : 349 $.",
+        "en": "White top-freezer refrigerator with vertical handles on the right and a Frigidaire badge. Store tag: $349."
       },
       "category": "refrigerators",
-      "price": 250,
+      "price": 343,
       "condition": "used",
       "inventoryStatus": "in-stock",
       "finish": "white",
@@ -3249,12 +3375,12 @@
       "featured": false,
       "deal": false,
       "status": "published",
-      "notes": "Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Repères de catalogage : variante E. Brand not confidently readable; no brand guessed from styling. Sticker amount transcribed; confirm current price before publishing Photos sources : IMG_5731.JPG (réf. catalogue AP-093)",
+      "notes": "PRIX 343 $ saisi sur instruction du propriétaire (28 sept, confirmé deux fois). L'étiquette jaune sur la photo d'origine IMG_5731 et sur son image retouchée se lit « 349 $ » ; il indique 343 $. Le 250 $ d'origine était l'étiquette bleue du réfrigérateur VOISIN. Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Repères de catalogage : variante E. Brand not confidently readable; no brand guessed from styling. Sticker amount transcribed; confirm current price before publishing Photos sources : IMG_5731.JPG (réf. catalogue AP-093)\n2026-09-28 : photo refaite. L'ancienne fiche portait 250 $ — c'est l'étiquette bleue du réfrigérateur VOISIN sur IMG_5731. L'appareil catalogué ici porte une note jaune manuscrite « 349 $ » (lisible sur la photo d'origine et sur la nouvelle image). Le propriétaire a écrit « 343 » dans sa demande — à confirmer.",
       "sourcePhotos": [
         "IMG_5731.webp"
       ],
       "createdAt": "2026-09-20T07:24:00.000Z",
-      "updatedAt": "2026-09-20T07:24:00.000Z"
+      "updatedAt": "2026-09-28T21:31:05.954138Z"
     },
     {
       "id": "cat-ap-094",
@@ -3599,8 +3725,8 @@
         "en": "Stainless steel top-freezer refrigerator"
       },
       "description": {
-        "fr": "Stainless-finish top-freezer refrigerator with recessed horizontal handles.",
-        "en": "Stainless-finish top-freezer refrigerator with recessed horizontal handles."
+        "fr": "Réfrigérateur en acier inoxydable à congélateur supérieur, poignée encastrée noire pleine largeur et écusson LG. Étiquette du magasin : 499 $.",
+        "en": "Stainless steel top-freezer refrigerator with a full-width recessed black handle and an LG badge. Store tag: $499."
       },
       "category": "refrigerators",
       "price": 499,
@@ -3619,25 +3745,25 @@
       "featured": false,
       "deal": false,
       "status": "published",
-      "notes": "Numéro de modèle non lisible sur les photos. Repères de catalogage : later batch. Potential look-alike elsewhere in batch. Physical identity requires model/serial label; do not auto-merge or publish duplicate stock. Sticker amount transcribed; confirm current price before publishing Photos sources : IMG_5742.JPG (réf. catalogue AP-109)",
+      "notes": "Numéro de modèle non lisible sur les photos. Repères de catalogage : later batch. Potential look-alike elsewhere in batch. Physical identity requires model/serial label; do not auto-merge or publish duplicate stock. Sticker amount transcribed; confirm current price before publishing Photos sources : IMG_5742.JPG (réf. catalogue AP-109)\nPhoto refaite le 2026-09-28 : le rendu précédent montrait un tout autre appareil. Nouvelle image vérifiée contre IMG_5742 (écusson LG, note jaune 499 $).",
       "sourcePhotos": [
         "IMG_5742.webp"
       ],
       "createdAt": "2026-09-20T06:36:00.000Z",
-      "updatedAt": "2026-09-20T06:36:00.000Z"
+      "updatedAt": "2026-09-28T21:31:05.954138Z"
     },
     {
       "id": "cat-ap-110",
       "slug": "refrigerateur-a-congelateur-superieur-en-acier-inoxydable-4",
       "sku": "GH-110",
-      "brand": "Frigidaire",
+      "brand": "Frigidaire Gallery",
       "name": {
         "fr": "Réfrigérateur à congélateur supérieur en acier inoxydable",
         "en": "Stainless steel top-freezer refrigerator"
       },
       "description": {
-        "fr": "Stainless-finish top-freezer refrigerator with a flat front and dark horizontal door separation.",
-        "en": "Stainless-finish top-freezer refrigerator with a flat front and dark horizontal door separation."
+        "fr": "Réfrigérateur en acier inoxydable à congélateur supérieur, poignées verticales foncées. Écusson Frigidaire Gallery. Étiquette du magasin : 379 $.",
+        "en": "Stainless steel top-freezer refrigerator with dark vertical handles. Frigidaire Gallery badge. Store tag: $379."
       },
       "category": "refrigerators",
       "price": 379,
@@ -3656,12 +3782,12 @@
       "featured": false,
       "deal": false,
       "status": "published",
-      "notes": "Numéro de modèle non lisible sur les photos. Repères de catalogage : later batch. Potential look-alike elsewhere in batch. Physical identity requires model/serial label; do not auto-merge or publish duplicate stock. Sticker amount transcribed; confirm current price before publishing Photos sources : IMG_5743.JPG (réf. catalogue AP-110)",
+      "notes": "Numéro de modèle non lisible sur les photos. Repères de catalogage : later batch. Potential look-alike elsewhere in batch. Physical identity requires model/serial label; do not auto-merge or publish duplicate stock. Sticker amount transcribed; confirm current price before publishing Photos sources : IMG_5743.JPG (réf. catalogue AP-110)\nPhoto refaite le 2026-09-28 : le rendu précédent avait inventé des portes supplémentaires et ne correspondait pas à l'appareil photographié. Nouvelle image vérifiée contre la photo d'origine (appareil, écusson et étiquette de prix identiques).",
       "sourcePhotos": [
         "IMG_5743.webp"
       ],
       "createdAt": "2026-09-20T06:33:00.000Z",
-      "updatedAt": "2026-09-20T06:33:00.000Z"
+      "updatedAt": "2026-09-28T21:29:12.889707Z"
     },
     {
       "id": "cat-ap-111",
@@ -3711,8 +3837,8 @@
         "en": "Stainless steel bottom-freezer refrigerator"
       },
       "description": {
-        "fr": "Stainless-finish refrigerator with a single upper door and bottom freezer drawer.",
-        "en": "Stainless-finish refrigerator with a single upper door and bottom freezer drawer."
+        "fr": "Réfrigérateur en acier inoxydable à porte unique et tiroir congélateur en bas, poignées barres. Écusson GE. Étiquette du magasin : 399 $.",
+        "en": "Stainless steel refrigerator with a single upper door and a bottom freezer drawer, bar handles. GE badge. Store tag: $399."
       },
       "category": "refrigerators",
       "price": 399,
@@ -3731,25 +3857,25 @@
       "featured": false,
       "deal": false,
       "status": "published",
-      "notes": "Numéro de modèle non lisible sur les photos. Sticker amount transcribed; confirm current price before publishing Photos sources : IMG_5746.JPG (réf. catalogue AP-112)",
+      "notes": "Numéro de modèle non lisible sur les photos. Sticker amount transcribed; confirm current price before publishing Photos sources : IMG_5746.JPG (réf. catalogue AP-112)\nPhoto refaite le 2026-09-28 : le rendu précédent avait inventé des portes supplémentaires et ne correspondait pas à l'appareil photographié. Nouvelle image vérifiée contre la photo d'origine (appareil, écusson et étiquette de prix identiques).",
       "sourcePhotos": [
         "IMG_5746.webp"
       ],
       "createdAt": "2026-09-20T06:27:00.000Z",
-      "updatedAt": "2026-09-20T06:27:00.000Z"
+      "updatedAt": "2026-09-28T21:29:12.889707Z"
     },
     {
       "id": "cat-ap-113",
-      "slug": "refrigerateur-a-congelateur-superieur-en-acier-inoxydable-5",
+      "slug": "refrigerateur-une-porte-en-acier-inoxydable",
       "sku": "GH-113",
-      "brand": "Frigidaire",
+      "brand": "Frigidaire Professional",
       "name": {
-        "fr": "Réfrigérateur à congélateur supérieur en acier inoxydable",
-        "en": "Stainless steel top-freezer refrigerator"
+        "fr": "Réfrigérateur une porte en acier inoxydable",
+        "en": "Single-door stainless steel refrigerator"
       },
       "description": {
-        "fr": "Stainless-finish top-freezer refrigerator with a single upper freezer door.",
-        "en": "Stainless-finish top-freezer refrigerator with a single upper freezer door."
+        "fr": "Réfrigérateur en acier inoxydable à une seule porte pleine hauteur, poignée verticale et écusson Frigidaire Professional. Étiquette du magasin : 389 $.",
+        "en": "Stainless steel refrigerator with one full-height door, vertical handle and a Frigidaire Professional badge. Store tag: $389."
       },
       "category": "refrigerators",
       "price": 389,
@@ -3759,7 +3885,7 @@
       "images": [
         {
           "src": "/inventory/ap-113.webp",
-          "alt": "Réfrigérateur à congélateur supérieur en acier inoxydable",
+          "alt": "Réfrigérateur une porte en acier inoxydable",
           "width": 1600,
           "height": 1600,
           "kind": "studio"
@@ -3768,12 +3894,12 @@
       "featured": false,
       "deal": false,
       "status": "published",
-      "notes": "Numéro de modèle non lisible sur les photos. Repères de catalogage : with blue price tag. Sticker amount transcribed; confirm current price before publishing Photos sources : IMG_5747.JPG (réf. catalogue AP-113)",
+      "notes": "Numéro de modèle non lisible sur les photos. Repères de catalogage : with blue price tag. Sticker amount transcribed; confirm current price before publishing Photos sources : IMG_5747.JPG (réf. catalogue AP-113)\nPhoto refaite le 2026-09-28 : le rendu précédent avait inventé des portes supplémentaires et ne correspondait pas à l'appareil photographié. Nouvelle image vérifiée contre la photo d'origine (appareil, écusson et étiquette de prix identiques).",
       "sourcePhotos": [
         "IMG_5747.webp"
       ],
       "createdAt": "2026-09-20T06:24:00.000Z",
-      "updatedAt": "2026-09-20T06:24:00.000Z"
+      "updatedAt": "2026-09-28T21:29:12.889707Z"
     },
     {
       "id": "cat-ap-114",
@@ -3804,8 +3930,8 @@
       ],
       "featured": false,
       "deal": false,
-      "status": "published",
-      "notes": "Numéro de modèle non lisible sur les photos. Repères de catalogage : behind window A. Sticker amount transcribed; confirm current price before publishing Photos sources : IMG_5748.JPG, IMG_5750.JPG, IMG_5751.JPG (réf. catalogue AP-114)",
+      "status": "draft",
+      "notes": "Photo d'origine prise à travers la vitrine, très réfléchissante : impossible de confirmer que l'image correspond à l'appareil. Retirée du site en attendant une photo vérifiable. Numéro de modèle non lisible sur les photos. Repères de catalogage : behind window A. Sticker amount transcribed; confirm current price before publishing Photos sources : IMG_5748.JPG, IMG_5750.JPG, IMG_5751.JPG (réf. catalogue AP-114)",
       "sourcePhotos": [
         "IMG_5748.webp",
         "IMG_5750.webp",
@@ -3917,8 +4043,8 @@
       ],
       "featured": false,
       "deal": false,
-      "status": "published",
-      "notes": "Numéro de modèle non lisible sur les photos. Sticker amount transcribed; confirm current price before publishing Le magasin vend surtout les laveuses et sécheuses en ensemble — confirmer si cet appareil se vend seul ou avec son partenaire. Photos sources : IMG_5754 2.JPG (réf. catalogue AP-119)",
+      "status": "draft",
+      "notes": "Le bleu de l'image vient du reflet de la vitrine sur la photo d'origine ; l'appareil n'est pas bleu. Photo à refaire. Numéro de modèle non lisible sur les photos. Sticker amount transcribed; confirm current price before publishing Le magasin vend surtout les laveuses et sécheuses en ensemble — confirmer si cet appareil se vend seul ou avec son partenaire. Photos sources : IMG_5754 2.JPG (réf. catalogue AP-119)",
       "sourcePhotos": [
         "IMG_5754_2.webp"
       ],
