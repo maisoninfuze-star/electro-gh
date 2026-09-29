@@ -106,7 +106,7 @@ export function CatalogBrowser({
   const availabilityCounts = facetCounts(products, filters, 'availability', (p) => p.inventoryStatus);
   const finishCounts = facetCounts(products, filters, 'finishes', (p) => p.finish);
   const categoryCounts = facetCounts(products, filters, 'categories', (p) => p.category);
-  const priceCounts = bucketCounts(products, filters, 'priceBuckets', PRICE_BUCKETS, (p) => p.price);
+  const priceCounts = bucketCounts(products, filters, 'priceBuckets', PRICE_BUCKETS, (p) => (p.price > 0 ? p.price : undefined));
   const widthCounts = bucketCounts(
     products, filters, 'widthBuckets', WIDTH_BUCKETS, (p) => p.dimensions?.width,
   );

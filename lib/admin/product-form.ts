@@ -78,6 +78,8 @@ export function parseProductForm(fd: FormData): ParsedForm {
   const category = oneOf(str(fd, 'category'), CATEGORY_IDS, 'washers');
   const price = num(fd, 'price') ?? 0;
   const compareAtPrice = num(fd, 'compareAtPrice');
+  // Only meaningful with no price: a typed price always wins.
+  const priceOnRequest = fd.get('priceOnRequest') === 'on' && !(price > 0);
   const condition = oneOf(str(fd, 'condition'), CONDITIONS, 'used');
   const inventoryStatus = oneOf(str(fd, 'inventoryStatus'), AVAILABILITY, 'in-stock');
   const status = oneOf(str(fd, 'status'), STATUSES, 'draft');
@@ -109,9 +111,12 @@ export function parseProductForm(fd: FormData): ParsedForm {
     errors.compareAtPrice = 'L’ancien prix doit être plus élevé que le prix actuel.';
   }
   // Publishing has a higher bar than saving: a live unit needs a real price
-  // and at least one photo. A draft can be anything.
+  // (or the owner's explicit "Prix sur demande") and at least one photo.
+  // A draft can be anything.
   if (status === 'published') {
-    if (!(price > 0)) errors.price = 'Un prix est requis pour publier.';
+    if (!(price > 0) && !priceOnRequest) {
+      errors.price = 'Un prix est requis pour publier — ou cochez « Prix sur demande ».';
+    }
     if (images.length === 0) errors.images = 'Au moins une photo est requise pour publier.';
   }
 
@@ -133,6 +138,7 @@ export function parseProductForm(fd: FormData): ParsedForm {
       category,
       price,
       compareAtPrice,
+      priceOnRequest: priceOnRequest || undefined,
       condition,
       inventoryStatus,
       finish,

@@ -101,6 +101,12 @@ export interface Product {
   price: number;
   /** Prior/regular price. Ignored unless strictly greater than `price`. */
   compareAtPrice?: number;
+  /**
+   * No readable price, and the owner chose "Prix sur demande / Contact for
+   * Price" over leaving the unit hidden. Only honoured while `price` is 0 —
+   * a typed price always wins. Never set it to dodge a price we could read.
+   */
+  priceOnRequest?: boolean;
 
   condition: Condition;
   inventoryStatus: InventoryStatus;
@@ -159,9 +165,19 @@ export interface Product {
   soldAt?: string;
 }
 
+/** A real amount to show. False for "Prix sur demande" units (price 0). */
+export const hasPrice = (p: Pick<Product, 'price'>): boolean => p.price > 0;
+
+/**
+ * The publishing bar: a photo, and either a real price or the owner's
+ * explicit "Prix sur demande". A 0 $ unit without that flag stays a draft.
+ */
+export const canPublish = (p: Pick<Product, 'price' | 'priceOnRequest' | 'images'>): boolean =>
+  (p.price > 0 || p.priceOnRequest === true) && p.images.length > 0;
+
 /** True only when there is a real, larger prior price. */
 export const hasDiscount = (p: Product): boolean =>
-  typeof p.compareAtPrice === 'number' && p.compareAtPrice > p.price;
+  p.price > 0 && typeof p.compareAtPrice === 'number' && p.compareAtPrice > p.price;
 
 /** Dollar savings, or 0. Never negative, never invented. */
 export const savings = (p: Product): number =>

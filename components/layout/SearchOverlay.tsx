@@ -137,7 +137,7 @@ export function SearchOverlay({
                               </span>
                             </span>
                             <span className="tnum shrink-0 text-sm font-medium text-ink">
-                              {formatPrice(r.price, locale)}
+                              {r.price > 0 ? formatPrice(r.price, locale) : dict.product.priceOnRequest}
                             </span>
                           </Link>
                         </li>

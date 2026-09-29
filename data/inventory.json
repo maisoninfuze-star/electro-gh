@@ -1656,15 +1656,16 @@
       ],
       "featured": false,
       "deal": false,
-      "status": "draft",
-      "notes": "Aucun prix lisible sur les photos. Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Détail non traduit : « with four front knobs ». Brand not confidently readable; no brand guessed from styling. Not established from supplied photos Photos sources : IMG_5446.JPG, IMG_5650.JPG, IMG_5651.JPG (réf. catalogue AP-037)",
+      "status": "published",
+      "notes": "Aucun prix lisible sur les photos. Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Détail non traduit : « with four front knobs ». Brand not confidently readable; no brand guessed from styling. Not established from supplied photos Photos sources : IMG_5446.JPG, IMG_5650.JPG, IMG_5651.JPG (réf. catalogue AP-037)\n\n[29 sept 2026] PUBLIÉ en « Prix sur demande » sur instruction du propriétaire : aucun prix lisible sur les photos, image vérifiée conforme à la photo d’origine en pleine résolution. Saisir le prix dès qu’il est connu (le prix saisi remplace automatiquement la mention).",
       "sourcePhotos": [
         "IMG_5446.webp",
         "IMG_5650.webp",
         "IMG_5651.webp"
       ],
       "createdAt": "2026-09-20T10:12:00.000Z",
-      "updatedAt": "2026-09-20T10:12:00.000Z"
+      "updatedAt": "2026-09-29T10:31:53.463353Z",
+      "priceOnRequest": true
     },
     {
       "id": "cat-ap-038",
@@ -1733,14 +1734,15 @@
       ],
       "featured": false,
       "deal": false,
-      "status": "draft",
-      "notes": "Aucun prix lisible sur les photos. Numéro de modèle non lisible sur les photos. Repères de catalogage : variante A. Not established from supplied photos Photos sources : IMG_5641.JPG, IMG_5642.JPG (réf. catalogue AP-039)",
+      "status": "published",
+      "notes": "Aucun prix lisible sur les photos. Numéro de modèle non lisible sur les photos. Repères de catalogage : variante A. Not established from supplied photos Photos sources : IMG_5641.JPG, IMG_5642.JPG (réf. catalogue AP-039)\n\n[29 sept 2026] PUBLIÉ en « Prix sur demande » sur instruction du propriétaire : aucun prix lisible sur les photos, image vérifiée conforme à la photo d’origine en pleine résolution. Saisir le prix dès qu’il est connu (le prix saisi remplace automatiquement la mention).",
       "sourcePhotos": [
         "IMG_5641.webp",
         "IMG_5642.webp"
       ],
       "createdAt": "2026-09-20T10:06:00.000Z",
-      "updatedAt": "2026-09-20T10:06:00.000Z"
+      "updatedAt": "2026-09-29T10:31:53.463353Z",
+      "priceOnRequest": true
     },
     {
       "id": "cat-ap-040",
@@ -1808,19 +1810,20 @@
       ],
       "featured": false,
       "deal": false,
-      "status": "draft",
-      "notes": "Aucun prix lisible sur les photos. Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Repères de catalogage : variante B. Détail non traduit : « smooth-top ». Brand not confidently readable; no brand guessed from styling. Not established from supplied photos Photos sources : IMG_5644.JPG (réf. catalogue AP-041)",
+      "status": "published",
+      "notes": "Aucun prix lisible sur les photos. Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Repères de catalogage : variante B. Détail non traduit : « smooth-top ». Brand not confidently readable; no brand guessed from styling. Not established from supplied photos Photos sources : IMG_5644.JPG (réf. catalogue AP-041)\n\n[29 sept 2026] PUBLIÉ en « Prix sur demande » sur instruction du propriétaire : aucun prix lisible sur les photos, image vérifiée conforme à la photo d’origine en pleine résolution. Saisir le prix dès qu’il est connu (le prix saisi remplace automatiquement la mention).",
       "sourcePhotos": [
         "IMG_5644.webp"
       ],
       "createdAt": "2026-09-20T10:00:00.000Z",
-      "updatedAt": "2026-09-20T10:00:00.000Z"
+      "updatedAt": "2026-09-29T10:31:53.463353Z",
+      "priceOnRequest": true
     },
     {
       "id": "cat-ap-042",
       "slug": "cuisiniere-electrique-blanche-3",
       "sku": "GH-042",
-      "brand": "",
+      "brand": "GE",
       "name": {
         "fr": "Cuisinière électrique blanche",
         "en": "White electric range"
@@ -1846,18 +1849,18 @@
       "featured": false,
       "deal": false,
       "status": "draft",
-      "notes": "Aucun prix lisible sur les photos. Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Repères de catalogage : variante A. Détail non traduit : « coil-top ». Brand not confidently readable; no brand guessed from styling. Not established from supplied photos Photos sources : IMG_5645.JPG (réf. catalogue AP-042)",
+      "notes": "Aucun prix lisible sur les photos. Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Repères de catalogage : variante A. Détail non traduit : « coil-top ». Brand not confidently readable; no brand guessed from styling. Not established from supplied photos Photos sources : IMG_5645.JPG (réf. catalogue AP-042)\n\n[29 sept 2026] RESTE EN BROUILLON — photo à refaire. L’image ajoute une rangée de 5 boutons en façade ; la vraie GE (IMG_5645) a ses 4 boutons sur le dosseret seulement. Marque GE lue sur la photo d’origine.",
       "sourcePhotos": [
         "IMG_5645.webp"
       ],
       "createdAt": "2026-09-20T09:57:00.000Z",
-      "updatedAt": "2026-09-20T09:57:00.000Z"
+      "updatedAt": "2026-09-29T10:31:53.463353Z"
     },
     {
       "id": "cat-ap-043",
       "slug": "refrigerateur-a-congelateur-inferieur-en-acier-inoxydable",
       "sku": "GH-043",
-      "brand": "",
+      "brand": "LG",
       "name": {
         "fr": "Réfrigérateur à congélateur inférieur en acier inoxydable",
         "en": "Stainless steel bottom-freezer refrigerator"
@@ -1882,13 +1885,14 @@
       ],
       "featured": false,
       "deal": false,
-      "status": "draft",
-      "notes": "Aucun prix lisible sur les photos. Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Repères de catalogage : variante A. Brand not confidently readable; no brand guessed from styling. Not established from supplied photos Photos sources : IMG_5646.JPG (réf. catalogue AP-043)",
+      "status": "published",
+      "notes": "Aucun prix lisible sur les photos. Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Repères de catalogage : variante A. Brand not confidently readable; no brand guessed from styling. Not established from supplied photos Photos sources : IMG_5646.JPG (réf. catalogue AP-043)\n\n[29 sept 2026] PUBLIÉ en « Prix sur demande » sur instruction du propriétaire : aucun prix lisible sur les photos, image vérifiée conforme à la photo d’origine en pleine résolution. Saisir le prix dès qu’il est connu (le prix saisi remplace automatiquement la mention). Marque LG lue sur l’écusson.",
       "sourcePhotos": [
         "IMG_5646.webp"
       ],
       "createdAt": "2026-09-20T09:54:00.000Z",
-      "updatedAt": "2026-09-20T09:54:00.000Z"
+      "updatedAt": "2026-09-29T10:31:53.463353Z",
+      "priceOnRequest": true
     },
     {
       "id": "cat-ap-048",
@@ -1968,7 +1972,7 @@
       "id": "cat-ap-050",
       "slug": "cuisiniere-autoportante-a-surface-lisse-en-acier-inoxydable-3",
       "sku": "GH-050",
-      "brand": "",
+      "brand": "KitchenAid",
       "name": {
         "fr": "Cuisinière autoportante à surface lisse en acier inoxydable",
         "en": "Stainless steel freestanding smooth-top range"
@@ -1978,7 +1982,7 @@
         "en": "Stainless-finish electric range with rear controls and a lower storage drawer."
       },
       "category": "ranges",
-      "price": 0,
+      "price": 600,
       "condition": "used",
       "inventoryStatus": "in-stock",
       "finish": "stainless",
@@ -1993,13 +1997,13 @@
       ],
       "featured": false,
       "deal": false,
-      "status": "draft",
-      "notes": "Aucun prix lisible sur les photos. Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Repères de catalogage : variante C. Brand not confidently readable; no brand guessed from styling. Not established from supplied photos Photos sources : IMG_5675.JPG (réf. catalogue AP-050)",
+      "status": "published",
+      "notes": "Aucun prix lisible sur les photos. Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Repères de catalogage : variante C. Brand not confidently readable; no brand guessed from styling. Not established from supplied photos Photos sources : IMG_5675.JPG (réf. catalogue AP-050)\n\n[29 sept 2026] PUBLIÉ. Prix lu sur l’appareil lui-même, en pleine résolution (manqué au catalogage sur photo réduite). IMG_5675 : étiquette jaune « $600 » collée sur la bande vitrée de CETTE cuisinière (le second autocollant visible est son reflet dans la surface vitrée). Écusson KitchenAid sur la porte. Image vérifiée conforme à la photo d’origine.",
       "sourcePhotos": [
         "IMG_5675.webp"
       ],
       "createdAt": "2026-09-20T09:33:00.000Z",
-      "updatedAt": "2026-09-20T09:33:00.000Z"
+      "updatedAt": "2026-09-29T10:31:53.463353Z"
     },
     {
       "id": "cat-ap-051",
@@ -2030,13 +2034,14 @@
       ],
       "featured": false,
       "deal": false,
-      "status": "draft",
-      "notes": "Aucun prix lisible sur les photos. Numéro de modèle non lisible sur les photos. Not established from supplied photos Photos sources : IMG_5676.JPG (réf. catalogue AP-051)",
+      "status": "published",
+      "notes": "Aucun prix lisible sur les photos. Numéro de modèle non lisible sur les photos. Not established from supplied photos Photos sources : IMG_5676.JPG (réf. catalogue AP-051)\n\n[29 sept 2026] PUBLIÉ en « Prix sur demande » sur instruction du propriétaire : aucun prix lisible sur les photos, image vérifiée conforme à la photo d’origine en pleine résolution. Saisir le prix dès qu’il est connu (le prix saisi remplace automatiquement la mention).",
       "sourcePhotos": [
         "IMG_5676.webp"
       ],
       "createdAt": "2026-09-20T09:30:00.000Z",
-      "updatedAt": "2026-09-20T09:30:00.000Z"
+      "updatedAt": "2026-09-29T10:31:53.463353Z",
+      "priceOnRequest": true
     },
     {
       "id": "cat-ap-052",
@@ -2067,13 +2072,14 @@
       ],
       "featured": false,
       "deal": false,
-      "status": "draft",
-      "notes": "Aucun prix lisible sur les photos. Numéro de modèle non lisible sur les photos. Not established from supplied photos Photos sources : IMG_5677.JPG (réf. catalogue AP-052)",
+      "status": "published",
+      "notes": "Aucun prix lisible sur les photos. Numéro de modèle non lisible sur les photos. Not established from supplied photos Photos sources : IMG_5677.JPG (réf. catalogue AP-052)\n\n[29 sept 2026] PUBLIÉ en « Prix sur demande » sur instruction du propriétaire : aucun prix lisible sur les photos, image vérifiée conforme à la photo d’origine en pleine résolution. Saisir le prix dès qu’il est connu (le prix saisi remplace automatiquement la mention).",
       "sourcePhotos": [
         "IMG_5677.webp"
       ],
       "createdAt": "2026-09-20T09:27:00.000Z",
-      "updatedAt": "2026-09-20T09:27:00.000Z"
+      "updatedAt": "2026-09-29T10:31:53.463353Z",
+      "priceOnRequest": true
     },
     {
       "id": "cat-ap-053",
@@ -2105,12 +2111,12 @@
       "featured": false,
       "deal": false,
       "status": "draft",
-      "notes": "Aucun prix lisible sur les photos. Numéro de modèle non lisible sur les photos. Not established from supplied photos Photos sources : IMG_5678.JPG (réf. catalogue AP-053)",
+      "notes": "Aucun prix lisible sur les photos. Numéro de modèle non lisible sur les photos. Not established from supplied photos Photos sources : IMG_5678.JPG (réf. catalogue AP-053)\n\n[29 sept 2026] RESTE EN BROUILLON — photo à refaire. L’image ajoute un distributeur d’eau ; le vrai Kenmore (IMG_5678) n’en a pas — le distributeur visible appartient au réfrigérateur voisin.",
       "sourcePhotos": [
         "IMG_5678.webp"
       ],
       "createdAt": "2026-09-20T09:24:00.000Z",
-      "updatedAt": "2026-09-20T09:24:00.000Z"
+      "updatedAt": "2026-09-29T10:31:53.463353Z"
     },
     {
       "id": "cat-ap-054",
@@ -2227,7 +2233,7 @@
       "id": "cat-ap-057",
       "slug": "cuisiniere-electrique-a-elements-spirales-blanche",
       "sku": "GH-057",
-      "brand": "",
+      "brand": "Admiral",
       "name": {
         "fr": "Cuisinière électrique à éléments spiralés blanche",
         "en": "White vintage coil-top electric range"
@@ -2237,7 +2243,7 @@
         "en": "White electric range with four exposed coil elements, solid oven door and raised control console."
       },
       "category": "ranges",
-      "price": 0,
+      "price": 350,
       "condition": "used",
       "inventoryStatus": "in-stock",
       "finish": "white",
@@ -2252,14 +2258,14 @@
       ],
       "featured": false,
       "deal": false,
-      "status": "draft",
-      "notes": "Aucun prix lisible sur les photos. Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Brand not confidently readable; no brand guessed from styling. Not established from supplied photos Photos sources : IMG_5682.JPG, IMG_5683.JPG (réf. catalogue AP-057)",
+      "status": "published",
+      "notes": "Aucun prix lisible sur les photos. Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Brand not confidently readable; no brand guessed from styling. Not established from supplied photos Photos sources : IMG_5682.JPG, IMG_5683.JPG (réf. catalogue AP-057)\n\n[29 sept 2026] PUBLIÉ. Prix lu sur l’appareil lui-même, en pleine résolution (manqué au catalogage sur photo réduite). IMG_5683 : pastille rouge « SALE $350 » collée sur la table de cuisson de CETTE cuisinière. ADMIRAL imprimé sur le dosseret. Image vérifiée conforme à la photo d’origine.",
       "sourcePhotos": [
         "IMG_5682.webp",
         "IMG_5683.webp"
       ],
       "createdAt": "2026-09-20T09:12:00.000Z",
-      "updatedAt": "2026-09-20T09:12:00.000Z"
+      "updatedAt": "2026-09-29T10:31:53.463353Z"
     },
     {
       "id": "cat-ap-058",
@@ -2440,12 +2446,12 @@
       "featured": false,
       "deal": false,
       "status": "draft",
-      "notes": "Aucun prix lisible sur les photos. Numéro de modèle non lisible sur les photos. Repères de catalogage : variante B. Only the upper appliance is this record. Other appliances in the photo are separate products. Potential look-alike elsewhere in batch. Physical identity requires model/serial label; do not auto-merge or publish duplicate stock. Not established from supplied photos Le magasin vend surtout les laveuses et sécheuses en ensemble — confirmer si cet appareil se vend seul ou avec son partenaire. Photos sources : IMG_5694.JPG (réf. catalogue AP-066)",
+      "notes": "Aucun prix lisible sur les photos. Numéro de modèle non lisible sur les photos. Repères de catalogage : variante B. Only the upper appliance is this record. Other appliances in the photo are separate products. Potential look-alike elsewhere in batch. Physical identity requires model/serial label; do not auto-merge or publish duplicate stock. Not established from supplied photos Le magasin vend surtout les laveuses et sécheuses en ensemble — confirmer si cet appareil se vend seul ou avec son partenaire. Photos sources : IMG_5694.JPG (réf. catalogue AP-066)\n\n[29 sept 2026] IDENTITÉ VÉRIFIÉE : la photo d’origine (IMG_5694) montre la sécheuse Samsung ARGENT posée sur la laveuse gris foncé — c’est l’ensemble « B », pas l’ensemble GH-S14. L’image la montre BLANCHE : couleur fausse, photo à refaire.",
       "sourcePhotos": [
         "IMG_5694.webp"
       ],
       "createdAt": "2026-09-20T08:45:00.000Z",
-      "updatedAt": "2026-09-20T08:45:00.000Z"
+      "updatedAt": "2026-09-29T10:31:53.463353Z"
     },
     {
       "id": "cat-ap-068",
@@ -2476,13 +2482,13 @@
       ],
       "featured": false,
       "deal": false,
-      "status": "published",
-      "notes": "Numéro de modèle non lisible sur les photos. Repères de catalogage : beneath Samsung dryer. Only the lower appliance is this record. Other appliances in the photo are separate products. Potential look-alike elsewhere in batch. Physical identity requires model/serial label; do not auto-merge or publish duplicate stock. Sticker amount transcribed; confirm current price before publishing Le magasin vend surtout les laveuses et sécheuses en ensemble — confirmer si cet appareil se vend seul ou avec son partenaire. Photos sources : IMG_5694.JPG (réf. catalogue AP-068)",
+      "status": "draft",
+      "notes": "Numéro de modèle non lisible sur les photos. Repères de catalogage : beneath Samsung dryer. Only the lower appliance is this record. Other appliances in the photo are separate products. Potential look-alike elsewhere in batch. Physical identity requires model/serial label; do not auto-merge or publish duplicate stock. Sticker amount transcribed; confirm current price before publishing Le magasin vend surtout les laveuses et sécheuses en ensemble — confirmer si cet appareil se vend seul ou avec son partenaire. Photos sources : IMG_5694.JPG (réf. catalogue AP-068)\n\n[29 sept 2026] RETIRÉ DU SITE (accord du propriétaire, 29 sept) : l’image porte à la fois un écusson SAMSUNG et un écusson LG. Le propriétaire veut aussi retirer cette laveuse seule au profit de l’ensemble GH-S14.",
       "sourcePhotos": [
         "IMG_5694.webp"
       ],
       "createdAt": "2026-09-20T08:39:00.000Z",
-      "updatedAt": "2026-09-20T08:39:00.000Z"
+      "updatedAt": "2026-09-29T10:31:53.463353Z"
     },
     {
       "id": "cat-ap-070",
@@ -2784,7 +2790,7 @@
       "id": "cat-ap-078",
       "slug": "cuisiniere-electrique-encastrable-en-acier-inoxydable-3",
       "sku": "GH-078",
-      "brand": "",
+      "brand": "LG",
       "name": {
         "fr": "Cuisinière électrique encastrable en acier inoxydable",
         "en": "Stainless steel slide-in electric range"
@@ -2810,18 +2816,18 @@
       "featured": false,
       "deal": false,
       "status": "draft",
-      "notes": "Aucun prix lisible sur les photos. Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Repères de catalogage : variante D. Brand not confidently readable; no brand guessed from styling. Not established from supplied photos Photos sources : IMG_5704.JPG (réf. catalogue AP-078)",
+      "notes": "Aucun prix lisible sur les photos. Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Repères de catalogage : variante D. Brand not confidently readable; no brand guessed from styling. Not established from supplied photos Photos sources : IMG_5704.JPG (réf. catalogue AP-078)\n\n[29 sept 2026] RESTE EN BROUILLON — photo à refaire. L’image montre des grilles de cuisinière AU GAZ, 8 boutons et un autre logo ; la vraie (IMG_5704) est une LG encastrable à 6 boutons. Marque LG lue sur la photo d’origine.",
       "sourcePhotos": [
         "IMG_5704.webp"
       ],
       "createdAt": "2026-09-20T08:09:00.000Z",
-      "updatedAt": "2026-09-20T08:09:00.000Z"
+      "updatedAt": "2026-09-29T10:31:53.463353Z"
     },
     {
       "id": "cat-ap-079",
       "slug": "cuisiniere-electrique-autoportante-en-acier-inoxydable",
       "sku": "GH-079",
-      "brand": "",
+      "brand": "Whirlpool",
       "name": {
         "fr": "Cuisinière électrique autoportante en acier inoxydable",
         "en": "Stainless steel freestanding electric range"
@@ -2847,12 +2853,12 @@
       "featured": false,
       "deal": false,
       "status": "draft",
-      "notes": "Aucun prix lisible sur les photos. Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Repères de catalogage : variante D. Brand not confidently readable; no brand guessed from styling. Not established from supplied photos Photos sources : IMG_5705.JPG (réf. catalogue AP-079)",
+      "notes": "Aucun prix lisible sur les photos. Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Repères de catalogage : variante D. Brand not confidently readable; no brand guessed from styling. Not established from supplied photos Photos sources : IMG_5705.JPG (réf. catalogue AP-079)\n\n[29 sept 2026] RESTE EN BROUILLON — photo à refaire. L’image a 5 boutons et un logo illisible ; la vraie (IMG_5705) est une Whirlpool à 4 boutons. Marque Whirlpool lue sur la photo d’origine.",
       "sourcePhotos": [
         "IMG_5705.webp"
       ],
       "createdAt": "2026-09-20T08:06:00.000Z",
-      "updatedAt": "2026-09-20T08:06:00.000Z"
+      "updatedAt": "2026-09-29T10:31:53.463353Z"
     },
     {
       "id": "cat-ap-080",
@@ -3124,7 +3130,7 @@
       "id": "cat-ap-087",
       "slug": "cuisiniere-encastrable-a-surface-lisse-blanche",
       "sku": "GH-087",
-      "brand": "",
+      "brand": "Maytag",
       "name": {
         "fr": "Cuisinière encastrable à surface lisse blanche",
         "en": "White slide-in smooth-top range"
@@ -3134,7 +3140,7 @@
         "en": "White slide-in electric range with front controls and a four-zone smooth cooktop."
       },
       "category": "ranges",
-      "price": 0,
+      "price": 239,
       "condition": "used",
       "inventoryStatus": "in-stock",
       "finish": "white",
@@ -3149,20 +3155,20 @@
       ],
       "featured": false,
       "deal": false,
-      "status": "draft",
-      "notes": "Aucun prix lisible sur les photos. Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Brand not confidently readable; no brand guessed from styling. Not established from supplied photos Photos sources : IMG_5722.JPG, IMG_5723.JPG (réf. catalogue AP-087)",
+      "status": "published",
+      "notes": "Aucun prix lisible sur les photos. Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Brand not confidently readable; no brand guessed from styling. Not established from supplied photos Photos sources : IMG_5722.JPG, IMG_5723.JPG (réf. catalogue AP-087)\n\n[29 sept 2026] PUBLIÉ. Prix lu sur l’appareil lui-même, en pleine résolution (manqué au catalogage sur photo réduite). IMG_5722 : étiquette bleue manuscrite « 239$ » sur la vitre de CETTE cuisinière. MAYTAG imprimé sur le panneau de commande. Image vérifiée conforme à la photo d’origine.",
       "sourcePhotos": [
         "IMG_5722.webp",
         "IMG_5723.webp"
       ],
       "createdAt": "2026-09-20T07:42:00.000Z",
-      "updatedAt": "2026-09-20T07:42:00.000Z"
+      "updatedAt": "2026-09-29T10:31:53.463353Z"
     },
     {
       "id": "cat-ap-088",
       "slug": "cuisiniere-autoportante-a-surface-lisse-blanche",
       "sku": "GH-088",
-      "brand": "",
+      "brand": "Kelvinator",
       "name": {
         "fr": "Cuisinière autoportante à surface lisse blanche",
         "en": "White freestanding smooth-top range"
@@ -3188,19 +3194,19 @@
       "featured": false,
       "deal": false,
       "status": "draft",
-      "notes": "Aucun prix lisible sur les photos. Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Repères de catalogage : variante C. Brand not confidently readable; no brand guessed from styling. Not established from supplied photos Photos sources : IMG_5724.JPG, IMG_5725.JPG (réf. catalogue AP-088)",
+      "notes": "Aucun prix lisible sur les photos. Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Repères de catalogage : variante C. Brand not confidently readable; no brand guessed from styling. Not established from supplied photos Photos sources : IMG_5724.JPG, IMG_5725.JPG (réf. catalogue AP-088)\n\n[29 sept 2026] RESTE EN BROUILLON — photo à refaire. L’image ajoute un 5e bouton ; la vraie (IMG_5724) est une Kelvinator à 4 boutons. Marque Kelvinator lue sur la photo d’origine.",
       "sourcePhotos": [
         "IMG_5724.webp",
         "IMG_5725.webp"
       ],
       "createdAt": "2026-09-20T07:39:00.000Z",
-      "updatedAt": "2026-09-20T07:39:00.000Z"
+      "updatedAt": "2026-09-29T10:31:53.463353Z"
     },
     {
       "id": "cat-ap-089",
       "slug": "cuisiniere-autoportante-a-surface-lisse-blanche-2",
       "sku": "GH-089",
-      "brand": "",
+      "brand": "Whirlpool",
       "name": {
         "fr": "Cuisinière autoportante à surface lisse blanche",
         "en": "White freestanding smooth-top range"
@@ -3210,7 +3216,7 @@
         "en": "White electric range with a dark smooth cooktop and a windowed oven door."
       },
       "category": "ranges",
-      "price": 0,
+      "price": 349,
       "condition": "used",
       "inventoryStatus": "in-stock",
       "finish": "white",
@@ -3225,14 +3231,14 @@
       ],
       "featured": false,
       "deal": false,
-      "status": "draft",
-      "notes": "Aucun prix lisible sur les photos. Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Repères de catalogage : variante D. Brand not confidently readable; no brand guessed from styling. Not established from supplied photos Photos sources : IMG_5726.JPG, IMG_5727.JPG (réf. catalogue AP-089)",
+      "status": "published",
+      "notes": "Aucun prix lisible sur les photos. Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Repères de catalogage : variante D. Brand not confidently readable; no brand guessed from styling. Not established from supplied photos Photos sources : IMG_5726.JPG, IMG_5727.JPG (réf. catalogue AP-089)\n\n[29 sept 2026] PUBLIÉ. Prix lu sur l’appareil lui-même, en pleine résolution (manqué au catalogage sur photo réduite). IMG_5726 : étiquette bleue manuscrite « 349$ » sur la vitre de CETTE cuisinière. Écusson Whirlpool sur la porte. Image vérifiée conforme à la photo d’origine.",
       "sourcePhotos": [
         "IMG_5726.webp",
         "IMG_5727.webp"
       ],
       "createdAt": "2026-09-20T07:36:00.000Z",
-      "updatedAt": "2026-09-20T07:36:00.000Z"
+      "updatedAt": "2026-09-29T10:31:53.463353Z"
     },
     {
       "id": "cat-ap-090",

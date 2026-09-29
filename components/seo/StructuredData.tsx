@@ -139,15 +139,16 @@ export function ProductSchema({
     '@context': 'https://schema.org',
     '@type': 'Product',
     '@id': `${url}#product`,
-    name: `${product.brand} ${product.name[locale]}`,
+    name: [product.brand, product.name[locale]].filter(Boolean).join(' '),
     sku: product.sku,
     category: cat.label[locale],
-    brand: { '@type': 'Brand', name: product.brand },
+    ...(product.brand ? { brand: { '@type': 'Brand', name: product.brand } } : {}),
     offers: {
       '@type': 'Offer',
       url,
-      priceCurrency: 'CAD',
-      price: product.price,
+      // "Prix sur demande": Google rejects an Offer priced 0, so leave the
+      // price out rather than advertise a free appliance.
+      ...(product.price > 0 ? { priceCurrency: 'CAD', price: product.price } : {}),
       itemCondition: CONDITION_URL[product.condition],
       availability: AVAILABILITY_URL[product.inventoryStatus],
       seller: { '@type': 'Organization', '@id': `${SITE_URL}/#store` },

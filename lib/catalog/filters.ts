@@ -93,7 +93,7 @@ export function applyFilters(products: Product[], f: FilterState): Product[] {
     if (f.conditions.length && !f.conditions.includes(p.condition)) return false;
     if (f.availability.length && !f.availability.includes(p.inventoryStatus)) return false;
     if (f.finishes.length && !(p.finish && f.finishes.includes(p.finish))) return false;
-    if (!inBucket(p.price, f.priceBuckets, PRICE_BUCKETS)) return false;
+    if (!inBucket(p.price > 0 ? p.price : undefined, f.priceBuckets, PRICE_BUCKETS)) return false;
     if (!inBucket(p.dimensions?.width, f.widthBuckets, WIDTH_BUCKETS)) return false;
     return true;
   });
@@ -107,8 +107,10 @@ export function sortProducts(products: Product[], sort: SortKey): Product[] {
     p.compareAtPrice && p.compareAtPrice > p.price ? p.compareAtPrice - p.price : 0;
 
   switch (sort) {
+    // "Prix sur demande" units (price 0) go last either way — they are not
+    // the cheapest thing in the shop.
     case 'priceAsc':
-      return out.sort((a, b) => a.price - b.price);
+      return out.sort((a, b) => (a.price > 0 ? a.price : Infinity) - (b.price > 0 ? b.price : Infinity));
     case 'priceDesc':
       return out.sort((a, b) => b.price - a.price);
     case 'newest':

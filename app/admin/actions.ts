@@ -5,7 +5,7 @@ import { revalidatePath } from 'next/cache';
 import { getStore, StoreUnavailableError } from '@/lib/store';
 import { checkPassword, createSession, destroySession, requireAdmin, adminEnabled } from '@/lib/admin/auth';
 import { parseProductForm, slugify, type FormErrors } from '@/lib/admin/product-form';
-import type { Product, ProductStatus } from '@/lib/catalog/types';
+import { canPublish, type Product, type ProductStatus } from '@/lib/catalog/types';
 
 /**
  * ADMIN SERVER ACTIONS
@@ -119,10 +119,11 @@ export async function setStatusAction(id: string, status: ProductStatus): Promis
     const store = await getStore();
     const p = await store.get(id);
     if (!p) return { ok: false, message: 'Produit introuvable.' };
-    if (status === 'published' && (!(p.price > 0) || p.images.length === 0)) {
+    if (status === 'published' && !canPublish(p)) {
       return {
         ok: false,
-        message: 'Pour publier, il faut un prix et au moins une photo. Ouvrez la fiche pour compléter.',
+        message:
+          'Pour publier, il faut au moins une photo et un prix (ou cocher « Prix sur demande »). Ouvrez la fiche pour compléter.',
       };
     }
     const now = new Date().toISOString();

@@ -64,15 +64,17 @@ export async function generateMetadata({
     ? { new: 'neuf', used: 'usagé', refurbished: 'reconditionné', 'open-box': 'boîte ouverte', clearance: 'liquidation' }[product.condition]
     : { new: 'new', used: 'used', refurbished: 'refurbished', 'open-box': 'open box', clearance: 'clearance' }[product.condition];
 
-  const price = formatPrice(product.price, locale);
+  const price = product.price > 0 ? formatPrice(product.price, locale) : null;
+  // Brand is blank when no badge was readable — never lead with a stray space.
+  const label = [product.brand, product.name[locale]].filter(Boolean).join(' ');
 
   return {
-    title: `${product.brand} ${product.name[locale]}${product.model ? ` — ${product.model}` : ''}`,
+    title: `${label}${product.model ? ` — ${product.model}` : ''}`,
     description: fr
-      ? `${product.brand} ${product.name[locale]} (${conditionWord}) à ${price} chez Électroménagers GH, Montréal et Laval. ${
+      ? `${label} (${conditionWord})${price ? ` à ${price}` : ', prix sur demande,'} chez Électroménagers GH, Montréal et Laval. ${
           hasDiscount(product) ? 'En aubaine. ' : ''
         }Appelez-nous pour confirmer la disponibilité.`
-      : `${product.brand} ${product.name[locale]} (${conditionWord}) at ${price} from Électroménagers GH, Montréal and Laval. ${
+      : `${label} (${conditionWord})${price ? ` at ${price}` : ', price on request,'} from Électroménagers GH, Montréal and Laval. ${
           hasDiscount(product) ? 'On sale. ' : ''
         }Call us to confirm availability.`,
     alternates: {

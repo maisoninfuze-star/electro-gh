@@ -90,6 +90,10 @@ export function ProductForm({ product, brands }: { product?: Product; brands: st
         <div>
           <label className={label} htmlFor="price">Prix ($) *</label>
           <input id="price" name="price" inputMode="decimal" defaultValue={product?.price ? String(product.price) : ''} placeholder="0" className={cx(input, 'tnum text-lg font-medium')} />
+          <label className="mt-2 inline-flex items-center gap-2 text-sm text-ink-2">
+            <input type="checkbox" name="priceOnRequest" defaultChecked={product?.priceOnRequest} className="size-4 accent-[var(--color-accent)]" />
+            Prix sur demande (si aucun prix)
+          </label>
           {err('price')}
         </div>
         <div>
@@ -121,7 +125,7 @@ export function ProductForm({ product, brands }: { product?: Product; brands: st
             </label>
           ))}
         </div>
-        <p className="mt-2 text-sm text-ink-2">Seuls les produits <strong>publiés</strong> apparaissent sur le site. Publier exige un prix et au moins une photo.</p>
+        <p className="mt-2 text-sm text-ink-2">Seuls les produits <strong>publiés</strong> apparaissent sur le site. Publier exige au moins une photo et un prix — ou « Prix sur demande » si aucun prix n’est lisible.</p>
         <div className="mt-4 flex flex-wrap gap-5">
           <label className="inline-flex items-center gap-2 text-sm"><input type="checkbox" name="featured" defaultChecked={product?.featured} className="size-4 accent-[var(--color-accent)]" /> En vedette (accueil)</label>
           <label className="inline-flex items-center gap-2 text-sm"><input type="checkbox" name="deal" defaultChecked={product?.deal} className="size-4 accent-[var(--color-accent)]" /> Aubaine</label>

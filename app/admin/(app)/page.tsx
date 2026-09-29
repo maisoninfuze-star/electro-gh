@@ -86,7 +86,7 @@ export default async function InventoryPage({ searchParams }: { searchParams: Pr
 function Row({ p }: { p: Product }) {
   const img = p.images[0];
   const missing: string[] = [];
-  if (!(p.price > 0)) missing.push('prix');
+  if (!(p.price > 0) && !p.priceOnRequest) missing.push('prix');
   if (p.images.length === 0) missing.push('photo');
   const rawPhotos = p.images.filter((i) => i.kind === 'original').length;
 
@@ -117,7 +117,7 @@ function Row({ p }: { p: Product }) {
         </Link>
         <div className="mt-1 flex flex-wrap items-center gap-x-3 gap-y-0.5 text-sm">
           <span className={cx('tnum font-medium', p.price > 0 ? 'text-ink' : 'text-ink-3')}>
-            {p.price > 0 ? formatPrice(p.price, 'fr') : 'Sans prix'}
+            {p.price > 0 ? formatPrice(p.price, 'fr') : p.priceOnRequest ? 'Prix sur demande' : 'Sans prix'}
           </span>
           <span className="text-ink-3">{p.sku}</span>
           {missing.length > 0 && p.status !== 'sold' && (

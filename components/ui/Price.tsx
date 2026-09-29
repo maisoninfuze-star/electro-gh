@@ -1,5 +1,5 @@
 import type { Product } from '@/lib/catalog/types';
-import { hasDiscount, savings } from '@/lib/catalog/types';
+import { hasDiscount, hasPrice, savings } from '@/lib/catalog/types';
 import { formatPrice, cx } from '@/lib/format';
 import type { Locale } from '@/lib/i18n/config';
 import type { Dictionary } from '@/lib/i18n/dictionaries';
@@ -27,6 +27,20 @@ export function Price({
   size?: 'md' | 'lg';
 }) {
   const discounted = hasDiscount(product);
+
+  // No readable price: say so plainly, in the same slot, never "0 $".
+  if (!hasPrice(product)) {
+    return (
+      <span
+        className={cx(
+          'font-display font-semibold tracking-[-0.01em] text-ink',
+          size === 'lg' ? 'text-2xl sm:text-3xl' : 'text-base',
+        )}
+      >
+        {dict.product.priceOnRequest}
+      </span>
+    );
+  }
 
   return (
     <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">

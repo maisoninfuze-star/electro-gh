@@ -258,6 +258,7 @@ const fr = {
 
   product: {
     backTo: 'Retour à',
+    priceOnRequest: 'Prix sur demande',
     model: 'Modèle',
     sku: 'Code',
     condition: 'État',
@@ -616,6 +617,7 @@ const en: Dict = {
   },
 
   product: {
+    priceOnRequest: 'Contact for Price',
     backTo: 'Back to',
     model: 'Model',
     sku: 'SKU',
