@@ -7,6 +7,7 @@ import { Deals } from '@/components/home/Deals';
 import { WhyElectroGH } from '@/components/home/WhyElectroGH';
 import { ShopByRoom } from '@/components/home/ShopByRoom';
 import { DealBanner } from '@/components/home/DealBanner';
+import { PackageOffer } from '@/components/home/PackageOffer';
 import { HowItWorks } from '@/components/home/HowItWorks';
 import { NewArrivals } from '@/components/home/NewArrivals';
 import { Reviews } from '@/components/home/Reviews';
@@ -69,6 +70,7 @@ export default async function HomePage({
       <Hero locale={locale} dict={dict} showcase={showcase} />
       <CategoryDiscovery locale={locale} dict={dict} />
       <Deals products={deals.slice(0, 4)} locale={locale} dict={dict} />
+      <PackageOffer dict={dict} />
       <WhyElectroGH dict={dict} />
       <ShopByRoom locale={locale} dict={dict} />
       <DealBanner locale={locale} dict={dict} />

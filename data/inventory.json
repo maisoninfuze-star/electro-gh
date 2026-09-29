@@ -4056,6 +4056,158 @@
       ],
       "createdAt": "2026-09-20T06:06:00.000Z",
       "updatedAt": "2026-09-20T06:06:00.000Z"
+    },
+    {
+      "id": "gh-s19",
+      "sku": "GH-S19",
+      "slug": "ensemble-laveuse-a-chargement-par-le-haut-et-secheuse-blanc",
+      "brand": "",
+      "category": "laundry-sets",
+      "price": 0,
+      "priceOnRequest": true,
+      "finish": "white",
+      "storeId": "laval",
+      "name": {
+        "fr": "Ensemble laveuse à chargement par le haut et sécheuse, blanc",
+        "en": "Top-load washer and dryer set, white"
+      },
+      "description": {
+        "fr": "Laveuse à chargement par le haut et sécheuse assortie, toutes deux blanches avec panneau de commande électronique. La sécheuse a une porte à grand hublot. Vendues ensemble.",
+        "en": "Top-load washer with a matching dryer, both white with electronic control panels. The dryer has a large windowed door. Sold as a pair."
+      },
+      "notes": "Photo du propriétaire (29 sept) prise devant le magasin de LAVAL (3576, chemin du Souvenir). Ensemble : laveuse à chargement par le haut (gauche) + sécheuse (droite). Aucun prix visible → « Prix sur demande » (consigne du propriétaire pour les ensembles). Marque non lisible sur la photo (écussons trop petits) — à confirmer. Image : masque Apple Vision sur la photo réelle + balance des blancs (reflet bleu du ciel), aucun pixel redessiné.",
+      "condition": "used",
+      "inventoryStatus": "in-stock",
+      "images": [
+        {
+          "src": "/inventory/gh-s19-pair.webp",
+          "alt": "Ensemble laveuse à chargement par le haut et sécheuse, blanc",
+          "width": 1600,
+          "height": 1600,
+          "kind": "studio"
+        }
+      ],
+      "featured": false,
+      "deal": false,
+      "status": "published",
+      "sourcePhotos": [
+        "owner-2026-09-29-28.webp"
+      ],
+      "createdAt": "2026-09-29T20:35:45.234652Z",
+      "updatedAt": "2026-09-29T20:35:45.234652Z"
+    },
+    {
+      "id": "gh-120",
+      "sku": "GH-120",
+      "slug": "refrigerateur-a-portes-francaises-samsung-ecran-tactile-distributeur",
+      "brand": "Samsung",
+      "category": "refrigerators",
+      "price": 850,
+      "finish": "stainless",
+      "name": {
+        "fr": "Réfrigérateur à portes françaises Samsung avec écran tactile et distributeur",
+        "en": "Samsung French-door refrigerator with touchscreen and dispenser"
+      },
+      "description": {
+        "fr": "Réfrigérateur à portes françaises en acier inoxydable avec écran tactile intégré à la porte droite, distributeur d’eau, de glaçons et de glace concassée, et tiroir congélateur en bas.",
+        "en": "Stainless steel French-door refrigerator with a touchscreen built into the right door, a water, cubed-ice and crushed-ice dispenser, and a bottom freezer drawer."
+      },
+      "notes": "Photo du propriétaire (29 sept). Étiquette jaune « $850 » collée sur la porte droite de CE réfrigérateur ; écusson SAMSUNG sur la même porte. Image : recadrage de la photo réelle (le bas du tiroir sort du cadre et d’autres réfrigérateurs le touchent des deux côtés — un détourage sur blanc aurait paru tronqué).",
+      "condition": "used",
+      "inventoryStatus": "in-stock",
+      "images": [
+        {
+          "src": "/inventory/gh-120.webp",
+          "alt": "Réfrigérateur à portes françaises Samsung avec écran tactile et distributeur",
+          "width": 1600,
+          "height": 1600,
+          "kind": "original"
+        }
+      ],
+      "featured": false,
+      "deal": false,
+      "status": "published",
+      "sourcePhotos": [
+        "owner-2026-09-29-30.webp"
+      ],
+      "createdAt": "2026-09-29T20:35:45.234652Z",
+      "updatedAt": "2026-09-29T20:35:45.234652Z"
+    },
+    {
+      "id": "gh-121",
+      "sku": "GH-121",
+      "slug": "refrigerateur-sans-congelateur-blanc-une-porte",
+      "brand": "",
+      "category": "refrigerators",
+      "price": 0,
+      "priceOnRequest": true,
+      "finish": "white",
+      "name": {
+        "fr": "Réfrigérateur sans congélateur blanc, une porte",
+        "en": "White all-refrigerator, single door"
+      },
+      "description": {
+        "fr": "Réfrigérateur pleine hauteur à une seule porte, sans compartiment congélateur, blanc, avec commandes électroniques sur la porte.",
+        "en": "Full-height single-door refrigerator with no freezer compartment, white, with electronic controls on the door."
+      },
+      "notes": "Photo du propriétaire (29 sept), appareil de GAUCHE des deux. Le propriétaire confirme : réfrigérateur (tout-réfrigérateur), pas un congélateur. Aucun prix visible → « Prix sur demande ». Marque non lisible (écusson ovale trop petit).",
+      "condition": "used",
+      "inventoryStatus": "in-stock",
+      "images": [
+        {
+          "src": "/inventory/gh-121.webp",
+          "alt": "Réfrigérateur sans congélateur blanc, une porte",
+          "width": 1600,
+          "height": 1600,
+          "kind": "studio"
+        }
+      ],
+      "featured": false,
+      "deal": false,
+      "status": "published",
+      "sourcePhotos": [
+        "owner-2026-09-29-29.webp"
+      ],
+      "createdAt": "2026-09-29T20:35:45.234652Z",
+      "updatedAt": "2026-09-29T20:35:45.234652Z"
+    },
+    {
+      "id": "gh-122",
+      "sku": "GH-122",
+      "slug": "refrigerateur-sans-congelateur-blanc-une-porte-2",
+      "brand": "",
+      "category": "refrigerators",
+      "price": 0,
+      "priceOnRequest": true,
+      "finish": "white",
+      "name": {
+        "fr": "Réfrigérateur sans congélateur blanc, une porte",
+        "en": "White all-refrigerator, single door"
+      },
+      "description": {
+        "fr": "Réfrigérateur pleine hauteur à une seule porte, sans compartiment congélateur, blanc, avec commandes électroniques sur la porte.",
+        "en": "Full-height single-door refrigerator with no freezer compartment, white, with electronic controls on the door."
+      },
+      "notes": "Photo du propriétaire (29 sept), appareil de DROITE des deux. Pastille rouge « SALE » sur la porte, montant ILLISIBLE sur la photo → « Prix sur demande » en attendant le prix. Marque non lisible.",
+      "condition": "used",
+      "inventoryStatus": "in-stock",
+      "images": [
+        {
+          "src": "/inventory/gh-122.webp",
+          "alt": "Réfrigérateur sans congélateur blanc, une porte",
+          "width": 1600,
+          "height": 1600,
+          "kind": "studio"
+        }
+      ],
+      "featured": false,
+      "deal": false,
+      "status": "published",
+      "sourcePhotos": [
+        "owner-2026-09-29-29.webp"
+      ],
+      "createdAt": "2026-09-29T20:35:45.234652Z",
+      "updatedAt": "2026-09-29T20:35:45.234652Z"
     }
   ]
 }

@@ -87,7 +87,11 @@ export async function getDeals(): Promise<Product[]> {
  * place a missing image would be most costly.
  */
 export async function getHeroProducts(limit = 6): Promise<Product[]> {
-  const all = (await loadAll()).filter((p) => p.images.length > 0 && p.price > 0);
+  // The hero stage is plain white: a store photo (kind 'original') would sit on
+  // it as a grey box, so only the white-background shots are eligible.
+  const all = (await loadAll()).filter(
+    (p) => p.images.length > 0 && p.images[0].kind !== 'original' && p.price > 0,
+  );
 
   const rank = (p: Product) =>
     (p.deal ? 0 : p.featured ? 1 : 2) * 1e13 + (1e13 - Date.parse(p.createdAt));

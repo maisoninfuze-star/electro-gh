@@ -156,6 +156,17 @@ const fr = {
     },
   },
 
+  packageOffer: {
+    eyebrow: 'Forfait en magasin · Laval',
+    title: 'Prenez les quatre, payez moins.',
+    body: 'Achetés ensemble, on vous fait un meilleur prix que séparément. Venez les voir à notre magasin de Laval.',
+    items: ['Réfrigérateur LG à portes françaises', 'Cuisinière à double four', 'Laveuse frontale', 'Sécheuse assortie'],
+    call: 'Appeler Laval',
+    directions: 'Itinéraire',
+    note: 'Prix du forfait en magasin, selon la disponibilité.',
+    imageAlt: 'Réfrigérateur LG à portes françaises, cuisinière à double four, laveuse et sécheuse alignés devant le magasin Électroménagers GH de Laval',
+  },
+
   dealBanner: {
     headlineTop: 'Plus de valeur.',
     headlineBottom: 'Moins cher.',
@@ -522,6 +533,17 @@ const en: Dict = {
       body: 'Dependable machines that make every load simpler.',
       cta: 'Shop the laundry room',
     },
+  },
+
+  packageOffer: {
+    eyebrow: 'In-store bundle · Laval',
+    title: 'Take all four, pay less.',
+    body: 'Buy them together and we’ll beat the price of buying them separately. Come see them at our Laval store.',
+    items: ['LG French-door refrigerator', 'Double-oven range', 'Front-load washer', 'Matching dryer'],
+    call: 'Call Laval',
+    directions: 'Directions',
+    note: 'Bundle price given in store, while available.',
+    imageAlt: 'LG French-door refrigerator, double-oven range, washer and dryer lined up outside the Électroménagers GH store in Laval',
   },
 
   dealBanner: {
