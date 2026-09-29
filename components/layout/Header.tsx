@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { NoticeBar } from '@/components/layout/NoticeBar';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { AnimatePresence, motion } from 'framer-motion';
@@ -110,6 +111,8 @@ export function Header({
       >
         {dict.common.skipToContent}
       </a>
+
+      <NoticeBar dict={dict} />
 
       <header
         className={cx(

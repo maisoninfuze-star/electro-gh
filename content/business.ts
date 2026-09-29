@@ -124,8 +124,17 @@ export const BUSINESS = {
   services: {
     /** Card: "Service de livraison". */
     delivery: { offered: true, details: unverified<string>(), pricing: unverified<string>() },
-    /** Card: "Service de réparation". Owner's email: its own section. */
-    repair: { offered: true, details: unverified<string>() },
+    /**
+     * Card: "Service de réparation". Owner's email: its own section.
+     * Owner, 29 Sept 2026: the repair line is 514 577-2847 (main), plus the
+     * Laval store. The Montréal store number is NOT given for repairs.
+     */
+    repair: {
+      offered: true,
+      details: unverified<string>(),
+      phone: v({ display: '514 577-2847', raw: '+15145772847' }),
+      alsoStore: 'laval' as StoreId,
+    },
     /** Owner's email: "Pièces". Nothing else is known — not even which parts. */
     parts: { offered: true, details: unverified<string>() },
     /** Card: "Garantie disponible". */

@@ -142,12 +142,14 @@ const contacts = await page.evaluate(() => ({
   whatsapp: document.querySelectorAll('a[href*="wa.me"]').length,
 }));
 // Two stores: BOTH numbers must be reachable as real tel: links, and nothing
-// on the page may dial a number that isn't one of the two.
+// on the page may dial a number that isn't a known one — the two stores, plus
+// the repair line the owner gave on 29 Sept 2026 (shown in the footer).
+const KNOWN_TELS = ['tel:+15143322848', 'tel:+14506812848', 'tel:+15145772847'];
 check('contact: both store tel: links present',
   contacts.tels.includes('tel:+15143322848') && contacts.tels.includes('tel:+14506812848'),
   `${contacts.telCount} link(s): ${[...new Set(contacts.tels)].join(', ')}`);
 check('contact: no tel: link to an unknown number',
-  contacts.tels.every((t) => t === 'tel:+15143322848' || t === 'tel:+14506812848'),
+  contacts.tels.every((t) => KNOWN_TELS.includes(t)),
   [...new Set(contacts.tels)].join(', '));
 check('contact: directions links present', contacts.maps > 0, `${contacts.maps} link(s)`);
 check('contact: WhatsApp hidden while unverified', contacts.whatsapp === 0,

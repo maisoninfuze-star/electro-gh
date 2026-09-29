@@ -156,6 +156,13 @@ const fr = {
     },
   },
 
+  notice: {
+    before: 'Nous recevons des électroménagers ',
+    brand: 'Fisher & Paykel',
+    after: '.',
+    cta: 'Appelez pour vérifier',
+  },
+
   packageOffer: {
     eyebrow: 'Forfait en magasin · Laval',
     title: 'Prenez les quatre, payez moins.',
@@ -220,6 +227,7 @@ const fr = {
   },
 
   footer: {
+    repairLine: 'Ligne de réparation',
     tagline: 'Électroménagers pour la maison. Achat & revente, à Montréal et à Laval.',
     shop: 'Magasiner',
     company: 'Services',
@@ -320,7 +328,7 @@ const fr = {
       title: 'On répare aussi.',
       lead: 'Un électroménager qui ne fonctionne plus comme avant? Électroménagers GH offre un service de réparation. Un appel suffit pour savoir si on peut vous aider.',
       steps: [
-        { n: '01', title: 'Appelez-nous', body: 'Au magasin le plus proche de chez vous, Montréal ou Laval.' },
+        { n: '01', title: 'Appelez-nous', body: 'À notre ligne de réparation, le 514 577-2847, ou au magasin de Laval.' },
         { n: '02', title: 'Décrivez le problème', body: 'Le type d’appareil, la marque, le modèle si vous l’avez, et ce qui ne va pas.' },
         { n: '03', title: 'On vous dit quoi faire', body: 'Notre équipe vous indique la prochaine étape.' },
       ],
@@ -328,6 +336,10 @@ const fr = {
       tipTitle: 'Avant d’appeler',
       tip: 'Le numéro de modèle se trouve généralement sur une étiquette à l’intérieur de la porte, sur le cadre ou à l’arrière de l’appareil. L’avoir en main accélère tout.',
       detailsPending: 'Les détails du service — appareils couverts, délais et tarifs — vous seront confirmés par téléphone.',
+      phonesTitle: 'Numéros pour la réparation',
+      mainLine: 'Ligne de réparation',
+      mainLineNote: 'Numéro principal',
+      storeLine: 'Magasin de Laval',
     },
     parts: {
       eyebrow: 'Pièces',
@@ -535,6 +547,13 @@ const en: Dict = {
     },
   },
 
+  notice: {
+    before: 'We receive ',
+    brand: 'Fisher & Paykel',
+    after: ' appliances.',
+    cta: 'Call to check',
+  },
+
   packageOffer: {
     eyebrow: 'In-store bundle · Laval',
     title: 'Take all four, pay less.',
@@ -591,6 +610,7 @@ const en: Dict = {
   },
 
   footer: {
+    repairLine: 'Repair line',
     tagline: 'Home appliances. We buy & sell, in Montréal and Laval.',
     shop: 'Shop',
     company: 'Services',
@@ -687,7 +707,7 @@ const en: Dict = {
       title: 'We fix them too.',
       lead: 'An appliance that isn’t working the way it used to? Électroménagers GH offers a repair service. One call is enough to find out whether we can help.',
       steps: [
-        { n: '01', title: 'Call us', body: 'At whichever store is closer to you, Montréal or Laval.' },
+        { n: '01', title: 'Call us', body: 'On our repair line, 514 577-2847, or at the Laval store.' },
         { n: '02', title: 'Describe the problem', body: 'The type of appliance, the brand, the model if you have it, and what’s going wrong.' },
         { n: '03', title: 'We tell you what’s next', body: 'Our team lays out the next step.' },
       ],
@@ -695,6 +715,10 @@ const en: Dict = {
       tipTitle: 'Before you call',
       tip: 'The model number is usually on a label inside the door, on the frame, or on the back of the appliance. Having it ready speeds everything up.',
       detailsPending: 'Service details — appliances covered, timing and rates — are confirmed by phone.',
+      phonesTitle: 'Numbers for repairs',
+      mainLine: 'Repair line',
+      mainLineNote: 'Main number',
+      storeLine: 'Laval store',
     },
     parts: {
       eyebrow: 'Parts',

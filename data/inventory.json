@@ -4208,6 +4208,51 @@
       ],
       "createdAt": "2026-09-29T20:35:45.234652Z",
       "updatedAt": "2026-09-29T20:35:45.234652Z"
+    },
+    {
+      "id": "gh-123",
+      "slug": "refrigerateur-a-portes-francaises-samsung-fini-noir",
+      "sku": "GH-123",
+      "brand": "Samsung",
+      "name": {
+        "fr": "Réfrigérateur à portes françaises Samsung, fini noir",
+        "en": "Samsung French-door refrigerator, black finish"
+      },
+      "description": {
+        "fr": "Réfrigérateur à portes françaises au fini noir, sans distributeur en façade, avec tiroir congélateur en bas. À l’intérieur : balconnets de porte, tablettes en verre et deux bacs à légumes.",
+        "en": "Black-finish French-door refrigerator with no front dispenser and a bottom freezer drawer. Inside: door bins, glass shelves and two crisper drawers."
+      },
+      "category": "refrigerators",
+      "price": 850,
+      "condition": "used",
+      "inventoryStatus": "in-stock",
+      "finish": "black",
+      "images": [
+        {
+          "src": "/inventory/gh-123.webp",
+          "alt": "Réfrigérateur à portes françaises Samsung, fini noir",
+          "width": 1600,
+          "height": 1600,
+          "kind": "studio"
+        },
+        {
+          "src": "/inventory/gh-123-interieur.webp",
+          "alt": "Réfrigérateur à portes françaises Samsung, fini noir, portes ouvertes",
+          "width": 1600,
+          "height": 1600,
+          "kind": "original"
+        }
+      ],
+      "featured": false,
+      "deal": false,
+      "status": "published",
+      "notes": "Photos du propriétaire (29 sept). Prix 850 $ donné par le propriétaire (aucune étiquette visible sur les photos). Écusson SAMSUNG sur la porte droite. Image principale : masque Apple Vision sur la photo réelle ; 2e image : recadrage de la photo portes ouvertes.",
+      "sourcePhotos": [
+        "owner-2026-09-29-33.webp",
+        "owner-2026-09-29-32.webp"
+      ],
+      "createdAt": "2026-09-29T21:26:05.954087Z",
+      "updatedAt": "2026-09-29T21:26:05.954087Z"
     }
   ]
 }

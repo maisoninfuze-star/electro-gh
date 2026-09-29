@@ -1,10 +1,11 @@
-import { Phone } from 'lucide-react';
+import { MapPin, Phone } from 'lucide-react';
 import { InfoPageHeader } from './InfoPageHeader';
 import { StoreCard } from '@/components/layout/StoreCard';
 import { StoreActionButton } from '@/components/layout/StoreChooser';
 import { Reveal } from '@/components/ui/Reveal';
 import { ButtonLink } from '@/components/ui/Button';
-import { STORES } from '@/content/business';
+import { BUSINESS, STORES, storeById, directionsUrl, addressLine } from '@/content/business';
+import { telHref } from '@/lib/contact';
 import { href, type Locale } from '@/lib/i18n/config';
 import type { Dictionary } from '@/lib/i18n/dictionaries';
 
@@ -37,6 +38,13 @@ export function ServicePage({
   const page = dict.pages[kind];
   const source = `${kind}_page`;
 
+  // Repairs have their own line (owner, 29 Sept 2026): 514 577-2847 first,
+  // then the Laval store. The Montréal store number is not a repair number,
+  // so this page never offers the two-store chooser or the store cards.
+  const repair = kind === 'repair' ? BUSINESS.services.repair : null;
+  const repairPhone = repair?.phone.verified ? repair.phone.value : null;
+  const repairStore = repair ? storeById(repair.alsoStore) : null;
+
   const primaryBtn =
     'inline-flex min-h-14 w-full items-center justify-center gap-2 rounded-[3px] bg-accent px-8 text-[0.9375rem] font-medium text-accent-ink transition-colors hover:bg-accent-hover active:scale-[0.985] sm:w-auto';
 
@@ -49,10 +57,19 @@ export function ServicePage({
         title={page.title}
         lead={page.lead}
       >
-        <StoreActionButton mode="call" source={`${source}_hero`} dict={dict} className={primaryBtn}>
-          <Phone className="size-4" strokeWidth={1.75} />
-          {page.cta}
-        </StoreActionButton>
+        {repairPhone ? (
+          <a href={`tel:${repairPhone.raw}`} className={primaryBtn} data-source={`${source}_hero`}>
+            <Phone className="size-4" strokeWidth={1.75} />
+            <span>
+              {page.cta} · <span className="tnum whitespace-nowrap">{repairPhone.display}</span>
+            </span>
+          </a>
+        ) : (
+          <StoreActionButton mode="call" source={`${source}_hero`} dict={dict} className={primaryBtn}>
+            <Phone className="size-4" strokeWidth={1.75} />
+            {page.cta}
+          </StoreActionButton>
+        )}
       </InfoPageHeader>
 
         {/* Steps */}
@@ -88,10 +105,17 @@ export function ServicePage({
               <Reveal delay={100} className="lg:col-span-5">
                 <div className="flex h-full flex-col justify-between gap-6 border border-line bg-surface px-6 py-6 sm:px-8 sm:py-7">
                   <p className="text-[0.9375rem] leading-relaxed text-ink-2">{page.detailsPending}</p>
-                  <StoreActionButton mode="call" source={`${source}_panel`} dict={dict} className={primaryBtn}>
-                    <Phone className="size-4" strokeWidth={1.75} />
-                    {page.cta}
-                  </StoreActionButton>
+                  {repairPhone ? (
+                    <a href={`tel:${repairPhone.raw}`} className={primaryBtn} data-source={`${source}_panel`}>
+                      <Phone className="size-4" strokeWidth={1.75} />
+                      {repairPhone.display}
+                    </a>
+                  ) : (
+                    <StoreActionButton mode="call" source={`${source}_panel`} dict={dict} className={primaryBtn}>
+                      <Phone className="size-4" strokeWidth={1.75} />
+                      {page.cta}
+                    </StoreActionButton>
+                  )}
                 </div>
               </Reveal>
             </div>
@@ -101,21 +125,72 @@ export function ServicePage({
         {/* Both stores */}
         <section className="border-t border-line bg-surface py-16 sm:py-24">
           <div className="container-page">
-            <Reveal>
-              <p className="mb-3 text-[0.6875rem] font-medium uppercase tracking-[0.16em] text-ink-3">
-                {dict.pages.stores.eyebrow}
-              </p>
-              <h2 className="font-display text-display-3 font-medium text-ink">
-                {dict.pages.stores.title}
-              </h2>
-            </Reveal>
-            <div className="mt-10 grid gap-6 lg:grid-cols-2 lg:gap-8">
-              {STORES.map((s, i) => (
-                <Reveal key={s.id} delay={120 + i * 90}>
-                  <StoreCard store={s} dict={dict} source={source} className="h-full" />
+            {repairPhone && repairStore ? (
+              <>
+                <Reveal>
+                  <h2 className="font-display text-display-3 font-medium text-ink">
+                    {dict.pages.repair.phonesTitle}
+                  </h2>
                 </Reveal>
-              ))}
-            </div>
+                <div className="mt-10 grid gap-6 lg:grid-cols-2 lg:gap-8">
+                  <Reveal delay={120}>
+                    <div className="flex h-full flex-col gap-5 border-2 border-accent bg-canvas p-6 sm:p-8">
+                      <p className="text-[0.6875rem] font-medium uppercase tracking-[0.16em] text-accent">
+                        {dict.pages.repair.mainLineNote}
+                      </p>
+                      <h3 className="font-display text-xl font-medium text-ink">{dict.pages.repair.mainLine}</h3>
+                      <a
+                        href={`tel:${repairPhone.raw}`}
+                        className="tnum inline-flex min-h-12 items-center self-start font-display text-3xl font-semibold tracking-[-0.02em] text-ink hover:text-accent sm:text-4xl"
+                      >
+                        {repairPhone.display}
+                      </a>
+                    </div>
+                  </Reveal>
+                  <Reveal delay={210}>
+                    <div className="flex h-full flex-col gap-5 border border-line bg-canvas p-6 sm:p-8">
+                      <p className="text-[0.6875rem] font-medium uppercase tracking-[0.16em] text-ink-3">
+                        {repairStore.city}
+                      </p>
+                      <h3 className="font-display text-xl font-medium text-ink">{dict.pages.repair.storeLine}</h3>
+                      <a
+                        href={telHref(repairStore)}
+                        className="tnum inline-flex min-h-12 items-center self-start font-display text-3xl font-semibold tracking-[-0.02em] text-ink hover:text-accent sm:text-4xl"
+                      >
+                        {repairStore.phone.display}
+                      </a>
+                      <a
+                        href={directionsUrl(repairStore)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex min-h-11 items-center gap-2 self-start text-sm text-ink-2 underline-offset-4 hover:text-ink hover:underline"
+                      >
+                        <MapPin className="size-4" strokeWidth={1.75} aria-hidden />
+                        {addressLine(repairStore)}
+                      </a>
+                    </div>
+                  </Reveal>
+                </div>
+              </>
+            ) : (
+              <>
+              <Reveal>
+                <p className="mb-3 text-[0.6875rem] font-medium uppercase tracking-[0.16em] text-ink-3">
+                  {dict.pages.stores.eyebrow}
+                </p>
+                <h2 className="font-display text-display-3 font-medium text-ink">
+                  {dict.pages.stores.title}
+                </h2>
+              </Reveal>
+              <div className="mt-10 grid gap-6 lg:grid-cols-2 lg:gap-8">
+                {STORES.map((s, i) => (
+                  <Reveal key={s.id} delay={120 + i * 90}>
+                    <StoreCard store={s} dict={dict} source={source} className="h-full" />
+                  </Reveal>
+                ))}
+              </div>
+              </>
+            )}
             <Reveal delay={300}>
               <div className="mt-10 flex flex-col gap-3 sm:flex-row">
                 <ButtonLink href={href(locale, 'shop')} variant="secondary" size="lg">

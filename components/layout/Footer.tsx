@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Mail, MapPin, Phone } from 'lucide-react';
+import { Mail, MapPin, Phone, Wrench } from 'lucide-react';
 import { Logo } from './Logo';
 import { BUSINESS, STORES, directionsUrl } from '@/content/business';
 import { mailtoHref, telHref } from '@/lib/contact';
@@ -102,6 +102,15 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
                 </address>
               ))}
             </div>
+            {BUSINESS.services.repair.phone.verified && (
+              <a
+                href={`tel:${BUSINESS.services.repair.phone.value!.raw}`}
+                className="tnum mt-6 inline-flex min-h-11 items-center gap-2.5 text-sm text-ink-2 transition-colors duration-300 hover:text-ink"
+              >
+                <Wrench className="size-4 shrink-0" strokeWidth={1.6} />
+                {dict.footer.repairLine} · {BUSINESS.services.repair.phone.value!.display}
+              </a>
+            )}
             {mailtoHref() && (
               <a
                 href={mailtoHref()!}
