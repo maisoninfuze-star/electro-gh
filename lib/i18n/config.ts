@@ -137,5 +137,10 @@ export function alternates(route: RouteId, sub?: string) {
   ) as Record<string, string>;
 }
 
+/**
+ * The site's own address: canonical links, sitemap, structured data.
+ * The owner bought electromenagersgh.com (Sept 2026) and set www as the
+ * primary host in Vercel (the bare domain redirects to it).
+ */
 export const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, '') ?? 'https://www.electrogh.ca';
+  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, '') ?? 'https://www.electromenagersgh.com';

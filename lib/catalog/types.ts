@@ -165,6 +165,16 @@ export interface Product {
   soldAt?: string;
 }
 
+/**
+ * "Brand + name" for titles and structured data. Many names already carry
+ * the brand ("Ensemble laveuse et sécheuse Samsung"), so prefix it only when
+ * it isn't there; a blank brand adds nothing.
+ */
+export const productLabel = (p: Pick<Product, 'brand' | 'name'>, locale: Locale): string => {
+  const name = p.name[locale];
+  return !p.brand || name.toLowerCase().includes(p.brand.toLowerCase()) ? name : `${p.brand} ${name}`;
+};
+
 /** A real amount to show. False for "Prix sur demande" units (price 0). */
 export const hasPrice = (p: Pick<Product, 'price'>): boolean => p.price > 0;
 

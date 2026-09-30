@@ -1,6 +1,6 @@
 import { BUSINESS, STORES, addressLine } from '@/content/business';
 import { CATEGORIES } from '@/lib/catalog/categories';
-import { hasDiscount, type Product } from '@/lib/catalog/types';
+import { hasDiscount, productLabel, type Product } from '@/lib/catalog/types';
 import { SITE_URL, href, type Locale } from '@/lib/i18n/config';
 
 /**
@@ -139,7 +139,7 @@ export function ProductSchema({
     '@context': 'https://schema.org',
     '@type': 'Product',
     '@id': `${url}#product`,
-    name: [product.brand, product.name[locale]].filter(Boolean).join(' '),
+    name: productLabel(product, locale),
     sku: product.sku,
     category: cat.label[locale],
     ...(product.brand ? { brand: { '@type': 'Brand', name: product.brand } } : {}),

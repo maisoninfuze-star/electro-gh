@@ -17,7 +17,7 @@ import { CATEGORIES } from '@/lib/catalog/categories';
 import { getProductBySlug, getRelated, categoryIdFromRoute, getAllProducts } from '@/lib/catalog/provider';
 import { SITE_CONFIG } from '@/content/site-config';
 import { formatPrice } from '@/lib/format';
-import { hasDiscount } from '@/lib/catalog/types';
+import { hasDiscount, productLabel } from '@/lib/catalog/types';
 
 /**
  * PRODUCT PAGE
@@ -65,8 +65,7 @@ export async function generateMetadata({
     : { new: 'new', used: 'used', refurbished: 'refurbished', 'open-box': 'open box', clearance: 'clearance' }[product.condition];
 
   const price = product.price > 0 ? formatPrice(product.price, locale) : null;
-  // Brand is blank when no badge was readable — never lead with a stray space.
-  const label = [product.brand, product.name[locale]].filter(Boolean).join(' ');
+  const label = productLabel(product, locale);
 
   return {
     title: `${label}${product.model ? ` — ${product.model}` : ''}`,
