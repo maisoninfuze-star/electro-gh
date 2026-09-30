@@ -159,5 +159,9 @@ function describeError(e: unknown): string {
   if (e instanceof StoreUnavailableError) return e.message;
   if (e instanceof Error && e.message === 'UNAUTHORIZED') return 'Session expirée. Reconnectez-vous.';
   console.error('[admin]', e);
-  return 'Une erreur est survenue. Réessayez.';
+  // The admin is password-gated and the owner is the only reader: name the
+  // cause, so a storage problem can be diagnosed from the screen rather than
+  // from logs nobody can reach.
+  const detail = e instanceof Error && e.message ? ` (${e.message.slice(0, 160)})` : '';
+  return `Une erreur est survenue. Réessayez.${detail}`;
 }

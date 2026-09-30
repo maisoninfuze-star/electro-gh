@@ -57,10 +57,18 @@ async function readAll(): Promise<Product[]> {
   return (await readDoc()) ?? (await readSeed());
 }
 
+/**
+ * The document is rewritten in place on every save, so overwriting must be
+ * allowed explicitly: since @vercel/blob 1.0, `put` to an existing pathname
+ * throws unless `allowOverwrite` is set. Without it the very first save in
+ * production created the document and every save after that failed with the
+ * admin's generic error (30 Sept 2026).
+ */
 async function writeAll(products: Product[]): Promise<void> {
   await put(DOC, JSON.stringify({ products }, null, 2), {
     access: 'public',
     addRandomSuffix: false,
+    allowOverwrite: true,
     contentType: 'application/json',
     cacheControlMaxAge: 0,
   });
