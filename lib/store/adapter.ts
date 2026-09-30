@@ -42,8 +42,12 @@ export interface InventoryStore {
 
 export interface StoreInfo {
   kind: 'local' | 'blob';
-  /** `document` once an admin save exists in Blob; `seed` before that (and always, locally). */
-  source: 'seed' | 'document';
+  /**
+   * `document` once an admin save exists in Blob; `seed` before that (and
+   * always, locally); `seed-fallback` when the document exists but could not
+   * be read just now — the storefront is up, but writes are refused.
+   */
+  source: 'seed' | 'document' | 'seed-fallback';
   /** Blob store access mode, learned on first contact; null until then (or locally). */
   access: 'public' | 'private' | null;
   /** Watermark up to which the committed seed has been folded into the document. */

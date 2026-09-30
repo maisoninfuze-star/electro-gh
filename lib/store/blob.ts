@@ -1,6 +1,6 @@
 import { put, del, get, head, list as listBlobs, BlobNotFoundError } from '@vercel/blob';
 import type { Product } from '@/lib/catalog/types';
-import type { InventoryStore, StoreInfo } from './adapter';
+import { StoreUnavailableError, type InventoryStore, type StoreInfo } from './adapter';
 import { readSeed } from './local';
 import { mergeSeed, type InventoryDoc } from './merge';
 
@@ -43,6 +43,12 @@ type Access = 'public' | 'private';
  * storefront down: not-found → seed (expected before the first save);
  * anything else → log loudly and serve the seed too. The SDK's error classes
  * do not set `name`, so they are matched with instanceof or by message.
+ *
+ * WRITES NEVER GUESS. "Not found" and "could not read" are different
+ * answers: a save that follows a failed read would rebuild the document from
+ * the seed plus one change and overwrite everything the owner had saved. So
+ * a write after a failed or unparsable read refuses, with a message that says
+ * the change was NOT saved, instead of clobbering the catalogue.
  */
 let access: Access | null = null;
 
@@ -72,33 +78,44 @@ const parseDoc = (raw: unknown): InventoryDoc | null => {
   return { products: d.products, seedSyncedAt: typeof d.seedSyncedAt === 'string' ? d.seedSyncedAt : undefined };
 };
 
-async function readDoc(): Promise<InventoryDoc | null> {
+type ReadResult =
+  | { status: 'ok'; doc: InventoryDoc }
+  | { status: 'missing' } // nothing saved yet — the seed is the catalogue
+  | { status: 'error' }; // storage did not answer, or the document is unreadable
+
+async function readDoc(): Promise<ReadResult> {
   let url: string;
   try {
     url = (await head(DOC)).url;
   } catch (e) {
-    if (e instanceof BlobNotFoundError) return null; // nothing saved yet
+    if (e instanceof BlobNotFoundError) return { status: 'missing' };
     console.error('[store] Blob head() failed — serving the committed seed.', e);
-    return null;
+    return { status: 'error' };
   }
   try {
     if (access !== 'private') {
       const res = await fetch(url, { cache: 'no-store' });
       if (res.ok) {
         access ??= 'public';
-        return parseDoc(await res.json());
+        const doc = parseDoc(await res.json());
+        return doc ? { status: 'ok', doc } : { status: 'error' };
       }
       // A private store refuses the plain URL; fall through to the SDK read.
     }
     const r = await get(DOC, { access: 'private', useCache: false });
-    if (!r || r.statusCode !== 200) return null;
+    if (!r) return { status: 'missing' };
+    if (r.statusCode !== 200) return { status: 'error' };
     access = 'private';
-    return parseDoc(JSON.parse(await new Response(r.stream).text()));
+    const doc = parseDoc(JSON.parse(await new Response(r.stream).text()));
+    return doc ? { status: 'ok', doc } : { status: 'error' };
   } catch (e) {
     console.error('[store] inventory.json in Blob unreadable — serving the committed seed.', e);
-    return null;
+    return { status: 'error' };
   }
 }
+
+const NOT_SAVED =
+  'Le stockage n’a pas répondu : la modification n’a PAS été enregistrée, pour ne pas écraser le catalogue sauvegardé. Réessayez dans un instant.';
 
 async function writeDoc(doc: InventoryDoc): Promise<void> {
   const body = JSON.stringify(doc, null, 2);
@@ -117,15 +134,22 @@ async function writeDoc(doc: InventoryDoc): Promise<void> {
  * The catalogue as it should be right now: the stored document with any
  * newer seed changes folded in, or the seed alone before the first save.
  */
-async function current(): Promise<{ doc: InventoryDoc; exists: boolean; changed: boolean }> {
+async function current(): Promise<{ doc: InventoryDoc; source: ReadResult['status']; changed: boolean }> {
   const seed = await readSeed();
   const stored = await readDoc();
-  if (!stored) {
+  if (stored.status !== 'ok') {
     const m = mergeSeed({ products: [] }, seed);
-    return { doc: { products: m.products, seedSyncedAt: m.seedSyncedAt }, exists: false, changed: false };
+    return { doc: { products: m.products, seedSyncedAt: m.seedSyncedAt }, source: stored.status, changed: false };
   }
-  const m = mergeSeed(stored, seed);
-  return { doc: { products: m.products, seedSyncedAt: m.seedSyncedAt }, exists: true, changed: m.changed };
+  const m = mergeSeed(stored.doc, seed);
+  return { doc: { products: m.products, seedSyncedAt: m.seedSyncedAt }, source: 'ok', changed: m.changed };
+}
+
+/** The document a write may build on: the stored one, or the seed only when nothing was ever saved. */
+async function forWrite(): Promise<InventoryDoc> {
+  const { doc, source } = await current();
+  if (source === 'error') throw new StoreUnavailableError(NOT_SAVED);
+  return doc;
 }
 
 let queue: Promise<unknown> = Promise.resolve();
@@ -148,8 +172,8 @@ async function persistMerged(doc: InventoryDoc): Promise<void> {
 }
 
 async function readAll(): Promise<Product[]> {
-  const { doc, exists, changed } = await current();
-  if (exists && changed) await persistMerged(doc);
+  const { doc, source, changed } = await current();
+  if (source === 'ok' && changed) await persistMerged(doc);
   return doc.products;
 }
 
@@ -164,7 +188,7 @@ export const blobStore: InventoryStore = {
 
   upsert(product) {
     return serial(async () => {
-      const { doc } = await current();
+      const doc = await forWrite();
       const i = doc.products.findIndex((p) => p.id === product.id);
       if (i >= 0) doc.products[i] = product;
       else doc.products.push(product);
@@ -176,7 +200,7 @@ export const blobStore: InventoryStore = {
 
   remove(id) {
     return serial(async () => {
-      const { doc } = await current();
+      const doc = await forWrite();
       doc.products = doc.products.filter((p) => p.id !== id);
       await writeDoc(doc);
       persistedFor = doc.seedSyncedAt;
@@ -205,8 +229,13 @@ export const blobStore: InventoryStore = {
   },
 
   async info(): Promise<StoreInfo> {
-    const { doc, exists } = await current();
-    return { kind: 'blob', source: exists ? 'document' : 'seed', access, seedSyncedAt: doc.seedSyncedAt ?? null };
+    const { doc, source } = await current();
+    return {
+      kind: 'blob',
+      source: source === 'ok' ? 'document' : source === 'error' ? 'seed-fallback' : 'seed',
+      access,
+      seedSyncedAt: doc.seedSyncedAt ?? null,
+    };
   },
 };
 
