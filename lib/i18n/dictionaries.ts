@@ -81,8 +81,15 @@ const fr = {
     ctaPrimary: 'Voir nos électroménagers',
     ctaSecondary: 'Voir les offres',
     trust: ['Montréal & Laval', 'Achat & revente', 'Livraison disponible'],
-    showcaseLabel: 'Quelques appareils en magasin',
-    showcaseGoTo: 'Voir l’appareil',
+    showcaseLabel: 'Le magasin et quelques appareils',
+    showcaseGoTo: 'Aller à l’image',
+    shopPhotos: [
+      // One per photograph in Hero.tsx SHOP_PHOTOS, same order: what it shows.
+      'Vue du magasin : une rangée de cuisinières en acier inoxydable devant des réfrigérateurs',
+      'Laveuses et sécheuses frontales empilées, dont un ensemble rouge, dans le magasin',
+      'Rangée de cuisinières en acier inoxydable, réfrigérateurs à l’arrière-plan, dans le magasin',
+      'Allée de réfrigérateurs blancs face à une rangée de cuisinières blanches, dans le magasin',
+    ],
   },
 
   categories: {
@@ -472,8 +479,14 @@ const en: Dict = {
     ctaPrimary: 'Browse appliances',
     ctaSecondary: 'See the deals',
     trust: ['Montréal & Laval', 'We buy & sell', 'Delivery available'],
-    showcaseLabel: 'A few appliances in store',
-    showcaseGoTo: 'View appliance',
+    showcaseLabel: 'The store and a few appliances',
+    showcaseGoTo: 'Go to slide',
+    shopPhotos: [
+      'View of the store: a row of stainless steel ranges in front of refrigerators',
+      'Stacked front-load washers and dryers, including a red set, in the store',
+      'A row of stainless steel ranges with refrigerators behind, in the store',
+      'An aisle of white refrigerators facing a row of white ranges, in the store',
+    ],
   },
 
   categories: {

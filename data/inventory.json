@@ -1473,7 +1473,7 @@
       "id": "cat-ap-033",
       "slug": "cuisiniere-encastrable-en-acier-inoxydable",
       "sku": "GH-033",
-      "brand": "",
+      "brand": "KitchenAid",
       "name": {
         "fr": "Cuisinière encastrable en acier inoxydable",
         "en": "Stainless steel slide-in range"
@@ -1499,14 +1499,14 @@
       "featured": false,
       "deal": false,
       "status": "published",
-      "notes": "Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Détail non traduit : « with touch controls ». Brand not confidently readable; no brand guessed from styling. Sticker amount transcribed; confirm current price before publishing Photos sources : IMG_5442.JPG, IMG_5633.JPG, IMG_5636.JPG (réf. catalogue AP-033)",
+      "notes": "Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Détail non traduit : « with touch controls ». Brand not confidently readable; no brand guessed from styling. Sticker amount transcribed; confirm current price before publishing Photos sources : IMG_5442.JPG, IMG_5633.JPG, IMG_5636.JPG (réf. catalogue AP-033)\n\n[30 sept 2026] Marque KitchenAid lue sur l’écusson de la porte (IMG_5633 et la photo du propriétaire du 29 sept (même appareil, même étiquette « $600 »)).",
       "sourcePhotos": [
         "IMG_5442.webp",
         "IMG_5633.webp",
         "IMG_5636.webp"
       ],
       "createdAt": "2026-09-20T10:24:00.000Z",
-      "updatedAt": "2026-09-20T10:24:00.000Z"
+      "updatedAt": "2026-09-30T16:13:04.675034Z"
     },
     {
       "id": "cat-ap-034",
@@ -1849,12 +1849,12 @@
       "featured": false,
       "deal": false,
       "status": "draft",
-      "notes": "Aucun prix lisible sur les photos. Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Repères de catalogage : variante A. Détail non traduit : « coil-top ». Brand not confidently readable; no brand guessed from styling. Not established from supplied photos Photos sources : IMG_5645.JPG (réf. catalogue AP-042)\n\n[29 sept 2026] RESTE EN BROUILLON — photo à refaire. L’image ajoute une rangée de 5 boutons en façade ; la vraie GE (IMG_5645) a ses 4 boutons sur le dosseret seulement. Marque GE lue sur la photo d’origine.",
+      "notes": "Aucun prix lisible sur les photos. Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Repères de catalogage : variante A. Détail non traduit : « coil-top ». Brand not confidently readable; no brand guessed from styling. Not established from supplied photos Photos sources : IMG_5645.JPG (réf. catalogue AP-042)\n\n[29 sept 2026] RESTE EN BROUILLON — photo à refaire. L’image ajoute une rangée de 5 boutons en façade ; la vraie GE (IMG_5645) a ses 4 boutons sur le dosseret seulement. Marque GE lue sur la photo d’origine.\n\n[30 sept 2026] Le propriétaire a fourni le 29 sept une photo nette de CETTE cuisinière (GE blanche à éléments spiralés, 4 boutons au dosseret) : ~/Downloads « WhatsApp Image 2026-09-29 at 16.35.17 ». Elle peut remplacer l’image fautive. L’étiquette jaune n’y montre que « $ », sans montant : prix toujours inconnu.",
       "sourcePhotos": [
         "IMG_5645.webp"
       ],
       "createdAt": "2026-09-20T09:57:00.000Z",
-      "updatedAt": "2026-09-29T10:31:53.463353Z"
+      "updatedAt": "2026-09-30T16:13:04.675034Z"
     },
     {
       "id": "cat-ap-043",
@@ -2977,7 +2977,7 @@
       "id": "cat-ap-083",
       "slug": "cuisiniere-encastrable-en-acier-inoxydable-panneau-de-commande-ovale",
       "sku": "GH-083",
-      "brand": "",
+      "brand": "KitchenAid",
       "name": {
         "fr": "Cuisinière encastrable en acier inoxydable, panneau de commande ovale",
         "en": "Stainless steel slide-in range, oval control panel"
@@ -3003,13 +3003,13 @@
       "featured": false,
       "deal": false,
       "status": "published",
-      "notes": "Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Brand not confidently readable; no brand guessed from styling. Sticker amount transcribed; confirm current price before publishing Photos sources : IMG_5713.JPG, IMG_5714.JPG (réf. catalogue AP-083)",
+      "notes": "Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Brand not confidently readable; no brand guessed from styling. Sticker amount transcribed; confirm current price before publishing Photos sources : IMG_5713.JPG, IMG_5714.JPG (réf. catalogue AP-083)\n\n[30 sept 2026] Marque KitchenAid lue sur l’écusson de la porte (IMG_5713).",
       "sourcePhotos": [
         "IMG_5713.webp",
         "IMG_5714.webp"
       ],
       "createdAt": "2026-09-20T07:54:00.000Z",
-      "updatedAt": "2026-09-20T07:54:00.000Z"
+      "updatedAt": "2026-09-30T16:13:04.675034Z"
     },
     {
       "id": "cat-ap-084",
@@ -3950,7 +3950,7 @@
       "id": "cat-ap-115",
       "slug": "cuisiniere-electrique-en-acier-inoxydable-3",
       "sku": "GH-115",
-      "brand": "",
+      "brand": "Whirlpool",
       "name": {
         "fr": "Cuisinière électrique en acier inoxydable",
         "en": "Stainless steel electric range"
@@ -3960,7 +3960,7 @@
         "en": "Stainless-finish electric range with a black smooth cooktop and rear rotary controls."
       },
       "category": "ranges",
-      "price": 0,
+      "price": 380,
       "condition": "used",
       "inventoryStatus": "in-stock",
       "finish": "stainless",
@@ -3976,12 +3976,12 @@
       "featured": false,
       "deal": false,
       "status": "draft",
-      "notes": "Aucun prix lisible sur les photos. Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Repères de catalogage : behind window B. Brand not confidently readable; no brand guessed from styling. Not established from supplied photos Photos sources : IMG_5749.JPG (réf. catalogue AP-115)",
+      "notes": "Aucun prix lisible sur les photos. Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Repères de catalogage : behind window B. Brand not confidently readable; no brand guessed from styling. Not established from supplied photos Photos sources : IMG_5749.JPG (réf. catalogue AP-115)\n\n[30 sept 2026] IMG_5749 en pleine résolution : « Whirlpool Gold » imprimé sur le panneau et étiquette jaune « $380 » collée sur CE panneau. Marque et prix consignés. RESTE EN BROUILLON : la photo est prise à travers la vitrine, l’image ne peut pas être vérifiée — il faut une photo prise en magasin.",
       "sourcePhotos": [
         "IMG_5749.webp"
       ],
       "createdAt": "2026-09-20T06:18:00.000Z",
-      "updatedAt": "2026-09-20T06:18:00.000Z"
+      "updatedAt": "2026-09-30T16:13:04.675034Z"
     },
     {
       "id": "cat-ap-118",
@@ -4061,27 +4061,26 @@
       "id": "gh-s19",
       "sku": "GH-S19",
       "slug": "ensemble-laveuse-a-chargement-par-le-haut-et-secheuse-blanc",
-      "brand": "",
+      "brand": "Fisher & Paykel",
       "category": "laundry-sets",
-      "price": 0,
-      "priceOnRequest": true,
+      "price": 799,
       "finish": "white",
       "storeId": "laval",
       "name": {
-        "fr": "Ensemble laveuse à chargement par le haut et sécheuse, blanc",
-        "en": "Top-load washer and dryer set, white"
+        "fr": "Ensemble laveuse à chargement par le haut et sécheuse Fisher & Paykel, blanc",
+        "en": "Fisher & Paykel top-load washer and dryer set, white"
       },
       "description": {
         "fr": "Laveuse à chargement par le haut et sécheuse assortie, toutes deux blanches avec panneau de commande électronique. La sécheuse a une porte à grand hublot. Vendues ensemble.",
         "en": "Top-load washer with a matching dryer, both white with electronic control panels. The dryer has a large windowed door. Sold as a pair."
       },
-      "notes": "Photo du propriétaire (29 sept) prise devant le magasin de LAVAL (3576, chemin du Souvenir). Ensemble : laveuse à chargement par le haut (gauche) + sécheuse (droite). Aucun prix visible → « Prix sur demande » (consigne du propriétaire pour les ensembles). Marque non lisible sur la photo (écussons trop petits) — à confirmer. Image : masque Apple Vision sur la photo réelle + balance des blancs (reflet bleu du ciel), aucun pixel redessiné.",
+      "notes": "Photo du propriétaire (29 sept) prise devant le magasin de LAVAL (3576, chemin du Souvenir). Ensemble : laveuse à chargement par le haut (gauche) + sécheuse (droite). Aucun prix visible → « Prix sur demande » (consigne du propriétaire pour les ensembles). Marque non lisible sur la photo (écussons trop petits) — à confirmer. Image : masque Apple Vision sur la photo réelle + balance des blancs (reflet bleu du ciel), aucun pixel redessiné.\n\n[30 sept 2026] Le propriétaire donne le prix : 799 $ pour l’ensemble, et la marque : Fisher & Paykel (il l’a écrite « Fysher » ; orthographe du fabricant retenue). Remplace « Prix sur demande ». L’adresse (slug) de la fiche est inchangée.",
       "condition": "used",
       "inventoryStatus": "in-stock",
       "images": [
         {
           "src": "/inventory/gh-s19-pair.webp",
-          "alt": "Ensemble laveuse à chargement par le haut et sécheuse, blanc",
+          "alt": "Ensemble laveuse à chargement par le haut et sécheuse Fisher & Paykel, blanc",
           "width": 1600,
           "height": 1600,
           "kind": "studio"
@@ -4094,7 +4093,7 @@
         "owner-2026-09-29-28.webp"
       ],
       "createdAt": "2026-09-29T20:35:45.234652Z",
-      "updatedAt": "2026-09-29T20:35:45.234652Z"
+      "updatedAt": "2026-09-30T16:07:44.444760Z"
     },
     {
       "id": "gh-120",

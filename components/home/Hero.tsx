@@ -1,6 +1,5 @@
 import { MapPin } from 'lucide-react';
-import { HeroMedia } from './HeroMedia';
-import { HeroShowcase } from './HeroShowcase';
+import { HeroStage, type HeroPhoto } from './HeroStage';
 import type { Product } from '@/lib/catalog/types';
 import { RevealLines, Reveal } from '@/components/ui/Reveal';
 import { ButtonLink } from '@/components/ui/Button';
@@ -10,25 +9,35 @@ import type { Dictionary } from '@/lib/i18n/dictionaries';
 /**
  * HERO
  * ====
- * Composition: an editorial split rather than text-over-photograph.
+ * The owner's own photographs of the showroom floor fill the whole hero and
+ * rotate; a compact card rotates through REAL stock with real prices. Both
+ * are self-evidently the shop: rows of actual machines, and what they cost.
  *
- * Why not an overlay? The owner will eventually swap this image for their own
- * showroom photography, and text-on-image only stays legible for the one photo
- * it was tuned against. A dedicated type panel means any future image works,
- * contrast never degrades, and the headline keeps full AA contrast on canvas.
+ * Desktop puts the headline over the photograph, on a scrim that keeps it
+ * legible whatever the photograph (see HeroStage). On a phone the photograph
+ * is a full-width band above the text instead — covering it with a scrim dark
+ * enough for body copy would hide the very thing the owner wants shown.
  *
- * On mobile the image is capped at a 4:5 crop instead of filling the screen —
- * a full-height mobile hero pushes the actual product one whole swipe away,
- * which is exactly the wrong trade for a store people arrive at from Instagram
- * ready to buy.
- *
- * The right-hand panel now rotates through REAL stock with real prices rather
- * than showing a stock kitchen. That is the strongest claim this page can
- * make, and it is self-updating: as the owner publishes and sells, the hero
- * changes with the shop. If nothing is publishable — an empty catalogue, or
- * every unit missing a photo — it falls back to the kitchen photograph
- * instead of rendering an empty frame.
+ * The headline block is rendered here, on the server, and passed into the
+ * client stage as children: it needs no JavaScript to appear.
  */
+
+/**
+ * The owner's showroom photographs (30 Sept 2026). Brightened only — one tone
+ * curve on every channel, nothing redrawn — except the first, where the
+ * photographer's own reflection in a glass partition (about 50px) was painted
+ * out. Alt text lives in the dictionary under hero.shopPhotos, in this order.
+ *
+ * `focus` picks the horizontal band that survives: the desktop hero is about
+ * twice as wide as it is tall, and these are 4:3.
+ */
+const SHOP_PHOTOS = [
+  { src: '/media/shop-vue-ensemble.webp', focus: '60% 42%' },
+  { src: '/media/shop-laveuses.webp', focus: '62% 45%' },
+  { src: '/media/shop-cuisinieres.webp', focus: '50% 35%' },
+  { src: '/media/shop-refrigerateurs.webp', focus: '50% 45%' },
+] as const;
+
 export function Hero({
   locale,
   dict,
@@ -38,73 +47,47 @@ export function Hero({
   dict: Dictionary;
   showcase?: Product[];
 }) {
+  const photos: HeroPhoto[] = SHOP_PHOTOS.map((p, i) => ({ ...p, alt: dict.hero.shopPhotos[i] }));
+
   return (
-    <section className="relative border-b border-line bg-canvas">
-      <div className="grid lg:grid-cols-12">
-        {/* Media — first on mobile, right-hand bleed on desktop */}
-        <div
-          className={
-            'relative order-1 w-full lg:order-2 lg:col-span-6 lg:aspect-auto lg:min-h-[min(82vh,46rem)] ' +
-            // A standing appliance needs vertical room; a landscape kitchen photo
-            // does not. The box changes shape with what is in it.
-            (showcase.length > 0 ? 'aspect-[3/4] sm:aspect-[4/3]' : 'aspect-[4/3] sm:aspect-[16/10]')
-          }
-        >
-          {showcase.length > 0 ? (
-            <HeroShowcase products={showcase} locale={locale} dict={dict} />
-          ) : (
-            <HeroMedia
-              src="/media/hero-kitchen.webp"
-              alt="Cuisine contemporaine avec électroménagers en acier inoxydable"
-            />
-          )}
+    <HeroStage photos={photos} products={showcase} locale={locale} dict={dict}>
+      <h1 className="font-display text-hero font-light text-ink lg:text-canvas">
+        <RevealLines lines={[dict.hero.headlineTop]} immediate delay={80} lineClassName="font-light" />
+        <RevealLines lines={[dict.hero.headlineBottom]} immediate delay={200} lineClassName="font-semibold" />
+      </h1>
+
+      <Reveal delay={380} y={10} immediate>
+        <p className="mt-7 max-w-md text-lead text-ink-2 lg:text-canvas">{dict.hero.body}</p>
+      </Reveal>
+
+      <Reveal delay={470} y={10} immediate>
+        <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
+          <ButtonLink href={href(locale, 'shop')} size="lg">
+            {dict.hero.ctaPrimary}
+          </ButtonLink>
+          <ButtonLink
+            href={href(locale, 'deals')}
+            variant="secondary"
+            size="lg"
+            // Over the photograph the outlined button becomes a solid light one.
+            className="lg:border-transparent lg:bg-canvas lg:text-ink lg:hover:border-transparent lg:hover:bg-white"
+          >
+            {dict.hero.ctaSecondary}
+          </ButtonLink>
         </div>
+      </Reveal>
 
-        {/* Type panel */}
-        <div className="order-2 flex flex-col justify-center px-5 py-10 sm:px-10 sm:py-12 lg:order-1 lg:col-span-6 lg:py-20 lg:pl-[max(2.5rem,calc((100vw-90rem)/2+4rem))] lg:pr-14">
-          <h1 className="font-display text-hero font-light text-ink">
-            <RevealLines
-              lines={[dict.hero.headlineTop]}
-              immediate
-              delay={80}
-              lineClassName="font-light"
-            />
-            <RevealLines
-              lines={[dict.hero.headlineBottom]}
-              immediate
-              delay={200}
-              lineClassName="font-semibold"
-            />
-          </h1>
-
-          <Reveal delay={380} y={10} immediate>
-            <p className="mt-7 max-w-md text-lead text-ink-2">{dict.hero.body}</p>
-          </Reveal>
-
-          <Reveal delay={470} y={10} immediate>
-            <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
-              <ButtonLink href={href(locale, 'shop')} size="lg">
-                {dict.hero.ctaPrimary}
-              </ButtonLink>
-              <ButtonLink href={href(locale, 'deals')} variant="secondary" size="lg">
-                {dict.hero.ctaSecondary}
-              </ButtonLink>
-            </div>
-          </Reveal>
-
-          <Reveal delay={560} y={8} immediate>
-            <p className="mt-10 flex flex-wrap items-center gap-x-3 gap-y-1 text-[0.75rem] uppercase tracking-[0.12em] text-ink-3">
-              <MapPin aria-hidden className="size-3.5" strokeWidth={1.75} />
-              {dict.hero.trust.map((item, i) => (
-                <span key={item} className="flex items-center gap-3">
-                  {i > 0 && <span aria-hidden className="text-ink-3">·</span>}
-                  {item}
-                </span>
-              ))}
-            </p>
-          </Reveal>
-        </div>
-      </div>
-    </section>
+      <Reveal delay={560} y={8} immediate>
+        <p className="mt-10 flex flex-wrap items-center gap-x-3 gap-y-1 text-[0.75rem] uppercase tracking-[0.12em] text-ink-3 lg:text-canvas">
+          <MapPin aria-hidden className="size-3.5" strokeWidth={1.75} />
+          {dict.hero.trust.map((item, i) => (
+            <span key={item} className="flex items-center gap-3">
+              {i > 0 && <span aria-hidden>·</span>}
+              {item}
+            </span>
+          ))}
+        </p>
+      </Reveal>
+    </HeroStage>
   );
 }
