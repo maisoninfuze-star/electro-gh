@@ -12,6 +12,9 @@ export const dynamic = 'force-dynamic';
  *                 the token is missing from this deployment's environment.
  *   adminEnabled  ADMIN_PASSWORD is present in this deployment's environment.
  *   storeOk       the backend could be read.
+ *   source        'document' once an admin save exists in Blob, else 'seed'.
+ *   access        the Blob store's mode ('public' | 'private'), once learned.
+ *   seedSyncedAt  how far the committed seed has been folded into the document.
  *
  * Vercel applies environment variables only to deployments built after they
  * were added, so the usual reason for 'local' or false here is simply that
@@ -20,16 +23,23 @@ export const dynamic = 'force-dynamic';
 export async function GET() {
   let storeOk = false;
   let published = 0;
+  let source: string | null = null;
+  let access: string | null = null;
+  let seedSyncedAt: string | null = null;
   try {
     const store = await getStore();
     const all = await store.list();
     storeOk = true;
     published = all.filter((p) => p.status === 'published').length;
+    const info = await store.info();
+    source = info.source;
+    access = info.access;
+    seedSyncedAt = info.seedSyncedAt;
   } catch {
     storeOk = false;
   }
   return NextResponse.json(
-    { ok: storeOk, store: storeKind(), storeOk, adminEnabled: adminEnabled(), published },
+    { ok: storeOk, store: storeKind(), storeOk, adminEnabled: adminEnabled(), published, source, access, seedSyncedAt },
     { headers: { 'cache-control': 'no-store' } },
   );
 }

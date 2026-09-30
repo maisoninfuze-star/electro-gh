@@ -1825,36 +1825,44 @@
       "sku": "GH-042",
       "brand": "GE",
       "name": {
-        "fr": "Cuisinière électrique blanche",
-        "en": "White electric range"
+        "fr": "Cuisinière électrique GE à éléments spiralés, blanche",
+        "en": "GE white electric range with coil elements"
       },
       "description": {
-        "fr": "White electric range with four exposed coil elements and a windowed oven door.",
-        "en": "White electric range with four exposed coil elements and a windowed oven door."
+        "fr": "Cuisinière électrique blanche de 30 po avec quatre éléments spiralés, panneau de commande sur le dosseret (quatre boutons et minuterie électronique), porte de four avec hublot et tiroir de rangement.",
+        "en": "30-inch white electric range with four coil elements, backguard controls (four knobs and an electronic timer), windowed oven door and a storage drawer."
       },
       "category": "ranges",
-      "price": 0,
+      "price": 350,
       "condition": "used",
       "inventoryStatus": "in-stock",
       "finish": "white",
       "images": [
         {
           "src": "/inventory/ap-042.webp",
-          "alt": "Cuisinière électrique blanche",
+          "alt": "Cuisinière électrique GE à éléments spiralés, blanche",
           "width": 1600,
           "height": 1600,
           "kind": "studio"
+        },
+        {
+          "src": "/inventory/gh-042-reference.webp",
+          "alt": "Cuisinière électrique GE à éléments spiralés, blanche — photo du fabricant",
+          "width": 1600,
+          "height": 1600,
+          "kind": "reference"
         }
       ],
       "featured": false,
       "deal": false,
-      "status": "draft",
-      "notes": "Aucun prix lisible sur les photos. Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Repères de catalogage : variante A. Détail non traduit : « coil-top ». Brand not confidently readable; no brand guessed from styling. Not established from supplied photos Photos sources : IMG_5645.JPG (réf. catalogue AP-042)\n\n[29 sept 2026] RESTE EN BROUILLON — photo à refaire. L’image ajoute une rangée de 5 boutons en façade ; la vraie GE (IMG_5645) a ses 4 boutons sur le dosseret seulement. Marque GE lue sur la photo d’origine.\n\n[30 sept 2026] Le propriétaire a fourni le 29 sept une photo nette de CETTE cuisinière (GE blanche à éléments spiralés, 4 boutons au dosseret) : ~/Downloads « WhatsApp Image 2026-09-29 at 16.35.17 ». Elle peut remplacer l’image fautive. L’étiquette jaune n’y montre que « $ », sans montant : prix toujours inconnu.",
+      "status": "published",
+      "notes": "Aucun prix lisible sur les photos. Marque non lisible sur les photos — à confirmer sur la plaque signalétique. Numéro de modèle non lisible sur les photos. Repères de catalogage : variante A. Détail non traduit : « coil-top ». Brand not confidently readable; no brand guessed from styling. Not established from supplied photos Photos sources : IMG_5645.JPG (réf. catalogue AP-042)\n\n[29 sept 2026] RESTE EN BROUILLON — photo à refaire. L’image ajoute une rangée de 5 boutons en façade ; la vraie GE (IMG_5645) a ses 4 boutons sur le dosseret seulement. Marque GE lue sur la photo d’origine.\n\n[30 sept 2026] Le propriétaire a fourni le 29 sept une photo nette de CETTE cuisinière (GE blanche à éléments spiralés, 4 boutons au dosseret) : ~/Downloads « WhatsApp Image 2026-09-29 at 16.35.17 ». Elle peut remplacer l’image fautive. L’étiquette jaune n’y montre que « $ », sans montant : prix toujours inconnu.\n\n[30 sept 2026] PUBLIÉ à 350 $ — prix et marque (« General Electric », écrit GE comme sur l’écusson) donnés par le propriétaire. Image principale : la photo du propriétaire du 29 sept, détourée (masque Vision + contour à la main, la plaque « SAMSUNG » et la cuisinière voisine retirées). 2e image : la photo de catalogue du fabricant envoyée par le propriétaire, marquée « photo de référence ». L’ancien rendu (5 boutons inventés) est archivé dans data/photos/superseded/.",
       "sourcePhotos": [
-        "IMG_5645.webp"
+        "IMG_5645.webp",
+        "owner-2026-09-29-ge.webp"
       ],
       "createdAt": "2026-09-20T09:57:00.000Z",
-      "updatedAt": "2026-09-30T16:13:04.675034Z"
+      "updatedAt": "2026-09-30T19:36:28.954950Z"
     },
     {
       "id": "cat-ap-043",

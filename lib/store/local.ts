@@ -96,6 +96,10 @@ export const localStore: InventoryStore = {
     const file = path.join(IMG_DIR, path.basename(url));
     await fs.rm(file, { force: true });
   },
+
+  async info() {
+    return { kind: 'local', source: 'seed', access: null, seedSyncedAt: null };
+  },
 };
 
 /** Seed reader used by the blob backend before its first write. */

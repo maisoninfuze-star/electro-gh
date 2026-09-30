@@ -36,6 +36,18 @@ export interface InventoryStore {
   putImage(name: string, bytes: Buffer, contentType: string): Promise<string>;
   /** Best-effort. A missing image is not an error. */
   deleteImage(url: string): Promise<void>;
+  /** Where the catalogue is coming from right now — for /api/health and the admin. */
+  info(): Promise<StoreInfo>;
+}
+
+export interface StoreInfo {
+  kind: 'local' | 'blob';
+  /** `document` once an admin save exists in Blob; `seed` before that (and always, locally). */
+  source: 'seed' | 'document';
+  /** Blob store access mode, learned on first contact; null until then (or locally). */
+  access: 'public' | 'private' | null;
+  /** Watermark up to which the committed seed has been folded into the document. */
+  seedSyncedAt: string | null;
 }
 
 export class StoreUnavailableError extends Error {
