@@ -54,6 +54,8 @@ export interface StoreInfo {
   seedSyncedAt: string | null;
   /** The document carries the seed baseline the three-way merge needs (see merge.ts). */
   seedBase: boolean;
+  /** Most recent storage failure seen by this server instance, if any. No secrets: SDK error text only. */
+  lastError: string | null;
 }
 
 export class StoreUnavailableError extends Error {

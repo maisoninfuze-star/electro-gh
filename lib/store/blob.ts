@@ -65,6 +65,12 @@ type Access = 'public' | 'private';
  */
 let access: Access | null = null;
 
+/** Last storage failure on this instance, surfaced by /api/health — the runtime logs are not reachable. */
+let lastError: string | null = null;
+const note = (where: string, e: unknown) => {
+  lastError = `${new Date().toISOString()} ${where}: ${e instanceof Error ? `${e.constructor.name}: ${e.message}` : String(e)}`.slice(0, 300);
+};
+
 const READ_TIMEOUT_MS = 6000;
 const timeout = () => AbortSignal.timeout(READ_TIMEOUT_MS);
 
@@ -108,13 +114,30 @@ type ReadResult =
   | { status: 'missing' } // nothing saved yet — the seed is the catalogue
   | { status: 'error' }; // storage did not answer, or the document is unreadable
 
-async function readPrivate(): Promise<ReadResult> {
+/**
+ * The ETag for `ifMatch` must come from the Blob API's own metadata
+ * (`head`), not from the download response's header: the first deployment of
+ * conditional writes used the header and the store rejected every write.
+ * `head` is called BEFORE the download on purpose — if someone writes in
+ * between, our tag is the older one and our write fails safely; the other
+ * order could pair a fresh tag with stale content.
+ */
+async function readPrivate(knownEtag?: string | null): Promise<ReadResult> {
+  let etag = knownEtag;
+  if (etag === undefined) {
+    try {
+      etag = (await head(DOC, { abortSignal: timeout() })).etag || null;
+    } catch (e) {
+      if (e instanceof BlobNotFoundError) return { status: 'missing' };
+      throw e;
+    }
+  }
   const r = await get(DOC, { access: 'private', useCache: false, abortSignal: timeout() });
   if (!r) return { status: 'missing' };
   if (r.statusCode !== 200) return { status: 'error' };
   access = 'private';
   const doc = parseDoc(JSON.parse(await new Response(r.stream).text()));
-  return doc ? { status: 'ok', doc, etag: r.blob.etag || null } : { status: 'error' };
+  return doc ? { status: 'ok', doc, etag } : { status: 'error' };
 }
 
 async function readDoc(): Promise<ReadResult> {
@@ -135,8 +158,9 @@ async function readDoc(): Promise<ReadResult> {
       return doc ? { status: 'ok', doc, etag: meta.etag || null } : { status: 'error' };
     }
     // A private store refuses the plain URL: read through the SDK instead.
-    return await readPrivate();
+    return await readPrivate(meta.etag || null);
   } catch (e) {
+    note('read', e);
     console.error('[store] inventory.json in Blob unreadable — serving the committed seed.', e);
     return { status: 'error' };
   }
@@ -218,6 +242,7 @@ async function persistMerged(cur: Current): Promise<void> {
   try {
     await serial(() => writeDoc(cur.doc, { exists: true, etag: cur.etag }));
   } catch (e) {
+    note('persist', e);
     if (isConflict(e)) return;
     persistBlockedUntil = Date.now() + 60_000;
     console.error('[store] could not persist the merged catalogue — serving it unsaved.', e);
@@ -230,18 +255,31 @@ async function readAll(): Promise<Product[]> {
   return cur.doc.products;
 }
 
-/** Read–modify–write with retries on a lost race. Refuses after a failed read. */
+/**
+ * Read–modify–write with retries on a lost race. Refuses after a failed read.
+ *
+ * A real race changes the document's ETag between attempts. If the store
+ * rejects the SAME tag twice, the precondition itself is not usable here —
+ * and an owner who cannot save at all is worse off than one who might, very
+ * rarely, lose a simultaneous edit — so the write then goes through
+ * unconditionally.
+ */
 function mutate(apply: (doc: InventoryDoc) => void): Promise<void> {
   return serial(async () => {
+    let rejected: string | null | undefined;
     for (let attempt = 0; attempt < 4; attempt++) {
       const cur = await current();
       if (cur.source === 'error') throw new StoreUnavailableError(NOT_SAVED);
       apply(cur.doc);
+      const exists = cur.source === 'ok';
+      const sameTagRejected = exists && rejected !== undefined && rejected === cur.etag;
       try {
-        await writeDoc(cur.doc, { exists: cur.source === 'ok', etag: cur.etag });
+        await writeDoc(cur.doc, { exists, etag: sameTagRejected ? null : cur.etag });
         return;
       } catch (e) {
+        note('save', e);
         if (!isConflict(e)) throw e;
+        rejected = cur.etag;
       }
     }
     throw new StoreUnavailableError(BUSY);
@@ -301,6 +339,7 @@ export const blobStore: InventoryStore = {
       access,
       seedSyncedAt: stored.status === 'ok' ? (stored.doc.seedSyncedAt ?? null) : null,
       seedBase: stored.status === 'ok' ? Boolean(stored.doc.seedBase) : false,
+      lastError,
     };
   },
 };

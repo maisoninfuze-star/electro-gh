@@ -28,6 +28,7 @@ export async function GET() {
   let access: string | null = null;
   let seedSyncedAt: string | null = null;
   let seedBase = false;
+  let lastError: string | null = null;
   try {
     const store = await getStore();
     const all = await store.list();
@@ -38,11 +39,12 @@ export async function GET() {
     access = info.access;
     seedSyncedAt = info.seedSyncedAt;
     seedBase = info.seedBase;
+    lastError = info.lastError;
   } catch {
     storeOk = false;
   }
   return NextResponse.json(
-    { ok: storeOk, store: storeKind(), storeOk, adminEnabled: adminEnabled(), published, source, access, seedSyncedAt, seedBase },
+    { ok: storeOk, store: storeKind(), storeOk, adminEnabled: adminEnabled(), published, source, access, seedSyncedAt, seedBase, lastError },
     { headers: { 'cache-control': 'no-store' } },
   );
 }
