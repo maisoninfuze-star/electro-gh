@@ -689,8 +689,8 @@
       "sku": "GH-S14",
       "brand": "",
       "name": {
-        "fr": "Ensemble laveuse et sécheuse",
-        "en": "Washer and dryer set"
+        "fr": "Ensemble laveuse LG et sécheuse Samsung",
+        "en": "LG washer and Samsung dryer set"
       },
       "description": {
         "fr": "Ensemble laveuse et sécheuse vendu en paire. Dark front-load washer with a circular door and front control panel. White front-load dryer with a black control panel and silver door trim.",
@@ -704,21 +704,21 @@
       "images": [
         {
           "src": "/inventory/gh-s14-pair.webp",
-          "alt": "Ensemble laveuse et sécheuse",
+          "alt": "Ensemble laveuse LG et sécheuse Samsung",
           "width": 1600,
           "height": 1600,
           "kind": "pair"
         },
         {
           "src": "/inventory/ap-069.webp",
-          "alt": "Ensemble laveuse et sécheuse",
+          "alt": "Ensemble laveuse LG et sécheuse Samsung",
           "width": 1600,
           "height": 1600,
           "kind": "studio"
         },
         {
           "src": "/inventory/ap-067.webp",
-          "alt": "Ensemble laveuse et sécheuse",
+          "alt": "Ensemble laveuse LG et sécheuse Samsung",
           "width": 1600,
           "height": 1600,
           "kind": "studio"
@@ -727,12 +727,12 @@
       "featured": false,
       "deal": false,
       "status": "draft",
-      "notes": "Ensemble constitué à partir de deux fiches du catalogue photo (AP-069 laveuse + AP-067 sécheuse). Raison du jumelage : photographiés ensemble, aucun prix visible. AUCUN PRIX visible sur les photos — à saisir avant publication.  Numéros de modèle non lisibles sur les photos. Marques différentes : laveuse , sécheuse Samsung. Photos sources : IMG_5695.JPG, IMG_5695.JPG.",
+      "notes": "Ensemble constitué à partir de deux fiches du catalogue photo (AP-069 laveuse + AP-067 sécheuse). Raison du jumelage : photographiés ensemble, aucun prix visible. AUCUN PRIX visible sur les photos — à saisir avant publication.  Numéros de modèle non lisibles sur les photos. Marques différentes : laveuse , sécheuse Samsung. Photos sources : IMG_5695.JPG, IMG_5695.JPG.\n\n[1 oct 2026] Composition vérifiée sur IMG_5695 en pleine résolution : sécheuse Samsung BLANCHE (console noire, pastille rouge « SALE $350 ») posée sur une laveuse LG graphite TrueSteam / Direct Drive (pastille rouge « SALE $450 »). Les deux étiquettes sont des prix INDIVIDUELS : 350 $ + 450 $. Aucun prix d’ensemble n’est affiché — à confirmer par le propriétaire avant publication (800 $ si vendus ensemble aux prix affichés).",
       "sourcePhotos": [
         "IMG_5695.webp"
       ],
       "createdAt": "2026-09-20T11:47:00.000Z",
-      "updatedAt": "2026-09-20T11:47:00.000Z"
+      "updatedAt": "2026-10-01T17:09:25.868457Z"
     },
     {
       "id": "cat-set-ap-098",
@@ -2454,35 +2454,35 @@
       "featured": false,
       "deal": false,
       "status": "draft",
-      "notes": "Aucun prix lisible sur les photos. Numéro de modèle non lisible sur les photos. Repères de catalogage : variante B. Only the upper appliance is this record. Other appliances in the photo are separate products. Potential look-alike elsewhere in batch. Physical identity requires model/serial label; do not auto-merge or publish duplicate stock. Not established from supplied photos Le magasin vend surtout les laveuses et sécheuses en ensemble — confirmer si cet appareil se vend seul ou avec son partenaire. Photos sources : IMG_5694.JPG (réf. catalogue AP-066)\n\n[29 sept 2026] IDENTITÉ VÉRIFIÉE : la photo d’origine (IMG_5694) montre la sécheuse Samsung ARGENT posée sur la laveuse gris foncé — c’est l’ensemble « B », pas l’ensemble GH-S14. L’image la montre BLANCHE : couleur fausse, photo à refaire.",
+      "notes": "Aucun prix lisible sur les photos. Numéro de modèle non lisible sur les photos. Repères de catalogage : variante B. Only the upper appliance is this record. Other appliances in the photo are separate products. Potential look-alike elsewhere in batch. Physical identity requires model/serial label; do not auto-merge or publish duplicate stock. Not established from supplied photos Le magasin vend surtout les laveuses et sécheuses en ensemble — confirmer si cet appareil se vend seul ou avec son partenaire. Photos sources : IMG_5694.JPG (réf. catalogue AP-066)\n\n[29 sept 2026] IDENTITÉ VÉRIFIÉE : la photo d’origine (IMG_5694) montre la sécheuse Samsung ARGENT posée sur la laveuse gris foncé — c’est l’ensemble « B », pas l’ensemble GH-S14. L’image la montre BLANCHE : couleur fausse, photo à refaire.\n\n[1 oct 2026] Fait partie de l’ensemble « B » avec GH-068 : sécheuse Samsung ARGENT posée sur la laveuse Samsung VRT Steam gris foncé (centre d’IMG_5694). Aucun prix visible sur l’une ou l’autre. À regrouper en un seul ensemble quand le propriétaire donnera le prix.",
       "sourcePhotos": [
         "IMG_5694.webp"
       ],
       "createdAt": "2026-09-20T08:45:00.000Z",
-      "updatedAt": "2026-09-29T10:31:53.463353Z"
+      "updatedAt": "2026-10-01T17:09:25.868457Z"
     },
     {
       "id": "cat-ap-068",
       "slug": "laveuse-frontale-foncee",
       "sku": "GH-068",
-      "brand": "LG",
+      "brand": "Samsung",
       "name": {
-        "fr": "Laveuse frontale foncée",
-        "en": "Dark front-load washer"
+        "fr": "Laveuse frontale Samsung VRT Steam, gris foncé",
+        "en": "Samsung VRT Steam front-load washer, dark grey"
       },
       "description": {
         "fr": "Dark front-load washer with a circular door and front control panel.",
         "en": "Dark front-load washer with a circular door and front control panel."
       },
       "category": "washers",
-      "price": 450,
+      "price": 0,
       "condition": "used",
       "inventoryStatus": "in-stock",
       "finish": "black",
       "images": [
         {
           "src": "/inventory/ap-068.webp",
-          "alt": "Laveuse frontale foncée",
+          "alt": "Laveuse frontale Samsung VRT Steam, gris foncé",
           "width": 1600,
           "height": 1600,
           "kind": "studio"
@@ -2491,12 +2491,12 @@
       "featured": false,
       "deal": false,
       "status": "draft",
-      "notes": "Numéro de modèle non lisible sur les photos. Repères de catalogage : beneath Samsung dryer. Only the lower appliance is this record. Other appliances in the photo are separate products. Potential look-alike elsewhere in batch. Physical identity requires model/serial label; do not auto-merge or publish duplicate stock. Sticker amount transcribed; confirm current price before publishing Le magasin vend surtout les laveuses et sécheuses en ensemble — confirmer si cet appareil se vend seul ou avec son partenaire. Photos sources : IMG_5694.JPG (réf. catalogue AP-068)\n\n[29 sept 2026] RETIRÉ DU SITE (accord du propriétaire, 29 sept) : l’image porte à la fois un écusson SAMSUNG et un écusson LG. Le propriétaire veut aussi retirer cette laveuse seule au profit de l’ensemble GH-S14.",
+      "notes": "Numéro de modèle non lisible sur les photos. Repères de catalogage : beneath Samsung dryer. Only the lower appliance is this record. Other appliances in the photo are separate products. Potential look-alike elsewhere in batch. Physical identity requires model/serial label; do not auto-merge or publish duplicate stock. Sticker amount transcribed; confirm current price before publishing Le magasin vend surtout les laveuses et sécheuses en ensemble — confirmer si cet appareil se vend seul ou avec son partenaire. Photos sources : IMG_5694.JPG (réf. catalogue AP-068)\n\n[29 sept 2026] RETIRÉ DU SITE (accord du propriétaire, 29 sept) : l’image porte à la fois un écusson SAMSUNG et un écusson LG. Le propriétaire veut aussi retirer cette laveuse seule au profit de l’ensemble GH-S14.\n\n[1 oct 2026] IDENTITÉ CORRIGÉE (photos IMG_5694 et IMG_5695 en pleine résolution). Cette fiche est la laveuse SAMSUNG « VRT Steam » gris foncé posée sous la sécheuse Samsung ARGENT, au centre d’IMG_5694 — l’ensemble « B », avec GH-066. Elle n’est PAS la laveuse LG : la marque LG et la pastille « SALE $450 » appartiennent à la laveuse voisine, sous la sécheuse BLANCHE, qui fait partie de l’ensemble GH-S14. Aucun prix n’est lisible sur cette laveuse Samsung : le prix de 450 $ est retiré de la fiche. Ce n’est donc PAS un doublon ; la fiche est conservée. Image toujours fautive (deux écussons) : photo à refaire.",
       "sourcePhotos": [
         "IMG_5694.webp"
       ],
       "createdAt": "2026-09-20T08:39:00.000Z",
-      "updatedAt": "2026-09-29T10:31:53.463353Z"
+      "updatedAt": "2026-10-01T17:09:25.868457Z"
     },
     {
       "id": "cat-ap-070",

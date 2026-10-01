@@ -140,7 +140,8 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
             href="https://b12ventures.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-ink-2 transition-colors duration-300 hover:text-ink"
+            // -my-3.5 keeps the line where it was; min-h-11 gives the link a 44px tap target.
+            className="-my-3.5 inline-flex min-h-11 items-center text-ink-2 transition-colors duration-300 hover:text-ink"
           >
             B12 Ventures
           </a>

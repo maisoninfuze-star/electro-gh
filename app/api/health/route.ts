@@ -24,6 +24,7 @@ export const dynamic = 'force-dynamic';
 export async function GET() {
   let storeOk = false;
   let published = 0;
+  let total = 0;
   let source: string | null = null;
   let access: string | null = null;
   let seedSyncedAt: string | null = null;
@@ -34,6 +35,7 @@ export async function GET() {
     const all = await store.list();
     storeOk = true;
     published = all.filter((p) => p.status === 'published').length;
+    total = all.length;
     const info = await store.info();
     source = info.source;
     access = info.access;
@@ -44,7 +46,7 @@ export async function GET() {
     storeOk = false;
   }
   return NextResponse.json(
-    { ok: storeOk, store: storeKind(), storeOk, adminEnabled: adminEnabled(), published, source, access, seedSyncedAt, seedBase, lastError },
+    { ok: storeOk, store: storeKind(), storeOk, adminEnabled: adminEnabled(), published, total, source, access, seedSyncedAt, seedBase, lastError },
     { headers: { 'cache-control': 'no-store' } },
   );
 }
