@@ -32,8 +32,10 @@ import type { Dictionary } from '@/lib/i18n/dictionaries';
  * twice as wide as it is tall, and these are 4:3.
  */
 const SHOP_PHOTOS = [
+  // The owner picked this one to lead (30 Sept): the wall of front-loaders,
+  // the red set at centre-right.
+  { src: '/media/shop-laveuses.webp', focus: '58% 48%' },
   { src: '/media/shop-vue-ensemble.webp', focus: '60% 42%' },
-  { src: '/media/shop-laveuses.webp', focus: '62% 45%' },
   { src: '/media/shop-cuisinieres.webp', focus: '50% 35%' },
   { src: '/media/shop-refrigerateurs.webp', focus: '50% 45%' },
 ] as const;

@@ -85,8 +85,8 @@ const fr = {
     showcaseGoTo: 'Aller à l’image',
     shopPhotos: [
       // One per photograph in Hero.tsx SHOP_PHOTOS, same order: what it shows.
-      'Vue du magasin : une rangée de cuisinières en acier inoxydable devant des réfrigérateurs',
       'Laveuses et sécheuses frontales empilées, dont un ensemble rouge, dans le magasin',
+      'Vue du magasin : une rangée de cuisinières en acier inoxydable devant des réfrigérateurs',
       'Rangée de cuisinières en acier inoxydable, réfrigérateurs à l’arrière-plan, dans le magasin',
       'Allée de réfrigérateurs blancs face à une rangée de cuisinières blanches, dans le magasin',
     ],
@@ -482,8 +482,8 @@ const en: Dict = {
     showcaseLabel: 'The store and a few appliances',
     showcaseGoTo: 'Go to slide',
     shopPhotos: [
-      'View of the store: a row of stainless steel ranges in front of refrigerators',
       'Stacked front-load washers and dryers, including a red set, in the store',
+      'View of the store: a row of stainless steel ranges in front of refrigerators',
       'A row of stainless steel ranges with refrigerators behind, in the store',
       'An aisle of white refrigerators facing a row of white ranges, in the store',
     ],
