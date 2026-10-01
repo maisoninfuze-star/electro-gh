@@ -98,7 +98,7 @@ export const localStore: InventoryStore = {
   },
 
   async info() {
-    return { kind: 'local', source: 'seed', access: null, seedSyncedAt: null };
+    return { kind: 'local', source: 'seed', access: null, seedSyncedAt: null, seedBase: false };
   },
 };
 

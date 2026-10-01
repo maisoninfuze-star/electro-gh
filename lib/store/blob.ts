@@ -1,4 +1,12 @@
-import { put, del, get, head, list as listBlobs, BlobNotFoundError } from '@vercel/blob';
+import {
+  put,
+  del,
+  get,
+  head,
+  list as listBlobs,
+  BlobNotFoundError,
+  BlobPreconditionFailedError,
+} from '@vercel/blob';
 import type { Product } from '@/lib/catalog/types';
 import { StoreUnavailableError, type InventoryStore, type StoreInfo } from './adapter';
 import { readSeed } from './local';
@@ -12,9 +20,8 @@ type Access = 'public' | 'private';
 /**
  * Vercel Blob backend.
  *
- * One `inventory.json` document at a stable path (`addRandomSuffix: false`,
- * `allowOverwrite: true` — since @vercel/blob 1.0 a put over an existing
- * pathname throws without it), plus one blob per uploaded image.
+ * One `inventory.json` document at a stable path, plus one blob per uploaded
+ * image.
  *
  * PUBLIC OR PRIVATE STORE
  * -----------------------
@@ -25,35 +32,48 @@ type Access = 'public' | 'private';
  * learns the mode on first contact and works with either:
  *
  *   public   the document and images are fetched by URL; images are served
- *            straight from the Blob CDN.
- *   private  the document is read through the SDK (`get`), and images are
- *            stored under a name we choose and streamed through
- *            /uploads/<name> by app/uploads/[name]/route.ts — the same URL
- *            shape the local backend uses.
+ *            straight from the Blob CDN. (The CDN may serve a document up to
+ *            a minute stale; conditional writes keep that from losing data.)
+ *   private  the document is read through the SDK with the cache bypassed,
+ *            and images are stored under a name we choose and streamed
+ *            through /uploads/<name> by app/uploads/[name]/route.ts — the
+ *            same URL shape the local backend uses.
  *
  * THE SEED IS STILL A WRITER
  * --------------------------
- * data/inventory.json keeps changing through deploys (new units, corrected
- * prices) after the admin has started saving. Every read folds seed changes
- * into the document with mergeSeed() — see merge.ts for the rule — and
- * persists the result once per change, so neither writer silently loses
- * work.
+ * data/inventory.json keeps changing through deploys after the admin has
+ * started saving. Every read folds seed changes into the document with a
+ * three-way merge (merge.ts) and persists the result, so neither writer
+ * silently undoes the other.
  *
- * READS NEVER THROW. A storage hiccup of any kind must not take the
- * storefront down: not-found → seed (expected before the first save);
- * anything else → log loudly and serve the seed too. The SDK's error classes
- * do not set `name`, so they are matched with instanceof or by message.
+ * READS NEVER THROW. A storage hiccup must not take the storefront down:
+ * not-found → seed (expected before the first save); anything else,
+ * including a read that takes too long → log and serve the seed. The SDK's
+ * error classes do not set `name`, so they are matched with instanceof or by
+ * message.
  *
- * WRITES NEVER GUESS. "Not found" and "could not read" are different
- * answers: a save that follows a failed read would rebuild the document from
- * the seed plus one change and overwrite everything the owner had saved. So
- * a write after a failed or unparsable read refuses, with a message that says
- * the change was NOT saved, instead of clobbering the catalogue.
+ * WRITES NEVER GUESS, AND NEVER RACE.
+ *  · "Not found" and "could not read" are different answers. A save after a
+ *    failed read would rebuild the document from the seed plus one change
+ *    and overwrite everything the owner had saved — so it refuses instead.
+ *  · Every write is conditional on the ETag it read (`ifMatch`), or on the
+ *    document still not existing. Serverless instances share the store but
+ *    not memory; without this, a page view persisting a merge on one
+ *    instance could overwrite an admin save made on another. A lost race
+ *    re-reads and retries (admin saves) or simply drops (merge persists —
+ *    the next read will redo it).
  */
 let access: Access | null = null;
 
+const READ_TIMEOUT_MS = 6000;
+const timeout = () => AbortSignal.timeout(READ_TIMEOUT_MS);
+
 const isPrivateStoreError = (e: unknown): boolean =>
   e instanceof Error && /private store|private access/i.test(e.message);
+
+const isConflict = (e: unknown): boolean =>
+  e instanceof BlobPreconditionFailedError ||
+  (e instanceof Error && /already exists|precondition/i.test(e.message));
 
 /** Runs a write in the learned mode; on a private-store rejection, learns and retries. */
 async function withAccess<T>(fn: (mode: Access) => Promise<T>): Promise<T> {
@@ -75,81 +95,108 @@ async function withAccess<T>(fn: (mode: Access) => Promise<T>): Promise<T> {
 const parseDoc = (raw: unknown): InventoryDoc | null => {
   const d = raw as Partial<InventoryDoc> | null;
   if (!d || !Array.isArray(d.products)) return null;
-  return { products: d.products, seedSyncedAt: typeof d.seedSyncedAt === 'string' ? d.seedSyncedAt : undefined };
+  return {
+    products: d.products,
+    seedBase: d.seedBase && typeof d.seedBase === 'object' ? d.seedBase : undefined,
+    seedSyncedAt: typeof d.seedSyncedAt === 'string' ? d.seedSyncedAt : undefined,
+  };
 };
 
 type ReadResult =
-  | { status: 'ok'; doc: InventoryDoc }
+  // `etag` is null only if the store returned none; writes then fall back to unconditional.
+  | { status: 'ok'; doc: InventoryDoc; etag: string | null }
   | { status: 'missing' } // nothing saved yet — the seed is the catalogue
   | { status: 'error' }; // storage did not answer, or the document is unreadable
 
+async function readPrivate(): Promise<ReadResult> {
+  const r = await get(DOC, { access: 'private', useCache: false, abortSignal: timeout() });
+  if (!r) return { status: 'missing' };
+  if (r.statusCode !== 200) return { status: 'error' };
+  access = 'private';
+  const doc = parseDoc(JSON.parse(await new Response(r.stream).text()));
+  return doc ? { status: 'ok', doc, etag: r.blob.etag || null } : { status: 'error' };
+}
+
 async function readDoc(): Promise<ReadResult> {
-  let url: string;
   try {
-    url = (await head(DOC)).url;
-  } catch (e) {
-    if (e instanceof BlobNotFoundError) return { status: 'missing' };
-    console.error('[store] Blob head() failed — serving the committed seed.', e);
-    return { status: 'error' };
-  }
-  try {
-    if (access !== 'private') {
-      const res = await fetch(url, { cache: 'no-store' });
-      if (res.ok) {
-        access ??= 'public';
-        const doc = parseDoc(await res.json());
-        return doc ? { status: 'ok', doc } : { status: 'error' };
-      }
-      // A private store refuses the plain URL; fall through to the SDK read.
+    if (access === 'private') return await readPrivate();
+
+    let meta: Awaited<ReturnType<typeof head>>;
+    try {
+      meta = await head(DOC, { abortSignal: timeout() });
+    } catch (e) {
+      if (e instanceof BlobNotFoundError) return { status: 'missing' };
+      throw e;
     }
-    const r = await get(DOC, { access: 'private', useCache: false });
-    if (!r) return { status: 'missing' };
-    if (r.statusCode !== 200) return { status: 'error' };
-    access = 'private';
-    const doc = parseDoc(JSON.parse(await new Response(r.stream).text()));
-    return doc ? { status: 'ok', doc } : { status: 'error' };
+    const res = await fetch(meta.url, { cache: 'no-store', signal: timeout() });
+    if (res.ok) {
+      access ??= 'public';
+      const doc = parseDoc(await res.json());
+      return doc ? { status: 'ok', doc, etag: meta.etag || null } : { status: 'error' };
+    }
+    // A private store refuses the plain URL: read through the SDK instead.
+    return await readPrivate();
   } catch (e) {
     console.error('[store] inventory.json in Blob unreadable — serving the committed seed.', e);
     return { status: 'error' };
   }
 }
 
-const NOT_SAVED =
-  'Le stockage n’a pas répondu : la modification n’a PAS été enregistrée, pour ne pas écraser le catalogue sauvegardé. Réessayez dans un instant.';
-
-async function writeDoc(doc: InventoryDoc): Promise<void> {
-  const body = JSON.stringify(doc, null, 2);
+/**
+ * Conditional write: only if the document is still the one we read
+ * (`ifMatch`), or still absent (`allowOverwrite: false`). If the store gave
+ * no ETag for an existing document, the write is unconditional — losing the
+ * race protection is better than refusing every save.
+ */
+async function writeDoc(doc: InventoryDoc, prior: { exists: boolean; etag: string | null }): Promise<void> {
+  const body = JSON.stringify(doc);
+  const guard = prior.etag ? { ifMatch: prior.etag } : { allowOverwrite: prior.exists };
   await withAccess((mode) =>
     put(DOC, body, {
       access: mode,
       addRandomSuffix: false,
-      allowOverwrite: true,
       contentType: 'application/json',
       cacheControlMaxAge: 0,
+      ...guard,
     }),
   );
 }
 
+const NOT_SAVED =
+  'Le stockage n’a pas répondu : la modification n’a PAS été enregistrée, pour ne pas écraser le catalogue sauvegardé. Réessayez dans un instant.';
+const BUSY =
+  'Le catalogue a été modifié au même moment depuis un autre appareil : la modification n’a PAS été enregistrée. Réessayez.';
+
+interface Current {
+  doc: InventoryDoc;
+  source: ReadResult['status'];
+  etag: string | null;
+  changed: boolean;
+}
+
 /**
- * The catalogue as it should be right now: the stored document with any
- * newer seed changes folded in, or the seed alone before the first save.
+ * The catalogue as it should be right now: the stored document with seed
+ * changes folded in, or the seed alone before the first save.
  */
-async function current(): Promise<{ doc: InventoryDoc; source: ReadResult['status']; changed: boolean }> {
+async function current(): Promise<Current> {
   const seed = await readSeed();
   const stored = await readDoc();
   if (stored.status !== 'ok') {
     const m = mergeSeed({ products: [] }, seed);
-    return { doc: { products: m.products, seedSyncedAt: m.seedSyncedAt }, source: stored.status, changed: false };
+    return {
+      doc: { products: m.products, seedBase: m.seedBase, seedSyncedAt: m.seedSyncedAt },
+      source: stored.status,
+      etag: null,
+      changed: false,
+    };
   }
   const m = mergeSeed(stored.doc, seed);
-  return { doc: { products: m.products, seedSyncedAt: m.seedSyncedAt }, source: 'ok', changed: m.changed };
-}
-
-/** The document a write may build on: the stored one, or the seed only when nothing was ever saved. */
-async function forWrite(): Promise<InventoryDoc> {
-  const { doc, source } = await current();
-  if (source === 'error') throw new StoreUnavailableError(NOT_SAVED);
-  return doc;
+  return {
+    doc: { products: m.products, seedBase: m.seedBase, seedSyncedAt: m.seedSyncedAt },
+    source: 'ok',
+    etag: stored.etag,
+    changed: m.changed,
+  };
 }
 
 let queue: Promise<unknown> = Promise.resolve();
@@ -159,22 +206,46 @@ const serial = <T,>(fn: () => Promise<T>): Promise<T> => {
   return next;
 };
 
-/** Persist a merged document at most once per watermark per instance, never throwing. */
-let persistedFor: string | undefined;
-async function persistMerged(doc: InventoryDoc): Promise<void> {
-  if (persistedFor === doc.seedSyncedAt) return;
-  persistedFor = doc.seedSyncedAt;
+/**
+ * Persist a merged document after a read. Never throws. Losing the race to
+ * another writer is fine — the next read merges again on top of their
+ * version. A real failure backs off for a minute so a broken store does not
+ * add a failing write to every page view.
+ */
+let persistBlockedUntil = 0;
+async function persistMerged(cur: Current): Promise<void> {
+  if (Date.now() < persistBlockedUntil) return;
   try {
-    await serial(() => writeDoc(doc));
+    await serial(() => writeDoc(cur.doc, { exists: true, etag: cur.etag }));
   } catch (e) {
+    if (isConflict(e)) return;
+    persistBlockedUntil = Date.now() + 60_000;
     console.error('[store] could not persist the merged catalogue — serving it unsaved.', e);
   }
 }
 
 async function readAll(): Promise<Product[]> {
-  const { doc, source, changed } = await current();
-  if (source === 'ok' && changed) await persistMerged(doc);
-  return doc.products;
+  const cur = await current();
+  if (cur.source === 'ok' && cur.changed) await persistMerged(cur);
+  return cur.doc.products;
+}
+
+/** Read–modify–write with retries on a lost race. Refuses after a failed read. */
+function mutate(apply: (doc: InventoryDoc) => void): Promise<void> {
+  return serial(async () => {
+    for (let attempt = 0; attempt < 4; attempt++) {
+      const cur = await current();
+      if (cur.source === 'error') throw new StoreUnavailableError(NOT_SAVED);
+      apply(cur.doc);
+      try {
+        await writeDoc(cur.doc, { exists: cur.source === 'ok', etag: cur.etag });
+        return;
+      } catch (e) {
+        if (!isConflict(e)) throw e;
+      }
+    }
+    throw new StoreUnavailableError(BUSY);
+  });
 }
 
 export const blobStore: InventoryStore = {
@@ -186,24 +257,18 @@ export const blobStore: InventoryStore = {
     return (await readAll()).find((p) => p.id === id) ?? null;
   },
 
-  upsert(product) {
-    return serial(async () => {
-      const doc = await forWrite();
+  async upsert(product) {
+    await mutate((doc) => {
       const i = doc.products.findIndex((p) => p.id === product.id);
       if (i >= 0) doc.products[i] = product;
       else doc.products.push(product);
-      await writeDoc(doc);
-      persistedFor = doc.seedSyncedAt;
-      return product;
     });
+    return product;
   },
 
   remove(id) {
-    return serial(async () => {
-      const doc = await forWrite();
+    return mutate((doc) => {
       doc.products = doc.products.filter((p) => p.id !== id);
-      await writeDoc(doc);
-      persistedFor = doc.seedSyncedAt;
     });
   },
 
@@ -229,12 +294,13 @@ export const blobStore: InventoryStore = {
   },
 
   async info(): Promise<StoreInfo> {
-    const { doc, source } = await current();
+    const stored = await readDoc();
     return {
       kind: 'blob',
-      source: source === 'ok' ? 'document' : source === 'error' ? 'seed-fallback' : 'seed',
+      source: stored.status === 'ok' ? 'document' : stored.status === 'error' ? 'seed-fallback' : 'seed',
       access,
-      seedSyncedAt: doc.seedSyncedAt ?? null,
+      seedSyncedAt: stored.status === 'ok' ? (stored.doc.seedSyncedAt ?? null) : null,
+      seedBase: stored.status === 'ok' ? Boolean(stored.doc.seedBase) : false,
     };
   },
 };

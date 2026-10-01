@@ -50,8 +50,10 @@ export interface StoreInfo {
   source: 'seed' | 'document' | 'seed-fallback';
   /** Blob store access mode, learned on first contact; null until then (or locally). */
   access: 'public' | 'private' | null;
-  /** Watermark up to which the committed seed has been folded into the document. */
+  /** Newest seed stamp folded into the document. */
   seedSyncedAt: string | null;
+  /** The document carries the seed baseline the three-way merge needs (see merge.ts). */
+  seedBase: boolean;
 }
 
 export class StoreUnavailableError extends Error {

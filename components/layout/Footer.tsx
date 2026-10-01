@@ -133,6 +133,18 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
         {IS_DEMO_DATA && (
           <p className="mt-4 text-xs text-ink-3">{dict.footer.demoBuild}</p>
         )}
+
+        <p className="mt-4 text-xs text-ink-3">
+          {dict.footer.poweredBy}{' '}
+          <a
+            href="https://b12ventures.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-ink-2 transition-colors duration-300 hover:text-ink"
+          >
+            B12 Ventures
+          </a>
+        </p>
       </div>
     </footer>
   );

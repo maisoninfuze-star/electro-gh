@@ -241,6 +241,7 @@ const fr = {
     contact: 'Nous joindre',
     langs: 'Service en français, en anglais et en arabe.',
     rights: 'Tous droits réservés.',
+    poweredBy: 'Propulsé par',
     demoBuild: 'Site de démonstration — contenu en cours de validation.',
   },
 
@@ -630,6 +631,7 @@ const en: Dict = {
     contact: 'Contact',
     langs: 'Service in French, English and Arabic.',
     rights: 'All rights reserved.',
+    poweredBy: 'Powered by',
     demoBuild: 'Demonstration site — content pending client validation.',
   },
 

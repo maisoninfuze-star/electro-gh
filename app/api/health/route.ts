@@ -15,6 +15,7 @@ export const dynamic = 'force-dynamic';
  *   source        'document' once an admin save exists in Blob, else 'seed'.
  *   access        the Blob store's mode ('public' | 'private'), once learned.
  *   seedSyncedAt  how far the committed seed has been folded into the document.
+ *   seedBase      the document holds the baseline the three-way merge needs.
  *
  * Vercel applies environment variables only to deployments built after they
  * were added, so the usual reason for 'local' or false here is simply that
@@ -26,6 +27,7 @@ export async function GET() {
   let source: string | null = null;
   let access: string | null = null;
   let seedSyncedAt: string | null = null;
+  let seedBase = false;
   try {
     const store = await getStore();
     const all = await store.list();
@@ -35,11 +37,12 @@ export async function GET() {
     source = info.source;
     access = info.access;
     seedSyncedAt = info.seedSyncedAt;
+    seedBase = info.seedBase;
   } catch {
     storeOk = false;
   }
   return NextResponse.json(
-    { ok: storeOk, store: storeKind(), storeOk, adminEnabled: adminEnabled(), published, source, access, seedSyncedAt },
+    { ok: storeOk, store: storeKind(), storeOk, adminEnabled: adminEnabled(), published, source, access, seedSyncedAt, seedBase },
     { headers: { 'cache-control': 'no-store' } },
   );
 }
