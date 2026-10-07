@@ -57,14 +57,17 @@ export interface ProductImage {
    * us show an honest "photo à venir" state instead of a broken frame.
    *   'original'  straight from the store, background not cleaned
    *   'studio'    background removed / normalised, e-commerce ready
+   *   'pair'      both machines of a laundry set in one frame (scripts/pair-image.py)
    *   'placeholder' generic category imagery — NOT this exact unit
-   *   'reference'   the manufacturer's photo of the same model. Shown with a
-   *                 visible "photo de référence" label and NEVER without the
-   *                 real unit's own photo alongside it — a pristine stock
-   *                 image standing alone for a used machine would be a
-   *                 misleading representation.
+   *   'reference'   the manufacturer's photo of the same model. Always shown
+   *                 with a visible label: "photo de référence" when the real
+   *                 unit's own photos are alongside it, and "photo du
+   *                 fabricant — modèle usagé équivalent" when it is the only
+   *                 picture (ProductGallery picks the label). A stock image
+   *                 passed off as the unit itself would be a misleading
+   *                 representation.
    */
-  kind: 'original' | 'studio' | 'placeholder' | 'reference';
+  kind: 'original' | 'studio' | 'pair' | 'placeholder' | 'reference';
 }
 
 /** Free-form spec rows. Localised so EN and FR both read naturally. */

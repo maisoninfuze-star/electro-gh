@@ -127,6 +127,7 @@ export default async function ProductPage({
             label={dict.product.gallery}
             pendingLabel={dict.product.imagePending}
             referenceLabel={dict.product.referenceLabel}
+            referenceOnlyLabel={dict.product.referenceOnlyLabel}
           />
 
           <div className="lg:pt-2">

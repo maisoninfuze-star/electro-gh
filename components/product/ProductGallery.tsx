@@ -21,13 +21,19 @@ export function ProductGallery({
   label,
   pendingLabel,
   referenceLabel,
+  referenceOnlyLabel,
 }: {
   images: ProductImage[];
   label: string;
   pendingLabel: string;
   referenceLabel?: string;
+  /** Shown instead of `referenceLabel` when EVERY image is a manufacturer photo —
+   *  the stock line "the real unit is in the other images" would be false. */
+  referenceOnlyLabel?: string;
 }) {
   const [active, setActive] = useState(0);
+  const onlyReference = images.length > 0 && images.every((i) => i.kind === 'reference');
+  const refLabel = onlyReference ? (referenceOnlyLabel ?? referenceLabel) : referenceLabel;
 
   if (!images.length) {
     return (
@@ -61,7 +67,7 @@ export function ProductGallery({
                 sizes="100vw"
                 className="product-shadow object-contain p-8 pb-12"
               />
-              {image.kind === 'reference' && referenceLabel && <ReferenceNote text={referenceLabel} />}
+              {image.kind === 'reference' && refLabel && <ReferenceNote text={refLabel} />}
             </div>
           ))}
         </div>
@@ -92,7 +98,7 @@ export function ProductGallery({
             sizes="(max-width: 1279px) 50vw, 44vw"
             className="product-shadow object-contain p-12 pb-16"
           />
-          {current.kind === 'reference' && referenceLabel && <ReferenceNote text={referenceLabel} />}
+          {current.kind === 'reference' && refLabel && <ReferenceNote text={refLabel} />}
         </div>
 
         {images.length > 1 && (

@@ -270,51 +270,59 @@
       "sku": "GH-S06",
       "brand": "Samsung",
       "name": {
-        "fr": "Ensemble laveuse et sécheuse Samsung",
-        "en": "Samsung washer and dryer set"
+        "fr": "Ensemble laveuse et sécheuse Samsung à chargement frontal, acier inoxydable foncé",
+        "en": "Samsung front-load washer and dryer set, dark stainless steel"
       },
       "description": {
-        "fr": "Ensemble laveuse et sécheuse vendu en paire. Dark front-load washer with a large glass door and matching pedestal. Dark front-load dryer with a large glass door and matching pedestal.",
-        "en": "Washer and dryer sold as a pair. Dark front-load washer with a large glass door and matching pedestal. Dark front-load dryer with a large glass door and matching pedestal."
+        "fr": "Superbe ensemble Samsung laveuse et sécheuse frontales, en finition stainless foncé, propre et en très bel état.\n\n✨ Caractéristiques :\nLaveuse et sécheuse frontales\nGrande capacité\nFinition stainless foncé\nLaveuse avec porte à chargement frontal et petite porte d’accès intégrée, très pratique\nPeut être installé côte à côte\nDesign moderne et élégant\nAppareils testés et vérifiés par notre technicien\n\nGarantie incluse. Taxes incluses.\nLivraison disponible avec frais supplémentaires.\n\nUn très bel ensemble Samsung, pratique et grande capacité, offert à un excellent prix!",
+        "en": "Superb Samsung front-load washer and dryer set in a dark stainless finish, clean and in very nice condition.\n\n✨ Features:\nFront-load washer and dryer\nLarge capacity\nDark stainless finish\nWasher with a front-loading door and a handy built-in access door\nCan be installed side by side\nModern, elegant design\nAppliances tested and checked by our technician\n\nWarranty included. Taxes included.\nDelivery available for an additional fee.\n\nA very nice Samsung set, practical and large-capacity, offered at an excellent price!"
       },
       "category": "laundry-sets",
-      "price": 899,
+      "price": 850,
       "condition": "used",
       "inventoryStatus": "in-stock",
       "finish": "black",
       "images": [
         {
           "src": "/inventory/gh-s06-pair.webp",
-          "alt": "Ensemble laveuse et sécheuse Samsung",
+          "alt": "Ensemble laveuse et sécheuse Samsung à chargement frontal, acier inoxydable foncé",
           "width": 1600,
           "height": 1600,
           "kind": "pair"
         },
         {
           "src": "/inventory/ap-018.webp",
-          "alt": "Ensemble laveuse et sécheuse Samsung",
+          "alt": "Ensemble laveuse et sécheuse Samsung à chargement frontal, acier inoxydable foncé",
           "width": 1600,
           "height": 1600,
           "kind": "studio"
         },
         {
           "src": "/inventory/ap-017.webp",
-          "alt": "Ensemble laveuse et sécheuse Samsung",
+          "alt": "Ensemble laveuse et sécheuse Samsung à chargement frontal, acier inoxydable foncé",
           "width": 1600,
           "height": 1600,
           "kind": "studio"
+        },
+        {
+          "src": "/inventory/gh-s06-reference.webp",
+          "alt": "Ensemble laveuse et sécheuse Samsung à chargement frontal, acier inoxydable foncé — photo du fabricant",
+          "width": 1600,
+          "height": 1600,
+          "kind": "reference"
         }
       ],
       "featured": false,
       "deal": false,
       "status": "published",
-      "notes": "Ensemble constitué à partir de deux fiches du catalogue photo (AP-018 laveuse + AP-017 sécheuse). Raison du jumelage : même étiquette d'ensemble (899 $). Confirmer que les deux appareils se vendent bien ensemble à ce prix.  Numéros de modèle non lisibles sur les photos. Photos sources : IMG_5427.JPG, IMG_5426.JPG.",
+      "notes": "Ensemble constitué à partir de deux fiches du catalogue photo (AP-018 laveuse + AP-017 sécheuse). Raison du jumelage : même étiquette d'ensemble (899 $). Confirmer que les deux appareils se vendent bien ensemble à ce prix.  Numéros de modèle non lisibles sur les photos. Photos sources : IMG_5427.JPG, IMG_5426.JPG.\n\n[7 oct 2026] Prix 899 → 850 $ et nouvelle description : texte de l’annonce fourni le 6 oct par le propriétaire pour « l’ensemble Samsung stainless foncé AddWash » — c’est cet ensemble (même modèle : laveuse AddWash et sécheuse Samsung en inox noir, IMG_5426/5427). La photo du fabricant envoyée est ajoutée en dernière image, marquée « photo de référence ». Un brouillon « Laveuse sécheuse Samsung en inoxe noir » (850 $, classé par erreur dans Laveuses) créé dans l’admin le 5 oct correspond au même ensemble — à supprimer.",
       "sourcePhotos": [
         "IMG_5427.webp",
-        "IMG_5426.webp"
+        "IMG_5426.webp",
+        "owner-2026-10-06-gh-s06-reference.webp"
       ],
       "createdAt": "2026-09-20T11:55:00.000Z",
-      "updatedAt": "2026-09-20T11:55:00.000Z"
+      "updatedAt": "2026-10-07T15:24:54.224909Z"
     },
     {
       "id": "cat-set-ap-020",
@@ -4260,6 +4268,84 @@
       ],
       "createdAt": "2026-09-29T21:26:05.954087Z",
       "updatedAt": "2026-09-29T21:26:05.954087Z"
+    },
+    {
+      "id": "gh-124",
+      "slug": "refrigerateur-kitchenaid-3-portes-acier-inoxydable-30-po",
+      "sku": "GH-124",
+      "brand": "KitchenAid",
+      "name": {
+        "fr": "Réfrigérateur KitchenAid 3 portes, acier inoxydable, 30 po",
+        "en": "KitchenAid 3-door refrigerator, stainless steel, 30 in."
+      },
+      "description": {
+        "fr": "Très beau réfrigérateur KitchenAid 3 portes en stainless, propre et en excellent état général.\n\n✨ Caractéristiques :\nModèle 3 portes\nLargeur : 30 po\nHauteur : environ 65 ½ à 67 ½ po, selon la configuration\nFinition stainless\nIntérieur propre et bien entretenu\nDesign élégant et pratique\nAppareil testé et vérifié par notre technicien\n\nGarantie incluse. Taxes incluses.\nLivraison disponible avec frais supplémentaires.\n\nUn excellent choix pour une cuisine moderne, à un très bon prix!",
+        "en": "Beautiful KitchenAid 3-door stainless steel refrigerator, clean and in excellent overall condition.\n\n✨ Features:\n3-door model\nWidth: 30 in.\nHeight: about 65 ½ to 67 ½ in., depending on configuration\nStainless steel finish\nClean, well-kept interior\nElegant, practical design\nTested and checked by our technician\n\nWarranty included. Taxes included.\nDelivery available for an additional fee.\n\nAn excellent choice for a modern kitchen, at a very good price!"
+      },
+      "category": "refrigerators",
+      "price": 749,
+      "condition": "used",
+      "inventoryStatus": "in-stock",
+      "finish": "stainless",
+      "images": [
+        {
+          "src": "/inventory/gh-124-reference.webp",
+          "alt": "Réfrigérateur KitchenAid 3 portes, acier inoxydable, 30 po — photo du fabricant",
+          "width": 1600,
+          "height": 1600,
+          "kind": "reference"
+        }
+      ],
+      "featured": false,
+      "deal": false,
+      "status": "published",
+      "notes": "Ajouté le 7 oct 2026 à la demande du propriétaire (texte de l’annonce fourni le 6 oct, repris tel quel sans la ligne de prix). Prix 749 $ donné par le propriétaire. Seule image : la photo du fabricant qu’il a envoyée, affichée avec la mention « photo du fabricant — modèle usagé équivalent ». PHOTO DE L’APPAREIL RÉEL À AJOUTER.",
+      "sourcePhotos": [
+        "owner-2026-10-06-gh-124-reference.webp"
+      ],
+      "createdAt": "2026-10-07T15:24:54.224909Z",
+      "updatedAt": "2026-10-07T15:24:54.224909Z",
+      "dimensions": {
+        "width": 30
+      }
+    },
+    {
+      "id": "gh-125",
+      "slug": "cuisiniere-electrique-ge-a-elements-spirales-acier-inoxydable",
+      "sku": "GH-125",
+      "brand": "GE",
+      "name": {
+        "fr": "Cuisinière électrique GE à éléments spiralés, acier inoxydable",
+        "en": "GE electric range with coil elements, stainless steel"
+      },
+      "description": {
+        "fr": "Cuisinière électrique autoportante en acier inoxydable, à quatre éléments spiralés.\n\n✨ Caractéristiques :\nQuatre éléments spiralés\nCommandes sur le dosseret : quatre boutons et un afficheur électronique (horloge et minuterie)\nPorte de four avec hublot\nTiroir de rangement sous le four\nFinition acier inoxydable, façade noire",
+        "en": "Freestanding stainless steel electric range with four coil elements.\n\n✨ Features:\nFour coil elements\nBackguard controls: four knobs and an electronic display (clock and timer)\nWindowed oven door\nStorage drawer below the oven\nStainless steel finish with a black front"
+      },
+      "category": "ranges",
+      "price": 0,
+      "condition": "used",
+      "inventoryStatus": "in-stock",
+      "finish": "stainless",
+      "images": [
+        {
+          "src": "/inventory/gh-125-reference.webp",
+          "alt": "Cuisinière électrique GE à éléments spiralés, acier inoxydable — photo du fabricant",
+          "width": 1600,
+          "height": 1600,
+          "kind": "reference"
+        }
+      ],
+      "featured": false,
+      "deal": false,
+      "status": "published",
+      "notes": "Ajouté le 7 oct 2026 à la demande du propriétaire. Aucun prix encore → « Prix sur demande ». Description rédigée d’après la photo du fabricant (écusson GE lu sur le dosseret) : seulement ce qui s’y voit. Seule image : cette photo du fabricant, affichée avec la mention « modèle usagé équivalent ». PHOTO DE L’APPAREIL RÉEL À AJOUTER. Un brouillon « Cuisiniere serpentin en stainless » créé dans l’admin le 6 oct correspond au même appareil — à supprimer.",
+      "sourcePhotos": [
+        "owner-2026-10-06-gh-125-reference.webp"
+      ],
+      "createdAt": "2026-10-07T15:24:54.224909Z",
+      "updatedAt": "2026-10-07T15:24:54.224909Z",
+      "priceOnRequest": true
     }
   ]
 }

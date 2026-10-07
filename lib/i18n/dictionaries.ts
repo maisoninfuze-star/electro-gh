@@ -323,6 +323,7 @@ const fr = {
     imagePending: 'Photo à venir',
     referenceBadge: 'Photo de référence',
     referenceLabel: 'Photo de référence du fabricant — l’appareil réel est photographié dans les autres images.',
+    referenceOnlyLabel: 'Photo du fabricant — l’appareil en vente est un modèle usagé équivalent. Venez le voir en magasin.',
     /** `{product}` is substituted at the call site — see lib/i18n/interpolate.ts.
      *  Kept as a plain string, not a function: dictionaries cross the
      *  server/client boundary and functions are not serialisable. */
@@ -712,6 +713,7 @@ const en: Dict = {
     imagePending: 'Photo coming soon',
     referenceBadge: 'Reference photo',
     referenceLabel: 'Manufacturer reference photo — the actual unit is shown in the other images.',
+    referenceOnlyLabel: 'Manufacturer photo — the unit for sale is an equivalent used model. Come see it in store.',
     inquirePrefill:
       "Hello Electro GH, I'm interested in {product}. Is it still available?",
   },

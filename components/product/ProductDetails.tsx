@@ -54,7 +54,8 @@ export function ProductDetails({
     rows.push({
       key: 'description',
       label: dict.product.tabs.description,
-      body: <p className="text-sm leading-relaxed text-ink-2">{product.description[locale]}</p>,
+      // Owners write descriptions as short lines; keep their line breaks.
+      body: <p className="whitespace-pre-line text-sm leading-relaxed text-ink-2">{product.description[locale]}</p>,
     });
   }
 
