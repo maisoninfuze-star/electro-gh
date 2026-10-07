@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import { adminEnabled } from '@/lib/admin/auth';
 import { getStore, storeKind } from '@/lib/store';
+import { readSeed } from '@/lib/store/local';
 
 export const dynamic = 'force-dynamic';
 
@@ -30,12 +31,20 @@ export async function GET() {
   let seedSyncedAt: string | null = null;
   let seedBase = false;
   let lastError: string | null = null;
+  // Products that exist only in the admin's document (created there, never in
+  // the seed): category, status and date only — enough to tell a developer
+  // whether a unit was already added, nothing a visitor couldn't infer.
+  let ownerCreated: { category: string; status: string; createdAt: string }[] = [];
   try {
     const store = await getStore();
     const all = await store.list();
     storeOk = true;
     published = all.filter((p) => p.status === 'published').length;
     total = all.length;
+    const seedIds = new Set((await readSeed()).map((p) => p.id));
+    ownerCreated = all
+      .filter((p) => !seedIds.has(p.id))
+      .map((p) => ({ category: p.category, status: p.status, createdAt: p.createdAt }));
     const info = await store.info();
     source = info.source;
     access = info.access;
@@ -46,7 +55,7 @@ export async function GET() {
     storeOk = false;
   }
   return NextResponse.json(
-    { ok: storeOk, store: storeKind(), storeOk, adminEnabled: adminEnabled(), published, total, source, access, seedSyncedAt, seedBase, lastError },
+    { ok: storeOk, store: storeKind(), storeOk, adminEnabled: adminEnabled(), published, total, source, access, seedSyncedAt, seedBase, lastError, ownerCreated },
     { headers: { 'cache-control': 'no-store' } },
   );
 }
