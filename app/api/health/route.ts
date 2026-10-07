@@ -32,9 +32,9 @@ export async function GET() {
   let seedBase = false;
   let lastError: string | null = null;
   // Products that exist only in the admin's document (created there, never in
-  // the seed): category, status and date only — enough to tell a developer
-  // whether a unit was already added, nothing a visitor couldn't infer.
-  let ownerCreated: { category: string; status: string; createdAt: string }[] = [];
+  // the seed): what they are, so a deploy can tell whether a unit was already
+  // added in the admin before the seed adds it again.
+  let ownerCreated: { category: string; status: string; createdAt: string; name: string; brand: string; price: number }[] = [];
   try {
     const store = await getStore();
     const all = await store.list();
@@ -44,7 +44,7 @@ export async function GET() {
     const seedIds = new Set((await readSeed()).map((p) => p.id));
     ownerCreated = all
       .filter((p) => !seedIds.has(p.id))
-      .map((p) => ({ category: p.category, status: p.status, createdAt: p.createdAt }));
+      .map((p) => ({ category: p.category, status: p.status, createdAt: p.createdAt, name: p.name.fr, brand: p.brand, price: p.price }));
     const info = await store.info();
     source = info.source;
     access = info.access;
