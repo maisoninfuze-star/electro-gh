@@ -4346,6 +4346,147 @@
       "createdAt": "2026-10-07T15:24:54.224909Z",
       "updatedAt": "2026-10-07T15:24:54.224909Z",
       "priceOnRequest": true
+    },
+    {
+      "id": "gh-126",
+      "slug": "refrigerateur-lg-3-portes-acier-inoxydable-noir-33-po",
+      "sku": "GH-126",
+      "brand": "LG",
+      "name": {
+        "fr": "Réfrigérateur LG 3 portes, acier inoxydable noir, 33 po",
+        "en": "LG 3-door refrigerator, black stainless steel, 33 in."
+      },
+      "description": {
+        "fr": "Découvrez ce magnifique réfrigérateur LG à 3 portes, en élégante finition Black Stainless (acier inoxydable noir). Avec son design moderne et raffiné, il ajoutera une touche de sophistication à votre cuisine.\n\nCaractéristiques principales\nMarque : LG\nType : Réfrigérateur à 3 portes avec congélateur inférieur\nCouleur : Black Stainless (acier inoxydable noir)\nLargeur : 33 pouces\nDistributeur de glace : pour plus de commodité au quotidien\nRangement pratique : espace intérieur conçu pour organiser vos aliments et vos boissons\nDesign élégant : finition moderne qui s’harmonise parfaitement avec une cuisine contemporaine\n\nUn excellent choix pour votre cuisine!\n\nProfitez de la qualité et du design LG avec un réfrigérateur élégant, pratique et fonctionnel. Son format de 33 pouces convient parfaitement à ceux qui recherchent un appareil offrant un bel équilibre entre style et praticité.",
+        "en": "Discover this beautiful LG 3-door refrigerator in an elegant Black Stainless finish. With its modern, refined design, it adds a touch of sophistication to your kitchen.\n\nMain features\nBrand: LG\nType: 3-door refrigerator with bottom freezer\nColour: Black Stainless\nWidth: 33 inches\nIce dispenser: for everyday convenience\nPractical storage: an interior designed to organise your food and drinks\nElegant design: a modern finish that blends perfectly with a contemporary kitchen\n\nAn excellent choice for your kitchen!\n\nEnjoy LG quality and design with an elegant, practical and functional refrigerator. Its 33-inch size suits anyone looking for a fine balance between style and practicality."
+      },
+      "category": "refrigerators",
+      "price": 899,
+      "condition": "used",
+      "inventoryStatus": "in-stock",
+      "finish": "black",
+      "images": [
+        {
+          "src": "/inventory/gh-126.webp",
+          "alt": "Réfrigérateur LG 3 portes, acier inoxydable noir, 33 po",
+          "width": 1600,
+          "height": 1600,
+          "kind": "original"
+        },
+        {
+          "src": "/inventory/gh-126-interieur.webp",
+          "alt": "Réfrigérateur LG 3 portes, acier inoxydable noir, 33 po, portes ouvertes",
+          "width": 1600,
+          "height": 1600,
+          "kind": "original"
+        }
+      ],
+      "featured": false,
+      "deal": false,
+      "status": "published",
+      "notes": "Ajouté le 20 oct 2026 (photos « new products/4.jpg » et « lg insisde 2 », texte du propriétaire repris tel quel sans la ligne de prix). Prix 899 $ donné par le propriétaire — l’étiquette jaune visible en haut à gauche de la photo appartient au réfrigérateur VOISIN (599) et celle de droite à l’autre voisin (699). Image : recadrage de la photo réelle (voisins collés des deux côtés, base hors cadre).",
+      "sourcePhotos": [
+        "owner-2026-10-20-lg.webp",
+        "owner-2026-10-20-lg-interieur.webp"
+      ],
+      "createdAt": "2026-10-20T12:40:58.615832Z",
+      "updatedAt": "2026-10-20T12:40:58.615832Z",
+      "dimensions": {
+        "width": 33
+      }
+    },
+    {
+      "id": "gh-127",
+      "slug": "refrigerateur-ge-portes-francaises-acier-inoxydable-33-po",
+      "sku": "GH-127",
+      "brand": "GE",
+      "name": {
+        "fr": "Réfrigérateur GE à portes françaises, acier inoxydable, 33 po",
+        "en": "GE French-door refrigerator, stainless steel, 33 in."
+      },
+      "description": {
+        "fr": "Découvrez ce magnifique réfrigérateur GE en acier inoxydable de 33 pouces, doté de trois portes françaises. Son design moderne et élégant s’intègre parfaitement à toutes les cuisines, tandis que sa configuration pratique offre un excellent espace de rangement pour vos aliments.\n\nCaractéristiques et avantages :\nMarque GE\nLargeur de 33 pouces\nFinition en acier inoxydable\nConfiguration à trois portes françaises\nEspace de rangement pratique et fonctionnel\nAppareil usagé, testé et vérifié par nos techniciens",
+        "en": "Discover this beautiful 33-inch GE stainless steel refrigerator with three French doors. Its modern, elegant design fits any kitchen, and its practical layout offers excellent storage space for your food.\n\nFeatures and benefits:\nGE brand\n33-inch width\nStainless steel finish\nThree-door French-door configuration\nPractical, functional storage space\nUsed appliance, tested and checked by our technicians"
+      },
+      "category": "refrigerators",
+      "price": 699,
+      "condition": "used",
+      "inventoryStatus": "in-stock",
+      "finish": "stainless",
+      "images": [
+        {
+          "src": "/inventory/gh-127.webp",
+          "alt": "Réfrigérateur GE à portes françaises, acier inoxydable, 33 po",
+          "width": 1600,
+          "height": 1600,
+          "kind": "original"
+        },
+        {
+          "src": "/inventory/gh-127-interieur.webp",
+          "alt": "Réfrigérateur GE à portes françaises, acier inoxydable, 33 po, portes ouvertes",
+          "width": 1600,
+          "height": 1600,
+          "kind": "original"
+        }
+      ],
+      "featured": false,
+      "deal": false,
+      "status": "published",
+      "notes": "Ajouté le 20 oct 2026 (photos « 2nd fridge » et « 2nd fridge inside », texte du propriétaire repris tel quel sans la ligne de titre/prix). Prix 699 $ donné par le propriétaire. Écusson GE Profile en haut à droite de la porte. Image : recadrage de la photo réelle.",
+      "sourcePhotos": [
+        "owner-2026-10-20-ge.webp",
+        "owner-2026-10-20-ge-interieur.webp"
+      ],
+      "createdAt": "2026-10-20T12:40:58.615832Z",
+      "updatedAt": "2026-10-20T12:40:58.615832Z",
+      "dimensions": {
+        "width": 33
+      }
+    },
+    {
+      "id": "gh-128",
+      "slug": "lave-vaisselle-whirlpool-acier-inoxydable-commandes-sur-le-dessus",
+      "sku": "GH-128",
+      "brand": "Whirlpool",
+      "name": {
+        "fr": "Lave-vaisselle Whirlpool en acier inoxydable, commandes sur le dessus",
+        "en": "Whirlpool stainless steel dishwasher, top controls"
+      },
+      "description": {
+        "fr": "Lave-vaisselle encastrable Whirlpool en acier inoxydable, avec poignée courbée en façade et commandes sur le dessus de la porte (façade lisse, sans boutons apparents).\n\nCaractéristiques :\nCuve en acier inoxydable\nDeux paniers coulissants et panier à ustensiles\nFaçade en acier inoxydable, poignée barre\nAppareil usagé, testé et vérifié par nos techniciens",
+        "en": "Whirlpool built-in stainless steel dishwasher with a curved front handle and controls on the top edge of the door (smooth front, no visible buttons).\n\nFeatures:\nStainless steel tub\nTwo sliding racks and a cutlery basket\nStainless steel front with bar handle\nUsed appliance, tested and checked by our technicians"
+      },
+      "category": "dishwashers",
+      "price": 350,
+      "condition": "used",
+      "inventoryStatus": "in-stock",
+      "finish": "stainless",
+      "images": [
+        {
+          "src": "/inventory/gh-128.webp",
+          "alt": "Lave-vaisselle Whirlpool en acier inoxydable, commandes sur le dessus",
+          "width": 1600,
+          "height": 1600,
+          "kind": "studio"
+        },
+        {
+          "src": "/inventory/gh-128-interieur.webp",
+          "alt": "Lave-vaisselle Whirlpool en acier inoxydable, commandes sur le dessus, porte ouverte",
+          "width": 1600,
+          "height": 1600,
+          "kind": "original"
+        }
+      ],
+      "featured": false,
+      "deal": false,
+      "status": "published",
+      "notes": "Ajouté le 20 oct 2026 (photos « dishwasher » et « dishwasher inside »). Prix 350 $ donné par le propriétaire ET lisible sur l’étiquette jaune collée sur CET appareil. Écusson Whirlpool au bas de la porte. Description rédigée d’après les photos. Image principale : masque Vision + rectangle à la main sur la photo réelle.",
+      "sourcePhotos": [
+        "owner-2026-10-20-dw.webp",
+        "owner-2026-10-20-dw-interieur.webp"
+      ],
+      "createdAt": "2026-10-20T12:40:58.615832Z",
+      "updatedAt": "2026-10-20T12:40:58.615832Z"
     }
   ]
 }
