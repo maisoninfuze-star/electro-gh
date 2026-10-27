@@ -8,14 +8,55 @@ import type { ProductImage } from '@/lib/catalog/types';
  * PHOTOS
  * ======
  * Multi-file input with `capture="environment"`, so on a phone the owner taps
- * once and the rear camera opens — photograph the machine, done. Files go to
- * /api/admin/upload immediately (resized to WebP there), and the returned
- * URLs are kept in a hidden `images` field the form submits as JSON.
+ * once and the rear camera opens — photograph the machine, done. Each photo
+ * is shrunk IN THE BROWSER (longest side 2000px, JPEG) and sent on its own
+ * to /api/admin/upload, which re-encodes it to WebP; the returned URLs are
+ * kept in a hidden `images` field the form submits as JSON.
+ *
+ * Why shrink here, when the server resizes anyway: Vercel refuses any request
+ * body over 4.5 MB with "413 FUNCTION_PAYLOAD_TOO_LARGE" before our code
+ * runs. A phone photo is 3–6 MB and the owner selects several at once, so
+ * from 15 Sept to 27 Oct 2026 not one upload ever reached the server. A
+ * shrunk photo is ~300 KB; one request per photo keeps each well under the
+ * limit even if the browser cannot decode a file and sends it as is.
  *
  * Order matters: the first photo is the card image everywhere. ◀ ▶ move a
  * photo; the trash removes it from the list, and the server deletes the file
  * on save.
  */
+/** Longest side of what the browser sends; the server fits inside 1600×2000 anyway. */
+const MAX_SIDE = 2000;
+
+/**
+ * Re-encode a photo in the browser so the request stays far below Vercel's
+ * 4.5 MB body limit. EXIF orientation is applied by the decoder
+ * (`imageOrientation: 'from-image'`), so the server sees an upright image.
+ * If the browser cannot decode the file (an unusual format), the original is
+ * sent and the server answers 413 if it is too big — reported per file.
+ */
+async function shrink(file: File): Promise<File> {
+  if (!file.type.startsWith('image/')) return file;
+  try {
+    const bitmap = await createImageBitmap(file, { imageOrientation: 'from-image' });
+    const scale = Math.min(1, MAX_SIDE / Math.max(bitmap.width, bitmap.height));
+    const w = Math.round(bitmap.width * scale);
+    const h = Math.round(bitmap.height * scale);
+    const canvas = document.createElement('canvas');
+    canvas.width = w;
+    canvas.height = h;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return file;
+    ctx.drawImage(bitmap, 0, 0, w, h);
+    bitmap.close();
+    const blob = await new Promise<Blob | null>((resolve) => canvas.toBlob(resolve, 'image/jpeg', 0.9));
+    if (!blob) return file;
+    const name = file.name.replace(/\.[^.]+$/, '') + '.jpg';
+    return new File([blob], name, { type: 'image/jpeg' });
+  } catch {
+    return file;
+  }
+}
+
 export function ImageUploader({ initial, name = 'images' }: { initial: ProductImage[]; name?: string }) {
   const [images, setImages] = useState<ProductImage[]>(initial);
   const [busy, setBusy] = useState(false);
@@ -46,20 +87,38 @@ export function ImageUploader({ initial, name = 'images' }: { initial: ProductIm
   const toggleReference = (i: number) =>
     setImages((cur) => cur.map((img, k) => (k === i ? { ...img, kind: img.kind === 'reference' ? 'original' : 'reference' } : img)));
 
+  const [progress, setProgress] = useState<string | null>(null);
+
   async function upload(files: FileList | null) {
     if (!files || files.length === 0) return;
     setBusy(true); setError(null);
+    const list = Array.from(files);
+    const failed: string[] = [];
     try {
-      const fd = new FormData();
-      for (const f of Array.from(files)) fd.append('files', f);
-      const res = await fetch('/api/admin/upload', { method: 'POST', body: fd });
-      const json = (await res.json()) as { images?: ProductImage[]; error?: string };
-      if (!res.ok || !json.images) throw new Error(json.error ?? 'Téléversement impossible.');
-      setImages((cur) => [...cur, ...json.images!.map((i) => ({ ...i, alt: '' }))]);
+      for (let n = 0; n < list.length; n++) {
+        setProgress(list.length > 1 ? `Envoi ${n + 1}/${list.length}…` : 'Envoi…');
+        const file = await shrink(list[n]);
+        const fd = new FormData();
+        fd.append('files', file, file.name);
+        const res = await fetch('/api/admin/upload', { method: 'POST', body: fd });
+        if (res.status === 413) {
+          failed.push(`${list[n].name} : trop lourde (${(file.size / 1e6).toFixed(1)} Mo) même après réduction.`);
+          continue;
+        }
+        const json = (await res.json().catch(() => ({}))) as { images?: ProductImage[]; error?: string };
+        if (!res.ok || !json.images) {
+          failed.push(`${list[n].name} : ${json.error ?? `erreur ${res.status}`}`);
+          continue;
+        }
+        const added = json.images.map((i) => ({ ...i, alt: '' }));
+        setImages((cur) => [...cur, ...added]);
+      }
+      if (failed.length) setError(failed.join(' · '));
     } catch (e) {
       setError(e instanceof Error ? e.message : 'Téléversement impossible.');
     } finally {
       setBusy(false);
+      setProgress(null);
       if (inputRef.current) inputRef.current.value = '';
     }
   }
@@ -116,7 +175,7 @@ export function ImageUploader({ initial, name = 'images' }: { initial: ProductIm
 
         <label className="flex aspect-[4/5] cursor-pointer flex-col items-center justify-center gap-2 border border-dashed border-line-strong text-ink-2 hover:border-ink hover:text-ink">
           {busy ? <Loader2 className="size-6 animate-spin" strokeWidth={1.8} /> : <Camera className="size-6" strokeWidth={1.6} />}
-          <span className="text-xs font-medium">{busy ? 'Envoi…' : 'Photo'}</span>
+          <span className="text-xs font-medium">{busy ? (progress ?? 'Envoi…') : 'Photo'}</span>
           <input
             ref={inputRef}
             type="file"
