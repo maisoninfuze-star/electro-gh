@@ -34,20 +34,45 @@ const MAX_SIDE = 2000;
  * If the browser cannot decode the file (an unusual format), the original is
  * sent and the server answers 413 if it is too big — reported per file.
  */
-async function shrink(file: File): Promise<File> {
-  if (!file.type.startsWith('image/')) return file;
+async function decode(file: File): Promise<ImageBitmap | HTMLImageElement> {
   try {
-    const bitmap = await createImageBitmap(file, { imageOrientation: 'from-image' });
-    const scale = Math.min(1, MAX_SIDE / Math.max(bitmap.width, bitmap.height));
-    const w = Math.round(bitmap.width * scale);
-    const h = Math.round(bitmap.height * scale);
+    return await createImageBitmap(file, { imageOrientation: 'from-image' });
+  } catch {
+    // Older Safari: no option support, or no createImageBitmap at all. An
+    // <img> decodes anything the browser can display (HEIC included on iOS)
+    // and applies EXIF orientation itself.
+    const url = URL.createObjectURL(file);
+    try {
+      const img = new Image();
+      img.decoding = 'async';
+      await new Promise<void>((resolve, reject) => {
+        img.onload = () => resolve();
+        img.onerror = () => reject(new Error('decode'));
+        img.src = url;
+      });
+      return img;
+    } finally {
+      URL.revokeObjectURL(url);
+    }
+  }
+}
+
+async function shrink(file: File): Promise<File> {
+  if (!file.type.startsWith('image/') && !/\.(heic|heif|jpe?g|png|webp)$/i.test(file.name)) return file;
+  try {
+    const src = await decode(file);
+    const sw = 'naturalWidth' in src ? src.naturalWidth : src.width;
+    const sh = 'naturalHeight' in src ? src.naturalHeight : src.height;
+    const scale = Math.min(1, MAX_SIDE / Math.max(sw, sh));
+    const w = Math.round(sw * scale);
+    const h = Math.round(sh * scale);
     const canvas = document.createElement('canvas');
     canvas.width = w;
     canvas.height = h;
     const ctx = canvas.getContext('2d');
     if (!ctx) return file;
-    ctx.drawImage(bitmap, 0, 0, w, h);
-    bitmap.close();
+    ctx.drawImage(src, 0, 0, w, h);
+    if ('close' in src) src.close();
     const blob = await new Promise<Blob | null>((resolve) => canvas.toBlob(resolve, 'image/jpeg', 0.9));
     if (!blob) return file;
     const name = file.name.replace(/\.[^.]+$/, '') + '.jpg';

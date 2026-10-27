@@ -29,8 +29,8 @@ export const dynamic = 'force-dynamic';
  * logs; this answers "which step" from the outside. The probe writes one tiny
  * blob under the images prefix and deletes it again.
  */
-async function probeUpload(): Promise<{ sharp: string; store: string }> {
-  const out = { sharp: 'skipped', store: 'skipped' };
+async function probeUpload(): Promise<{ sharp: string; store: string; serve: string }> {
+  const out = { sharp: 'skipped', store: 'skipped', serve: 'skipped' };
   let bytes: Buffer | null = null;
   try {
     const sharp = (await import('sharp')).default;
@@ -43,8 +43,20 @@ async function probeUpload(): Promise<{ sharp: string; store: string }> {
     const store = await getStore();
     const name = `gh-probe-${Date.now().toString(36)}.webp`;
     const url = await store.putImage(name, bytes ?? Buffer.from('probe'), 'image/webp');
-    await store.deleteImage(url);
     out.store = `ok (${url})`;
+    try {
+      // Read it back the way /uploads/<name> does, so a broken serving path shows here too.
+      if (url.startsWith('/uploads/')) {
+        const { readImage } = await import('@/lib/store/blob');
+        const img = await readImage(url.slice('/uploads/'.length));
+        out.serve = img ? `ok (${(await new Response(img.stream).arrayBuffer()).byteLength} B, ${img.contentType})` : 'FAIL: not found when read back';
+      } else {
+        const res = await fetch(url);
+        out.serve = res.ok ? `ok (${res.headers.get('content-length')} B)` : `FAIL: ${res.status}`;
+      }
+    } finally {
+      await store.deleteImage(url);
+    }
   } catch (e) {
     out.store = `FAIL: ${e instanceof Error ? `${e.constructor.name}: ${e.message}` : String(e)}`.slice(0, 300);
   }
