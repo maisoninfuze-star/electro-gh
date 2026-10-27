@@ -66,7 +66,9 @@ export async function POST(req: Request) {
     }
     return NextResponse.json({ images: out });
   } catch (e) {
-    const message = e instanceof StoreUnavailableError ? e.message : 'Téléversement impossible.';
+    // Admin-only surface: name the cause — the runtime logs are not reachable.
+    const detail = e instanceof Error ? ` (${e.constructor.name}: ${e.message.slice(0, 200)})` : '';
+    const message = e instanceof StoreUnavailableError ? e.message : `Téléversement impossible.${detail}`;
     if (!(e instanceof StoreUnavailableError)) console.error('[upload]', e);
     return NextResponse.json({ error: message }, { status: 500 });
   }

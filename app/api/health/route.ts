@@ -22,7 +22,36 @@ export const dynamic = 'force-dynamic';
  * were added, so the usual reason for 'local' or false here is simply that
  * nobody has redeployed since setting them.
  */
-export async function GET() {
+/**
+ * `?probe=1` additionally exercises the two steps an admin photo upload needs
+ * — sharp (image re-encoding) and a write to the image store — and reports
+ * each step's outcome. Uploads were failing for the owner with no reachable
+ * logs; this answers "which step" from the outside. The probe writes one tiny
+ * blob under the images prefix and deletes it again.
+ */
+async function probeUpload(): Promise<{ sharp: string; store: string }> {
+  const out = { sharp: 'skipped', store: 'skipped' };
+  let bytes: Buffer | null = null;
+  try {
+    const sharp = (await import('sharp')).default;
+    bytes = await sharp({ create: { width: 8, height: 8, channels: 3, background: '#d3121c' } }).webp().toBuffer();
+    out.sharp = `ok (${bytes.length} B)`;
+  } catch (e) {
+    out.sharp = `FAIL: ${e instanceof Error ? `${e.constructor.name}: ${e.message}` : String(e)}`.slice(0, 300);
+  }
+  try {
+    const store = await getStore();
+    const name = `gh-probe-${Date.now().toString(36)}.webp`;
+    const url = await store.putImage(name, bytes ?? Buffer.from('probe'), 'image/webp');
+    await store.deleteImage(url);
+    out.store = `ok (${url})`;
+  } catch (e) {
+    out.store = `FAIL: ${e instanceof Error ? `${e.constructor.name}: ${e.message}` : String(e)}`.slice(0, 300);
+  }
+  return out;
+}
+
+export async function GET(req: Request) {
   let storeOk = false;
   let published = 0;
   let total = 0;
@@ -54,8 +83,9 @@ export async function GET() {
   } catch {
     storeOk = false;
   }
+  const probe = new URL(req.url).searchParams.get('probe') ? await probeUpload() : undefined;
   return NextResponse.json(
-    { ok: storeOk, store: storeKind(), storeOk, adminEnabled: adminEnabled(), published, total, source, access, seedSyncedAt, seedBase, lastError, ownerCreated },
+    { ok: storeOk, store: storeKind(), storeOk, adminEnabled: adminEnabled(), published, total, source, probe, access, seedSyncedAt, seedBase, lastError, ownerCreated },
     { headers: { 'cache-control': 'no-store' } },
   );
 }
