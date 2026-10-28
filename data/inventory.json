@@ -4487,6 +4487,189 @@
       ],
       "createdAt": "2026-10-20T12:40:58.615832Z",
       "updatedAt": "2026-10-20T12:40:58.615832Z"
+    },
+    {
+      "id": "gh-129",
+      "slug": "refrigerateur-maytag-portes-francaises-acier-inoxydable-30-po",
+      "sku": "GH-129",
+      "brand": "Maytag",
+      "name": {
+        "fr": "Réfrigérateur Maytag à portes françaises, acier inoxydable, 30 po",
+        "en": "Maytag French-door refrigerator, stainless steel, 30 in."
+      },
+      "description": {
+        "fr": "Réfrigérateur Maytag au design moderne et élégant, avec portes françaises, congélateur inférieur et distributeur d’eau extérieur.\n\nCaractéristiques :\nMarque : Maytag\nCouleur : Acier inoxydable\nLargeur : 30 pouces\nHauteur : 67 pouces\nProfondeur : 27,5 pouces\nConfiguration : Portes françaises avec congélateur en bas\nDistributeur d’eau : Oui\nÉtat : Usagé\n\nAppareil vérifié par notre technicien. Garantie de 30 jours incluse.\n\nContactez-nous pour connaître le prix et les options de livraison.",
+        "en": "Maytag refrigerator with a modern, elegant design: French doors, bottom freezer and an exterior water dispenser.\n\nFeatures:\nBrand: Maytag\nColour: Stainless steel\nWidth: 30 inches\nHeight: 67 inches\nDepth: 27.5 inches\nConfiguration: French doors with bottom freezer\nWater dispenser: Yes\nCondition: Used\n\nChecked by our technician. 30-day warranty included.\n\nContact us for the price and delivery options."
+      },
+      "category": "refrigerators",
+      "price": 0,
+      "condition": "used",
+      "inventoryStatus": "in-stock",
+      "finish": "stainless",
+      "images": [
+        {
+          "src": "/inventory/gh-129.webp",
+          "alt": "Réfrigérateur Maytag à portes françaises, acier inoxydable, 30 po",
+          "width": 1600,
+          "height": 1600,
+          "kind": "studio"
+        },
+        {
+          "src": "/inventory/gh-129-magasin.webp",
+          "alt": "Réfrigérateur Maytag à portes françaises, acier inoxydable, 30 po, en magasin",
+          "width": 1600,
+          "height": 1600,
+          "kind": "original"
+        },
+        {
+          "src": "/inventory/gh-129-interieur.webp",
+          "alt": "Réfrigérateur Maytag à portes françaises, acier inoxydable, 30 po, portes ouvertes",
+          "width": 1600,
+          "height": 1600,
+          "kind": "original"
+        },
+        {
+          "src": "/inventory/gh-129-interieur-2.webp",
+          "alt": "Réfrigérateur Maytag à portes françaises, acier inoxydable, 30 po, intérieur",
+          "width": 1600,
+          "height": 1600,
+          "kind": "original"
+        }
+      ],
+      "featured": false,
+      "deal": false,
+      "status": "published",
+      "notes": "Ajouté le 28 oct 2026. Texte du propriétaire repris tel quel. Aucun prix donné → « Prix sur demande » (l’étiquette jaune 699 de la photo est sur le réfrigérateur VOISIN). Image principale : rendu Higgsfield (GPT Image 2.5) à partir de la photo réelle, vérifié conforme (badge, distributeur, poignées, tiroir). Les photos réelles suivent dans la galerie.",
+      "sourcePhotos": [
+        "owner-2026-10-28-maytag.webp",
+        "owner-2026-10-28-maytag-int1.webp",
+        "owner-2026-10-28-maytag-int2.webp"
+      ],
+      "createdAt": "2026-10-28T15:51:54.601131Z",
+      "updatedAt": "2026-10-28T15:51:54.601131Z",
+      "priceOnRequest": true,
+      "dimensions": {
+        "width": 30,
+        "height": 67,
+        "depth": 27.5
+      }
+    },
+    {
+      "id": "gh-130",
+      "slug": "cuisiniere-electrique-lg-convection-acier-inoxydable",
+      "sku": "GH-130",
+      "brand": "LG",
+      "name": {
+        "fr": "Cuisinière électrique LG à convection, acier inoxydable",
+        "en": "LG convection electric range, stainless steel"
+      },
+      "description": {
+        "fr": "Très belle cuisinière LG en acier inoxydable (stainless steel), propre et bien entretenue !\n\n✅ Marque : LG\n✅ Fini stainless steel élégant et moderne\n✅ Four à convection\n✅ Fonction autonettoyante\n✅ Très propre et belle apparence\n\n🏡 Parfaite pour donner un look moderne à votre cuisine !",
+        "en": "Very nice LG stainless steel range, clean and well maintained!\n\n✅ Brand: LG\n✅ Elegant, modern stainless steel finish\n✅ Convection oven\n✅ Self-cleaning function\n✅ Very clean, great appearance\n\n🏡 Perfect for giving your kitchen a modern look!"
+      },
+      "category": "ranges",
+      "price": 599,
+      "condition": "used",
+      "inventoryStatus": "in-stock",
+      "finish": "stainless",
+      "images": [
+        {
+          "src": "/inventory/gh-130.webp",
+          "alt": "Cuisinière électrique LG à convection, acier inoxydable",
+          "width": 1600,
+          "height": 1600,
+          "kind": "studio"
+        },
+        {
+          "src": "/inventory/gh-130-magasin.webp",
+          "alt": "Cuisinière électrique LG à convection, acier inoxydable, en magasin",
+          "width": 1600,
+          "height": 1600,
+          "kind": "original"
+        },
+        {
+          "src": "/inventory/gh-130-four.webp",
+          "alt": "Cuisinière électrique LG à convection, acier inoxydable, four ouvert",
+          "width": 1600,
+          "height": 1600,
+          "kind": "original"
+        }
+      ],
+      "featured": false,
+      "deal": false,
+      "status": "published",
+      "notes": "Ajouté le 28 oct 2026. Texte du propriétaire repris sans la ligne de prix ni l’appel « écrivez-moi en privé » (le site a ses propres boutons). Prix 599 $ donné par le propriétaire. Panneau « ThinQ », 5 éléments, four à convection (ventilateur visible sur la photo du four). Image principale : rendu Higgsfield à partir de la photo réelle, vérifié.",
+      "sourcePhotos": [
+        "owner-2026-10-28-lg-range.webp",
+        "owner-2026-10-28-lg-range-four.webp"
+      ],
+      "createdAt": "2026-10-28T15:51:54.601131Z",
+      "updatedAt": "2026-10-28T15:51:54.601131Z"
+    },
+    {
+      "id": "gh-131",
+      "slug": "refrigerateur-lg-portes-francaises-distributeur-acier-inoxydable-30-po",
+      "sku": "GH-131",
+      "brand": "LG",
+      "name": {
+        "fr": "Réfrigérateur LG à portes françaises avec distributeur, acier inoxydable, 30 po",
+        "en": "LG French-door refrigerator with dispenser, stainless steel, 30 in."
+      },
+      "description": {
+        "fr": "Vous cherchez un beau réfrigérateur pour votre cuisine ? Découvrez ce magnifique modèle à 3 portes françaises, au fini stainless steel, élégant et pratique !\n\n✅ 3 portes françaises\n✅ Fini stainless steel\n✅ Largeur : 30 pouces\n✅ Hauteur : 67,5 pouces\n✅ Profondeur : 27 pouces\n\n📏 Dimensions : 30 po L × 67,5 po H × 27 po P",
+        "en": "Looking for a beautiful refrigerator for your kitchen? Discover this gorgeous 3-door French-door model in a stainless steel finish, elegant and practical!\n\n✅ 3 French doors\n✅ Stainless steel finish\n✅ Width: 30 inches\n✅ Height: 67.5 inches\n✅ Depth: 27 inches\n\n📏 Dimensions: 30 in. W × 67.5 in. H × 27 in. D"
+      },
+      "category": "refrigerators",
+      "price": 799,
+      "condition": "used",
+      "inventoryStatus": "in-stock",
+      "finish": "stainless",
+      "images": [
+        {
+          "src": "/inventory/gh-131.webp",
+          "alt": "Réfrigérateur LG à portes françaises avec distributeur, acier inoxydable, 30 po",
+          "width": 1600,
+          "height": 1600,
+          "kind": "studio"
+        },
+        {
+          "src": "/inventory/gh-131-magasin.webp",
+          "alt": "Réfrigérateur LG à portes françaises avec distributeur, acier inoxydable, 30 po, en magasin",
+          "width": 1600,
+          "height": 1600,
+          "kind": "original"
+        },
+        {
+          "src": "/inventory/gh-131-interieur.webp",
+          "alt": "Réfrigérateur LG à portes françaises avec distributeur, acier inoxydable, 30 po, portes ouvertes",
+          "width": 1600,
+          "height": 1600,
+          "kind": "original"
+        },
+        {
+          "src": "/inventory/gh-131-congelateur.webp",
+          "alt": "Réfrigérateur LG à portes françaises avec distributeur, acier inoxydable, 30 po, tiroir congélateur",
+          "width": 1600,
+          "height": 1600,
+          "kind": "original"
+        }
+      ],
+      "featured": false,
+      "deal": false,
+      "status": "published",
+      "notes": "Ajouté le 28 oct 2026. Texte du propriétaire repris sans la ligne « contactez-nous pour le prix » puisqu’il a ensuite donné le prix : 799 $. Distributeur d’eau/glace visible sur la photo (non mentionné dans son texte, ajouté au titre seulement). Image principale : rendu Higgsfield à partir de la photo réelle, vérifié.",
+      "sourcePhotos": [
+        "owner-2026-10-28-lg-fridge.webp",
+        "owner-2026-10-28-lg-fridge-int.webp",
+        "owner-2026-10-28-lg-fridge-cong.webp"
+      ],
+      "createdAt": "2026-10-28T15:51:54.601131Z",
+      "updatedAt": "2026-10-28T15:51:54.601131Z",
+      "dimensions": {
+        "width": 30,
+        "height": 67.5,
+        "depth": 27
+      }
     }
   ]
 }
