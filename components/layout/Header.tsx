@@ -112,7 +112,7 @@ export function Header({
         {dict.common.skipToContent}
       </a>
 
-      <NoticeBar dict={dict} />
+      <NoticeBar dict={dict} locale={locale} />
 
       <header
         className={cx(

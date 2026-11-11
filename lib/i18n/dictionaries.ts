@@ -164,10 +164,10 @@ const fr = {
   },
 
   notice: {
-    before: 'Nous recevons des électroménagers ',
-    brand: 'Fisher & Paykel',
-    after: '.',
-    cta: 'Appelez pour vérifier',
+    before: 'Vente du Black Friday — jusqu’à ',
+    brand: '50 %',
+    after: ' de rabais en magasin. Venez vite !',
+    cta: 'Nos magasins',
   },
 
   packageOffer: {
@@ -563,10 +563,10 @@ const en: Dict = {
   },
 
   notice: {
-    before: 'We receive ',
-    brand: 'Fisher & Paykel',
-    after: ' appliances.',
-    cta: 'Call to check',
+    before: 'Black Friday sale — up to ',
+    brand: '50% off',
+    after: ' in store. Come in soon!',
+    cta: 'Our stores',
   },
 
   packageOffer: {
