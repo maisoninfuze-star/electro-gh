@@ -164,9 +164,12 @@ const fr = {
   },
 
   notice: {
-    before: 'Vente du Black Friday — jusqu’à ',
-    brand: '50 %',
-    after: ' de rabais en magasin. Venez vite !',
+    eyebrow: 'En magasin seulement',
+    title: 'Black Friday',
+    figure: '50 %',
+    figureLabel: 'jusqu’à',
+    after: 'de rabais',
+    tail: 'Venez vite !',
     cta: 'Nos magasins',
   },
 
@@ -563,9 +566,12 @@ const en: Dict = {
   },
 
   notice: {
-    before: 'Black Friday sale — up to ',
-    brand: '50% off',
-    after: ' in store. Come in soon!',
+    eyebrow: 'In store only',
+    title: 'Black Friday',
+    figure: '50%',
+    figureLabel: 'up to',
+    after: 'off',
+    tail: 'Come in soon!',
     cta: 'Our stores',
   },
 
