@@ -51,6 +51,7 @@ export function HeroStage({
   locale,
   dict,
   children,
+  promo,
 }: {
   photos: HeroPhoto[];
   products: Product[];
@@ -58,6 +59,8 @@ export function HeroStage({
   dict: Dictionary;
   /** The headline block, rendered on the server. */
   children: ReactNode;
+  /** Optional promotion block shown above the product card (server-rendered). */
+  promo?: ReactNode;
 }) {
   const [i, setI] = useState(0);
   const [paused, setPaused] = useState(false);
@@ -130,6 +133,7 @@ export function HeroStage({
 
       <div className="relative z-10 bg-canvas lg:bg-transparent">
         <div className="container-page grid gap-8 py-10 sm:py-12 lg:min-h-[min(84vh,50rem)] lg:grid-cols-12 lg:items-center lg:gap-10 lg:py-16">
+          {promo && <div className="lg:hidden">{promo}</div>}
           <div className="lg:col-span-7">{children}</div>
 
           <div
@@ -137,6 +141,7 @@ export function HeroStage({
             aria-roledescription="carousel"
             aria-label={dict.hero.showcaseLabel}
           >
+            {promo && <div className="mb-4 hidden lg:ml-auto lg:block lg:max-w-[26rem]">{promo}</div>}
             {prodIdx >= 0 && (
               <div className="relative h-[8.75rem] overflow-hidden rounded-[3px] bg-white shadow-[0_22px_48px_-20px_rgba(22,24,26,0.55)] ring-1 ring-line lg:ml-auto lg:max-w-[26rem]">
                 {products.map((p, n) => {

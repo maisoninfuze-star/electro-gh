@@ -52,6 +52,7 @@ export function Header({
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const pathname = usePathname();
+  const isHome = pathname === '/' || pathname === '/en' || pathname === '/en/';
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -112,7 +113,8 @@ export function Header({
         {dict.common.skipToContent}
       </a>
 
-      <NoticeBar dict={dict} locale={locale} />
+      {/* The home hero carries the full-size promotion; the bar repeats it elsewhere. */}
+      {!isHome && <NoticeBar dict={dict} locale={locale} />}
 
       <header
         className={cx(

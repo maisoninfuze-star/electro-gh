@@ -1,4 +1,4 @@
-import { MapPin } from 'lucide-react';
+import { ArrowRight, MapPin } from 'lucide-react';
 import { HeroStage, type HeroPhoto } from './HeroStage';
 import type { Product } from '@/lib/catalog/types';
 import { RevealLines, Reveal } from '@/components/ui/Reveal';
@@ -52,7 +52,7 @@ export function Hero({
   const photos: HeroPhoto[] = SHOP_PHOTOS.map((p, i) => ({ ...p, alt: dict.hero.shopPhotos[i] }));
 
   return (
-    <HeroStage photos={photos} products={showcase} locale={locale} dict={dict}>
+    <HeroStage photos={photos} products={showcase} locale={locale} dict={dict} promo={<BlackFridayPromo locale={locale} dict={dict} />}>
       <h1 className="font-display text-hero font-light text-ink lg:text-canvas">
         <RevealLines lines={[dict.hero.headlineTop]} immediate delay={80} lineClassName="font-light" />
         <RevealLines lines={[dict.hero.headlineBottom]} immediate delay={200} lineClassName="font-semibold" />
@@ -91,5 +91,40 @@ export function Hero({
         </p>
       </Reveal>
     </HeroStage>
+  );
+}
+
+/**
+ * BLACK FRIDAY (owner, 11–12 Nov 2026): up to 50% off, in store only, no
+ * per-product figures — so this names the sale and sends people to the
+ * stores, and no product is marked as discounted. Sits in the hero's right
+ * column above the product card; the slim top bar carries the same message
+ * on inner pages. Remove both when the sale ends.
+ */
+function BlackFridayPromo({ locale, dict }: { locale: Locale; dict: Dictionary }) {
+  const n = dict.notice;
+  return (
+    <div className="relative overflow-hidden rounded-[3px] bg-ink px-6 py-6 text-canvas shadow-[0_22px_48px_-20px_rgba(22,24,26,0.65)] ring-1 ring-white/10 sm:px-8 sm:py-7">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -right-16 -top-20 size-72 rounded-full bg-[radial-gradient(circle,rgba(211,18,28,0.55)_0%,rgba(211,18,28,0)_70%)]"
+      />
+      <p className="relative text-[0.6875rem] font-medium uppercase tracking-[0.2em] text-canvas/70">{n.eyebrow}</p>
+      <p className="relative mt-2 font-display text-[2rem] font-semibold uppercase leading-none tracking-[-0.03em] sm:text-[2.5rem]">
+        {n.title}
+      </p>
+      <p className="relative mt-4 flex flex-wrap items-baseline gap-x-3 gap-y-1 leading-none">
+        <span className="text-[0.8125rem] font-medium uppercase tracking-[0.14em] text-canvas/80">{n.figureLabel}</span>
+        <span className="tnum whitespace-nowrap font-display text-[3.5rem] font-semibold tracking-[-0.04em] text-[#ff3b45] sm:text-[4.75rem]">{n.figure}</span>
+        <span className="whitespace-nowrap text-[1.0625rem] font-medium">{n.after}</span>
+      </p>
+      <div className="relative mt-5 flex flex-wrap items-center gap-x-5 gap-y-3">
+        <ButtonLink href={href(locale, 'stores')} size="lg">
+          {n.cta}
+          <ArrowRight className="size-4" strokeWidth={2.2} aria-hidden />
+        </ButtonLink>
+        <span className="text-[0.9375rem] text-canvas/85">{n.tail}</span>
+      </div>
+    </div>
   );
 }
